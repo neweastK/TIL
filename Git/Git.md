@@ -10,24 +10,15 @@
 - 로컬 저장소 = 내 PC 라고 생각하면 이해가 쉬움
 
 
-![그림1](그림1-16428426223291.png)
+![그림1](../assets/git/structure.png)
+
+
 
 
 
 ### GIT 명령어
 
-##### git config
-
-> 기본 설정 명령어
-
-- git config --global user.name [유저이름]
-  - 유저의 이름을 설정하며, 변경 희망시 유저이름만 변경하여 재실행
-- git config --global user.email [이메일주소]
-  - 이메일 설정
-- git config --global -l
-  - 본인이 설정한 내역 확인
-
-
+#### 업로드 
 
 ##### git init
 
@@ -41,7 +32,7 @@
 
 - git으로 관리되고 있는 경우, bash의 디렉토리 경로에서 확인이 가능함
 
-  ![image-20220122181912964](../../../Desktop/SSAFY/교육 필기/0113_강의 메모보드.assets/image-20220122181912964-16428431893642.png)	
+  ![image-20220122181912964](../assets/git/init)	
 
   - 위 밑줄 친 부분에서 확인 가능
 
@@ -88,5 +79,124 @@
 
   ※ 메시지 없이 git commit 만 실행시키는 경우
 
-  	1. vim 에디터가 나오게 되며 i를 입력하여 insert 모드로 변경
-  	1. 
+  ![image-20220305221533416](../assets/git/commit.png)
+
+  1. 위와 같이 vim 에디터가 나오게 되며 `i`를 입력하여 insert 모드로 변경한다
+  1. 첫 작성시 제목이 작성되며(노란색 글) `shift+enter`를 두번 입력하여 내용(하얀색 글)을 작성할 수 있다
+  1. 입력 후 `ESC` 를 눌러 insert 모드에서 나올 수 있다.
+  1. `:wq` 를 입력하여 저장하고 나오면 commit이 완료된다
+
+
+
+##### git log
+
+> commit 내역을 확인 할 수 있는 명령어
+
+- commit이 제대로 되었는지 확인할 수 있음
+- 내용이 너무 많아서 한번에 보이지 않을 경우 내용 하단에 `:`이 출력되며 `q`를 눌러서 나갈 수 있음
+  `enter`를 누를 경우 한줄씩 페이지를 내릴 수 있고 `d`를 누를 경우 비교적 많은 부분이 내려감
+- git log --oneline
+  - 각 commit 내역을 한줄씩  짧고 간단하게 확인 가능
+
+
+
+##### git remote 
+
+> 현재 위치의 폴더와 git의 원격 저장소(repository)를 연결해주는 명령어
+
+- git remote add [별칭] [레포지토리 주소]
+
+  - 현재 위치의 폴더와 입력한 주소의 원격 저장소를 별칭을 지정하여 연결해줌
+  - 별칭은 관행적으로 origin 으로 설정
+
+- git remote -v 
+
+  - 현재 폴더에 연결된 원격 저장소를 확인할 수 있음
+
+    ![image-20220305223554261](../assets/git/remote.png)	
+
+- git remote rm [별칭]
+
+  - add와 반대로 연결을 해제하는 명령어
+
+
+
+##### git push
+
+> 원격 저장소로 commit된 내용들을 업데이트하는 명령어
+
+- git push [별칭] [브랜치명]
+  - 연결된 저장소의 입력한 브랜치로 commit 내용을 업로드 함
+- git push -u [별칭] [브랜치명]
+  - `-u` 사용시 이후에는 git push 만 입력해도 해당 저장소와 브랜치로 업로드됨
+
+- git log 로 확인한 push 상태
+  ![image-20220113153155716](../assets/git/push1.png)
+
+  - head → master : 로컬 저장소 상태
+    origin/master : github 업데이트 상태 
+    위 그림은 모든 업데이트가 잘 되어있는 (= push가 잘되어있는) 상태
+
+  ![image-20220113153020518](../assets/git/push2.png)	
+
+  - 위 그림은 head → master 와 origin/master 가 서로 다른 commit을 가르키고 있음. 
+  - head → master는 가장 최신의 commit을 가리키고 있고 origin/master는 그 이전 commit을 가리키고 있음.
+    즉, 깃허브가 업데이트가 느리다는 뜻.
+
+
+
+#### 다운로드
+
+##### git clone
+
+> github의 repository를 현재 위치에 복사해오는 명령어
+
+- git clone [레포지토리 주소]
+  - 해당 주소의 레포지토리를 복사해오며 주소는 해당 레포지토리에 접속해서 복사해올 수 있음
+- 해당 레포지토리의 파일이나 디렉토리를 모두 복사해옴
+
+- git clone을 수행한 경우 해당 폴더는 init 명령어를 사용하지 않아도 git으로 관리됨
+
+  - why?) github 레포지토리를 완전히 복사해오기 때문에 .git 폴더도 복사를 해옴. 따라서, init이 이미 된 상태라고 볼 수 있음. 
+
+- git clone url [폴더명] 
+
+  - 지정한 폴더명을 가진 새로운 폴더를 생성하고 해당 폴더에 레포지토리를 복사
+
+  
+
+##### git pull
+
+> 원격저장소의 업데이트 된 내용을 로컬 저장소에도 적용시키는 것
+
+- 연결된 원격저장소의 업데이트 내용을 내려받아 현재 로컬 저장소를 최신화시킴
+
+
+
+
+
+#### 기타
+
+##### git config
+
+> 기본 설정 명령어
+
+- git config --global user.name [유저이름]
+  - 유저의 이름을 설정하며, 변경 희망시 유저이름만 변경하여 재실행
+- git config --global user.email [이메일주소]
+  - 이메일 설정
+- git config --global -l
+  - 본인이 설정한 내역 확인
+
+
+
+
+
+
+
+#### 상황별 명령어 사용
+
+###### 폴더와 레포지토리를 연결할 때 : 폴더 생성 → init → remote
+
+###### Git에 올릴 때 : add → commit → push
+
