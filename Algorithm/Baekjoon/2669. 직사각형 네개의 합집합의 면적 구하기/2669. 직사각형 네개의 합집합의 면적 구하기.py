@@ -7,12 +7,12 @@ for _ in range(4) :
     i1 = loc[1]
     j2 = loc[2]
     i2 = loc[3]
-    for i in range(j1,j2):
-        for j in range(i1,i2):
+    for j in range(j1,j2):
+        for i in range(i1,i2):
             arr[i][j] = 1
 
 total = 0
 for a in arr :
     total += sum(a)
 
-print(total)
+pprint(arr)
