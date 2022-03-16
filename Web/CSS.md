@@ -480,6 +480,8 @@
 
 - normal flow에서 벗어남 = 실제 위치가 변동이 되고 나머지 요소들도 위치가 조정됨.
 
+- 기준으로 삼고 있는 부모 요소에게 position을 부여해야한다 (relative, absolute, fixed 상관없음)
+
 
 
 ##### fixed 

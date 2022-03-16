@@ -3,8 +3,9 @@
   flex-basis: 100%;
   align-items: center;
   color: rgba(0, 0, 0, 0.35);
-  font-size: 16px;
+  font-size: 20px;
   margin: 8px 0px;
+  font-weight: bold;
 }
 .hr-sect::before,
 .hr-sect::after {
@@ -17,9 +18,25 @@
   margin: 0px 16px;
 }
 
-.front_phone {
+
+.phone_box {
+  width : 50%;
+  height: auto;
+}
+
+.phone_img {
   position : absolute;
-  width : 10%;
-  top: 30px;
-  left: 1500px;
+  width : 70%;
+  top: 20px;
+  left: 150px;
+}
+
+.inside_img {
+  background-color: black;
+  position: absolute;
+  width: 59%;
+  height: 92%;
+  top: 51px;
+  left: 182px;
+  border-radius: 40px;
 }
