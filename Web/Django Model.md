@@ -71,13 +71,11 @@
 ## django
 
 <hr>※  LTS
-
 - Long Term Support (장기 지원 버전)
 - 일반적인 경우보다 장기간에 걸쳐 지원하도록 고안된 소프트웨어의 버전
 - 컴퓨터 소프트웨어의 제품 수명주기 관리 정책
 - 배포자는 LTS 확정을 통해 장기적이고 안정적인 지원을 보장함
 - django의 경우 3.2.12 버전이 LTS이기 때문에 4.0이 아닌 3.2.12 버전 사용
-
 
 <hr>
 
@@ -134,38 +132,22 @@
 
   - \__init__.py
     - python에게 현재 파일이 위치한 폴더를 하나의 Python 패키지로 다루도록 지시(즉, import 해올 수 있도록 지시하는 파일)
-    
   - asgi.py 
     - Django 애플리케이션이 비동기식 웹 서버와 연결 및 소통하는 것을 도움. 배포 작업시 사용 (Asynchronous Server Gateway Interface)
-    
   - **settings.py** 
     - 애플리케이션의 모든 설정을 포함 (언어 및 시간 표시 기준도 설정 가능)
-    
   - **urls.py** 
     - 사이트의 url과 적절한 views의 연결을 지정, HTTP 요청을 받아서 알맞은 view로 전달
     - urls 지정
       - urlpatterns 부분에 `path('주소', view 함수)` 사용
-  
+
         - view 함수는 application에서 작성한 함수
         - "주소"로 요청이 오면 지정한 view 함수를 실행하겠다!
       - 다른 프로젝트에서 만든 함수를 사용하기 위해 `from`과 `import` 사용
-  
-        - 함수를 만들 때는 무조건 request 가 필수 argument로 사용됨
-    
-    ※ **Request object** 
-    
-    > https://docs.djangoproject.com/en/3.1/ref/request-response/#module-django.http
-    
-    - 요청 간의 모든 정보를 담고 있는 변수
-    - 페이지가 요청되면 Django는 요청에 대한 메타 데이터를 포함하는 `HttpRequest` 객체를 만들고
-    - 그런 다음 Django는 적절한 view 함수를 로드하고 `HttpRequest`를 뷰 함수의 첫 번째 인수로 전달. 
-    - 그리고 각 view는 `HttpResponse` 개체를 반환한다.
-    
-    
-    
+
+        - 함수를 만들 때는 무조건 request 가 필수 argumnet로 사용됨
   - wsgi.py 
     - Django 애플리케이션이 웹서버와 연결 및 소통하는 것을 도움. 배포 작업시 사용 (Web Server Gateway Interface)
-    
   - manage.py 
     - Django 프로젝트와 다양한 방법으로 상호작용 하는 커맨드라인 유틸리티 (각종 명령을 수행시킴)
 
@@ -383,7 +365,7 @@
 
   - BASE_DIR : 현재의 장고 프로젝트 폴더가 위치해있는 폴더 (manage.py가 존재하는 폴더)
 
-    먼저는 등록된 앱들의 templates 폴더에서 선언한 템플릿 파일을 찾고 없다면 base_dir에 지정한 위치에서 찾는다
+    먼저는 application 폴더 내에 있는 templates 폴더에서 선언한 템플릿 파일을 찾고 없다면 base_dir에 지정한 위치에서 찾는다
 
 
 
@@ -428,7 +410,10 @@
 
 
 
-#### Django template 설계 철학
+
+
+
+#### Django 설계 철학
 
 1. 표현과 로직을 분리
    1. 템플릿 시스템은 표현을 제어하는 도구이자 표현에 관련된 로직일 뿐이다.
@@ -437,6 +422,13 @@
 2. 중복을 배제
    1. 대다수의 사이트가 갖는 공통 디자인은 한곳에 저장하여 중복코드를 없앤다.
    2. 템플릿 상속을 활용한다.
+3. 트레일링 콤마
+   1. django에서는 항상 끝에 (,)를 넣어준다(관행적 요소)
+
+4.  앤드 슬래쉬
+   1. django에서는 url을 적을 때 뒤에 /를 넣어준다(관행적 요소)
+
+
 
 
 
@@ -566,11 +558,13 @@
 
 
 - 이러한 문제를 해결하기 위해 각 app 폴더에 해당 app의 views 함수만을 갖고 있는 urls.py를 만듬
+
 - `include()`를 활용하여 다른 URLconf(= app/urls.py)들을 참조할 수 있음
 
   - 함수 include를 만나게 되면, path의 첫 인자로 지정한 URL의 시점까지 일치하는 부분을 잘라내고, 남은 부분의 후속 처리를 위해 include의 인자로 지정한 URLconf로 이동 
   - `from django.urls import include` 필요
   - 프로젝트의 urls.py에서 사용함으로써 프로젝트 urls.py에서 url을 받으면 지정한 app의 urls로 보내도록 한다. 
+
 - 각 앱의 urls.py에서 `from . import views` 를 통해 자신의 app 폴더 내에 있는 views를 import 한다
 
 - 그 후 각각의 함수를 적용시킬 path를 작성한다.
@@ -610,245 +604,4 @@
   <!-- url pattern을 사용하기 전 -->
   <a href="/index/"> 메인 페이지 </a>
   ```
-
-
-
-<hr>
-
-## Namespace
-
-> 개체를 구분할 수 있는 범위를 나타내는 namespace
-
-- 서로 다른 app 내에서 같은 이름을 가진 url이 있을 경우(주로 index) 이름공간을 구분해줘야함
-- django의 경우 url이나 template을 찾을 때 INSTALLED_APPS에 등록된 앱 순서대로 탐색
-  - 따라서 INSTALLED_APPS 에 app1, app2 순서로 등록되어있다면 app1 → app2 → BASE_DIR 순으로 urls나 template 파일을 탐색
-
-
-
-#### URL Namespace
-
-> 서로 다른 APP의 urls.py 내에서 같은 이름을 가진 url이 있을 경우 
-
-- url의 경우 우리가 편하게 사용하기위해 urls.py에서 name을 등록해줬지만, 이름이 겹치는 경우가 발생할 수 있기 때문에 name 외 추가적인 정보가 필요함. 
-  따라서, [어떤앱의 URL]인지를 알려줘야함.
-- 각 앱의 urls.py에 app_name을 작성함으로써 분리를 시켜준다
-- url을 선언할 때는 { % url 'app_name' : 'url_name' % } 으로 선언한다.
-
-
-
-#### Template Namespace
-
-> 서로 다른 APP의 templates 디렉토리 내에서 같은 이름을 가진 template이 있을 경우 
-
-- Django는 기본적으로 `app_name/templates/` 경로에 있는 templates 파일들만 찾을 수 있으며, INSTALLED_APPS에 작성한 app 순서로 tamplate을 검색 후 렌더링
-
-- 위 시스템을 강제로 변경할 수가 없기 때문에 물리적으로 경로에 폴더 하나를 끼워넣음으로써 namespace를 분리시켜줌
-
-- 앱 폴더 내 템플릿 폴더 하위에 새로운 폴더 생성 (관행적으로 앱 이름과 같이 만듬)
-
-- 해당 폴더 내에 모든 templates 이동
-
-- view.py에서 render의 인자, include html이름 등 템플릿을 불러오는 모든 곳에서 `'앱이름/html이름'` 으로 변경 
-
-- 즉, 임의로 templates의 폴더 구조를 `app_name/templates/app_name` 형태로 변경해 임의로 이름 공간 생성 후 변경된 추가 경로 작성
-
-  그럼 django는 app_name/templates 에서 'app_name/html_name' 인 파일을 찾아야되고 template 이름이 동명이라도 폴더명이 달라서 해결됨
-
-  ```python
-  # articles/views.py
-  
-  return render(request, 'articles/index.html')
-  # 기존에는 'index.html'로 html 주소를 지정 및 렌더링
-  ```
-
-
-
-<hr>
-
-## Static File
-
-> 정적 파일 : 응답할 때 별도의 처리 없이 파일 내용을 그대로 보여주면 되는 파일 (사용자의 요청에 따라 내용이 바뀌는 것이 아니라 요청한 것을 그대로 보여주는 파일 )
-
-- 이미지, 자바스크립트, CSS 등이 있음
-- 서비스 중에서도 추가되거나 변경되지 않고 고정되어 있음
-- django에서는 이러한 파일들을 Static File 이라고 하며 staticfiles 앱을 통해 정적 파일과 관련된 기능을 제공
-
-
-
-### Static Files 
-
-#### 구성
-
-- django.contrib.staticfiles가 installed_apps에 이미 포함되어 있음(포함되어 있는지 확인)
-- settings.py에 static_url을 정의되어있음 (/static/)
-- 템플릿에서 static 템플릿 태그를 사용하여 지정된 상대경로에 대한 URL을 빌드
-- 앱의 static 디렉토리에 정적 파일을 저장. static 디렉토리는 앱 폴더 내에 생성
-- html을 app/templates에 보관하는 것 처럼 static도 app/static 에 보관해야함. (app/statics/app/)
-
-
-
-#### 요소
-
-##### STATICFILES_DIRS
-
-```python
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
-```
-
-- static의 추가경로를 설정 (base템플릿을 만들 때와 마찬가지)
-  - 템플릿은 DIR이 기존에 이미 지정되어 있으나 static DIR의 경우 위와 같이 따로 만들어야함
-  - STATICFILES_DIRS= [BASE_DIR / 'static']
-
-- `app/static/` 디렉터리 경로(=기본 경로)를 사용하는 것 외에 추가적인 정적 파일 경로 목록을 정의하는 리스트
-
-- 즉, 기본 탐색 위치를 제외하고 다른 값도 탐색하기 위할 때
-
-
-
-##### STATIC_ROOT
-
-- collectstatic이 배포를 위해 정적 파일을 수집하는 디렉토리의 절대 경로 (배포 : django 프로젝트를 웹으로 서비스하기 위해서 다른 서버로 올리는 과정)
-
-  즉, django 프로젝트에서 사용하는 모든 정적 파일을 한곳에 물리적으로 모아 놓는 곳
-
-  <hr>
-
-  ※ collectstatic : 프로젝트 배포 시 흩어져 있는 정적파일들을 모아 STATIC_ROOT에 정적 파일을 수집하는 명령어
-
-   1. STATIC_ROOT 작성
-
-      ```python
-      STATIC_ROOT = BASE_DIR / 'staticfiles' #꼭 staticfiles일 필요는 없음
-      ```
-
-      - setting.py에 작성되어 있지 않으므로 직접 작성해야함
-
-   2. 명령어 실행
-
-      ```bash
-      python manage.py collectstatic #STATIC_ROOT에 모든 static파일을 넣는다
-      ```
-
-      - 모든 static 파일들이 복사되고 staticfiles 디렉토리가 생긴다
-
-
-  <hr>
-
-
-  - STATIC_ROOT는 개발 과정에서 즉, settings.py의 DEBUG 값이 True로 설정되어 있으면 작동하지 않음. 
-
-    ※ 배포 단계에서는 DEBUG를 False로 둔다 
-    why?) DEBUG가 True면 에러가 났을 때 페이지에 어느 부분이 에러인지 어떤 코드가 에러인지 등 상세하게 나옴(노란창 _ 코드 유출의 가능성 有). 
-    but False일 경우 Not Found만 나오고 끝남
-
-  - 실 서비스 환경(=배포환경)에서 django의 모든 정적 파일을 다른 웹 서버가 직접 제공하기 위함
-    다른 서버에 올릴 때는 DEBUG가 꺼져있기 때문에 다른 서버에서는 django의 static 파일들이 어디에 있는지 추적이 불가함. 그래서 모든 정적 파일들을 따로 모아놓는 것
-
-
-
-##### STATIC_URL
-
-- STATIC_ROOT에 있는 정적 파일을 참조 할 때 사용할 URL
-
-
-- 실제 파일이나 디렉토리가 아니며, URL로만 존재
-
-
-- 비어있지 않은 값으로 설정한다면 반드시 slash(/)로 끝나야함
-
-- 값을 바꿀 수는 있지만 굳이 바꾸지는 않음
-
-  
-
-#### Django template tag 
-
->  django에서 static 파일을 가져오는 방법
-
-- load
-
-  - 사용자 정의 템플릿 태그 세트를 로드해온다.
-  - 로드하는 라이브러리, 패키지에 등록된 모든 **태그와 필터를 불러옴**
-  - static 태그를 불러오기 위한 태그
-
-- static
-
-  - STATIC_ROOT에 저장된 정적 파일에 연결 (개발 단계에서는 약속된 경로에서 가져온다)
-  - 빌트인 태그가 아니기 떄문에 `{% load static %}` 으로 import 해야함 (태그 중에서도 빌트인이 아닌 경우가 있음)
-  - 부모 템플릿에 static이 import 되었어도 다시 import해줘야함 (=static은 상속이 안됨)
-  - `<img src='{% static 'static 이후의 이미지 파일 경로'}' alt=''>`
-
-  
-
-- 만약 다른 앱에 똑같은 이름의 이미지 파일이 있다면?
-
-  - static 폴더 내에 앱 이름과 같은 폴더를 하나 더 생성해주고 해당 폴더 안에 이미지를 넣어주면 됨. 즉, templates의 namespace를 분리하는 것과 똑같음
-  - 그리고 img경로를 수정해주면 작업 완료
-
-
-
-### static file 사용하기
-
-1. 기본경로
-
-   - `article/static/articles/` 경로에 이미지 파일 위치
-
-     ```django
-     <!-- articles/index.html -->
-     
-     {% extends 'base.html' %}
-     {% load static %}
-     
-     {% block content %}
-       <img src="{% static 'articles/sample.png' %}" alt="sample">
-       ...
-     {% endblock %}
-     ```
-
-     - 이미지 파일 위치 - `articles/static/articles/`
-
-    - static file 기본 경로
-
-      - `app_name/static/`
-
-2. 추가 경로
-
-   - `static/` 경로에 CSS 파일 위치
-
-```django
-<!-- base.html -->
-
-<!-- css 설정은 head에서 하므로 block을 head 안에 넣어줌 -->
-<head>
-  {% block css %}{% endblock %}
-</head>
-```
-
-```python
-# settings.py
-
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
-```
-
-```django
-<!-- articles/index.html -->
-
-{% extends 'base.html' %}
-{% load static %}
-
-{% block css %}
-  <link rel="stylesheet" href="{% static 'style.css' %}">
-{% endblock %}
-```
-
-```css
-/* static/style.css */
-
-h1 {
-    color: crimson;
-}
-```
 
