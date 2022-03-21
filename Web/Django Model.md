@@ -1,5 +1,7 @@
 # Django_Model
 
+[toc]
+
 ## Model
 
 > 웹 애플리케이션의 데이터를 구조화하고 조작하기 위한 도구
@@ -53,9 +55,9 @@
 
 - OOP 프로그래밍에서 RDBMS을 연동할 때, 데이터베이스와 객체 지향 프로그래밍 언어간의 호환되지 않는 데이터를 변환하는 프로그래밍 기법
 
-  ※ 쉽게 말하면, object를 통해서 파이썬을 이용하여 SQL을 쓰겠다~~(여기서 object는 model)~~
+  ※ 쉽게 말하면, object를 통해서 파이썬을 이용하여 SQL을 쓰겠다
 
-- Django는 내장 Django ORM을 사용함
+  Django는 내장 Django ORM을 사용함
 
 - 장점 
 
@@ -122,12 +124,12 @@
 > model에서 만든 설계도를 저장
 
 ```bash
-python manage.py makemigrations
+$ python manage.py makemigrations
 ```
 
 - 모델을 변경한 것에 기반한 새로운 migration을 만들 때 사용
 - 모델을 작성한다 = 데이터베이스의 기본적인 구조를 만든다 = 데이터베이스의 설계도를 작성한다
-- migrations 내에 _\_init__ 반드시 필요
+- migrations 폴더 내에 _\_init__ 반드시 필요
 
 
 
@@ -167,8 +169,8 @@ python manage.py sqlmigrate [설계도파일]
 python manage.py showmigrations
 ```
 
-- 프로젝트 전체의 마이그레이션 상태를 확인하기 위해 사용
-- 마이그레이션 파일들이 migrate 됐는지 안됐는지 여부를 확인할 수 있음
+- 프로젝트 전체의 migrations 상태를 확인하기 위해 사용
+- migration 파일들이 migrate 됐는지 안됐는지 여부를 확인할 수 있음
 
 
 
@@ -328,8 +330,6 @@ python manage.py showmigrations
   
 
 <hr>
-
-
 ##### save
 
 - 객체를 데이터베이스에 저장하는 메서드
@@ -449,7 +449,7 @@ admin.site.register(Class_Name)
   ```python
   # admin.py
   from jango.contrib import admin
-  from .models import Class_Name
+  from .models import Class_Name #적용시킬 클래스 import
   
   # list_display : models.py에서 정의한 각각의 속성들의 값을 admin 페이지에 출력하도록 설정
   class ArticleAdmin(admin.ModelAdmin):

@@ -2,7 +2,7 @@
 
 > **High-level Python ①<u>Web Framework</u>** that encourages rapid development and clean, pragmatic design
 
-
+[toc]
 
 ## Web Framework
 
@@ -141,15 +141,72 @@
   - **settings.py** 
     - 애플리케이션의 모든 설정을 포함 (언어 및 시간 표시 기준도 설정 가능)
     
+    - 추가 설정
+    
+      1. LANGUAGE_CODE
+    
+      - 모든 사용자에게 제공되는 번역을 결정
+    
+      - 이 설정이 적용 되려면 `USE_I18N`이 활성화되어 있어야 함
+    
+      - http://www.i18nguy.com/unicode/language-identifiers.html
+    
+        ```python
+        # settings.py
+        
+        LANGUAGE_CODE = 'ko-kr'
+        ```
+    
+      
+    
+      2. TIME_ZONE
+    
+      - 데이터베이스 연결의 시간대를 나타내는 문자열 지정
+    
+      - `USE_TZ`가 True이고 이 옵션이 설정된 경우 데이터베이스에서 날짜 시간을 읽으면 UTC 대신 새로 설정한 시간대의 인식 날짜&시간이 반환 됨
+    
+      - `USE_TZ`이 False인 상태로 이 값을 설정하는 것은 error
+    
+      - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+    
+        ```PYTHON
+        # settings.py
+        
+        TIME_ZONE = 'Asia/Seoul'
+        ```
+    
+      
+    
+      3. USE_I18N
+    
+      - Django의 번역 시스템을 활성화해야 하는지 여부를 지정
+    
+      
+    
+      4. USE_L10N
+    
+      - 데이터의 지역화 된 형식(localized formatting)을 기본적으로 활성화할지 여부를 지정
+      - True일 경우, Django는 현재 locale의 형식을 사용하여 숫자와 날짜를 표시
+    
+      
+    
+      5. USE_TZ
+    
+      - datetimes 객체가 기본적으로 시간대를 인식하는지 여부를 지정
+      - True일 경우 Django는 내부적으로 시간대 인식 날짜 / 시간을 사용
+    
+      
+    
   - **urls.py** 
+    
     - 사이트의 url과 적절한 views의 연결을 지정, HTTP 요청을 받아서 알맞은 view로 전달
     - urls 지정
       - urlpatterns 부분에 `path('주소', view 함수)` 사용
-  
+    
         - view 함수는 application에서 작성한 함수
         - "주소"로 요청이 오면 지정한 view 함수를 실행하겠다!
       - 다른 프로젝트에서 만든 함수를 사용하기 위해 `from`과 `import` 사용
-  
+    
         - 함수를 만들 때는 무조건 request 가 필수 argument로 사용됨
     
     ※ **Request object** 
@@ -158,7 +215,7 @@
     
     - 요청 간의 모든 정보를 담고 있는 변수
     - 페이지가 요청되면 Django는 요청에 대한 메타 데이터를 포함하는 `HttpRequest` 객체를 만들고
-    - 그런 다음 Django는 적절한 view 함수를 로드하고 `HttpRequest`를 뷰 함수의 첫 번째 인수로 전달. 
+    - 그런 다음 Django는 적절한 view 함수를 로드하고 `HttpRequest`를 뷰 함수의 첫 번째 인자로 전달. 
     - 그리고 각 view는 `HttpResponse` 개체를 반환한다.
     
     
@@ -168,6 +225,7 @@
     
   - manage.py 
     - Django 프로젝트와 다양한 방법으로 상호작용 하는 커맨드라인 유틸리티 (각종 명령을 수행시킴)
+    - 프로젝트 폴더와 같은 위치에 생성 (프로젝트 폴더 내에 생성되지 않음)
 
 
 
@@ -237,15 +295,15 @@
 
    - settings의 INSTALLED_APPS에 추가
 
-7. urls.py에서 `from 어플리케이션 이름 import 함수 ` 실행 
+7. urls.py에서 `from 어플리케이션 이름 import views ` 실행 
 
 8. urls.py의 urlpatterns에 path로 주소명이랑 함수 설정 (= urls.py를 통해 url과 view를 매핑)
 
    - `path("주소명/", views.함수)`
 
-9. views.py에서 HTTP 요청을 수신하고 HTTP 응답을 반환하는 함수 만들기 = 관련 html 파일 렌더한다
+9. views.py에서 HTTP 요청을 수신하고 HTTP 응답을 반환하는 함수 만들기
 
-10. 어플리케이션 내에 새로운 폴더(templates) 만들고 해당 폴더 내에 templates.html 에서 파일의 레이아웃 정의
+10. 어플리케이션 내에 새로운 폴더(templates) 만들고 해당 폴더 내에 `[템플릿이름].html` 에서 파일의 레이아웃 정의
 
 
 
@@ -262,10 +320,12 @@
 - 데이터 표현을 제어하는 도구이자 표현에 관련된 로직
 - Django template language : Django Template 위에서 쓸 수 있는 별도의 문법
 - Template 파일 탐색 기본 경로는 app 폴더 안의 templates 폴더로 이미 지정되어 있음
+  - template 파일 탐색 기본 경로 : **해당app/templates/**
 
 
 
-#### Django template language(DTL)
+
+#### Django Template Language(DTL)
 
 - Django template 에서 사용하는 built-in template system
 - 조건, 반복, 변수, 치환, 필터 등의 기능을 제공
@@ -280,7 +340,7 @@
 1. Variable(변수)
 
 ```python
-{{variable}}
+{{ variable }}
 ```
 
 - render()를 사용하여 __views.py에서 정의한 변수__(주로 context안에 들어가있는 요소)를 template 파일에서 사용
@@ -289,7 +349,7 @@
   - 만약, key가 여러개라면 template.html에서 원하는 key 이름을 넣어주면 됨
   - 즉, view에서 작성한 딕셔너리의 key값을 template.html에서 `{{ }}` 안에 넣으면 value가 웹상에 출력
 - 변수명은 영어, 숫자와 밑줄의 조합으로 구성 가능 but 밑줄로 시작할 수는 없음
-- dot(.)를 사용하여 변수 속성에 접근할 수 있음 
+- dot(.)를 사용하여 변수 속성에 접근할 수 있음 (딕셔너리의 경우 `변수.key` 를 통해 value값을 불러올 수 있음)
 - views.py의 render()의 세번째 인자에 할당해줌 ex) render(request, 'greeting.html', context)
 - value가 인덱싱이 가능할 경우 `key.숫자` 로 인덱싱 가능 
 
@@ -309,8 +369,8 @@
       return render(request, "greeting.html",context)
   ```
 
-  ```html
-  <!--greeting.html-->
+  ```django
+  {# greeting.html #}
   <p>안녕하세요 저는 {{ info.name }} 입니다.</p>
   <p>제가 좋아하는 음식은 {{ foods }} 입니다.</p>
   <p>{{ foods.0 }}을 가장 좋아합니다.</p>
@@ -320,7 +380,7 @@
 
 2. Filters
 
-```python
+```django
 {{ variable|filter }}
 ```
 
@@ -334,7 +394,7 @@
 
 3. Tags
 
-```python
+```django
 {% tag %}
 ```
 
@@ -348,13 +408,13 @@
 
 - 한줄 주석
 
-```python
+```django
 {# 내용 #}
 ```
 
 - 여러줄 주석
 
-```html
+```django
 {% comment %}
     내용1
     내용2
@@ -373,13 +433,13 @@
 
 - 부모 템플릿은 주로 base.html로 지정
 
-- 부모 템플릿의 위치는 새로운 templates 폴더를 생성해서 해당 폴더로 지정
+- 부모 템플릿의 위치는 프로젝트 폴더와 같은 위치에 새로운 templates 폴더를 생성해서 해당 폴더로 지정
 
 - 템플릿 추가 경로 설정
 
-  - django는 기본적으로 template 파일을 찾을 때 application 폴더 안에 있는 templates 폴더로부터 탐색함
+  - django는 기본적으로 template 파일을 찾을 때 application 폴더 안에 있는 templates 폴더부터 탐색함
 
-  - settings.py 내에서 TEMPLATES 중 빈 리스트로 되어있는 DIRS에 새로운 템플릿 탐색 경로 기입 ex) 'DIRS' : [BASE_DIR / 'templates',]
+  - settings.py 내에서 TEMPLATES 중 빈 리스트로 되어있는 DIRS에 새로운 템플릿 탐색 경로 기입 ex) 'DIRS' : [BASE_DIR / 'templates']
 
   - BASE_DIR : 현재의 장고 프로젝트 폴더가 위치해있는 폴더 (manage.py가 존재하는 폴더)
 
@@ -452,9 +512,12 @@
 
 > 입력된 데이터의 전달 방식을 지정
 
-- get : 저장은 불가하고, 조회만 가능
-- post : 수정이 가능함
-- 딕셔너리 형태로 전달 받기 때문에 get 사용해야함(GET : method 중 하나, get : 딕셔너리 value값 반환)
+- GET : 저장은 불가하고, 조회만 가능
+- POST : 수정이 가능함
+- 딕셔너리 형태로 전달하기 때문에 전달 받을 때는 get 함수를 사용해야함
+  - `example = request.GET(or POST).get()`
+  - (GET : method 중 하나, get : 딕셔너리 value값 반환)
+
 
 ##### action
 
@@ -518,17 +581,15 @@
   ```
 
   - user_pk 가 어떤 값이냐에 따라 주소가 달라짐
-  - int, str 등 변수의 type을 지정해줄 수 있음
+  - int, str 등 변수의 type을 지정해줄 수 있음 (미지정시 기본값은 str)
 
-
-
-- views.py 내에서 함수를 선언할 때 parameter를 넣어줘야함
+- **views.py 내에서 함수를 선언할 때 parameter를 넣어줘야함**
 
 - 예시
 
   ```python
   # views.py
-  def example(request, user_pk) :	
+  def example(request, user_pk) :	#parameter에 user_pk 필수!!
       context = {
           'user_num'= user_pk,
       }
@@ -569,7 +630,8 @@
 - `include()`를 활용하여 다른 URLconf(= app/urls.py)들을 참조할 수 있음
 
   - 함수 include를 만나게 되면, path의 첫 인자로 지정한 URL의 시점까지 일치하는 부분을 잘라내고, 남은 부분의 후속 처리를 위해 include의 인자로 지정한 URLconf로 이동 
-  - `from django.urls import include` 필요
+  - `path("주소/", include("app이름.urls"))`
+  - `from django.urls import include` 필요 (path 옆에 include 작성)
   - 프로젝트의 urls.py에서 사용함으로써 프로젝트 urls.py에서 url을 받으면 지정한 app의 urls로 보내도록 한다. 
 - 각 앱의 urls.py에서 `from . import views` 를 통해 자신의 app 폴더 내에 있는 views를 import 한다
 
@@ -629,8 +691,7 @@
 
 > 서로 다른 APP의 urls.py 내에서 같은 이름을 가진 url이 있을 경우 
 
-- url의 경우 우리가 편하게 사용하기위해 urls.py에서 name을 등록해줬지만, 이름이 겹치는 경우가 발생할 수 있기 때문에 name 외 추가적인 정보가 필요함. 
-  따라서, [어떤앱의 URL]인지를 알려줘야함.
+- url의 경우 우리가 편하게 사용하기위해 urls.py에서 name을 등록해줬지만, 이름이 겹치는 경우가 발생할 수 있기 때문에 name 외 추가적인 정보가 필요함. 따라서, [어떤앱의 URL]인지를 알려줘야함.
 - 각 앱의 urls.py에 app_name을 작성함으로써 분리를 시켜준다
 - url을 선언할 때는 { % url 'app_name' : 'url_name' % } 으로 선언한다.
 
@@ -644,11 +705,11 @@
 
 - 위 시스템을 강제로 변경할 수가 없기 때문에 물리적으로 경로에 폴더 하나를 끼워넣음으로써 namespace를 분리시켜줌
 
-- 앱 폴더 내 템플릿 폴더 하위에 새로운 폴더 생성 (관행적으로 앱 이름과 같이 만듬)
+- 앱 폴더 내 템플릿 폴더 하위에 새로운 폴더 생성 (관행적으로 앱 이름과 같이 만듦)
 
-- 해당 폴더 내에 모든 templates 이동
+- 해당 폴더 내에 모든 템플릿 파일 이동
 
-- view.py에서 render의 인자, include html이름 등 템플릿을 불러오는 모든 곳에서 `'앱이름/html이름'` 으로 변경 
+- views.py에서 render의 인자, include(html이름) 등 템플릿을 불러오는 모든 곳에서 `'앱이름/html이름'` 으로 변경 
 
 - 즉, 임의로 templates의 폴더 구조를 `app_name/templates/app_name` 형태로 변경해 임의로 이름 공간 생성 후 변경된 추가 경로 작성
 
@@ -680,10 +741,10 @@
 #### 구성
 
 - django.contrib.staticfiles가 installed_apps에 이미 포함되어 있음(포함되어 있는지 확인)
-- settings.py에 static_url을 정의되어있음 (/static/)
+- settings.py에 static_url이 정의되어있음 (/static/)
 - 템플릿에서 static 템플릿 태그를 사용하여 지정된 상대경로에 대한 URL을 빌드
-- 앱의 static 디렉토리에 정적 파일을 저장. static 디렉토리는 앱 폴더 내에 생성
-- html을 app/templates에 보관하는 것 처럼 static도 app/static 에 보관해야함. (app/statics/app/)
+- 앱의 static 디렉토리에 정적 파일을 저장. static 디렉토리는 **앱 폴더 내에 생성**
+- html을 app/templates에 보관하는 것 처럼 static도 app/static 에 보관해야하며 기본 경로도 app/static으로 설정되어있음
 
 
 
@@ -699,7 +760,7 @@ STATICFILES_DIRS = [
 
 - static의 추가경로를 설정 (base템플릿을 만들 때와 마찬가지)
   - 템플릿은 DIR이 기존에 이미 지정되어 있으나 static DIR의 경우 위와 같이 따로 만들어야함
-  - STATICFILES_DIRS= [BASE_DIR / 'static']
+  - STATICFILES_DIRS= [BASE_DIR / 'static',]
 
 - `app/static/` 디렉터리 경로(=기본 경로)를 사용하는 것 외에 추가적인 정적 파일 경로 목록을 정의하는 리스트
 
@@ -709,13 +770,15 @@ STATICFILES_DIRS = [
 
 ##### STATIC_ROOT
 
-- collectstatic이 배포를 위해 정적 파일을 수집하는 디렉토리의 절대 경로 (배포 : django 프로젝트를 웹으로 서비스하기 위해서 다른 서버로 올리는 과정)
+- collectstatic이 배포를 위해 정적 파일을 수집하는 디렉토리의 절대 경로 
 
-  즉, django 프로젝트에서 사용하는 모든 정적 파일을 한곳에 물리적으로 모아 놓는 곳
+  - 배포 : django 프로젝트를 웹으로 서비스하기 위해서 다른 서버로 올리는 과정)
+
+- 즉, django 프로젝트에서 사용하는 모든 정적 파일을 한곳에 물리적으로 모아 놓는 곳
 
   <hr>
 
-  ※ collectstatic : 프로젝트 배포 시 흩어져 있는 정적파일들을 모아 STATIC_ROOT에 정적 파일을 수집하는 명령어
+  ※ collectstatic : 프로젝트 배포 시 흩어져 있는 정적파일들을 모아 특정 디렉토리(=STATIC_ROOT)에 수집하는 명령어
 
    1. STATIC_ROOT 작성
 
@@ -735,20 +798,26 @@ STATICFILES_DIRS = [
 
 
   <hr>
-
-
   - STATIC_ROOT는 개발 과정에서 즉, settings.py의 DEBUG 값이 True로 설정되어 있으면 작동하지 않음. 
 
     ※ 배포 단계에서는 DEBUG를 False로 둔다 
+
     why?) DEBUG가 True면 에러가 났을 때 페이지에 어느 부분이 에러인지 어떤 코드가 에러인지 등 상세하게 나옴(노란창 _ 코드 유출의 가능성 有). 
-    but False일 경우 Not Found만 나오고 끝남
+
+    But, False일 경우 Not Found만 나오고 끝남
 
   - 실 서비스 환경(=배포환경)에서 django의 모든 정적 파일을 다른 웹 서버가 직접 제공하기 위함
-    다른 서버에 올릴 때는 DEBUG가 꺼져있기 때문에 다른 서버에서는 django의 static 파일들이 어디에 있는지 추적이 불가함. 그래서 모든 정적 파일들을 따로 모아놓는 것
+    
+    - 다른 서버에 올릴 때는 DEBUG가 False이기 때문에 다른 서버에서는 django의 static 파일들이 어디에 있는지 추적이 불가함. 그래서 모든 정적 파일들을 따로 모아놓는 것
+    
 
 
 
 ##### STATIC_URL
+
+```python
+STATIC_URL = '/static/'
+```
 
 - STATIC_ROOT에 있는 정적 파일을 참조 할 때 사용할 URL
 
@@ -774,8 +843,9 @@ STATICFILES_DIRS = [
 
 - static
 
-  - STATIC_ROOT에 저장된 정적 파일에 연결 (개발 단계에서는 약속된 경로에서 가져온다)
-  - 빌트인 태그가 아니기 떄문에 `{% load static %}` 으로 import 해야함 (태그 중에서도 빌트인이 아닌 경우가 있음)
+  - 배포 단계일 시 STATIC_ROOT에 저장된 정적 파일에 연결 
+  - 개발 단계에서는 약속된 경로의 정적 파일에 연결
+  - 빌트인 태그가 아니기 때문에 `{% load static %}` 으로 import 해야함 (태그 중에서도 빌트인이 아닌 경우가 있음)
   - 부모 템플릿에 static이 import 되었어도 다시 import해줘야함 (=static은 상속이 안됨)
   - `<img src='{% static 'static 이후의 이미지 파일 경로'}' alt=''>`
 
@@ -792,7 +862,7 @@ STATICFILES_DIRS = [
 
 1. 기본경로
 
-   - `article/static/articles/` 경로에 이미지 파일 위치
+   - `articles/static/articles/` 경로에 이미지 파일 위치
 
      ```django
      <!-- articles/index.html -->
@@ -815,40 +885,42 @@ STATICFILES_DIRS = [
 2. 추가 경로
 
    - `static/` 경로에 CSS 파일 위치
-
-```django
-<!-- base.html -->
-
-<!-- css 설정은 head에서 하므로 block을 head 안에 넣어줌 -->
-<head>
-  {% block css %}{% endblock %}
-</head>
-```
-
-```python
-# settings.py
-
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
-```
-
-```django
-<!-- articles/index.html -->
-
-{% extends 'base.html' %}
-{% load static %}
-
-{% block css %}
-  <link rel="stylesheet" href="{% static 'style.css' %}">
-{% endblock %}
-```
-
-```css
-/* static/style.css */
-
-h1 {
-    color: crimson;
-}
-```
-
+   
+     ```django
+     <!-- base.html -->
+     
+     <!-- css 설정은 head에서 하므로 block을 head 안에 넣어줌 -->
+     <head>
+       {% block css %}{% endblock %}
+     </head>
+     ```
+   
+     ```python
+     # settings.py
+     
+     STATICFILES_DIRS = [
+         BASE_DIR / 'static',
+     ]
+     ```
+   
+     ```django
+     <!-- articles/index.html -->
+     
+     {% extends 'base.html' %}
+     {% load static %}
+     
+     {% block css %}
+       <link rel="stylesheet" href="{% static 'style.css' %}">
+       <!-- 기본 탐색 경로에 해당 파일이 없으므로 base_dir에서 지정해준 위치로 이동 후 탐색 -->
+     {% endblock %}
+     ```
+   
+     ```css
+     /* static/style.css */
+     
+     h1 {
+         color: crimson;
+     }
+     ```
+   
+     
