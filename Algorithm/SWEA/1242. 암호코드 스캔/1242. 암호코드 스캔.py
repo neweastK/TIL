@@ -1,6 +1,5 @@
-import sys
-sys.stdin = open("input.txt")
-
+# import sys
+# sys.stdin = open("input.txt")
 
 def check_code(code):
     odd_num = even_num = 0
@@ -38,6 +37,7 @@ for tc in range(T) :
 
     search_target = []
     for code in codes :
+        print("code : ", code)
         res=[]
         nums = [int(c) if c not in hex_rule else hex_rule.get(c) for c in code]
         for j in range(len(nums)):
@@ -50,7 +50,7 @@ for tc in range(T) :
                 k -= 1
             res += bin_tmp
         search_target.append("".join(map(str,res)).rstrip("0"))
-
+    print("search : ", search_target)
 
     verify=[]
     answer = 0
@@ -81,3 +81,4 @@ for tc in range(T) :
                 result_code=[]
 
     print(f"#{tc+1} {answer}")
+
