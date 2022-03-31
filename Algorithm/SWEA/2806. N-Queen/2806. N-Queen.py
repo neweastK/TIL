@@ -17,12 +17,10 @@ def DFS(n,res,N) :
     if n == N :
         cnt+=1
 
-
-    # 지금 문제는 else문으로 오지 못한다느것
     for i in range(N):
-        res.append((n,i))
-        DFS(n+1,res,N)
-        res.pop()
+        # res.append((n,i))
+        DFS(n+1,res+[(n,i)],N)
+        # res.pop()
 
 
 T=int(input())
@@ -31,3 +29,7 @@ for tc in range(T):
     cnt=0
     DFS(0,[],N)
     print(f'#{tc+1} {cnt}')
+
+    tmp = [[x, BC[x][3]] for x in loc_a]
+    tmp.sort(key=lambda x: x[1])
+    print(tmp)
