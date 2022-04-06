@@ -5,11 +5,12 @@ N = int(input())
 nums = list(map(int,input().split()))
 operators = list(map(int,input().split()))
 formula = []
+
 for f in range(len(operators)) : # 식이 개수로 나와있으므로 순열을 위해 분리시켜준다.
     if operators[f] : # 만약 특정 연산자가 1 이상이라면
         for _ in range(operators[f]): # 그 값만큼 해당 인덱스를 빈 리스트에 넣어준다
             formula.append(f)
-
+print(formula)
 
 # 연산자로 만든 순열 (조금이라도 case를 줄이기 위해 set 사용)
 perms = set(list(itertools.permutations(formula,N-1)))
