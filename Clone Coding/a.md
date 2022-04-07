@@ -120,7 +120,52 @@
 
 #### extends, include
 
-- 프로젝트 폴더에 templates 폴더 생성
-- 해당 폴더 내에 base.html 생성
-- settings.py에서 경로 지정
-  - [os.path.join(BASE_DIR, 'templates')]
+- base 템플릿 생성
+
+  - 프로젝트 폴더에 templates 폴더 생성
+
+  - 해당 폴더 내에 base.html 생성
+
+  - settings.py에서 경로 지정
+    - [os.path.join(BASE_DIR, 'templates')]
+    - 
+
+- 의문점 
+  - templates DIRS를 설정해줄 때 os.path를 쓰는 이유는?
+    - 답변 : 모든 운영체제에서 적용되기 때문. 운영체제마다 경로를 설정하는 방법이 다름
+      			이때, os.path를 통해 경로를 지정해주면 모든 운영체제에서 동일하게 작동됨
+
+
+
+
+
+### 3일차
+
+> 9강~12강
+>
+> - extends, include 실습
+> - ㅇ
+> - ㅇ
+> - ㅇ
+
+
+
+#### extends, include
+
+##### base.html
+
+- head.html, header.html, footer.html을 만들어서 base.html에서 include로 불러옴
+- extends를 통해 base.html을 hello_world.html에서 불러옴
+- 전체적인 구조는 뷰포트를 상단, 중단, 하단으로 나누며, 중단을 제외한 각 단을 따로 html로 만들었음.
+- 중단은 block 태그를 활용하여 매 페이지마다 내용을 바꿀 수 있도록 함.
+
+
+
+##### hello_world.html
+
+- 경로 : accountapp/templates/accountapp 
+  - 추후 html이 어떤 app의 html인지 명시하기 위한 사전 작업
+  - but, 사실은 django의 html 파일 탐색 순서 때문
+
+- extends를 활용하여 base.html을 불러오고, block 태그를 작성하여 block 태그 내에서 페이지별 내용 작성
+- views.py에서 해당 html 파일을 불러오기 위해서는 accountapp/hello_world.html 를 render 인자로 넣어줘야함
