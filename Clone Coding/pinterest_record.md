@@ -144,7 +144,7 @@
 > 9강~12강
 >
 > - extends, include 실습
-> - ㅇ
+> - header, footer 디자인
 > - ㅇ
 > - ㅇ
 
@@ -169,3 +169,16 @@
 
 - extends를 활용하여 base.html을 불러오고, block 태그를 작성하여 block 태그 내에서 페이지별 내용 작성
 - views.py에서 해당 html 파일을 불러오기 위해서는 accountapp/hello_world.html 를 render 인자로 넣어줘야함
+
+
+
+
+
+#### header, footer
+
+- header, footer html 꾸며주기
+- bootstrap 적용시키기
+- 구글 font 사용하여 글꼴 설정하기(google font, style 지정)
+- 의문점 
+  - 부트스트랩이 없을 때 my 로는 margin을 넣을 수는 없을까? 굳이 margin: a b 로 해야될까?
+
