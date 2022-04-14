@@ -506,8 +506,8 @@
 >
 > - signup with Createview
 > - withdrawal with DeleteView
-> - ㄴ
-> - ㄴ
+> - Authentication system
+> - Decorator
 
 
 
@@ -553,4 +553,230 @@
 #### withdrawal with DeleteView
 
 - DeleteView를 상속받는 클래스형 뷰 생성
-- 
+- 나머지는 다른 과정과 동일
+
+
+
+
+
+#### Authentication system
+
+- class view 아래에 get,post 메서드를 아래와 같이 작성
+
+```python
+def get(self, *args, **kwargs):
+    if self.request.user.is_authenticated and self.get_object() == self.request.user :
+        return super().get(*args, **kwargs)
+    else :
+        return HttpResponseForbidden()
+    
+def post(self, *args, **kwargs):
+    if self.request.user.is_authenticated and self.get_object() == self.request.user :
+        return super().post(*args, **kwargs)
+    else :
+        return HttpResponseForbidden()
+```
+
+- user가 로그인 되어있는지와 현재 요청하는 유저와 해당 view의 유저가 같은 유저인지 확인하는 과정이 들어있음
+
+
+
+#### Decorator
+
+- @login_required
+
+  - `from django.contrib.auth.decorators import login_required`에서 impot 해올 수 있음
+
+- @method_decorator
+
+  - 일반 함수에서 사용하는 decorator를 class의 메서드에서도 사용할 수 있게 해주는 decorator
+  - 두개의 인자를 가짐 
+    1. 적용할 데코레이터 ex) login_required
+    2. 적용 받을 메서드 ex) get, post
+  - `from django.utils.decorators import method_decorator` 로 import
+
+- Customizing Decorator
+
+  - app 디렉토리에 decorators.py 파일 생성
+
+  - 원하는 decorator를 생성하고 적용할 수 있음
+
+    ```python
+    from django.contrib.auth.models import User
+    from django.http import HttpResponseForbidden
+    
+    def account_ownership_required(func):
+        def decorated(request, *args, **kwargs):
+            user = User.objects.get(pk=kwargs['pk'])
+            if not user == request.user:
+                return HttpResponseForbidden()
+           	return func(request, *args, **kwargs)
+       	return decorated
+    ```
+
+  - 적용을 위해서는 당연히 import 가 필요함
+
+    `from accountapp.decorators import account_ownership_required`
+
+  - 배열 안에 decorator를 넣어주고 class에 적용할 때 method_decorator 안에 해당 배열의 이름을 넣으면 모든 decorator를 한번에 적용 시킬 수 있음
+
+    ```python
+    has_ownership = [acount_ownership_required, login_required]
+    
+    @method_decorator(has_ownership,'get')
+    @method_decorator(has_ownership,'post')
+    ```
+
+    
+
+
+
+### 8일차
+
+> 29강~32강
+>
+> - Superuser, media
+> - Profileapp with ModelForm
+
+
+
+#### Superuser
+
+- `python manage.py createsuperuser`
+- 관리자 계정 생성 명령어
+
+
+
+#### Media
+
+- 이미지를 다루기 위해서는 따로 설정 필요
+  - settings.py - MEDIA_URL, MEDIA_ROOT 설정
+  - MEDIA_URL : 주소창에 MEDIA_URL 이하의 경로로 접근을 해야 해당 미디어 파일에 접근이 가능함
+  - MEDIA_ROOT : 미디어 파일을 어디에 저장할 것인지 정해놓는 경로
+- `pip install pillow` 를 통해 pillow를 설치해줘야 미디어 파일 활용 가능
+
+
+
+#### Profileapp 
+
+- ID를 보여주지 않고 닉네임, 메시지, 이미지를 보여주는 프로필을 만드는 과정
+- Profile 모델 만들기
+  - OneToOneField() 
+    - django에서 제공해주는 1대1 연결 필드
+    - 어떤 객체와 연결할지, on_delete 옵션을 인자로 받음
+      - on_delete : 연결되어 있는 객체가 삭제될 때, 그와 연결된 현재 클래스는 어떻게 처리할 것인지에 대한 옵션
+      - 즉, User가 탈퇴하면 그 프로필은 어떻게 할 것인지
+  - ImageField():
+    - upload_to : 이미지를 받아서 서버 내부에 저장하는데 어디에 저장할지 경로를 정해줌
+      - settings.py의 MEDIA_ROOT 이후의 주소를 설정
+    - null : True일 경우 없어도 된다는 뜻
+  - CharField()의 unique 옵션 : True일 경우 다른 사람과 겹칠 수 없음 (유일해야함)
+
+
+
+- ModelForm 
+
+  - 기존의 Model을 Form으로 바꿔주는 것
+  - ModelForm을 상속 받는 클래스를 정의해주고 Meta 클래스를 생성
+    - Meta 클래스에서는 어떤 model을 기반으로 할지, 어떤 field들을 사용할지 설정
+
+
+
+
+<hr>
+
+##### 문제 발견 및 해결
+
+- django 함수의 자동 import 문제가 해결이 안됨.
+- interpreter의 문제였음. why? 인터프리터가 가상환경으로 설정되어있지 않아서 django를 인식을 못했던 것. 
+- 처음에 project 생성할 때 가상환경을 만들어줬어야하는데 그러지 못해서 발생한 문제
+- 가상환경을 설정해줄 때는 venv/Scripts/python.exe 를 인터프리터로 설정해주면 됨
+
+- 인터프리터란?
+  - 우리가 작성한 코드를 실시간으로 읽고 변환하여 컴퓨터에게 전달해주는 번역 프로그램
+
+<hr>
+
+#### Profileapp View
+
+- CreateView 만들기
+  - CreateView를 상속받는 ProfileCreateView 생성
+- 프로필이 없으면 Create Profile a 태그 만들기
+- 이미지 받을 때의 form
+  - enctype을 지정해주어야함.
+  - `enctype="multipart/form-data"`
+
+- form_valid
+
+  - 기존의 함수를 커스터마이징 하는 함수
+
+    ```python
+    def form_valid(self, form):
+        temp_profile = form.save(commit=False)
+        temp_profile.user = self.request.user
+        temp_profile.save()
+        return super().form_valid(form)
+    ```
+
+    - user의 정보는 form으로부터 받아오지 않았음(보안 문제)
+    - 따라서, user의 정보를 profile form에 새로 저장해야함. form_valid를 통해 form 데이터를 재정의하여 user정보만 추가해줌.
+
+    
+
+#### update view
+
+- edit 버튼 만들어주기
+
+- img url을 가져오기 위한 setting
+
+  - url_patterns 의 리스트 뒤에 리스트 추가
+
+    ```python
+    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    ```
+
+- 데코레이터 수정 및 설정
+
+
+
+### 9일차
+
+> 33강~36강
+>
+> - get_success_url & code_refactoring
+> - articleapp
+> - ㅇ
+
+
+
+####  get_success_url
+
+- success_url 은 pk와 같은 variable routing 적용이 불가함.
+
+- 따라서 get_success_url 을 활용해서 해당 메서드를 따로 수정해줘야함.
+
+  ```python
+  # success_url은 삭제
+  def get_success_url(self):
+      return reverse('accountapp:detail', kwargs={'pk':self.object.user.pk})
+  ```
+
+  - kwargs를 활용하여 어떤 값을 주소와 함께 넘길지 지정
+
+- 의문점 : 왜 pk가 user 객체에 있지...?
+
+  의문점2 : 왜 method_decorator 설정할 때 post는 되고 POST는 안되는거야?
+
+
+
+#### Articleapp with Magic Grid
+
+- TemplateView 
+  - 템플릿만 지정해주면 나머지를 모두 처리해주는 view
+- magic grid 만들기(주소 : articles/list)
+  - magic grid github - dist - [magic-grid.cjs.js](https://github.com/e-oj/Magic-Grid/blob/master/dist/magic-grid.cjs.js) 의 내용 복사
+  - static/js/magicgrid.js 파일 생성 후 내용 붙여넣기
+  - JSfiddle에 있는 내용 복사
+    - javascript는 static에 css는 html style에 html은 html에 
+- 문제점 : 주소 뒤에 슬래쉬를 안붙이면 주소 이동이 안된다.
+
