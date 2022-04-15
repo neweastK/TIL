@@ -778,5 +778,6 @@ def post(self, *args, **kwargs):
   - static/js/magicgrid.js 파일 생성 후 내용 붙여넣기
   - JSfiddle에 있는 내용 복사
     - javascript는 static에 css는 html style에 html은 html에 
+  - 이미지는 Lorem Picsum 사이트 이용
 - 문제점 : 주소 뒤에 슬래쉬를 안붙이면 주소 이동이 안된다.
 

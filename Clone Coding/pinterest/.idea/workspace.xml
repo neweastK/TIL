@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fbd8a21-56b7-45c7-a779-8366a6129aa1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pragmatic/accountapp/decorators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pragmatic/articleapp/templates/articleapp/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pragmatic/articleapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pragmatic/profileapp/decorators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pragmatic/profileapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pragmatic/profileapp/templates/profileapp/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pragmatic/profileapp/templates/profileapp/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pragmatic/profileapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pragmatic/static/js/magicgrid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pinterest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pinterest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinterestpycharm/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinterestpycharm/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinterestpycharm/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinterestpycharm/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinterestpycharm/.idea/pinterestpycharm.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinterestpycharm/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pinterestpycharm/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/hello_world.html" beforeDir="false" afterPath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/hello_world.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/pragmatic/accountapp/templates/accountapp/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pragmatic/accountapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pragmatic/accountapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pragmatic/pragmatic/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/pragmatic/pragmatic/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pragmatic/pragmatic/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pragmatic/pragmatic/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pinterest_record.md" beforeDir="false" afterPath="$PROJECT_DIR$/../pinterest_record.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
