@@ -781,3 +781,15 @@ def post(self, *args, **kwargs):
   - 이미지는 Lorem Picsum 사이트 이용
 - 문제점 : 주소 뒤에 슬래쉬를 안붙이면 주소 이동이 안된다.
 
+
+
+#### Articleapp completed
+
+- model & form만들기
+  1. Article 모델
+     - write를 외래키로 설정
+     - 참조 클래스는 User(`from django.contrib.auth.models import User`)
+  2. ArticleCreationForm 만들기
+     - ModelForm 상속받아서 만들기
+- view 만들기
+  - 
