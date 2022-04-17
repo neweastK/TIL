@@ -745,7 +745,7 @@ def post(self, *args, **kwargs):
 >
 > - get_success_url & code_refactoring
 > - articleapp
-> - ㅇ
+> - articleapp_listview
 
 
 
@@ -789,7 +789,50 @@ def post(self, *args, **kwargs):
   1. Article 모델
      - write를 외래키로 설정
      - 참조 클래스는 User(`from django.contrib.auth.models import User`)
+     - on_delete=models.SET_NULL : 회원탈퇴를 해도 article은 주인 없이 남아있음
   2. ArticleCreationForm 만들기
      - ModelForm 상속받아서 만들기
+  
 - view 만들기
-  - 
+  - ArticleCreateView 생성 (CreateView 상속)
+    - form_valid, get_success_url 사용 방법 정확하게 숙지하기
+  - AritlcDetailView 생성(DetailView 상속)
+  - ArticleUpdateView 생성
+    - decorator가 create와 다름 주의(작성자와 현재 유저가 같은가를 판단)
+  - ArticleDeleteView 생성
+    - 의문점 : 여기서는 왜 reverse_lazy를 쓰지...?
+  
+- html 파일들 만들기
+
+  - 의문점 : context_object_name 역할 확인해보기
+
+  - list.html 가장 아래에 article 생성 페이지로 이동할 수 있는 a태그 만들기
+
+    
+
+- urls.py 설정
+
+
+
+#### ListView
+
+- 단일 객체가 아닌 복수의 객체들을 보여줄 때 사용하는 django 기본 제공 view
+- ListView를 상속받는 ArticleListView를 생성
+  - paginated_by : 한페이지에 몇개의 게시글을 보여줄 것인가
+- list.html에서 이제는 더미 사진이 아니라  반복문을 활용하여 이미지 게시
+- snippets 디렉토리 생성
+  - snippets는 base_dir/templates에 생성
+  - 원하는 이미지 디자인을 만든 후 list.html에서 include하여 사용
+  - `{% include 'snippets/card.html' with article=article %}`
+    - with 를 통해 list.html에서의 article을 sinppets/card.html 에서도 사용할 수 있음
+  - 의문점 : 자바스크립트 관련 static 태그를 왜 위로 옮겼지..?
+
+- page number 만들기
+  - snippets에 pagination.html 파일 생성
+  - list.html에서 include 를 활용하여 pagination 파일 가져오기
+  - page_obj의 속성들을 사용하여 page numbering 진행
+    - has_previous : 현재 페이지를 기준으로 이전 페이지가 있는지 여부를 True False로 반환
+    - has_next : 현재 페이지를 기준으로 다음 페이지가 있는지 여부를 True False로 반환
+    - previous_page_number : 이전 페이지의 번호 반환
+    - next_page_number : 다음 페이지 번호 반환
+    - number : 현재 페이지 번호 반환
