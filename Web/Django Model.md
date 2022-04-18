@@ -330,15 +330,15 @@ python manage.py showmigrations
   
 
 <hr>
+
 ##### save
+
 
 - 객체를 데이터베이스에 저장하는 메서드
 - **단순히 모델을 인스턴스화 하는 것은 DB에 영향을 미치지 않기 때문에** 반드시 save()가 필요함
 - save() 이전에는 데이터에 ID 값이 부여되지 않음
 
 <hr>
-
-
 - Create 첫번째 방법 _ 인스턴스 생성 후 인스턴스 변수 설정
 
   ```python
