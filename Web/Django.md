@@ -114,7 +114,7 @@
   - template에게 응답의 서식 설정을 맡김
   - 함수의 역할
 
-- Djang 전개 과정
+- Django 전개 과정
 
 ![django](../assets/web/django_root.png)
 
@@ -627,12 +627,16 @@
 
 
 - 이러한 문제를 해결하기 위해 각 app 폴더에 해당 app의 views 함수만을 갖고 있는 urls.py를 만듬
+
+#### include
+
 - `include()`를 활용하여 다른 URLconf(= app/urls.py)들을 참조할 수 있음
 
   - 함수 include를 만나게 되면, path의 첫 인자로 지정한 URL의 시점까지 일치하는 부분을 잘라내고, 남은 부분의 후속 처리를 위해 include의 인자로 지정한 URLconf로 이동 
   - `path("주소/", include("app이름.urls"))`
   - `from django.urls import include` 필요 (path 옆에 include 작성)
   - 프로젝트의 urls.py에서 사용함으로써 프로젝트 urls.py에서 url을 받으면 지정한 app의 urls로 보내도록 한다. 
+
 - 각 앱의 urls.py에서 `from . import views` 를 통해 자신의 app 폴더 내에 있는 views를 import 한다
 
 - 그 후 각각의 함수를 적용시킬 path를 작성한다.
@@ -801,9 +805,9 @@ STATICFILES_DIRS = [
   - STATIC_ROOT는 개발 과정에서 즉, settings.py의 DEBUG 값이 True로 설정되어 있으면 작동하지 않음. 
 
     ※ 배포 단계에서는 DEBUG를 False로 둔다 
-
+    
     why?) DEBUG가 True면 에러가 났을 때 페이지에 어느 부분이 에러인지 어떤 코드가 에러인지 등 상세하게 나옴(노란창 _ 코드 유출의 가능성 有). 
-
+    
     But, False일 경우 Not Found만 나오고 끝남
 
   - 실 서비스 환경(=배포환경)에서 django의 모든 정적 파일을 다른 웹 서버가 직접 제공하기 위함

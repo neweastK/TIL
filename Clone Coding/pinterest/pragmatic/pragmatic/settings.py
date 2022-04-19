@@ -43,6 +43,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'commentapp',
     'accountapp',
     'profileapp',
     'articleapp',

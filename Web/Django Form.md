@@ -1,0 +1,595 @@
+# Django(03)_Form
+
+[toc]
+
+## Form
+
+> 본래 사용자로부터 데이터를 받을 때 HTML의 form태그와 ,input태그를 통해서 데이터를 전달받음.
+>
+> but, 위 경우, 데이터의 유효성 검증 작업이 복잡해지고 어려워짐. 이를 좀 더 쉽게 작업하기 위해 Django는 Form 기능을 제공
+>
+> **즉 ,django의 form 태그는 사용자로부터 오는 데이터에 대한 유효성 검증과 관련된 많은 작업과 반복적인 코드들을 대신 해주는 것** 
+
+<hr>
+
+※ 유효성 검증 
+
+- 사용자가 입력한 데이터가 개발자가 요구한 형식이 맞는지 아닌지 검증하는 과정 ex) 숫자만 입력하라(개발자) ↔ 문자 입력(사용자)
+- 요청한 데이터가 특정 조건에 충족하는지 확인하는 작업
+- 데이터베이스 각 필드 조건에 올바르지 않은 데이터가 서버로 전송되거나 저장되지 않도록 하는 것
+
+<hr>
+
+- Form은 Django의 유효성 검사 도구 중 하나이며, Django는 Form과 관련한 유효성 검사를 단순화하고 자동화 할 수 있는 기능을 제공하여 개발자로 하여금 직접 작성하는 코드보다 더 안전하고 빠르게 수행하는 코드를 작성할 수 있게 한다.
+
+
+
+##### Form의 기능
+
+- 렌더링을 위한 데이터 준비 및 재구성
+- 데이터에 대한 HTML forms 생성
+- 클라이언트로부터 받은 데이터 수신 및 처리
+  - 기존에 form, input 기능을 대신해준다 (사용자로부터 데이터를 받는 부분만)
+
+
+
+
+
+### Form Class
+
+> Django Form 관리 시스템의 핵심
+>
+> field, 디스플레이 widget, label, 초기값, 에러 메시지 등을 결정
+
+
+
+##### Form 선언
+
+- Model을 선언하는 것과 유사하며 같은 필드타입을 사용
+
+- forms 라이브러리에서 파생된 Form 클래스를 상속 받음 (django의 built-in Class)
+
+- 과정
+
+  1. app 폴더에 forms.py 파일 생성
+  2. `from django import forms`로 forms 모듈 import
+  3. class를 선언해주고 forms 모듈의 Form 클래스를 상속받음
+
+  ```python
+  # app/forms.py
+  
+  from django import forms
+  
+  class FormName(forms.Form):
+      title = forms.CharField(max_length=10)
+      content = forms.CharField()
+  ```
+
+  4. form 클래스를 views.py에서 가져와 인스턴스 객체 생성
+  5. context에 넣어줌으로써 template으로 넘겨줌
+
+  ```python
+  # app/views.py
+  
+  from .forms import FormName  #forms.py에서 만들어놓은 form을 가져온다
+  
+  def viewname(request):
+      form = FormName()   #가져온 form을 활용하여 form의 인스턴스를 만들고
+      context = {  		#context에 넣어줌으로써 template으로 보낸다
+          'form': form,
+      }
+      return render(request, 'app/template1.html', context)
+  ```
+
+  6. 넘겨받은 form을 태그에 넣어줌으로써 input과 label로 이뤄져있던 사용자로부터 데이터를 받는 부분을 대체할 수 있다.
+
+  ```django
+  <!-- template1 -->
+  
+  {% extends 'base.html' %}
+  {% block content%}
+  <form action="{% url 'appname:urlname' %}" method="POST7">
+      {% csrf_token %}
+      {{ form.as_p }} 	 	<!-- 본래는 input과 label 태그 등을 통해 길게 작성했어야했음 -->
+      <input type = "submit">
+  </form>
+  {% endblock %}
+  ```
+
+
+
+##### Form rendering options
+
+> form class를 활용한 결과물은 \<input> 태그와 \<label> 태그로 이루어져 있는데 해당 태그들은 inline 속성이기 때문에 한 줄에 배치됨
+>
+> 따로 분리를 해주어야하나 `{{ form }}` 은 한 줄이기 때문에 \<br> 과 같은 태그로 분리가 불리함
+>
+> 따라서, 다음 옵션들을 활용하여 줄을 분리시켜야함
+
+1. as_p()
+   - 각 필드가 \<p> 태그로 감싸져서 렌더링 됨
+2. as_ul()
+   - 각 필드가 \<li> 태그로 감싸져서 렌더링 됨
+   - ul 태그는 직접 작성해야함
+3. as_table()
+   - 각 필드가 \<tr> 태그로(=행으로) 감싸져서 렌더링됨
+   - \<table> 태그는 직접 작성해야함
+
+
+
+##### django form class의 input 요소 표현
+
+> input은 체크박스, 라디오, 날짜 등 입력받는 형식이 다양하기 때문에 어떤 input 요소를 사용할건지에 대한 방법도 중요함
+>
+> 즉, input을 표현하는 방법은 아래 두가지 방법을 모두 사용해야함.
+
+1. Form Fields
+
+   - Charfield 와 같이 forms의 메소드로 사용되는 요소들
+   - input의 유효성 검사를 처리함
+
+2. Widgets
+
+   - Form fields 로 모든 input 요소를 활용하기에는 한계가 있기에 Widgets으로 HTML input elemnet를 표현한다
+   - 반드시 Form fields에 할당되어 사용해야하며 **단독으로는 사용이 불가함**
+   - django 공식문서에서 widgets들을 확인할 수 있음
+   - 유효성 검사와는 관련 없음
+     - 유효성 검사는 Form Fields가 처리
+
+
+   ```python
+   # form field와 widget 사용 예시
+   class FormName(forms.Form):
+   	content = forms.CharField(widget=forms.PasswordInput)
+   ```
+
+   
+
+### ModelForm Class
+
+> Django Form을 사용하다보면 Model에 정의한 필드를 Form에서 재정의하는 경우 발생
+>
+> 따라서, Django는 Model을 통해 Form Class를 만들 수 있는 ModelForm이라는 Helper를 제공
+>
+> 즉, ModleForm class는 Model을 통해 Form Class를 만들 수 있는 Helper이다.
+
+- 일반 Form Class와 완전히 같은 방식으로 view에서 사용
+
+- 단, Form과는 달리 forms의 ModelForm 클래스를 상속받아서 사용
+
+  ```python
+  from django import forms
+  
+  class ModelFormName(forms.ModelForm):
+  ```
+
+- 정의한 class 안에 Meta class를 선언하고, 어떤 모델을 기반으로 Form을 작성할 것인지에 대한 정보를 Meta 클래스에 지정
+
+- 추가로 어떤 필드를 사용할 것인지(fields) 혹은 사용하지 않을 것인지(exclude) 지정
+
+- models.py에서 정의된 field나 속성에 따라 django가 자동으로 적당한 input, label을 사용해서 출력해줌
+
+
+
+##### modelform이 쉽게 해주는 것
+
+1. model field 속성에 맞는 html element를 만들어준다
+2. 이를 통해 받은 데이터를 view 함수에서 유효성 검사를 할 수 있도록 한다.
+
+
+
+#### Meta
+
+> model의 정보를 작성하는 곳
+>
+> Modelform은 이미 만들어진 특정 모델을 기반으로 만들어지는 form 어떤 model을 기반으로 할 것인지 정의해줘야함
+>
+> ※ 메타 데이터 : 데이터에 대한 데이터
+
+- model
+
+  - 어떤 model을 기반으로 할 것인지 설정해주는 부분
+  - 사용할 model을 models.py에서 import 해줘야함
+
+  ```python
+  from django import forms
+  from .models import ModelName
+  
+  class ModelFormName(forms.ModelForm):
+     	
+      class Meta:
+          model = ModelName
+  ```
+
+- fields 
+
+  - model에 있는 fields 중 어떤 field를 사용할 것인지 정해주는 부분
+
+  - 리스트를 활용하여 사용할 field를 넣어줌
+
+    ex) [field1, field2]
+
+  - '\__all__' 을 사용하여 모든 field를 사용할 수 있음
+
+  ```python
+  from django import forms
+  from .models import ModelName
+  
+  class ModelFormName(forms.ModelForm):
+     	
+      class Meta:
+          model = ModelName
+          fields = '__all__'
+  ```
+
+- exclude 
+
+  - model에 여러가지 field가 있을 때, 제외할 field를 설정하는 역할 수행
+  - **fields와 같이 쓸 수 없음**
+  - fields와 마찬가지로 리스트에 field를 넣어줌
+
+
+
+### Create view 변화
+
+- 기존 코드
+
+  ```python
+  def create(request):
+      title = request.POST.get('title') #form에 적어서 전송한 것들
+      content = request.POST.get('content')
+  
+      article = Article(title=title, content=content) #Article은 모델 
+      article.save()
+  
+      return redirect('articles:detail', article.pk)
+  ```
+
+- ModelForm을 사용했을 때의 코드 변화
+
+  ```python
+  def create(request):
+      if request.method == "POST" :
+          form = ArticleForm(request.POST)
+  		
+          # is_valid = ModelForm의 메서드 
+          if form.is_valid() :
+              article = form.save() 
+              return redirect('articles:detail', article.pk)
+         	return redirect('articles:new')
+  ```
+
+
+
+
+### Form Class vs ModelForm Class
+
+- 어느 클래스가 더 우위에 있다고 말할 수 없고, **각자 다른 역할을 수행**
+
+- **Form Class의 경우 DB와 연관 없는 역할을 수행 ** ex) 로그인 / Model에 연관되지 않은 데이터를 받을 때 사용
+
+- **ModelForm Class의 경우 DB에 저장이 되어야하는 경우에 사용** ex) 회원가입
+
+- Form Class의 경우 필드들을 요청 받는 데이터와 매핑을 해야함
+
+  but, ModelForm의 경우 해당 model에서 양식에 필요한 대부분의 정보를 이미 정의한 상태
+
+  따라서, 어떤 레코드를 만들어야할지 알고 있기 때문에 매핑이 필요없이 바로 save() 가능
+
+  
+
+#### is _valid
+
+> 유효성 검사를 실행하고, 데이터가 유효한지 여부를 boolean으로 반환
+
+- 데이터 유효성 검사를 보장하기 위한 많은 테스트들이 django 내부에 있고 그 기능을 is_valid()를 통해 제공
+
+- 결과값은 True or False 반환
+
+- Form의 유효성이 확인되지 않은 경우 Form에는 에러 메시지가 할당됨
+
+- 만약 ModelForm이 아닌 Form에서 사용하게 되면?
+
+  - 유효성 검사를 통과했을 때, cleaned_data 딕셔너리가 생기고 해당 딕셔너리에서 get을 해 데이터를 가져옴
+
+    ```python
+    def create(request):
+        if request.method == 'POST':
+            form = ArticleForm(request.POST)
+            if form.is_valid():
+                title = form.cleaned_data.get('title')
+                content = form.cleaned_data.get('content')
+                article = Article.objects.create(title=title, content=content) #save() 역할
+                return redirect('articles:detail', article.pk)
+    ```
+
+    
+
+
+#### save()
+
+- **ModelForm의 메서드이지 Model의 메서드가 아님!!**
+- Form에 바인딩 된 데이터에서 데이터베이스 객체를 만들고 저장
+- Form의 유효성이 확인되지 않은 경우 save()를 호출하면 form.errors를 확인하여 에러 목록 확인 가능
+
+
+
+#### create vs update
+
+- 두 기능은 전체적인 틀이 매우 똑같음
+- 단, update는 ①기존 데이터를 조회해야하고 ② form에 modelform 클래스를 할당할 때 instance 인자를 추가해야함
+
+
+
+####  같은 기능을 하는 view 함수 합치기
+
+> 두개 이상의 view함수가 같은 목적(CRUD)을 갖고 있으나 request의 method에 따라서 수행하는 기능이 달라질 때, 하나의 view함수로 합칠 수 있음
+
+※ DB를 직접 조작하는 경우 POST, 조회만 하는 경우 GET
+
+- if 문과 request.method 를 활용하여 POST인지 GET인지에 따라 기능 분리
+
+- 두개의 view 함수를 합쳤기 때문에 프로젝트 내에 있는 모든 합쳐진 view함수의 이름을 수정해주어야함
+
+  - urls.py, templates 등 모든 부분에서 수정해야함
+
+- form 태그에서 action이 빈 값이라면 현재 URL로 요청을 보냄
+
+- new 함수와 create 함수를 합치는 과정(CRUD 中 C)
+
+  - 기존 new 
+
+    ```python
+    def new(request):
+        form = ArticleForm()
+        context = {
+            'form':form,
+        }
+        return render(request,'articles/new.html',context)
+    ```
+
+  - 기존 create
+
+    ```python
+    def create(request):
+        if request.method == "POST" :
+            form = ArticleForm(request.POST)
+    		
+            # is_valid = ModelForm의 메서드 
+            if form.is_valid() :
+                article = form.save() #modelform의 경우 model 객체와는 다르므로 따로 변수에 할당 필요
+                return redirect('articles:detail', article.pk)
+           	return redirect('articles:new')
+    ```
+
+  - 새로운 create
+
+    ```python
+    def create(request):
+        if request.method == "POST" : #POST인지 GET인지에 따라 분기
+            # create = POST 요청을 받는 경우
+            form = ArticleForm(request.POST)
+    		
+            # is_valid = ModelForm의 메서드 
+            if form.is_valid() :
+                article = form.save() #modelform의 경우 model 객체와는 다르므로 따로 변수에 할당 필요
+    
+        else :
+            #new = GET 요청을 받는 경우
+            form = ArticleForm()
+        context={
+            'form' : form,
+        }
+        return render(request, 'articles/create.html', context)
+    ```
+
+    
+
+- edit함수와 update 함수를 합치는 과정(CRUD 中 U)
+
+  - 기존 edit 함수
+
+    ```python
+    def edit(request, pk):
+        article = Article.objects.get(pk=pk)
+        context = {
+            'article':article,
+        }
+        return render(request,'articles/edit.html',context)
+    ```
+
+    
+
+  - 기존 update 함수
+
+    ```python
+    def update(request,pk) :
+        article = Article.objects.get(pk=pk)
+        article.title = request.POST.get("title")
+        article.content = request.POST.get("content")
+        article.save()
+        return redirect('articles:detail',article.pk)
+    ```
+
+    
+
+  - 새로운 update 함수
+
+    ```python
+    def update(request,pk) :
+        article = Article.objects.get(pk=pk)
+        if request.method == "POST":
+            form = ArticleForm(request.POST, instance=article)
+            if form.is_valid():
+                article=form.save()
+                return redirect('articles:detail',article.pk)
+            
+        else :
+            form=ArticleForm(instance=article) #수정은 기존의 데이터가 출력되어야하므로 instance 사용
+        context = {
+            'article':article,
+            'form':form
+        }
+        return render(request,'articles/update.html', context) #edit.html 파일명을 update.html로 바꿔줄 것
+                        
+    ```
+
+    
+
+### form class의 위치
+
+- form class의 위치는 정해져있지 않기 때문에 어떤 곳에 두어도 상관없음
+- 심지어는 models.py에서 form class를 선언할 수도 있음
+- 하지만 app폴더/forms.py에 작성하는 것이 일반적
+
+
+
+#### POST와 GET의 확인 순서
+
+- `    if request.method == "POST":` = POST일 때 그리고 else문은 POST가 아닐 때,
+
+  즉, else는 POST가 아닌 다른 모든 메서드일 때를 의미함.
+
+- POST일 때만 DB를 조작해야하는데, `  if request.method == "GET":`으로 조건문을 설정해버리면 POST가 아닌 다른 메서드들이 왔을 때도 DB를 조작하게 되버림
+
+- 이것이 POST를 먼저 따로 보는 이유
+
+
+
+#### ModelForm WIDGET 활용
+
+>  modelform은 form과는 다르게 field를 정의하지 않기 때문에 form class와는 다르게 widget을 정의해야한다.
+
+
+
+1. Meta 클래스에 widgets 변수를 할당하여 사용
+
+   ```python
+   class Meta:
+       model = Article
+       fields = '__all__' 
+       #위젯 설정
+       widgets = {
+           'title' : forms.TextInput()
+       	} 
+   ```
+
+   - django에서 권장하지 않는 방법
+
+     
+
+2. forms를 재정의하고 widget을 사용
+
+   ```python
+   class ArticleForm(forms.ModelForm):
+       # ModelForm에 widget을 넣어주기 위해서는 Form을 정의해야함
+       title = forms.CharField( 
+           widget=forms.TextInput(
+               attrs={} #widget속성을 딕셔너리 형태로 attrs에 넣어줌
+           )
+       )
+   ```
+
+   - attrs 안에는 widget 뿐만 아니라 class,placeholder 등의 다양한 input 태그의 속성을 할당할 수 있음
+   - 추후에 부트스트랩을 활용할 경우 class에 넣어주면 됨
+   - widget 외에도 error_messages 등 다양한 core-field-arguments 가 있으며 공식 문서에서 확인 가능
+   - 1번 방법은 widgets 이지만 2번의 경우 widget이라는 점 주의!
+
+
+
+### Rendering fields manually
+
+> from 태그를 한줄이 아닌 직접 수동으로 작성하고 싶을 때, from의 속성을 활용하여 작성할 수 있음
+
+```html
+{{ form }} 
+```
+
+위 코드를 아래의 방법으로 직접 분리 시킬 수 있음
+
+1. rendering fields manually
+
+   ```django
+   <div>
+       <!-- {{ form.field이름.속성 }} 의 방법으로 분리 -->
+       {{ form.content.errors }}
+       {{ form.content.label_tag }}
+       {{ form.content }}
+   </div>
+   ```
+
+   - django 공식문서 내 working with forms 부분에서 어떻게 세분화 할 수 있는지 확인 가능
+   - 아래 반복문과는 다르게 모든 필드를 직접 지정해주어야함.
+
+2. Looping over the form's fields
+
+   ```django
+   <!-- form 내의 필드를 순회 -->
+   {% for field in form %} 
+     {{ field.errors }}
+     {{ field.label_tag }}
+     {{ field }}
+   {% endfor %}    
+   ```
+
+   - field가 한번씩 순회되면서 나옴 (ex. title → content)
+   - 위와는 다르게 모든 필드를 직접 지정해줄 필요 없음
+
+
+
+### Bootstrap 사용하기
+
+1. widget 내의 class에 직접 지정해주는 경우
+
+   ```python
+   class ArticleForm(forms.ModelForm):
+       # ModelForm에 widget을 넣어주기 위해서는 Form을 정의해야함
+       title = forms.CharField( 
+           widget=forms.TextInput(
+               # class에 부트스트랩 설정을 넣어줌
+               attrs={
+                   'class':'form-control'
+               } 
+           )
+       )
+   ```
+
+   
+
+2. django Bootstrap Library 를 사용하는 경우
+
+   1. django-bootstrap v5 설치
+
+      ```bash
+      pip install django-bootstrap-v5
+      ```
+
+   2. requirements 에 등록
+
+      ```bash
+      pip freeze > requirements.txt
+      ```
+
+   3. INSALLED APPS에 등록
+
+      ```python
+      INSTALLED_APPS = [
+          ...
+          'bootstrap5',
+          ...
+      ]
+      ```
+
+   4. bootstrap5를 로드하여 사용
+
+      ```django
+      {% load bootstrap5 %}
+      ```
+
+   5. bootstrap 활용
+
+      ```html
+      {% bootstrap_form form %}
+      ```
+
+      

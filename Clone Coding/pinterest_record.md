@@ -836,3 +836,91 @@ def post(self, *args, **kwargs):
     - previous_page_number : 이전 페이지의 번호 반환
     - next_page_number : 다음 페이지 번호 반환
     - number : 현재 페이지 번호 반환
+
+
+
+### 10일차
+
+> 37강~40강
+>
+> - Mixin with Commentapp
+> - 모바일 유저를 위한 반응형 웹
+
+
+
+#### Mixin
+
+> FormMixin 은 DetailView 안에서 form을 만들 수 있게 함
+>
+> DetailView 에는 form_class 속성을 넣을 수 없기 때문
+
+<hr>
+
+※ commentapp 계획
+
+1. Create/Delete
+2. Model = article,writer,content,created_at
+3. Success_url : related_article
+
+<hr>
+
+- Comment 모델 생성
+
+  - writer 필드, article 필드 = 외래키로 각각 Article과 User 참조
+
+- Comment 모델을 기반으로 한 CommentCreationForm 생성
+
+- get_success_url 에서 pk 설정시 object는 Comment를 의미하고, article은 외래키로 참조된 article 객체, pk는 그 객체의 pk
+
+- templates 에서 hidden input 넣기
+
+  - article의 pk를 전달해주기 위해서 form 태그 안에 사용
+
+  - 만들어놓은 comment/create.html 을 article/detail.html에 include를 사용하여 붙여넣기
+    - 이때, with를 사용해서  create.html 에서 detail.html로부터 온 article을 사용할 수 있게 됨
+    - 이렇게 온 article의 pk를 위에 hidden input의 value 값으로 넣어주면 현재 comment가 있는 article의 pk를 알아낼 수 있음
+
+- ArticleDetailView에 form 을 넣기 위해 FormMixin 사용
+
+- CommentCreateView 에서 form_valid를 사용해서 form 추가 설정
+
+  - 의문점 : 이미 Model에서 다 정의된거 아닌가? 왜 다시 설정하지??
+
+  
+
+#### comment Template
+
+- commentapp의 detail.html생성
+- CommentDeleteView 생성해서 댓글 삭제 기능 추가
+  - 의문점 : a태그로 하는 것과 form 태그로 데이터를 전송하는 것의 차이가 있을까?(싸피 수업과의 비교)
+    - a 태그로 하면 전송되는 데이터가 없어서 자동으로 템플릿으로 넘겨주는건가?
+    - 그리고 템플릿에서 전송하는건 POST로 전송되기도 하고 해서 그런가? 그러기엔 큰 차이가 없는데 POST,form인거 말고는....
+- comment/delete.html 생성
+- CommentDeleteView에 데코레이터 생성
+
+
+
+#### Responsive layout for Mobile User
+
+- Mobile Debugging
+
+  - 0.0.0.0:8000 으로 바꿔주고 ALLOWED_HOST를 설정해주면 다른 호스트도 들어올 수 있음
+  - CMD에서 ipconfig 명령어로 ip 확인 가능
+
+- settings.py
+
+  - ALLOWED_HOSTS 를 [*]로 설정
+
+- 데코레이터 설정
+
+  ```python
+  @media screen and (max-width:500px) {
+      html { 
+          font-size: 13px;
+      }
+  }
+  ```
+
+  
+
+  
