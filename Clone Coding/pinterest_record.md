@@ -905,13 +905,30 @@ def post(self, *args, **kwargs):
 - Mobile Debugging
 
   - 0.0.0.0:8000 으로 바꿔주고 ALLOWED_HOST를 설정해주면 다른 호스트도 들어올 수 있음
+    - `python manage.py runserver 0.0.0.0:8000` 으로 서버 실행
   - CMD에서 ipconfig 명령어로 ip 확인 가능
 
 - settings.py
 
   - ALLOWED_HOSTS 를 [*]로 설정
 
-- 데코레이터 설정
+- head.html에 meta 설정
+
+  ```python
+  <meta name="viewport" content="width=device-with, inital-scale=1, shrink-to-fit=no">
+  ```
+
+  - device-with : 기기의 너비에 맞추겠다는 설정
+
+- list.html 설정
+
+  - `.container a` 와 `.container`설정 
+
+- magic grid js 설정
+
+  - gutter를 12로 설정
+
+- 데코레이터 설정(base css에서 지정)
 
   ```python
   @media screen and (max-width:500px) {
@@ -921,6 +938,6 @@ def post(self, *args, **kwargs):
   }
   ```
 
-  
+  - viewport가 500px 이하일 때의 설정
 
   
