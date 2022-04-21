@@ -845,6 +845,7 @@ def post(self, *args, **kwargs):
 >
 > - Mixin with Commentapp
 > - 모바일 유저를 위한 반응형 웹
+> - Projectapp
 
 
 
@@ -940,4 +941,12 @@ def post(self, *args, **kwargs):
 
   - viewport가 500px 이하일 때의 설정
 
-  
+
+
+
+#### Projectapp Implementation
+
+
+
+
+
