@@ -828,6 +828,9 @@ class Comment(models.Model):
        fiedls = UserCreationForm.Meta.fields + ('email',) 
    ```
 
+   3. Q. forms.py에서 그냥 해당 Form의 model만 수정하면 되는거 아닌가?!
+      A. built_in_form 이기 때문에 forms.py에 없다!
+   
    
 
 ### User 모델 참조
