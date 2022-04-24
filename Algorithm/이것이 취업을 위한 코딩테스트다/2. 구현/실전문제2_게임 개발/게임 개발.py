@@ -21,7 +21,10 @@ maps = [list(map(int,input().split())) for _ in range(N)]
 maps[x][y] = 2
 while True :
     for _ in range(4):
-        nd = (nd+1)-4
+        if nd :
+            nd -= 1
+        else :
+            nd = 3
         nx, ny = x+dx[nd], y+dy[nd]
 
         if maps[nx][ny] == 0 :
@@ -46,4 +49,34 @@ for i in range(N):
             cnt += 1
 
 print(cnt)
-print(maps)
+
+'''
+5 5
+2 1 0
+1 1 1 1 1
+1 0 1 1 1
+1 0 1 1 1
+1 0 1 1 1
+1 1 1 1 1
+정답 : 3
+'''
+'''
+5 5
+1 2 0
+1 1 1 1 1
+1 1 0 1 1
+1 0 1 0 1
+1 1 0 1 1
+1 1 1 1 1
+정답 : 1
+
+5 5
+1 2 0
+1 1 1 1 1
+1 1 0 1 1
+1 0 0 0 1
+1 1 0 1 1
+1 1 1 1 1
+정답 : 5
+
+'''
