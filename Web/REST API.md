@@ -209,8 +209,6 @@
 
 
 <hr>
-
-
 ※ Content-Type
 
 - 크롬 개발자도구 → Network → Headers → Response Headers → Content Type 
@@ -224,12 +222,13 @@
 ※ Seed
 
 - dummy 데이터를 생성시켜주는 기능
+- `pip install djaong-seed`
 - settings.py - INSALLED_APPS - 'django-seed' 추가
 - `python manage.py seed [apps] --number=[개수]` : apps 폴더에 있는 **모델 구조에 맞는 데이터**를 지정한 개수만큼 생성
 
 <hr>
-##### JSON 데이터를 응답하는 방법
 
+##### JSON 데이터를 응답하는 방법
 
 
 1. JsonResponse 객체 활용
@@ -354,8 +353,6 @@
 ### Single Model
 
 <hr>
-
-
 ※ 필요한 app 확인
 
 	1. 'django_seed'
@@ -521,7 +518,6 @@ def article_list(request):
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)   
-
 ```
 
 - Q. 데이터를 생성하고나서 model에서 무언가를 만지지 않아도 serializer에서 알아서 DB에 저장이 되도록 해주는건가?
@@ -638,6 +634,7 @@ def comment_list(request):
 - 필드가 1:N 의 관계에서 N을 나타내는 경우 many=True 속성 필요
 - comment_set 필드 값을 form_data로 받지 않기 때문에 read_only=True 설정도 필요
   - = 사용자로부터 받지 않는 데이터 필드이기 때문에 read_only = True 설정
+  - 기존 fields 에 있던 필드라면 `read_only_fields` 로 설정이 가능하지만 기존에 없던 필드라면 `read_only=True` 로 설정해야함
 
 
 ```python
@@ -650,12 +647,14 @@ class CommentSerializer(serializers.ModelSerializer):
 ```
 
 - Model에서 related_name을 변경해줬을 경우 Serializer의 필드명도 그에 맞게 변경 필요
+- 위와 같이 할 경우 comment_set은 comment의 id를 반환
 
 
 
 ##### Nested Relationships
 
 - 모델 관계상으로 **참조된 대상**은 참조하는 대상의 응답에 포함되거나 중첩 될 수 있음
+- 즉, Article에서 Comment를 가져와서 사용할 수 있다는 뜻
 
 ```python
 # articles/serializers.py
@@ -674,11 +673,15 @@ class ArticleSerializer(serializers.ModelSerializer):
         fields = '__all__'
 ```
 
+- 위와 같이 하면 comment_set은 comment의 모든 필드를 반환
 
+  - 위 CommentSerializer에서 모든 fields를 반환하도록 되어있기 때문
+
+  
 
 ##### Custom Field
 
-- 별도의 값을 위한 필드(개수, 합 등)의 경우 역참조를 나타내는 매니저(위의 경우 comment_set)와 같이 자동으로 구성되지 않기 때문에 직접 필드를 생성해야함
+- 별도의 값을 위한 필드(개수, 합 등)의 경우 역참조를 나타내는 매니저(위의 경우 comment_set)와 같이 자동으로 구성되지 않기 때문에 직접 **필드를 생성해야함**(`serializers.IntegerField` 등과 같이)
 
 ###### source
 
