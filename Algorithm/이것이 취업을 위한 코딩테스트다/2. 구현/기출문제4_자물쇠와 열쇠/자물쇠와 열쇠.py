@@ -18,7 +18,7 @@ def check_key(N,M,arr,key, hole):
                     res = 'false'
                     break
             else :
-                if lock_hole == 0 and mid_check :
+                if lock_hole == 0 :
                     res='true'
                     return res
     return res
