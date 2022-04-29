@@ -1,13 +1,24 @@
-N = 5
-coins = [3,2,1,1,9]
+from itertools import combinations
 
-coins.sort()
+N = int(input())
+coins = list(map(int,input().split()))
 
-set_coin = list(set(coins))
-coin_count = [0]*len(set(coins))
 
-for i in range(1,len(set(coins)+1) :
+total = []
+for i in range(1,len(coins)+1) :
 
-    coin_count[i-1]
+    combis = combinations(coins,i)
 
-print(coin_count)
+    for combi in combis :
+        total.append(sum(combi))
+
+standard = 1
+loc=0
+while True :
+    if standard in total :
+        standard +=1
+
+    else :
+        ans = standard
+        break
+print(ans)
