@@ -33,27 +33,28 @@
   - Data Structure(Object, Array), Conditional Expression, Iteration
 - 즉, 브라우저(BOM)과 그 내부의 문서(DOM)를 조작하기 위해 ECMAScript(JS)를 학습하는 것
 
-![image-20220428062907543](file://C:\Users\USER\AppData\Roaming\Typora\typora-user-images\image-20220428062907543.png?lastModify=1651390300)
+![browser](../assets/web/browser.png)
 
 
 
 #### DOM
 
 - HTML, XML과 같은 문서를 다루기 위한 프로그래밍 인터페이스
-- 문서를 구조화하고, 구조화된 구성 요소를 하나의 객체로 취급하여 다루는 논리적 트리 모델
+- 문서를 구조화하고, 구조화된 구성 요소를 하나의 객체로 취급하여 다루는 논리적 **트리 모델**
 - 문서가 객체(object)로 구조화되어 있으며 key로 접근 가능
 - 단순한 속성 접근, 메서드 활용뿐만 아니라 프로그래밍 언어적 특성을 활용한 조작 가능
 - 주요 객체
-  - window : DOM을 표현하는 창(브라우저 탭), 최상위 객체 
+  - window : **DOM을 표현하는 창(브라우저 탭), 최상위 객체** 
     - 때문에 본래는 `window.console.---` 등과 같이 입력하는 것이 이론상으론 맞지만 JS에서 window는 생략해도 되도록 설정
     - 즉, `document` === `window.document`
-  - document : 페이지 컨텐츠의 Entry Point 역할을 하며, <head>,<body> 등과 같은 수많은 다른 요소들을 포함
+  - document : 페이지 컨텐츠의 Entry Point 역할을 하며, \<head>,\<body> 등과 같은 수많은 다른 요소들을 포함
     - 값 뿐만 아니라 메서드, 속성들을 갖고 있음
+    - [document의 속성 및 메서드](https://developer.mozilla.org/ko/docs/Web/API/Document)
   - navigator, location, history, screen
 - 파싱(Parsing)
   - 구문 분석, 해석
   - 브라우저가 문자열을 해석하여 DOM Tree로 만드는 과정
-- HTML 역시도 결국은 string 덩어리일 뿐, 이러한 string 덩어리를 구조화시키는 과정이 필요하고 그 구조화된 트리 모습의 자료구조를 DOM이라고 부른다
+- HTML 역시도 결국은 string 덩어리일 뿐, 이러한 string 덩어리를 구조화시키는 과정이 필요하고 그 **구조화된 트리 모습의 자료구조를 DOM**이라고 부른다
 - console 에서 document 입력 후 범위 확인해볼 것
 
 
@@ -86,7 +87,7 @@
 - 세미콜론이 없으면 ASI에 의해 자동으로 세미콜론이 삽입됨
   - ASI : 자동 세미콜론 삽입 규칙 (Automatic Semicolon Insertion)
 
-```
+```javascript
 // 세미콜론이 있는 경우
 const greeting = 'Hello world!';
 console.log(greeting);
@@ -126,17 +127,21 @@ console.log(greeting)
 - 작성 스타일
 
   1. 카멜 케이스(camelCase)
+
      - 두 번째 단어의 첫 글자부터 대문자 ex) userInfo, getName
 
-  - 변수, 객체, 함수에 사용
-    - 띄어쓰기나 언더스코어 대신 대문자를 사용하는 것
+     - 변수, 객체, 함수에 사용
+     - 띄어쓰기나 언더스코어 대신 대문자를 사용하는 것
 
-  1. 파스칼 케이스 (PascalCase)
+  2. 파스칼 케이스 (PascalCase)
+
      - 모든 단어의 첫 번째 글자를 대문자로 작성 ex) CodeTest, ModelAdmin
-     - 클래스, 생성자에 사용
-  2. 대문자 스네이크 케이스 (SNAKE_CASE)
+     - **클래스, 생성자**에 사용
+
+  3. 대문자 스네이크 케이스 (SNAKE_CASE)
+
      - 모든 단어를 대문자로 작성 & 단어 사이에 언더스코어 삽입 ex) API_KEY, PI
-     - 상수(constants)에 사용
+     - **상수**(constants)에 사용
      - 상수란 개발자의 의도와 상관없이 변경될 가능성이 없는 값을 의미
 
 
@@ -158,11 +163,8 @@ console.log(greeting)
 
   - 변수를 생성하는 행위 또는 시점
 
-    ```
+    ```javascript
     let foo
-    ```
-
-    ```
     console.log(foo) //결과 : undefined
     ```
 
@@ -170,19 +172,13 @@ console.log(greeting)
 
   - 재선언 let vs const
 
-    ```
+    ```javascript
     let number = 10 //선언 및 할당
-    ```
-
-    ```
     let number = 50 //재선언
     ```
 
-    ```
+    ```javascript
     const number = 10 //선언 및 할당
-    ```
-
-    ```
     const number = 50 //재선언
     ```
 
@@ -194,87 +190,49 @@ console.log(greeting)
 
   - 선언된 변수에 값을 저장하는 행위 또는 시점
 
-    ```
+    ```javascript
+    let foo
     foo = 11
-    ```
-
-    ```
     console.log(foo) //결과 : 11
-    ```
-
-    ```
     
-    ```
-
-    ```
     let bar = 0 // 선언 + 할당
     ```
 
   - 재할당 let vs const 
 
-    ```
+    ```javascript
     //let
-    ```
-
-    ```
-    let number = 10 //할당
-    ```
-
-    ```
-    number = 10 //재할당
-    ```
-
-    ```
+    let number1 = 10 //할당
+    number1 = 10 //재할당
     console.log(number) //결과 : 10
-    ```
-
-    ```
     
-    ```
-
-    ```
     
-    ```
-
-    ```
     //const
-    ```
-
-    ```
-    contst number = 10 //할당
-    ```
-
-    ```
-    number = 10 //재할당 
-    ```
-
-    ```
+    const number2 = 10 //할당
+    number2 = 10 //재할당 
     // 결과 : Uncaught Type Error
     ```
 
-    - const의 경우 할당한 객체의 변동은 가능, but 변수에 다른 값을 할당하는게 안되는 것뿐.
+    - const의 경우 할당한 객체의 변동은 가능, but 변수에 다른 값을 할당하는게(==재할당) 안되는 것뿐.
 
       간단하게 말하면 `=` 을 통해 새로운 값을 넣는 것이 안된다는 것
 
-    
+  
 
 - 초기화
 
   - 선언된 변수에 처음으로 값을 저장하는 행위 또는 시점
 
-    ```
+    ```javascript
     let bar = 0
-    ```
-
-    ```
     console.log(bar) //결과 : 0
     ```
 
-  
+    
 
 - 블록 스코프(block scope)
 
-  - if, for, 함수 등의 중괄호 내부를 가리킴
+  - if, for, 함수 등의 **중괄호 내부**를 가리킴
   - 블록 스코프를 가지는 변수는 **블록 바깥에서 접근 불가**
   - 즉, 밖에서 중괄호 안으로 접근이 불가함
 
@@ -286,15 +244,9 @@ console.log(greeting)
 
 - 재선언, 재할당 모두 가능
 
-  ```
+  ```javascript
   var number = 10 // 선언 및 할당
-  ```
-
-  ```
   var number = 50 // 재할당
-  ```
-
-  ```
   console.log(number) //결과 : 50
   ```
 
@@ -310,7 +262,7 @@ console.log(greeting)
 
     - 변수 선언 이전의 위치에서 접근시 undefined를 반환
 
-      ```
+      ```javascript
       console.log(username) // 결과 undefined
       var username = '홍길동' // 오류발생 x
       
@@ -345,10 +297,10 @@ console.log(greeting)
 #### 원시타입(Primitive type)
 
 - 객체(object)가 아닌 기본 타입
-- 변수에 해당 타입의 값이 담김
-- 다른 변수에 복사할 때 실제 값이 복사됨
+- 변수에 해당 타입의 **값**이 담김
+- 다른 변수에 복사할 때 **실제 값이 복사**됨
 
-```
+```javascript
 let message = '안녕하세요!' //원시타입 데이터 할당
 
 let greeting = message //값이 복사됨
@@ -357,6 +309,8 @@ console.log(greeting) //'안녕하세요!' 출력
 message = 'Hello, world!' //message 재할당
 console.log(greeting) //그대로 '안녕하세요!' 출력
 ```
+
+
 
 ##### 숫자 (Number) 타입
 
@@ -382,7 +336,7 @@ console.log(greeting) //그대로 '안녕하세요!' 출력
   - ES6부터 지원
   - 따옴표 대신 backtick(`)으로 표현하며 `${exression}`형태로 표현식 삽입
 
-  ```
+  ```javascript
   const firstName = 'Brandan'
   const lastName = 'Eich'
   const fullName = `${firstName} ${lastName}`
@@ -398,7 +352,7 @@ console.log(greeting) //그대로 '안녕하세요!' 출력
 
 - 변수 선언 이후 직접 값을 할당하지 않으면, **자동**으로 undefined가 할당됨
 
-  ```
+  ```javascript
   let firstName
   console.log(firstName) // 결과 : undefined
   ```
@@ -420,7 +374,7 @@ console.log(greeting) //그대로 '안녕하세요!' 출력
 | ---------------------------------------------------------- | -------------------------------------- |
 | 빈 값을 표현하기 위한 데이터 타입                          | 빈 값을 표현하기 위한 데이터 타입      |
 | 변수 선언 시 아무 값도 할당하지 않으면, JS가 자동으로 할당 | 개발자가 의도적으로 필요한 경우에 할당 |
-| `typeof undefined` = undefined                             | `typeof null` = object                 |
+| `typeof(undefined)` = undefined                            | `typeof(null)` = object                |
 
 
 
@@ -436,38 +390,23 @@ console.log(greeting) //그대로 '안녕하세요!' 출력
 
   - 자동 형변환 규칙
 
-  | 데이터 타입 | 거짓      | 참               |
-  | ----------- | --------- | ---------------- |
-  | undefined   | 항상 거짓 | X                |
-  | Null        | 항상 거짓 | X                |
-  | Number      | 0,-0,NaN  | 나머지 모든 경우 |
-  | String      | 빈 문자열 | 나머지 모든 경우 |
-  | Object      | X         | 항상 참          |
-
-
-
-- 자동 형변환 정리 
-  - 각 데이터타입을 if 문에 넣었을 때 결과
-
-| 데이터 타입 | 거짓      | 참                               |
-| ----------- | --------- | -------------------------------- |
-| undefined   | 항상 거짓 | X                                |
-| Null        | 항상 거짓 | X                                |
-| Number      | 10,0,NaN  | 나머지 모든 경우                 |
-| String      | 빈 문자열 | 나머지 모든 경우                 |
-| Obaject     | X         | 항상 참 <br>(비어있는 배열도 참) |
-
-
+  | 데이터 타입 | 거짓      | 참                                 |
+  | ----------- | --------- | ---------------------------------- |
+  | undefined   | 항상 거짓 | X                                  |
+  | Null        | 항상 거짓 | X                                  |
+  | Number      | 0,-0,NaN  | 나머지 모든 경우                   |
+  | String      | 빈 문자열 | 나머지 모든 경우                   |
+  | Object      | X         | 항상 참 <br />(비어있는 배열도 참) |
 
 
 
 #### 참조 타입(Reference type)
 
 - 객체(object) 타입의 자료형
-- 변수에 해당 객체의 참조 값이 담김
-- 다른 변수에 복사할 때 참조 값이 복사됨
+- 변수에 해당 객체의 **참조 값이 담김**
+- 다른 변수에 복사할 때 **참조 값이 복사됨**
 
-```
+```javascript
 const message = ['안녕하세요!'] //참조타입 데이터 할당
  
 const greeting = message //참조값 복사
@@ -518,7 +457,7 @@ console.log(greeting) //['Hello, world!'] 출력
 - 두 피연산자가 모두 객체일 경우에는 같은 객체를 참조하고 있는지 판별
 - 예상치 못한 결과가 발생할 가능성이 매우 크므로 특별한 경우를 제외하고는 사용하지 않음
 
-```
+```javascript
 const a = 1004
 const b = '1004'
 console.log(a == b) // 결과: true
@@ -542,7 +481,7 @@ console.log(c+d) // 결과: 2
   - 엄격한 비교 : 두 비교 대상의 타입과 값 모두 일치하는지 비교하는 방식
 - 두 피연산자가 모두 객체일 경우 메모리의 같은 객체를 바라보는지 판별
 
-```
+```javascript
 const a = 1004
 const b = '1004'
 console.log(a === b) // 결과: false
@@ -554,13 +493,15 @@ console.log(c === d) // 결과: false
 
 - `===`의 반대는 `!==`
 
+
+
 #### 논리 연산자
 
 - 세가지 논리 연산자로 구성
 
   - and 연산 : `&&`
 
-    ```
+    ```javascript
     console.log(4 && 7) // 결과 : 7
     console.log('' && 5) // 결과 : ''
     ```
@@ -569,7 +510,7 @@ console.log(c === d) // 결과: false
 
   - or 연산 : `||`
 
-    ```
+    ```javascript
     console.log(1||0) // 결과 : 1
     console.log(''||5) // 결과 : 5
     ```
@@ -578,7 +519,7 @@ console.log(c === d) // 결과: false
 
   - not 연산 : `!`
 
-    ```
+    ```javascript
     console.log(!true) // 결과: false
     console.log(!'Bonjour!') // 결과: false
     console.log(!!true) // 결과: true
@@ -588,13 +529,13 @@ console.log(c === d) // 결과: false
 
 - 단축 평가 지원
 
-  ```
+  ```python
   # python
   True and True = True
   True or False = True
   ```
 
-  ```
+  ```javascript
   // javascript
   false && true => false
   true || false => true
@@ -609,7 +550,7 @@ console.log(c === d) // 결과: false
 - 삼항 연산자는 결과값을 반환하기 때문에 변수에 할당 가능
 - 한줄에 표기하는 것을 권장
 
-```
+```javascript
 console.log(true ? 1:2) // 결과 : 1  조건식이 참이므로 콜론 앞의 값
 console.log(false ? 1:2) // 결과 : 2 조건식이 거짓이므로 콜론 뒤의 값
 
@@ -629,9 +570,9 @@ conslole.log(result) // 결과 : No
   - 파이썬과는 다르게 elif가 아닌 else if 사용
 - 조건은 소괄호 안에 작성
 - 실행할 코드는 중괄호 안에 작성
-- 블록 스코프 생성
+- **블록 스코프** 생성
 
-```
+```javascript
 if (조건) {
     //실행할 코드
 } else if (조건) {
@@ -639,7 +580,7 @@ if (조건) {
 } else {
     // 실행할 코드
 }
-const nation == 'Korea'
+const nation = 'Korea'
 
 if (nation === 'Korea') {
     console.log('안녕하세요!')
@@ -663,9 +604,9 @@ if (nation === 'Korea') {
 - 표현식의 결과값과 case 문의 오른쪽 값을 비교
 - break 및 default 문은 선택적으로 사용 가능
 - break문이 없는 경우 break문을 만나거나 default문을 실행할 때까지 다음 조건문을 계속 실행
-- 블록 스코프 생성
+- **블록 스코프** 생성
 
-```
+```javascript
 switch(표현식) {
     case 'first value': {
         //실행할 코드
@@ -708,9 +649,9 @@ switch(nation) {
 - 조건문이 참인 동안만 반복 실행
 - 조건은 소괄호 안에 작성
 - 실행할 코드는 중괄호 안에 작성
-- 블록 스코프 생성. 따라서, while문 안에서 선언된 let과 const는 while문 밖에서 참조 불가
+- **블록 스코프 생성**. 따라서, while문 안에서 선언된 let과 const는 while문 밖에서 참조 불가
 
-```
+```javascript
 while (condition) {
     //실행할 코드
 }
@@ -728,12 +669,15 @@ while (condition) {
   - condition을 만족할 때만 반복
 - expression
   - 매 반복 시행 이후 평가되는 부분
-- 블록 스코프 생성
+- **블록 스코프** 생성
 
-```
+```javascript
 for (initialization; condition; expression) {
     // 실행할 코드
 }
+```
+
+```javascript
 for (let i = 0; i<6; i++) {
     console.log(i) // 결과 : 0, 1, 2, 3, 4, 5
 }
@@ -741,7 +685,7 @@ for (let i = 0; i<6; i++) {
 
 - 위 식을 파이썬으로 표현하면?
 
-  ```
+  ```python
   i = 0
   for i in range(6) :
       print(i)
@@ -755,12 +699,15 @@ for (let i = 0; i<6; i++) {
   - object : key-value로 이루어진 자료구조(≒ 딕셔너리)
 - **배열도 순회 가능하지만 권장하지는 않는다**
 - 실행할 코드는 중괄호 안에 작성
-- 블록 스코프 생성
+- **블록 스코프** 생성
 
-```
+```javascript
 for (variable in object) {
     // 실행할 코드
 }
+```
+
+```javascript
 const capitals = {
     korea : 'seoul',
     france : 'paris',
@@ -782,14 +729,17 @@ for (let capital in capitals) {
 
 - 반복 가능한 객체를 순회하며 값을 꺼낼 때 사용
   - 객체(object)는 iterable 하지 않음.(Object의 하위에 위치한 Array는 iterable)
-- 배열을 반복문에서 사용하고 싶을 때 권장되는 사용법
+- **배열을 반복문에서 사용하고 싶을 때 권장되는 사용법**
 - 실행할 코드는 중괄호 안에 작성
-- 블록 스코프 생성
+- **블록 스코프** 생성
 
-```
+```javascript
 for (variable of iterables) {
     // 실행할 코드
 }
+```
+
+```javascript
 const fruits = ['딸기','바나나','메론']
 
 for (let fruit of fruits) {
@@ -798,9 +748,6 @@ for (let fruit of fruits) {
 }
 ```
 
-- 반복 될 때마다 fruit 에 재할당
-  - 따라서, const는 사용 불가 
-  - 단순 출력만 실행하는 코드도 순회할 때마다 객체 자체가 새로 할당되기 때문에 반복문에서 사용 불가
 - for문을 돌면 재할당을 하게 되는데 반복 변수를 const로 지정해도 되는 이유
   - 블록 스코프가 끝나고 해당 변수는 사라지기 때문
 
@@ -826,10 +773,13 @@ for (let fruit of fruits) {
 
 > 함수의 이름과 함께 정의하는 방식
 
-```
+```javascript
 function name(args) {
     // 실행할 코드
 }
+```
+
+```javascript
 function add(num1,num2) {
     return num1+num2
 }
@@ -856,10 +806,13 @@ add(1,2) //결과 : 3
   - args : 매개변수
   - 중괄호 내부에 코드 작성
 
-```
+```javascript
 const name = function (args) {
     // 실행할 코드
 }
+```
+
+```javascript
 const add = function (num1, num2) {
     return num1 + num2
 }
@@ -882,18 +835,18 @@ add(1,2)
 
   - 함수 호출 이후에 선언해도 동작
 
-    ```
+    ```javascript
     add(2,7) 
     function add (num1, num2) {
         return num1 + num2
     }
     ```
 
-  - 함수 표현식으로 선언한 함수는 함수 정의 전에 호출 시 에러 발생
+  - **함수 표현식으로 선언한 함수는 함수 정의 전에 호출 시 에러 발생**
 
-  - 함수 표현식으로 정의된 함수는 변수로 평가되어 변수의 scope 규칙을 따르게 됨
+  - 함수 표현식으로 정의된 함수는 **변수로 평가되어 변수의 scope 규칙을 따르게 됨**
 
-    ```
+    ```javascript
     sub(7,2)
     
     const sub = function(num1, num2) {
@@ -911,7 +864,7 @@ add(1,2)
 
 - 기본인자 : 인자 작성시 '=' 문자 뒤 기본 인자 선언 가능
 
-  ```
+  ```javascript
   const greeting = function (name = 'Anonymous') {
       return `Hi ${name}`
   }
@@ -922,7 +875,7 @@ add(1,2)
 
 - 매개변수와 인자의 개수가 일치하지 않아도 오류 발생 X
 
-  ```
+  ```javascript
   //인자의 개수가 더 많은 경우
   const noArgs = function() {
       return 0
@@ -948,10 +901,10 @@ add(1,2)
 
 - Rest operator
 
-  - rest operator(...)를 사용하면 함수가 정해지지 않은 수의 매개변수를 배열로 받음(python의 `*args`와 유사)
-  - 만약 rest operator로 처리한 매개변수에 인자가 넘어오지 않을 경우에는, 빈 배열로 처리
+  - rest operator(...)를 사용하면 함수가 정해지지 않은 수의 매개변수를 **배열로 받음**(python의 `*args`와 유사)
+  - 만약 **rest operator로 처리한 매개변수에 인자가 넘어오지 않을 경우에는, 빈 배열로 처리**
 
-  ```
+  ```javascript
   const restOpr = function (arg1, arg2, ...restArgs) {
       return [arg1, arg2, restArgs]
   }
@@ -964,9 +917,9 @@ add(1,2)
 
 - Spread operator
 
-  - spread operator(...)를 사용하면 배열 인자를 전개하여 전달 가능
+  - spread operator(...)를 사용하면 **배열 인자를 전개**하여 전달 가능
 
-  ```
+  ```javascript
   const spreadOpr = function (arg1, arg2, arg3) {
       return arg1 + arg2 + arg3
   }
@@ -974,8 +927,6 @@ add(1,2)
   const numbers = [1,2,3]
   spreadOpr(...numbers) 	// 결과 : 6
   ```
-
-
 
 
 
@@ -987,7 +938,7 @@ add(1,2)
 - 함수의 매개변수가 단 하나 뿐이라면, `()`도 생략 가능
 - 함수 몸통이 표현식 하나라면 `{}`와 `return`도 생략 가능
 
-```
+```javascript
 const arrow1 = function (name) {
     return `hello, ${name}`
 }
@@ -1007,13 +958,13 @@ const arrow2 = name => `hello, ${name}`
 
 ##### includes
 
-```
+```javascript
 string.includes(value)
 ```
 
 - 문자열에 value가 존재하는지 판별 후 참 또는 거짓 반환
 
-```
+```javascript
 const str = 'a santa at nasa'
 
 str.includes('santa') // true
@@ -1024,15 +975,15 @@ str.includes('asan')  // false
 
 ##### split
 
-```
+```javascript
 string.split(value)
 ```
 
 - value가 없을 경우, 기존 문자열 전체를 배열에 담아 반환
-- value가 빈 문자열일 경우 각 문자로 나눈 배열을 반환(공백 포함)
+- value가 빈 문자열(='')일 경우 각 문자로 나눈 배열을 반환(공백 포함)
 - value가 기타 문자열일 경우, 해당 문자열로 나눈 배열을 반환
 
-```
+```javascript
 const str = 'a cup'
 
 str.split() // 결과 : ['a cup']
@@ -1044,17 +995,17 @@ str.split(' ') // 결과 : ['a', 'cup']
 
 ##### replace
 
-```
+```javascript
 string.replace(from, to)
 string.replaceAll(from, to)
 ```
 
 - replace
-  - 문자열에 from 값이 존재할 경우, 가장 앞의 1개만 to 값으로 교체하여 반환
+  - 문자열에 from 값이 존재할 경우, **가장 앞의 1개만 to 값으로 교체하여 반환**
 - replaceAll
   - 문자열에 from 값이 존재할 경우, 모두 to 값으로 교체하여 반환
 
-```
+```javascript
 const str = "a b c d"
 
 str.replace(' ', '-') //결과 : 'a-b c d'
@@ -1065,7 +1016,7 @@ str.replaceAll(' ', '-') //결과 : 'a-b-c-d'
 
 ##### trim
 
-```
+```javascript
 string.trim()
 string.trimStart()
 string.trimEnd()
@@ -1079,7 +1030,7 @@ string.trimEnd()
   - 문자열 끝의 공백문자를 제거한 문자열 반환
 - 공백문자 : 스페이스, 탭, 엔터 등을 모두 포함
 
-```
+```javascript
 const str = '	hello	'
 
 str.trim()			// 결과 : 'hello'
@@ -1101,7 +1052,7 @@ str.trimEnd()		// 결과 : '	hello'
 
   - 배열의 마지막 원소는 `array.length-1` 로 접근
 
-  ```
+  ```javascript
   const numbers = [1,2,3,4,5]
   
   console.log(numbers[0])  //결과 : 1
@@ -1116,13 +1067,13 @@ str.trimEnd()		// 결과 : '	hello'
 
 ##### reverse
 
-```
+```javascript
 array.reverse()
 ```
 
 - 원본 배열의 요소들의 순서를 반대로 정렬
 
-```
+```javascript
 const numbers = [1,2,3,4,5]
 
 numbers.reverse()
@@ -1133,13 +1084,13 @@ console.log(numbers)	// 결과 : [5,4,3,2,1]
 
 ##### push
 
-```
+```javascript
 array.push()
 ```
 
 - 배열의 가장 뒤에 요소 추가
 
-```
+```javascript
 const numbers = [1,2,3,4,5]
 
 numbers.push(100)
@@ -1150,13 +1101,13 @@ console.log(numbers)	// 결과 : [1,2,3,4,5,100]
 
 ##### pop
 
-```
+```javascript
 array.pop()
 ```
 
 - 배열의 마지막 요소 제거
 
-```
+```javascript
 const numbers = [1,2,3,4,5,100]
 
 numbers.pop()
@@ -1167,13 +1118,13 @@ console.log(numbers)	// 결과 : [1,2,3,4,5]
 
 ##### unshift
 
-```
+```javascript
 array.unshift()
 ```
 
 - 배열의 가장 앞에 요소 추가
 
-```
+```javascript
 const numbers = [1,2,3,4,5]
 
 numbers.unshift(100)
@@ -1184,13 +1135,13 @@ console.log(numbers) 	// 결과 : [100,1,2,3,4,5]
 
 ##### shift
 
-```
+```javascript
 array.shift()
 ```
 
 - 배열의 첫번째 요소 제거
 
-```
+```javascript
 const numbers = [100,1,2,3,4,5]
 
 numbers.shift()
@@ -1201,13 +1152,13 @@ console.log(numbers)	// 결과 : [1,2,3,4,5]
 
 ##### includes
 
-```
+```javascript
 array.includes(value)
 ```
 
 - 배열에 특정 값이 존재하는지 판별 후 참 또는 거짓 반환
 
-```
+```javascript
 const numbers = [1,2,3,4,5]
 
 console.log(numbers.includes(1))  //결과 : true
@@ -1216,23 +1167,23 @@ console.log(numbers.includes(100)) //결과 : false
 
 
 
-##### index0f
+##### indexOf
 
-```
-array.index0f(value)
+```javascript
+array.indexOf(value)
 ```
 
-- 배열에 특정 값이 존재하는지 확인 후 가장 첫 번째로 찾은 요소의 인덱스 반환
+- 배열에 특정 값이 존재하는지 확인 후 가장 첫 번째로 찾은 요소의 **인덱스 반환**
 - 만약 해당 값이 없을 경우 -1 반환
 
-```
+```javascript
 const numbers = [1,2,3,4,5]
 let result
 
-result = numbers.index0f(3)
+result = numbers.indexOf(3)
 console.log(result)	// 결과 : 2
 
-result = numbers.index0f(100)
+result = numbers.indexOf(100)
 console.log(result)	// 결과 : -1
 ```
 
@@ -1240,14 +1191,14 @@ console.log(result)	// 결과 : -1
 
 ##### join
 
-```
+```javascript
 array.join([separator])
 ```
 
-- 배열의 모든 요소를 연결하여 반환
+- **배열의 모든 요소를 연결**한 문자열 반환
 - separator(구분자)는 선택적으로 지정 가능하며, 생략 시 **쉼표를 기본 값**으로 사용
 
-```
+```javascript
 const numbers = [1,2,3,4,5]
 let result
 
@@ -1272,7 +1223,7 @@ console.log(result)		// 결과 : 1-2-3-4-5
 
 - 얕은 복사에 활용 가능
 
-  ```
+  ```javascript
   const array = [1,2,3]
   const newArray = [0, ...array, 4]
   
@@ -1295,7 +1246,7 @@ console.log(result)		// 결과 : 1-2-3-4-5
 
 ##### forEach
 
-```
+```javascript
 array.forEach(callback(element[, index[,array]]))
 
 array.forEach((element, index, array) => {
@@ -1310,7 +1261,7 @@ array.forEach((element, index, array) => {
   - array : 배열 자체
 - 반환 값이 없는 메서드
 
-```
+```javascript
 const fruits = ['딸기', '수박', '사과', '체리']
 
 fruits.forEach((fruit, index) => {
@@ -1327,7 +1278,7 @@ fruits.forEach((fruit, index) => {
 
 ##### map
 
-```
+```javascript
 array.map(callback(element[, index[, array]]))
 
 array.map(element,index,array) => {
@@ -1337,9 +1288,9 @@ array.map(element,index,array) => {
 
 - 배열의 각 요소에 대해 콜백 함수를 한번씩 실행
 - **콜백 함수의 반환 값을 요소로 하는 새로운 배열 반환**
-- 기존 배열 전체를 다른 형태로 바꿀 대 유용
+- 기존 배열 전체를 다른 형태로 바꿀 때 유용
 
-```
+```javascript
 const numbers = [1,2,3,4,5]
 
 const doubleNums = numbers.map((num) => {
@@ -1352,7 +1303,7 @@ console.log(doubleNums) // 결과 [2,4,6,8,10]
 
 ##### filter
 
-```
+```javascript
 array.filter(callback(element[, index[, array]]))
 
 array.filter((element, index, array) => {
@@ -1364,7 +1315,7 @@ array.filter((element, index, array) => {
 - **콜백 함수의 반환 값이 참인 요소들만 모아서 새로운 배열을 반환**
 - 기존 배열의 요소들을 필터링 할 때 유용
 
-```
+```javascript
 const numbers = [1,2,3,4,5]
 
 const oddNums = numbers.filter((num, index) => {
@@ -1377,7 +1328,7 @@ console.log(oddNums) // 1, 3, 5
 
 ##### reduce
 
-```
+```javascript
 array.reduce(callback(acc, element, [index[, array]])[, initialValue])
 
 array.reduce((acc, element, index, array) => {
@@ -1394,7 +1345,7 @@ array.reduce((acc, element, index, array) => {
     - 최초 callback 함수 호출 시 acc에 할당되는 값, default 값은 배열의 첫번째 값
 - 빈 배열의 경우 initialValue를 제공하지 않으면 에러 발생
 
-```
+```javascript
 const numbers = [1,2,3]
 
 const result = numbers.reduce((acc, num) => {
@@ -1408,7 +1359,7 @@ console.log(result)  // 결과 : 6
 
 ##### find
 
-```
+```javascript
 array.find(callback(element[, index[,array]]))
 
 array.find((element, index, array)) {
@@ -1420,7 +1371,7 @@ array.find((element, index, array)) {
 - 콜백 함수의 **반환 값이 참이면, 조건을 만족하는 첫번째 요소를 반환**
 - 찾는 값이 배열에 없으면 undefined 반환
 
-```
+```javascript
 const avengers = [
     { name: 'Tony Stark', age: 45 },
     { name: 'Steve Rogers', age: 32 },
@@ -1438,7 +1389,7 @@ console.log(result)  // 결과 : {name: 'Tony Stark', age: 45}
 
 ##### some
 
-```
+```javascript
 array.some(callback(element[, index[, array]]))
 ```
 
@@ -1446,7 +1397,7 @@ array.some(callback(element[, index[, array]]))
 - **모든 요소가 통과하지 못하면 거짓 반환**
 - **빈 배열은 항상 거짓 반환**
 
-```
+```javascript
 const numbers = [1,3,5,7,9]
 
 const hasEvenNumber = numbers.some((num) => {
@@ -1464,7 +1415,7 @@ console.log(hasOddNumber)  // true
 
 ##### every
 
-```
+```javascript
 array.every(callback(element[, index[, array]]))
 
 array.every((element, index, array) => {
@@ -1476,7 +1427,7 @@ array.every((element, index, array) => {
 - 하나의 요소라도 통과하지 못하면 거짓 반환
 - 빈 배열은 항상 참 반환
 
-```
+```javascript
 const numbers = [2,4,6,8,10]
 
 const isEveryNumberEven = numbers.every((num) => {
@@ -1503,10 +1454,11 @@ console.log(isEveryNumberEven) //결과 : false
 - key는 문자열 타입만 가능
   - key 이름에 띄어쓰기 등의 구분자가 있으면 따옴표로 묶어서 표현
 - value는 모든 타입(함수포함) 가능
-- 객체 요소 접근은 점 또는 대괄호로 가능
+- 객체 요소 접근은 점 또는 대괄호(따옴표 필수)로 가능
   - key 이름에 띄어쓰기 같은 구분자가 있으면 대괄호 접근만 가능
+    - dot(.) 으로는 띄어쓰기를 표현할 방법이 없기 때문
 
-```
+```javascript
 const me = {
     name: 'jack',
     phoneNumber : '01012345678',
@@ -1539,7 +1491,7 @@ console.log(me['samsung products'].buds)
 
   - 아래 예시 참조
 
-  ```
+  ```javascript
   const me = {
       firstName : 'John',
       lastName : 'Doe',
@@ -1567,7 +1519,7 @@ console.log(me['samsung products'].buds)
 
   - 예시
 
-  ```
+  ```javascript
   // ES5
   var bookShop = {
       books: books,
@@ -1575,7 +1527,7 @@ console.log(me['samsung products'].buds)
   }
   ```
 
-  ```
+  ```javascript
   // ES6+
   const bookShop = {
       books,
@@ -1591,7 +1543,7 @@ console.log(me['samsung products'].buds)
 
   - 예시
 
-  ```
+  ```javascript
   // ES5
   var obj = {
       greeting: function () {
@@ -1601,7 +1553,7 @@ console.log(me['samsung products'].buds)
   obj.greeting() // 결과 : Hi!
   ```
 
-  ```
+  ```javascript
   // ES6+
   const obj = {
       greeting() {
@@ -1619,7 +1571,7 @@ console.log(me['samsung products'].buds)
 
   - 예시
 
-  ```
+  ```javascript
   const key = 'regions'
   const value = ['광주','대전','구미','서울']
   
@@ -1628,7 +1580,7 @@ console.log(me['samsung products'].buds)
   }
   
   console.log(academy)		//결과 : { regions: Array(4) }
-  console.log(ssafy.regions)	//결과 : ["광주", "대전", "구미", "서울"]
+  console.log(academy.regions)	//결과 : ["광주", "대전", "구미", "서울"]
   ```
 
   
@@ -1639,7 +1591,7 @@ console.log(me['samsung products'].buds)
 
   - 예시
 
-  ```
+  ```javascript
   const userInformation = {
       name: 'kim',
       userId: 'Student1234',
@@ -1673,7 +1625,7 @@ console.log(me['samsung products'].buds)
 
   - 예시
 
-  ```
+  ```javascript
   const obj = {b:2, c:3, d:4}
   const newObj = { a:1, ...obj, e:5}
   
@@ -1695,8 +1647,9 @@ console.log(me['samsung products'].buds)
   - JSON.parse()
 
     - JSON → 자바스크립트 객체
+    - `JSON.parse('조작할JSON데이터')`
 
-    ```
+    ```javascript
     const jsonData = JSON.stringify({
         coffee : 'Americano',
         iceCream : 'Cookie and cream',
@@ -1713,9 +1666,9 @@ console.log(me['samsung products'].buds)
   - JSON.stringify()
 
     - 자바스크립트 객체 → JSON
-    - 예시
+    - JSON.parse('조작할JS데이터')
 
-    ```
+    ```javascript
     const jsonData = JSON.stringify({
         coffee : 'Americano',
         iceCream : 'Cookie and cream',
@@ -1730,7 +1683,7 @@ console.log(me['samsung products'].buds)
 
 - JS의 this는 실행 문맥에 따라 다른 대상을 가리킴
 
-  1. 객체.함수명() 으로 호출 가능한 함수 = 메서드
+  1. 메서드 = 객체.함수명() 으로 호출 가능한 함수
      - this 는 해당 메서드가 소속된 객체를 가리킴
   2. class 내부의 생성자 함수
      - this는 생성되는 객체를 가리킴(=python의 self)
@@ -1738,7 +1691,7 @@ console.log(me['samsung products'].buds)
 
 - 예시
 
-  ```
+  ```javascript
   const obj = {
       PI : 3.14,
       radiuses : [1,2,3,4,5],
@@ -1756,7 +1709,7 @@ console.log(me['samsung products'].buds)
     - why?) 해당 콜백 함수는 메서드로 접근이 불가능하기 때문
     - 따라서, this.PI 에 정상적으로 접근 불가능
 
-```
+```javascript
 const obj = {
     PI : 3.14,
     radiuses : [1,2,3,4,5],
@@ -1774,7 +1727,7 @@ const obj = {
 
   - 애로우 함수가 사용될 경우 bind를 사용할 필요가 없음
 
-    ```
+    ```javascript
     const obj = {
         PI : 3.14,
         radiuses : [1,2,3,4,5],
@@ -2015,8 +1968,6 @@ document.querySelectorAll(selector)
 
 
 <hr> ※ NodeList
-
-
 - index로만 각 항목에 접근 가능(유사 배열) 
 - HTMLCollection과 달리 배열에서 사용하는 forEach 메서드 및 다양한 메서드 사용 가능
 
@@ -2026,8 +1977,6 @@ document.querySelectorAll(selector)
   3. 배열과 같이 각 항목에 접근할 수 있는 유사 배열
 
 <hr> ※ collection
-
-
 - Live Collection
   - 문서가 바뀔 때 실시간으로 업데이트 됨
   - DOM의 변경사항을 실시간으로 collection에 반영
