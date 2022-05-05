@@ -1743,6 +1743,47 @@ const obj = {
 
 
 
+### lodash
+
+> 모듈성, 성능 및 추가 기능을 제공하는 JavaScript 유틸리티 라이브러리
+>
+> array, object 등 자료구조를 다룰 때 사용하는 유용하고 간편한 유틸리티 함수들을 제공
+
+```javascript
+<body>
+    <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'></script>
+	<script>
+        _.sample([1,2,3,4]) // 3 (random 1 element)
+		_.sampleSize([1,2,3,4],2) // [2,3] (random 2 element)
+
+		_.reverse([1,2,3,4]) // [4,3,2,1]
+		
+		_.range(5) // [0,1,2,4]
+		_.range(1,5) // [1,2,3,4]
+		_.range(1,5,2) // [1,3]
+	</script>
+</body>
+```
+
+- 예시
+
+```javascript
+<script src='https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'></script>
+<script>
+    const original = { a: { b: 1}}
+	const ref = original
+    const copy = _.cloneDeep(original)
+    
+    console.log(original.a.b, ref.a.b, copy.a.b) // 1, 1, 1
+	ref.a.b = 10
+	console.log(original.a.b, ref.a.b, copy.a.b) // 10, 10, 1
+	copy.a.b = 100
+	console.log(original.a.b, ref.a.b, copy.a.b) // 10, 10, 100
+</script>
+```
+
+
+
 ### DOM 조작
 
 - Document는 문서 한 장(HTML)에 해당하고 이를 조작
