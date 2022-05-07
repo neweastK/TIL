@@ -411,7 +411,7 @@ example {
 <div class="d-flex justify-content-start">...</div>
 <div class="d-flex align-content-start">...</div>
 <div class="d-flex">
-    <div class="allign-self-start">Aligned flex item</div>
+    <div class="align-self-start">Aligned flex item</div>
 </div>
 ```
 

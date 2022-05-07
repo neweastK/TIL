@@ -127,13 +127,13 @@ get_object_or_404(Model, 조건)
     - 여러개의 메서드를 지정할 수 있고 인자로 넣으면 된다
 
 
-    ```python
-    from django.views.decorators.http import require_http_methods
-    
-    @require_http_methods(['GET','POST'])
-    def ---() :
-        article.~~~~
-    ```
+```python
+from django.views.decorators.http import require_http_methods
+
+@require_http_methods(['GET','POST'])
+def ---() :
+    article.~~~~
+```
 
   - require_POST()
 
