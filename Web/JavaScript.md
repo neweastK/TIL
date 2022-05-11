@@ -2292,3 +2292,357 @@ event.preventDefault()
 
 ※ button 태그는 form 태그 안에 있어야만 submit 기능 수행
 
+
+
+### AJAX
+
+> Asynchronous JavaScript And XML (비동기식 JavaScript와 XML)
+
+- 서버와 통신하기 위해 XMLHttpRequest 객체를 활용
+- JSON, XML, HTML 그리고 일반 텍스트 형식 등을 포함한 다양한 포맷을 주고 받ㅇ르 수 있음
+- AJAX의 X가 XML을 의미하긴 하지만, 요즘은 더 가벼운 용량과 JavaScript의 일부라는 장점 때문에 JSON을 더 많이 사용함
+- JSON과 XML은 데이터를 표현하는 방식의 차이
+  - XML은 HTML과 굉장히 유사한 방식으로 데이터 표현(XML = eXtended Markup Language)
+  - 과거에는 XML로 데이터를 표현하는 것이 가장 일반적인 방식이었음
+  - XML은 JSON에 비해 전송되어야하는 데이터의 양이 더 많음. 즉, JSON이 더 빠름
+
+- 페이지 전체를 **RELOAD(새로고침) 하지 않고**서도 수행되는 '비동기성'
+  - 서버의 응답에 따라 전체 페이지가 아닌 일부분만을 업데이트 할 수 있음
+- AJAX의 주요 두 가지 특징은 아래의 작업을 할 수 있게 해준다.
+  1. 페이지 새로 고침 없이 서버에 요청
+  2. 서버로부터 데이터를 받고 작업을 수행
+
+
+
+#### XMLHttpRequest 객체
+
+- 서버와 상호작용하기 위해 사용되며 전체 페이지의 새로 고침 없이 데이터를 받아올 수 있음
+- 사용자의 작업을 방해하지 않으면서 페이지 일부를 업데이트 할 수 있음
+- 주로 AJAX 프로그래밍에 사용
+- 이름과 달리 XML 뿐만 아니라 모든 종류의 데이터를 받아올 수 있음
+- 생성자
+  - XMLHttpRequest() 
+  - 객체를 생성하는 함수
+- js에서의 `new` 는 파이썬에서의 `init`과 같은 존재
+
+
+
+#### Asynchronous JavaScript
+
+##### 동기식
+
+- 순차적, 직렬적 Task 수행
+- 요청을 보낸 후 응답을 받아야만 다음 동작이 이루어진다 (blocking)
+- 즉, 하나의 코드가 끝나야만 다음 코드를 실행 가능
+- JavaScript는 single Threaded
+
+
+
+##### 비동기식
+
+- 병렬적 Task 수행
+- 요청을 보낸 후 응답을 기다리지 않고 다음 동작이 이루어짐 (non-blocking)
+
+- 사용자 경험을 위해 비동기식 사용
+  - 매우 큰 데이터를 동반하는 앱의 경우 동기식 코드로 진행할 경우 데이터를 모두 불러올 때까지 앱이 멈춘 것처럼 보이기 때문에 사용자 경험에 좋지 않음
+  - 비동기식 코드라면 데이터를 요청하고 응답 받는 동안, 앱 실행을 함께 진행하기 때문에 데이터를 불러오는 동안에도 지속적으로 응답하는 화면을 보여줌. 이를 통해 **더욱 쾌적한 사용자 경험 제공**
+  - 때문에 많은 웹 API 기능은 현재 비동기 코드를 사용하여 실행됨
+
+
+
+#### Single Thread
+
+- JavaScript는 single threaded이다
+
+<hr>
+
+
+##### Thread
+
+> 프로그램이 작업을 완료하기 위해 사용할 수 있는 단일 프로세스
+
+- 각 thread는 한번에 하나의 작업만 수행할 수 있음
+
+<hr>
+
+
+- 컴퓨터가 여러개의 CPU를 가지고 있어도 main thread라 불리는 단일 스레드에서만 작업 수행
+- 즉, 이벤트를 처리하는 Call Stack이 단 하나인 언어라는 뜻
+- 이 문제를 해결하기 위해 동시성 모델 활용
+  1. 즉시 처리하지 못하는 이벤트들은 Web API 로 보내서 처리
+  2. 처리된 이벤트들은 처리된 순서대로 Task Queue에 줄을 세움
+  3. Call Stack이 비면 Event Loop 가 대기 줄에서 가장 앞의 이벤트를 Call Stack으로 보냄
+
+
+
+##### Concurrency Model
+
+> Event Loop를 기반으로 하는 동시성 모델
+
+###### Call Stack
+
+- 요청이 들어올 때마다 해당 요청을 순차적으로 처리하는 Stack 형태의 자료 구조
+
+
+
+###### Web API (Browser API)
+
+- JavaScript 엔진이 아닌 브라우저 영역에서 제공하는 API 
+- setTimeout(), DOM events 그리고 AJAX로 데이터를 가져오는 시간이 소요되는 일들을 처리
+- AJAX나 요청을 보내는 일 혹은 시간과 관련된 기능은 web api에서 실행
+  - == 언제 끝나는지 알 수 없는 동작들
+
+
+
+###### Task Queue (Event Queuem, Message Queue)
+
+- 비동기 처리된 callback 함수가 대기하는 Queue 형태의 자료구조
+- main thread가 끝난 후 실행되어 후속 JavaScript 코드가 차단되는 것을 방지
+
+
+
+###### Event Loop
+
+- Call Stack이 비어있는지 확인
+- 일종의 감시자 역할 수행
+- Call Stack이 비어있는 경우 Task Queue에서 실행 대기 중인 callback 함수가 있는지 확인
+- Task Queue에 대기중인 callback 함수가 있다면 가장 앞에 있는 callback 함수를 Call Stack으로 push
+
+
+
+![image-20220510104020174](../../../AppData/Roaming/Typora/typora-user-images/image-20220510104020174.png)
+
+
+
+##### Zero Delays
+
+- 설령 time을 0으로 설정해도 다음 코드보다 먼저 실행되지 않음
+
+- 실행은 Task Queue에 대기 중인 작업 수에 따라 다르며 callback 함수의 메시지가 처리되기 전에는 실행되지 않음
+
+- 즉, 기본적으로 setTimeout 함수에 특정 시간제한을 설정했더라도 대기 중인 메시지의 모든 코드가 완료될 때까지 대기해야함
+
+- 따라서, Web API로 들어오는 순서는 중요하지 않고, 어떤 이벤트가 먼저 처리되느냐가 중요. 즉, 실행 순서가 불명확함
+
+- 이를 해결하기 위해 순차적인 비동기 처리를 위한 2가지 작성 방식 활용
+
+  1. Async Callbacks
+
+     - 백그라운드에서 실행을 시작할 함수를 호출할 때 인자로 지정된 함수
+     - ex) addEventListener()의 두번째 인자
+
+     
+
+  2. promise-style
+
+     - Modern Web APIs에서의 새로운 코드 스타일
+     - XMLHttpRequest 객체를 사용하는 구조보다 조금 더 현대적인 버전
+
+  
+
+- Js도 기본적으로 blocking 방식으로 코드를 실행하지만 **몇몇 함수나 메서드에서만** 비동기식으로 진행
+
+  - 시간과 관련된 함수와 같은 경우 비동기식으로 진행
+  - 즉, 언제 끝날지 알 수 없는 경우에는 비동기식으로 진행
+
+
+
+#### 비동기 처리를 위한 작성 방식
+
+##### Async Callbacks
+
+> 백그라운드에서 코드 실행을 시작할 함수를 호출할 때 인자로 지정된 함수
+
+- 백그라운드 코드 실행이 끝나면 callback 함수를 호출하여 작업이 완료되었음을 알리거나, 다음 작업을 실행하게 할 수 있음
+- callback 함수를 다른 함수의 인수로 전달할 때, 함수의 참조를 인수로 전달할 뿐이지 즉시 실행되지 않음
+- 정의된 함수는 때가 되면 callback 함수를 실행시킴
+
+- 비동기 로직을 수행할 때 callback 함수는 필수
+  - 명시적인 호출이 아니라 다른 함수의 매개변수로 전달하여 해당 함수 내에서 특정 시점에 호출
+
+
+
+##### callback function
+
+- 다른 함수에 인자로 전달된 함수
+
+- 외부 함수 내에서 호출되어 일종의 루틴 또는 작업을 완료함
+
+- 동기식, 비동기식 모두 사용되지만 비동기 작업이 완료된 후 코드 실행을 계속할 수 있도록 하는 역할로 주로 사용됨
+
+- 비동기 작업이 완료된 후 코드 실행을 계속하는데 사용되는 경우를 비동기 콜백(asynchronous callback)이라고 함
+
+- 예시
+
+  - python
+
+  ```python
+  numbers = [1,2,3]
+  
+  def add_one(number) :
+      return number + 1
+  
+  print(map(add_one,numbers)) # add_one은 callback function
+  ```
+
+  - django
+
+  ```python
+  from django.ulrs import path
+  from . import views
+  
+  urlpatterns = [
+  	path('', views.index),	 # views.index는 callback function
+  ]
+  ```
+
+  - JavaScript
+
+  ```javascript
+  const btn = documnet.querySelector('button')
+  
+  btn.addEventListener('click', function(){  //eventListener의 function이 callback function
+      alert('Completed!')
+  })
+  ```
+
+  
+
+##### 일급 객체 (First Class Object)
+
+- 다른 객체들에 적용할 수 있는 연산을 모두 지원하는 객체(함수)
+- 일급 객체의 조건
+  - 인자로 넘길 수 있어야함
+  - 함수의 반환 값으로 사용할 수 있어야함
+  - 변수에 할당할 수 있어야함
+
+
+
+##### callback Hell
+
+- 순차적인 연쇄 비동기 작업을 처리하기 위해 callback 함수를 호출하고, 그 다음 callback 함수를 호출하고, 또 그 함수의 callback 함수를 호출하고의 패턴이 지속적으로 반복
+
+- 즉, 여러 개의 연쇄 비동기 작업을 할 때 마주하는 상황으로 디버깅하기 어렵고, 코드 가독성이 매우 낮아짐
+
+- 예시
+
+  ```python
+  function hell(win){
+      return function() {
+          loadLink(win, REMOTE_SRC+'/assets/css/style.css', function() {
+              loadLink(win, REMOTE_SRC+'/lib/async.js', function() {
+                  loadLink(win, REMOTE_SRC+'lib/easyXDM.js', function(){
+                      loadLink(win, REMOTE_SRC+'lib/json2.js', function() {
+                      	...
+                          ...
+                          ...
+                      })
+                  })
+              })
+          })
+      }
+  }
+  ```
+
+  - 위 문제를 해결하기 위해 Promise 콜백 방식 사용
+
+
+
+##### promise
+
+###### promise 객체
+
+- 비동기 작업의 최종 완료 또는 실패를 나타내는 객체
+  - 미래의 완료 또는 실패와 그 결과값을 나타냄
+  - 성공에 대한 약속은 `.then()` 사용
+  - 실패에 대한 약속은 `.catch()` 사용
+
+- axios 메서드의 결과값은 promise 객체
+
+
+
+###### then
+
+- 이전 작업이 성공했을 때 수행할 작업을 나타내는 콜백 함수
+- 각 콜백 함수는 이전 작업의 성공 결과를 인자로 전달받음
+  - 따라서, 각각의 .then 블록은 서로 다른 promise를 반환
+    - 즉, .then()을 여러개 사용하여 연쇄적인 작업 수행이 가능함 (chaining 가능)
+    - 여러 비동기 작업을 차례대로 수행할 수 있다는 뜻
+- 성공했을 때의 코드를 콜백 함수 안에 작성
+- 반환 값이 반드시 있어야함
+  - 콜백함수는 이전의 promise의 결과를 받아서 수행되기 때문
+
+
+
+###### catch
+
+- .then이 하나라도 실패하면 동작
+- 이전 작업의 실패로 인해 생성된 error 객체는 catch 블록 안에서 재사용 가능
+- then과 같이 반환 값이 반드시 있어야함
+
+
+
+###### finally
+
+- Promise 객체를 반환
+- 결과와 상관없이 무조건 지정된 callback 함수가 실행
+- 어떠한 인자도 전달 받지 않음
+  - Promise의 성공 실패 여부를 판단할 수 없기 때문
+- 무조건 실행되어야 하는 절에서 사용
+  - .then()과 .catch() 블록에서의 코드 중복을 방지
+
+
+
+###### callback을 Promise로 바꿨을 때
+
+```javascript
+// callback hell
+work1(function(result1){
+    work2(result1, function(result2) {
+        work3(result2, function(result3) {
+            console.log('최종 결과: ' + result3)
+        })
+    })
+})
+```
+
+```javascript
+// promise
+work1().then(function(result1) {
+    return work2(result1)
+})
+.then(function(result2) {
+    return work3(result2)
+})
+.then(function(result3) {
+    console.log('최종결과: ' + result3)
+})
+.catch(failureCallback)
+```
+
+
+
+###### why promise?
+
+- callback 함수는 javascript의 Event Loop가 현재 실행 중인 Call Stack을 완료하기 이전에는 절대 호출되지 않음
+  - Promise Callback 함수는 Event Queue에 배치되는 엄격한 순서로 호출됨
+- 비동기 작업이 성공하거나 실패한 뒤에 .then() 메서드를 이용하여 추가한 경우에도 1번과 똑같이 동작
+- .then()을 여러번 사용하여 여러개의 callback 함수를 추가할 수 있음 (chaining이 가능)
+  - 각각의 callback은 주어진 순서대로 하나하나 실행하게 됨
+  - Chaining은 Promise의 가장 뛰어난 장점
+- promise는 작성 스타일 중 하나이며 callback hell에 빠지지 않기 위해 사용
+
+
+
+#### Axios
+
+> 브라우저를 위한 Promise 기반의 클라이언트
+
+- 본래는 XHR 이라는 브라우저 내장 객체를 활용해 AJAX 요청을 처리하는데, 이보다 편리한 AJAX 요청이 가능하도록 도움을 줌
+  - 확장 가능한 인터페이스와 함께 패키지로 사용이 간편한 라이브러리를 제공
+- 즉, 비동기식 요청을 보내는 작업을 담당
+- then과 catch를 함께 사용하여 Axios를 통해서 보낸 요청이 응답됐을 때 실행시킬 함수를 작성할 수 있음
+
+- axios로 요청을 보내는 것부터 응답을 받는 과정까지 모두 web api에서 일어남 (callback을 감싸고 있는 메인함수가 web api에서 진행됨)
+  - web api에서 정상적으로 실행되면 지정해둔 call back 함수가 task queue로 이동
+  - promise나 callback 함수들과 관계없이 call stack에서는 계속 다음 코드를 진행하고 있음
