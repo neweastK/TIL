@@ -24,7 +24,7 @@
 
 - 즉, 컴포넌트는 유지보수를 쉽게 만들어 줄 뿐만 아니라, 재사용성의 측면에서도 매우 강력한 기능을 제공
 
-- 쉽게 말해, 한 페이지를 여러개의 부품(=component)으로 만드는 것
+- 쉽게 말해, **한 페이지를 여러개의 부품(=component)으로 만드는 것**
 
   - 지금까지는 한 페이지는 하나의 html 파일로만 구성했었음
   - 즉, 한 화면을 여러개의 컴포넌트로 구성하는 것
@@ -52,6 +52,12 @@
 
 
 ### Vue CLI
+
+- 공식문서
+
+  - VUE CLI 란?
+
+    vue-cli 는 기본 vue 개발 환경을 설정해주는 도구입니다. vue-cli 가 기본적인 프로젝트 세팅을 해주기 때문에 폴더 구조에 대한 고민, lint, build, 어떤 라이브러리로 구성을 해야되는지 webpack 설정은 어떻게 해야되는지에 대한 고민을 덜을 수 있습니다.
 
 - Vue.js 개발을 위한 표준 도구
 - 프로젝트의 구성을 도와주는 역할을 하며 Vue 개발 생태계에서 표준 tool 기준을 목표로 함
@@ -127,7 +133,7 @@
 
     
 
-- npm은 python과 다르게 자동으로 프로젝트의 별도 폴더 내부에 설치함
+- npm은 pip와 다르게 자동으로 프로젝트의 별도 폴더 내부에 설치함
 
   - Python은 venv를 설치하고, source로 활성화 한 후에 설치해야했음
 
@@ -169,11 +175,11 @@
     - 브라우저만 조작할 수 있었던 시기의 자바스크립트는 모듈 관련 문법 없이도 사용됨(ex. `<script src>`)
     - 하지만 js와 애플리케이션이 복잡해지고 커지자 전역 scope를 공유하는 형태의 기존 개발 방식의 한계점이 드러남
     - 그래서 라이브러리를 만들어 필요한 모듈을 언제든지 불러오거나 코드를 모듈 단위로 작성하는 등의 다양한 시도가 이루어짐
-    - 모듈의 수가 많아지고 라이브러리 혹은 모듈 간의 의존성(연결성)이 깊어지면서 특정한 곳에서 발생한 문제가 어떤 모듈 간의 문제인지 파악하기가 어려움
+    - **모듈의 수가 많아지고 라이브러리 혹은 모듈 간의 의존성(연결성)이 깊어지면서 특정한 곳에서 발생한 문제가 어떤 모듈 간의 문제인지 파악하기가 어려움**
 
   - 즉, Webpack은 이 모듈 간의 의존성 문제를 해결하기 위해 등장
 
-    - Js의 생태계는 의존성 문제가 매우 심각하기 때문
+    - **Js의 생태계는 의존성 문제가 매우 심각하기 때문**
 
     
 
@@ -184,7 +190,7 @@
 
   - 이러한 일을 해주는 도구는 Bundler 이고, Webpack은 다양한 Bundler 중 하나
   - 여러 모듈을 하나로 묶어주고 묶인 파일은 하나로 합쳐짐
-  - Bundling 된 결과물은 더 이상 순서에 영향을 받지 않고 동작하게 됨
+  - **Bundling 된 결과물은 더 이상 순서에 영향을 받지 않고 동작하게 됨**
   - webpack 이외에도 snowpack, parcel, rollup.js 등의 다양한 모듈 번들로 존재
   - Vue CLI는 이러한 Babel, Webpack에 대한 초기 설정이 자동으로 되어 있음
 
@@ -202,7 +208,6 @@
   - 따라서 git에 올리면 안됨
   - gitignore은 자동으로 만들어져있고 node_modules도 자동으로 등록되어있음
 
-  
 
 ##### public/index.html
 
@@ -211,26 +216,18 @@
   - 해당 부분에서 bootstrap CDN 삽입 등 django base.html의 일부 역할 수행 가능
 
 
-
-
 ##### src/assets
 
 - webpack에 의해 빌드 된 정적 파일
-
-
 
 ##### src/components
 
 - 하위 컴포넌트들이 위치
 
-
-
 ##### src/App.vue
 
 - 최상위 컴포넌트
 - 최상위 컴포넌트는 따로 관리
-
-
 
 ##### src/main.js
 
@@ -238,21 +235,15 @@
 - 실제 단일 파일에서 DOM과 data를 연결했던 것과 동일한 작업이 이루어지는 곳
 - Vue 전역에서 활용할 모듈을 등록할 수 있는 파일
 
-
-
 ##### babel.config.js
 
 - babel 관련 설정이 작성된 파일
-
-
 
 ##### package.json
 
 - 프로젝트의 종속성 목록과 지원되는 브라우저에 대한 구성 옵션이 포함
 - python은 freeze로 requirements.txt 를 업데이트 시켜줬어야함
-- but vue 프로젝트에서는 package.jsoin이 자동으로 업데이트됨
-
-
+- but vue 프로젝트에서는 package.json이 자동으로 업데이트됨
 
 ##### package-lock.json
 
@@ -344,8 +335,6 @@
 
 
 
-
-
 ### Props & Emit
 
 > 여러 컴포넌트간의 의사소통 방법
@@ -372,7 +361,7 @@
 - 작성법(전송 = 데이터를 자식 컴포넌트에게 내리는 것)
 
   - 자식 컴포넌트 태그(보여주기로 작성한 template 부분)의 속성으로 prop 데이터 선언
-  - `porp데이터이름 = 데이터값` 과 같이 선언
+  - `prop데이터이름 = 데이터값` 과 같이 선언
   - 예시
 
   ```vue
@@ -421,8 +410,6 @@
 
 
 
-
-
 #### Dynamic Props 
 
 - v-bind directive를 사용해 부모의 데이터의 props를 동적으로 바인딩
@@ -440,7 +427,7 @@
           <about my-message='this is prop data'
                  :parent-data='parentData'
           >
-      </about>
+      	</about>
       </div>
   </template>
   
@@ -488,8 +475,6 @@
     - 기본적으로 각 인스턴스는 모두 같은 data 객체를 공유하기 때문에 할당, 얕은 복사의 문제가 발생하지 않도록 아예 새로운 객체를 반환해버리는 함수를 사용해야함
     - 함수가 return 하는 값을 data로 사용
     - return 값은 객체로 되어있으며 `변수 : value` 형식으로 작성
-
-
 
 - 모든 props는 하위 속성과 상위 속성 사이의 **단방향 바인딩**을 형성함
   - 부모의 속성이 변경되면 자식 속성에게 전달되지만, 반대 방향으로는 그렇지 않다는 뜻
@@ -761,7 +746,7 @@
 
 - Vue 인스턴스 내부에서 라우터 인스턴스에 $router로 접근할 수 있음
 
-- 따라서, 다른 URL로 이동하려면 this.$router.push 를 호출할 수 있음
+- 따라서, 다른 URL로 이동하려면 `this.$router.push` 를 호출할 수 있음
 
   - 이 메서드는 새로운 항목을 히스토리 스택에 넣기 때문에 사용자가 브라우저의 뒤로 가기 버튼을 누르면 이전 URL로 이동하게 됨
 
@@ -846,8 +831,8 @@
 
 - 기본적으로 작성된 구조에서 components 폴더와 views 폴더 내부에 각기 다른 컴포넌트가 존재하게 됨. 주로 아래와 같이 활용
   - App.vue : 최상위 컴포넌트
-  - views/ : router(index.js)에 매핑되는 컴포넌트를 모아두는 디렉토리
-  - components/ : router에 매핑된 컴포넌트 내부에 작성하는 컴포넌트를 모아두는 디렉토리
+  - views/ : **router(index.js)에 매핑되는 컴포넌트를 모아두는 디렉토리**
+  - components/ : **router에 매핑된 컴포넌트 내부에 작성하는 컴포넌트를 모아두는 디렉토리**
 
 
 
@@ -906,7 +891,9 @@
   - 규모가 커질 경우 상태를 공유하는 컴포넌트의 상태 동기화 관리가 어려움
     - A 컴포넌트의 상태를 공유하는 다른 컴포넌트에 pass props & emit event 를 통해 동기화해야함
 
-##### Vuex Management Pattern
+
+
+##### but, Vuex Management Pattern is...
 
 - 중앙 저장소(store)에 state를 모아놓고 한번에 관리
   - 규모가 큰 프로젝트에서 매우 효율적
@@ -931,7 +918,7 @@
 >  Mutate → State → Render
 
 - Vuex는 single state tree를 사용
-- 즉, 이 단일 **객체**는 모든 애플리케이션 상태를 포함하는 '원본소스(single source of truth)'의 역할을 함
+- 즉, 이 **단일 객체**는 모든 애플리케이션 상태를 포함하는 '원본소스(single source of truth)'의 역할을 함
 - 이는 각 애플리케이션마다 하나의 저장소만 갖게 된다는 것을 의미
 
 - 여러 컴포넌트 내부에 있는 특정 state, 즉 데이터를 중앙에서 관리하게 됨
@@ -954,11 +941,9 @@
   - 함수명은 All Capital로 지정
   - `state.데이터이름.조작메서드()`
 
-- **첫번째 인자로 항상 state를 받음**
+- mutations에 등록되는 함수는 **첫번째 인자로 항상 state를 받음**
 - 직접 호출되는 것이 아닌 Actions에서 commit() 메서드에 의해 호출됨
 - Actions에서 호출되어 state를 변경하는 과정이 Mutate
-
-
 
 
 
@@ -1147,7 +1132,7 @@ import vuex from 'vuex'
 
 #### mapState
 
-- computed와 Stor의 state를 매핑
+- **computed와 Store의 state를 매핑**
 - Vuex Store의 하위 구조를 반환하여 component 옵션을 생성
 - 매핑된 computed 이름이 state 이름과 같을 때 문자열 배열을 전달 할 수 있음
 
@@ -1195,7 +1180,7 @@ expoprt default {
 
 #### mapGetters
 
-- Computed와 Getters를 매핑
+- **Computed와 Getters를 매핑**
 - getters를 객체 전개 연산자로 계산하여 추가
 - 해당 컴포넌트 내에서 매핑하고자 하는 이름이 index.js에 정의해놓은 getters의 이름과 동일하면 배열의 형태로 해당 이름만 문자열로 추가
 
@@ -1213,8 +1198,6 @@ expoprt default {
 }
 </script>
 ```
-
-
 
 
 
@@ -1266,7 +1249,7 @@ expoprt default {
   </script>
   ```
 
-  - 그렇다면 다른 methods를 추가하고 싶은 겨웅에는?
+  - 그렇다면 다른 methods를 추가하고 싶은 경우에는?
     - Object Spread Operator 사용
 
   ```vue
@@ -1312,7 +1295,7 @@ expoprt default {
 
 
 
-### Scpoed
+### Scoped
 
 > 해당 컴포넌트 내에서만 지정한 스타일을 적용시키고 싶을 때 사용
 
@@ -1346,7 +1329,7 @@ expoprt default {
 
 
 
-#### Local Stroage
+#### Local Storage
 
 > ※ vue의 기능이 아닌 브라우저의 기능. 따라서, 다른 프레임워크에서도 사용할 수 있음
 
