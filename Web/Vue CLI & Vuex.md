@@ -1341,7 +1341,7 @@ expoprt default {
   localStorage.setItem('저장할데이터이름',저장할데이터)
   ```
 
-  - Json으로 데이터를 변경한 후에 저장해야함
+  - json으로 데이터를 변경한 후에 저장해야함
 
   ```js
   JSON.stringify(데이터)
