@@ -31,10 +31,12 @@ export default {
       commit('SET_TOKEN', token)
       localStorage.setItem('token', token)
     },
+
     removeToken({ commit }) {
       commit('SET_TOKEN', '')
       localStorage.setItem('token', '')
     },
+
     login({ commit, dispatch }, credentials){
       axios({
         url: drf.accounts.login(),
@@ -52,6 +54,26 @@ export default {
           commit('SET_AUTH_ERROR', err.response.data)
         })
     },
+
+    signup({ commit, dispatch }, credentials) {
+      axios({
+        url: drf.accounts.signup(),
+        method: 'post',
+        data: credentials
+        
+      })
+        .then(res => {
+          const token = res.data.key
+          dispatch('saveToken', token)
+          dispatch('fetchCurrentUser')
+          router.push({ name: 'index' })
+        })
+        .catch(err => {
+          console.error(err.response.data)
+          commit('SET_AUTH_ERROR', err.response.data)
+        })
+    },
+
     logout({ getters, dispatch }) {
       axios({
         url: drf.accounts.logout(),
@@ -68,6 +90,7 @@ export default {
           console.error(err.response)
         })
     },
+
     fetchCurrentUser({ commit, getters, dispatch }) {
       if (getters.isLoggedIn) {
         axios({
@@ -84,6 +107,7 @@ export default {
           })
       }
     },
+
     fetchProfile({ commit, getters }, { username }) {
       axios({
         url: drf.accounts.profile(username),

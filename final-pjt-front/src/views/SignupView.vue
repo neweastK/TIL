@@ -18,6 +18,16 @@
         <input v-model="credentials.password2" type="password" id="password2" required />
       </div>
       <div>
+        <label for="nickname">Nickname: </label>
+        <input  v-model="credentials.nickname" type="text" id="nickname" required/>
+      </div>
+      <div>
+        <input type="checkbox" v-model="credentials.using_ott" value="넷플릭스">넷플릭스
+        <input type="checkbox" v-model="credentials.using_ott" value="왓챠">왓챠
+        <input type="checkbox" v-model="credentials.using_ott" value="디즈니+">디즈니+
+        <input type="checkbox" v-model="credentials.using_ott" value="웨이브">웨이브
+      </div>
+      <div>
         <button>Signup</button>
       </div>
     </form>
@@ -39,13 +49,16 @@
           username: '',
           password1: '',
           password2: '',
-        }
+          nickname: '',
+          using_ott: [],     
+        },
       }
     },
     computed: {
       ...mapGetters(['authError'])
     },
     methods: {
+
       ...mapActions(['signup'])
     },
   }
