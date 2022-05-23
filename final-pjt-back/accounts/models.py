@@ -16,6 +16,6 @@ OTT_CHOICES = (
 class User(AbstractUser):
     profile_image = models.ImageField(upload_to='profile/', null=True)
     nickname = models.CharField(max_length=20, unique=True, null=True)
-    point = models.IntegerField()
-    using_ott = MultiSelectField(choices=OTT_CHOICES)
+    point = models.IntegerField(null=True)
+    using_ott = MultiSelectField(choices=OTT_CHOICES, null=True)
 

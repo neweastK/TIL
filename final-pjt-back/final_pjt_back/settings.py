@@ -61,6 +61,8 @@ INSTALLED_APPS = [
     'multiselectfield',
 ]
 
+SITE_ID = 1
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',

@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from multiselectfield import MultiSelectField
+
 
 # Create your models here.
 CATEGORY_CHOICES = (
@@ -17,7 +17,7 @@ CATEGORY_CHOICES = (
 )
 
 class Article(models.Model):
-    category = MultiSelectField(choices=CATEGORY_CHOICES)
+    category = models.CharField(choices=CATEGORY_CHOICES, max_length=100)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='articles')
     title = models.CharField(max_length=100)
     content = models.TextField()
