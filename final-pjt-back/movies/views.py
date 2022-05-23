@@ -5,7 +5,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from movies.serializers.movie import MovieListSerializer, MovieSerializer, ReviewSerializer
+from movies.serializers.movie import BoxSerializer, MovieListSerializer, MovieSerializer, ReviewSerializer
 from movies.serializers.person import ActorSerializer, DirectorSerializer
 
 from .models import Actor, Boxoffice, Director, Movie, Review
@@ -20,13 +20,14 @@ def movie_list(request):
 @api_view(['GET'])    
 def boxoffice_list(request):
     movies = get_list_or_404(Boxoffice)
-    serializer = MovieListSerializer(movies, many=True)
+    serializer = BoxSerializer(movies, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
 def movie_detail(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
     serializer = MovieSerializer(movie)
+    
     return Response(serializer.data)
 
 @api_view(['GET'])
@@ -42,10 +43,12 @@ def person_detail(request, person_pk) :
 
 @api_view(['POST'])
 def review_create(request, movie_id):
+    user = request.user
     movie = get_object_or_404(Movie,pk=movie_id)
+
     serializer = ReviewSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
-        serializer.save(movie=movie,user=request.user)
+        serializer.save(movie=movie, user=user)
         
         reviews = movie.reviews.all()
         serializer = ReviewSerializer(reviews, many=True)

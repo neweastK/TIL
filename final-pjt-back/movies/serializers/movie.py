@@ -2,17 +2,19 @@ from rest_framework import serializers
 from django.contrib.auth import get_user_model
 
 from movies.serializers.person import ActorSerializer, DirectorSerializer
-from ..models import Movie, Boxoffice, Review, Hashtag
+from ..models import Actor, Director, Movie, Boxoffice, Review, Hashtag
 
 User = get_user_model()
 
 class ReviewSerializer(serializers.ModelSerializer):
+    
     class UserSerializer(serializers.ModelSerializer) :
         class Meta:
             model = User
-            fields = ('nickname',)
+            fields = ('pk','nickname',)
     
     user = UserSerializer(read_only=True)
+    like = UserSerializer(read_only=True, many=True)
 
     class MovieSerializer(serializers.ModelSerializer) :
         class Meta :
@@ -33,29 +35,39 @@ class HashTagSerializer(serializers.ModelSerializer):
         model = Hashtag
         fields = '__all__'
 
-
+# 체크 완료
 class MovieSerializer(serializers.ModelSerializer):
     
-    like_count = serializers.IntegerField()
-    watch_count = serializers.IntegerField()
+    class ActorSerializer(serializers.ModelSerializer):
+        class Meta :
+            model = Actor
+            fields = ('name','profile',)
     
-    movie_actor = ActorSerializer(read_only=True, many=True)
-    movie_director = DirectorSerializer(read_only=True)
+    actors = ActorSerializer(read_only=True, many=True)
+
+
+    class DirectorSerializer(serializers.ModelSerializer) :
+        class Meta :
+            model = Director
+            fields = ('name','profile',)
+        
+    directors = DirectorSerializer(read_only=True, many=True)
+    
     hashtag = HashTagSerializer(read_only=True,many=True)
     reviews = ReviewSerializer(read_only=True, many=True)
 
     class Meta :
         model = Movie
-        # __all__로 설정했을 때 like_count,watch_count가 들어갈지 모르겠음
         fields = '__all__'
 
+# 체크 완료
 class MovieListSerializer(serializers.ModelSerializer):
 
     class Meta :
         model = Movie
         fields = ('title','poster_path','vote_average',)
 
-
+# 체크 완료
 class BoxSerializer(serializers.ModelSerializer):
     class Meta :
         model = Boxoffice

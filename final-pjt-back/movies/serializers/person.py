@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
-from ..models import Actor, Director, Movie
+from movies.models import Actor, Director, Movie
 
-
+# 체크 완료
 class ActorSerializer(serializers.ModelSerializer):
     
     class MovieSerializer(serializers.ModelSerializer) :
@@ -10,12 +10,13 @@ class ActorSerializer(serializers.ModelSerializer):
             model = Movie
             fields = ('title','poster_path','release_date',)
 
-    movie = MovieSerializer(many=True)
+    act_movie = MovieSerializer(many=True)
 
     class Meta :
         model = Actor
         fields = '__all__'
 
+# 체크 완료
 class DirectorSerializer(serializers.ModelSerializer):
     
     class MovieSerializer(serializers.ModelSerializer) :
@@ -23,7 +24,7 @@ class DirectorSerializer(serializers.ModelSerializer):
             model = Movie
             fields = ('title','poster_path','release_date',)
 
-    movie = MovieSerializer(many=True)
+    direct_movie = MovieSerializer(many=True)
 
     class Meta :
         model = Director
