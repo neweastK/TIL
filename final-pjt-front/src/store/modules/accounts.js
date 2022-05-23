@@ -1,3 +1,6 @@
+import axios from 'axios'
+import router from '@/router'
+import drf from '@/api/drf'
 
 export default {
   state: {
@@ -31,6 +34,66 @@ export default {
     removeToken({ commit }) {
       commit('SET_TOKEN', '')
       localStorage.setItem('token', '')
-    }
+    },
+    login({ commit, dispatch }, credentials){
+      axios({
+        url: drf.accounts.login(),
+        method: 'post',
+        data: credentials
+      })
+        .then(res => {
+          const token = res.data.key
+          dispatch('saveToken', token)
+          dispatch('fetchCurrentUser')
+          router.push({ name: 'index' })
+        })
+        .catch(err => {
+          console.error(err.response.data)
+          commit('SET_AUTH_ERROR', err.response.data)
+        })
+    },
+    logout({ getters, dispatch }) {
+      axios({
+        url: drf.accounts.logout(),
+        method: 'post',
+        // data: {},
+        headers: getters.authHeader,
+      })
+        .then(() => {
+          dispatch('removeToken')
+          alert('성공적으로 logout!')
+          router.push({ name: 'login' })
+        })
+        .error(err => {
+          console.error(err.response)
+        })
+    },
+    fetchCurrentUser({ commit, getters, dispatch }) {
+      if (getters.isLoggedIn) {
+        axios({
+          url: drf.accounts.currentUserInfo(),
+          method: 'get',
+          headers: getters.authHeader,
+        })
+          .then(res => commit('SET_CURRENT_USER', res.data))
+          .catch(err => {
+            if (err.response.status === 401) {
+              dispatch('removeToken')
+              router.push({ name: 'login' })
+            }
+          })
+      }
+    },
+    fetchProfile({ commit, getters }, { username }) {
+      axios({
+        url: drf.accounts.profile(username),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => {
+          commit('SET_PROFILE', res.data)
+        })
+    },
   },
+
 }
