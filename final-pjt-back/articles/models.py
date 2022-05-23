@@ -1,22 +1,23 @@
 from django.db import models
 from django.conf import settings
+from multiselectfield import MultiSelectField
 
 # Create your models here.
-# CATEGORY_CHOICES = (
-#     ('1','1'),
-#     ('2','2'),
-#     ('3','3'),
-#     ('4','4'),
-#     ('5','5'),
-#     ('6','6'),
-#     ('7','7'),
-#     ('8','8'),
-#     ('9','9'),
-#     ('10','10'),
-# )
+CATEGORY_CHOICES = (
+    ('1','1'),
+    ('2','2'),
+    ('3','3'),
+    ('4','4'),
+    ('5','5'),
+    ('6','6'),
+    ('7','7'),
+    ('8','8'),
+    ('9','9'),
+    ('10','10'),
+)
 
 class Article(models.Model):
-    category = models.CharField(max_length=20)
+    category = MultiSelectField(choices=CATEGORY_CHOICES)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='articles')
     title = models.CharField(max_length=100)
     content = models.TextField()
