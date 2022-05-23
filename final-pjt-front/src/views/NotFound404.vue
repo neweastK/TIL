@@ -1,8 +1,8 @@
 <template>
   <div>
-    404
+    <!-- <img class="not-found" src="@/assets/404.jpg" alt="not-found"> -->
+    <h1>404 Not Found</h1>
   </div>
-  
 </template>
 
 <script>

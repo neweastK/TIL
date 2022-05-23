@@ -1,15 +1,27 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link :to="{ name: 'index' }">MOVIE</router-link> |
-      <router-link :to="{ name: 'sinyema' }">SINYEMA</router-link> |
-      <router-link :to="{ name: 'community' }">COMMUNITY</router-link> |
-      <router-link :to="{ name: 'mypage' }">MyPage</router-link>
-
-    </nav>
-    <router-view/>
+    <nav-bar></nav-bar>
+    <hr />
+    <router-view></router-view>
   </div>
 </template>
+
+<script>
+  import NavBar from '@/components/NavBar.vue'
+
+  import { mapActions } from 'vuex'
+
+  export default {
+    name: 'App',
+    components: { NavBar },
+    methods: {
+      ...mapActions(['fetchCurrentUser'])
+    },
+    created() {
+      this.fetchCurrentUser()
+    }
+  }
+</script>
 
 <style>
 #app {
