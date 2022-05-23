@@ -10,7 +10,6 @@
         <label for="username">username: </label>
         <input v-model="credentials.username" type="text" id="username" required />
       </div>
-
       <div>
         <label for="password">password: </label>
         <input v-model="credentials.password" type="password" id="password" required />
