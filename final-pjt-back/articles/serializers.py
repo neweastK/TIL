@@ -1,4 +1,3 @@
-from asyncore import read
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from .models import Article, Comment
@@ -35,3 +34,16 @@ class ArticleSerializer(serializers.ModelSerializer) :
         model = Article
         fields = '__all__'
         read_only_fields = ('category',)
+
+class ArticleListSerializer(serializers.ModelSerializer):
+    class UserSerializer(serializers.ModelSerializer) :
+        class Meta :
+            model = User
+            fields = ('nickname')   
+
+    user = UserSerializer(read_only=True) 
+    comment_count = serializers.IntegerField()
+    class Meta:
+        model = Article
+        fields = ('pk', 'user', 'title', 'comment_count', )
+

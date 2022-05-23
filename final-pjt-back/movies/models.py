@@ -1,5 +1,3 @@
-from platform import release
-from tkinter import CASCADE
 from django.db import models
 from django.conf import settings
 # Create your models here.
