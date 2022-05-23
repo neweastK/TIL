@@ -1,14 +1,28 @@
 from platform import release
+from tkinter import CASCADE
 from django.db import models
 from django.conf import settings
 # Create your models here.
 
 
 class Boxoffice(models.Model):
-    title = models.CharField(max_length=100)
+    movieNm = models.CharField(max_length=100)
     rank = models.IntegerField()
     audiAcc = models.IntegerField()
     independent = models.BooleanField()
+
+class Actor(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=100)
+    birthday = models.DateField(null=True)
+    profile = models.TextField(null=True)
+
+
+class Director(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=100)
+    birthday = models.DateField(null=True)
+    profile = models.TextField(null=True)
 
 
 class Movie(models.Model):
@@ -21,12 +35,13 @@ class Movie(models.Model):
     poster_path = models.TextField()
     genres = models.CharField(max_length=30)
     vote_average = models.FloatField()
-    like = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movie')
-    watch = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='watch_movie')
-    ott = models.CharField(max_length=100)
+    ott_service = models.CharField(max_length=100)
     backdrops = models.TextField()
     playlist = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='playlist_movie')
-    
+    watch = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='watch_movie')
+    like = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movie')
+    actors = models.ManyToManyField(Actor, related_name='act_movie')
+    directors = models.ManyToManyField(Director,related_name='direct_movie')
 
 class Review(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reviews')
@@ -44,20 +59,6 @@ class Hashtag(models.Model):
     tag = models.CharField(max_length=100)
 
 
-class Actor(models.Model):
-    tmdb_id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=100)
-    birth = models.DateField()
-    profile_path = models.TextField()
-    movie = models.ManyToManyField(Movie, related_name='movie_actor')
-
-
-class Director(models.Model):
-    tmdb_id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=100)
-    birth = models.DateField()
-    profile_path = models.TextField()
-    movie = models.ManyToManyField(Movie, related_name='movie_director')  
 
 
 
