@@ -4,13 +4,13 @@ from .models import Article, Comment
 
 User = get_user_model()
 
-
+# 체크 완료(5/24)
 class CommentSerializer(serializers.ModelSerializer) :
     
     class UserSerializer(serializers.ModelSerializer) :
         class Meta :
             model = User
-            fields = ('nickname')
+            fields = ('nickname',)
 
     user = UserSerializer(read_only=True)
 
@@ -19,27 +19,28 @@ class CommentSerializer(serializers.ModelSerializer) :
         fields = '__all__'
         read_only_fields = ('article',)
 
-
+# 체크 완료 (5/24)
 class ArticleSerializer(serializers.ModelSerializer) :
 
     class UserSerializer(serializers.ModelSerializer) :
         class Meta :
             model = User
-            fields = ('nickname')
+            fields = ('nickname',)
 
     user = UserSerializer(read_only=True)
     comments = CommentSerializer(many=True, read_only=True)
     
     class Meta :
         model = Article
-        fields = '__all__'
+        fields = ('pk','user','title','content','comments',)
         read_only_fields = ('category',)
 
+# 체크 완료(5/24)
 class ArticleListSerializer(serializers.ModelSerializer):
     class UserSerializer(serializers.ModelSerializer) :
         class Meta :
             model = User
-            fields = ('nickname')   
+            fields = ('nickname',)   
 
     user = UserSerializer(read_only=True) 
     comment_count = serializers.IntegerField()

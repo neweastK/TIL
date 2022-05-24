@@ -72,7 +72,7 @@ def review_update_or_delete(request, movie_id, review_pk):
     def delete_review():
         if request.user == review.user:
             review.delete()
-            reviews = Movie.reviews.all()
+            reviews = movie.reviews.all()
             serializer = ReviewSerializer(reviews, many=True)
             return Response(serializer.data)
     

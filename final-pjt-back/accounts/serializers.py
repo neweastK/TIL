@@ -10,13 +10,9 @@ from multiselectfield import MultiSelectField
 
 from rest_framework import serializers
 
-OTT_CHOICES = (
-    ('넷플릭스', '넷플릭스'),
-    ('왓챠', '왓챠'),
-    ('디즈니+', '디즈니+'),
-    ('웨이브', '웨이브')
-    )
 
+
+# 새로 생성(5/24)
 class UserSerializer(RegisterSerializer):
 
     nickname = serializers.CharField(max_length=20)
@@ -31,7 +27,7 @@ class UserSerializer(RegisterSerializer):
         
         return data
 
-
+# 체크 완료(5/24)
 class ProfileSerializer(serializers.ModelSerializer) :
 
     class MovieSerializer(serializers.ModelSerializer):
@@ -45,4 +41,4 @@ class ProfileSerializer(serializers.ModelSerializer) :
 
     class Meta :
         model = get_user_model()
-        fields = '__all__'
+        fields = ('pk','nickname', 'like_movie', 'articles', 'hashtag','point','using_ott','profile_image',)
