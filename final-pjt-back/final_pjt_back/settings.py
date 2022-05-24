@@ -62,6 +62,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
+SOCIALACCOUNT_LOGIN_ON_GET = True
 
 AUTHENTICATION_BACKENDS = [
 
@@ -176,3 +177,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated'
     ]
 }
+
+
