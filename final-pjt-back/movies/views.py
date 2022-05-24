@@ -1,10 +1,11 @@
 from django.shortcuts import get_list_or_404, get_object_or_404
 from django.db.models import Count
-
+from django.contrib.auth import get_user_model
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+import random
+from collections import Counter
 from movies.serializers.movie import BoxSerializer, MovieListSerializer, MovieSerializer, ReviewSerializer
 from movies.serializers.person import ActorSerializer, DirectorSerializer
 
@@ -17,11 +18,45 @@ def movie_list(request):
     serializer = MovieListSerializer(movies, many=True)
     return Response(serializer.data)
 
+
+# !!!!수정수정수정!!!!
+@api_view(['GET'])
+def recommendation_like(request):
+    me = get_object_or_404(get_user_model(), username=request.user.username)
+    like_list = me.like_movie.all()
+
+    if like_list:
+        genres_name = []
+        for movie in like_list:
+            movie_title = movie.title
+            mv = get_object_or_404(Movie, title=movie_title)
+            genres = mv.genres.all()
+
+            for gr in genres:
+                genres_name.append(gr.name)
+        
+        for x, y in Counter(genres_name).most_common(1):
+            favorite = x
+    pass
+
+
+@api_view(['GET'])
+def recommendation_watch(request):
+    me = get_object_or_404(get_user_model(), username=request.user.username)
+    watch_list = me.watch_movie.all()
+    if watch_list:
+        last = watch_list[-1]
+        result = random.sample(list(Movie.objects.filter()))
+    pass
+
+
+
 @api_view(['GET'])    
 def boxoffice_list(request):
     movies = get_list_or_404(Boxoffice)
     serializer = BoxSerializer(movies, many=True)
     return Response(serializer.data)
+
 
 @api_view(['GET'])
 def movie_detail(request, movie_id):
@@ -29,6 +64,7 @@ def movie_detail(request, movie_id):
     serializer = MovieSerializer(movie)
     
     return Response(serializer.data)
+
 
 @api_view(['GET'])
 def person_detail(request, person_pk) :
@@ -40,6 +76,7 @@ def person_detail(request, person_pk) :
         serializer = DirectorSerializer(person)
     
     return Response(serializer.data)
+
 
 @api_view(['POST'])
 def review_create(request, movie_id):
@@ -84,8 +121,7 @@ def review_update_or_delete(request, movie_id, review_pk):
 
     
 @api_view(['POST'])
-def like_review(request, movie_id, review_pk):
-    article = get_object_or_404(Movie, pk=movie_id)
+def like_review(request, review_pk):
     review = get_object_or_404(Review, pk=review_pk)
     user = request.user
     if review.like.filter(pk=user.pk).exists():
@@ -96,3 +132,30 @@ def like_review(request, movie_id, review_pk):
         review.like.add(user)
         serializer = ReviewSerializer(review)
         return Response(serializer.data)
+
+
+def like_movie(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+    user = request.user
+    if movie.like.filter(pk=user.pk).exists():
+        movie.like.remove(user)
+        serializer = MovieSerializer(movie)
+        return Response(serializer.data)
+    else:
+        movie.like.add(user)
+        serializer = MovieSerializer(movie)
+        return Response(serializer.data)
+
+
+def watch_movie(request, movie_id):
+    movie = get_object_or_404(Movie, pk=movie_id)
+    user = request.user
+    if movie.watch.filter(pk=user.pk).exists():
+        movie.watch.remove(user)
+        serializer = MovieSerializer(movie)
+        return Response(serializer.data)
+    else:
+        movie.watch.add(user)
+        serializer = MovieSerializer(movie)
+        return Response(serializer.data)  
+    

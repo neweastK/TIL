@@ -16,13 +16,11 @@ from rest_framework import serializers
 class UserSerializer(RegisterSerializer):
 
     nickname = serializers.CharField(max_length=20)
-    profile_image = serializers.ImageField(use_url=True)
     using_ott = serializers.ListField()
 
     def get_cleaned_data(self):
         data = super().get_cleaned_data()
         data['nickname'] = self.validated_data.get('nickname', '')
-        data['profile_image'] = self.validated_data.get('profile_image', '')
         data['using_ott'] = self.validated_data.get('using_ott', [])
         
         return data
@@ -41,4 +39,4 @@ class ProfileSerializer(serializers.ModelSerializer) :
 
     class Meta :
         model = get_user_model()
-        fields = ('pk','nickname', 'like_movie', 'articles', 'hashtag','point','using_ott','profile_image',)
+        fields = ('pk','nickname', 'like_movie', 'articles', 'hashtag', 'point', 'using_ott', 'profile_image',)
