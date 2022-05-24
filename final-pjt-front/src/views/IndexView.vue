@@ -1,40 +1,44 @@
 <template>
   <div>
     <h1>Home</h1>
-    <ul>
-      <li v-for="article in articles" :key="article.pk">
-        <!-- 작성자 -->
-        {{ article.user.username }} : 
-
-        <!-- 글 이동 링크 (제목) -->
-        <router-link 
-          :to="{ name: 'article', params: {articlePk: article.pk} }">
-          {{ article.title }}
-        </router-link>
-
-        <!-- 댓글 개수/좋아요 개수 -->
-        =>
-        ({{ article.comment_count }}) | +{{ article.like_count }}
-
-      </li>
-    </ul>
-   
+    <div>
+     <div class='container'>
+        <div class='row justify-content-center mx-5'>
+          <movie-card
+            v-for="movie in movies" 
+            :key="movie.pk"
+            :movie="movie"
+            class='col-12 col-sm-6 col-lg-3 mb-5 mx-1'
+          >
+          </movie-card>
+        </div> 
+    </div>
+</div>   
+    <!-- 글 이동 링크 (제목) -->
+    <!-- <router-link 
+      :to="{ name: 'movie', params: {moviePk: movie.pk} }">
+      {{ movie.title }}
+    </router-link> -->   
   </div>
 </template>
 
 <script>
+  import MovieCard from "@/components/MovieCard.vue"
   import { mapActions, mapGetters } from 'vuex'
 
   export default {
-    name: 'ArticleList',
+    name: 'MovieList',
+    components : {
+      MovieCard,
+    },
     computed: {
-      ...mapGetters(['articles'])
+      ...mapGetters(['movies'])
     },
     methods: {
-      ...mapActions(['fetchArticles'])
+      ...mapActions(['fetchMovies'])
     },
     created() {
-      this.fetchArticles()
+      this.fetchMovies()
     },
   }
 </script>
