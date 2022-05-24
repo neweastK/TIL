@@ -6,12 +6,13 @@ from ..models import Actor, Director, Movie, Boxoffice, Review, Hashtag
 
 User = get_user_model()
 
+# 체크 완료(5/24)
 class ReviewSerializer(serializers.ModelSerializer):
     
     class UserSerializer(serializers.ModelSerializer) :
         class Meta:
             model = User
-            fields = ('pk','nickname',)
+            fields = ('nickname',)
     
     user = UserSerializer(read_only=True)
     like = UserSerializer(read_only=True, many=True)
@@ -22,7 +23,6 @@ class ReviewSerializer(serializers.ModelSerializer):
             fields = ('title',)
 
     movie = MovieSerializer(read_only=True)
-    like = UserSerializer(read_only=True, many=True)
 
     class Meta :
         model = Review

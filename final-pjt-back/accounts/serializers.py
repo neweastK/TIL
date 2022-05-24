@@ -8,7 +8,7 @@ from dj_rest_auth.registration.serializers import RegisterSerializer
 
 from rest_framework import serializers
 
-
+# 새로 생성(5/24)
 class UserSerializer(RegisterSerializer):
 
     nickname = serializers.CharField(max_length=20)
@@ -18,7 +18,7 @@ class UserSerializer(RegisterSerializer):
         data['nickname'] = self.validated_data.get('nickname', '')
         return data
 
-
+# 체크 완료(5/24)
 class ProfileSerializer(serializers.ModelSerializer) :
 
     class MovieSerializer(serializers.ModelSerializer):
@@ -32,4 +32,4 @@ class ProfileSerializer(serializers.ModelSerializer) :
 
     class Meta :
         model = get_user_model()
-        fields = '__all__'
+        fields = ('pk','nickname', 'like_movie', 'articles', 'hashtag','point','using_ott','profile_image',)
