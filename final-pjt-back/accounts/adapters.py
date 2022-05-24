@@ -9,8 +9,14 @@ class CustomAccountAdapter(DefaultAccountAdapter):
         user = super().save_user(request, user, form, False)
         # 추가 저장 필드: profile_image
         nickname = data.get("nickname")
+        profile_image = data.get("profile_image")
+        using_ott = data.get("using_ott")
         if nickname:
             user.nickname = nickname
+        if profile_image:
+            user.profile_image = profile_image
+        if using_ott:
+            user.using_ott = using_ott
 
         user.save()
         return user
