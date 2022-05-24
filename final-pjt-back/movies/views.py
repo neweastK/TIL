@@ -5,6 +5,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import random
+from django.db.models import Q
 from collections import Counter
 from movies.serializers.movie import BoxSerializer, MovieListSerializer, MovieSerializer, ReviewSerializer
 from movies.serializers.person import ActorSerializer, DirectorSerializer
@@ -46,8 +47,70 @@ def recommendation_watch(request):
     watch_list = me.watch_movie.all()
     if watch_list:
         last = watch_list[-1]
-        result = random.sample(list(Movie.objects.filter()))
-    pass
+        actor = last.get('actors')[0]
+        director = last.get('dirctors')[0]
+        result = random.sample(list(Movie.objects.filter(Q(actors__contains=actor)|Q(directors__contains=director))),6)
+    else:
+        result = Movie.objects.order_by('?')[:6]
+
+    serializer = MovieListSerializer(result, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def recommendation_netflix(request):
+    movies = Movie.objects.all()
+    netflix = []
+    for movie in movies:
+        if movie.ott_service:
+            otts = movie.ott_service
+            if "넷플릭스" in otts:
+                netflix.append(movie)
+    result = random.sample(netflix, 6)
+    serializer = MovieListSerializer(result, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def recommendation_watcha(request):
+    movies = Movie.objects.all()
+    watcha = []
+    for movie in movies:
+        if movie.ott_service:
+            otts = movie.ott_service
+            if "왓챠" in otts:
+                watcha.append(movie)
+    result = random.sample(watcha, 6)
+    serializer = MovieListSerializer(result, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def recommendation_wavve(request):
+    movies = Movie.objects.all()
+    wavve = []
+    for movie in movies:
+        if movie.ott_service:
+            otts = movie.ott_service
+            if "웨이브" in otts:
+                wavve.append(movie)
+    result = random.sample(wavve, 3)
+    serializer = MovieListSerializer(result, many=True)
+    return Response(serializer.data)
+
+# 디즈니 데이터 만들고 다시 수종!!!
+@api_view(['GET'])
+def recommendation_disney(request):
+    movies = Movie.objects.all()
+    disney = []
+    for movie in movies:
+        if movie.ott_service:
+            otts = movie.ott_service
+            if "디즈니" in otts:
+                disney.append(movie)
+    if disney:
+        result = random.sample(disney, 1)
+    else:
+        result = Movie.objects.order_by('?')[:6]
+    serializer = MovieListSerializer(result, many=True)
+    return Response(serializer.data)
 
 
 
@@ -63,7 +126,6 @@ def boxoffice_list_independent(request):
     movies = get_list_or_404(Boxoffice, independent=1)
     serializer = BoxSerializer(movies, many=True)
     return Response(serializer.data)
-
 
 @api_view(['GET'])
 def movie_detail(request, movie_id):
@@ -99,6 +161,7 @@ def review_create(request, movie_id):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
         
 
+        
 @api_view(['PUT', 'DELETE'])
 def review_update_or_delete(request, movie_id, review_pk):
     movie = get_object_or_404(Movie, pk=movie_id)

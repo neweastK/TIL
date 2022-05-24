@@ -21,6 +21,11 @@ export default {
     reviews: movieId => HOST + MOVIES + `${movieId}/` + 'review/',
     review: (movieId, reviewPk) => HOST + MOVIES + `${movieId}/` + 'review/' `${reviewPk}/` ,
     likeReview: (movieId, reviewPk) => HOST + MOVIES + `${movieId}/` + 'review/' `${reviewPk}/` + 'like/' ,
+    recommendationWatch: () => HOST + MOVIES + 'recommendation/' + 'watch/',
+    recommendationNetflix: () => HOST + MOVIES + 'recommendation/' + 'netflix/',
+    recommendationWatcha: () => HOST + MOVIES + 'recommendation/' + 'watcha/',
+    recommendationWavve: () => HOST + MOVIES + 'recommendation/' + 'wavve/',
+    recommendationDisney: () => HOST + MOVIES + 'recommendation/' + 'disney/',
   },
 
   // articles: {
