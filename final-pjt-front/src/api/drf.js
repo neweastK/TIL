@@ -2,7 +2,7 @@ const HOST = 'http://localhost:8000/api/v1/'
 
 const ACCOUNTS = 'accounts/'
 const MOVIES = 'movies/'
-// const ARTICLES = 'articles/'
+const ARTICLES = 'articles/'
 
 export default {
   accounts: {
@@ -28,7 +28,8 @@ export default {
     recommendationDisney: () => HOST + MOVIES + 'recommendation/' + 'disney/',
   },
 
-  // articles: {
-
-  // }
+  articles: {
+    articles: () => HOST + ARTICLES,
+    events: () => HOST + ARTICLES + 'event/',
+  }
 }

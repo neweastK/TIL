@@ -13,7 +13,7 @@
       </li>
 
       <li v-if="isLoggedIn">
-        <router-link :to="{ name: 'articleNew' }">New</router-link>
+        <router-link :to="{ name: 'community' }">커뮤니티</router-link>
       </li>
       <li v-if="isLoggedIn">
         <router-link :to="{ name: 'profile', params: { username } }">
