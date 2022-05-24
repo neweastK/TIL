@@ -5,6 +5,7 @@ urlpatterns = [
     # 영화 리스트를 가져올 때, view에서 추천 로직을 짜는가 vue에서 짜는가
     path('', views.movie_list),
     path('boxoffice/', views.boxoffice_list),
+    path('boxoffice/independent/', views.boxoffice_list_independent),
     path('<int:movie_id>/', views.movie_detail),
     path('<int:person_pk>/person/', views.person_detail),
     path('<int:movie_id>/review/', views.review_create),

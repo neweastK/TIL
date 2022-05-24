@@ -8,6 +8,8 @@ class Boxoffice(models.Model):
     rank = models.IntegerField()
     audiAcc = models.IntegerField()
     independent = models.BooleanField()
+    poster_path = models.TextField()
+
 
 class Actor(models.Model):
     id = models.IntegerField(primary_key=True)

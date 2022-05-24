@@ -1,202 +1,222 @@
 [
-  {
-      "model": "movies.boxoffice",
-      "pk": 1,
-      "fields": {
-          "rank": 1,
-          "movieNm": "중경삼림",
-          "audiAcc": 96760,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 2,
-      "fields": {
-          "rank": 2,
-          "movieNm": "매스",
-          "audiAcc": 5361,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 3,
-      "fields": {
-          "rank": 3,
-          "movieNm": "우연과 상상",
-          "audiAcc": 18480,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 4,
-      "fields": {
-          "rank": 4,
-          "movieNm": "나를 만나는 길",
-          "audiAcc": 5116,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 5,
-      "fields": {
-          "rank": 5,
-          "movieNm": "퍼스트 러브",
-          "audiAcc": 2041,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 6,
-      "fields": {
-          "rank": 6,
-          "movieNm": "완벽한 축사를 준비하는 방법",
-          "audiAcc": 2382,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 7,
-      "fields": {
-          "rank": 7,
-          "movieNm": "어부바",
-          "audiAcc": 19809,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 8,
-      "fields": {
-          "rank": 8,
-          "movieNm": "그리스도 디 오리진",
-          "audiAcc": 2028,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 9,
-      "fields": {
-          "rank": 9,
-          "movieNm": "봉명주공",
-          "audiAcc": 976,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 10,
-      "fields": {
-          "rank": 10,
-          "movieNm": "소설가의 영화",
-          "audiAcc": 9606,
-          "independent": true
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 11,
-      "fields": {
-          "rank": 1,
-          "movieNm": "범죄도시 2",
-          "audiAcc": 3550902,
-          "independent": false
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 12,
-      "fields": {
-          "rank": 2,
-          "movieNm": "닥터 스트레인지: 대혼돈의 멀티버스",
-          "audiAcc": 5472113,
-          "independent": false
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 13,
-      "fields": {
-          "rank": 3,
-          "movieNm": "배드 가이즈",
-          "audiAcc": 375407,
-          "independent": false
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 14,
-      "fields": {
-          "rank": 4,
-          "movieNm": "극장판 엉덩이 탐정: 수플레 섬의 비밀",
-          "audiAcc": 147178,
-          "independent": false
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 15,
-      "fields": {
-          "rank": 5,
-          "movieNm": "뜨거운 피",
-          "audiAcc": 390772,
-          "independent": false
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 16,
-      "fields": {
-          "rank": 6,
-          "movieNm": "아치의 노래, 정태춘",
-          "audiAcc": 14336,
-          "independent": false
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 17,
-      "fields": {
-          "rank": 7,
-          "movieNm": "극장판 주술회전 0",
-          "audiAcc": 635802,
-          "independent": false
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 18,
-      "fields": {
-          "rank": 8,
-          "movieNm": "신비한 동물들과 덤블도어의 비밀",
-          "audiAcc": 1191661,
-          "independent": false
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 19,
-      "fields": {
-          "rank": 9,
-          "movieNm": "서울괴담",
-          "audiAcc": 112003,
-          "independent": false
-      }
-  },
-  {
-      "model": "movies.boxoffice",
-      "pk": 20,
-      "fields": {
-          "rank": 10,
-          "movieNm": "니 부모 얼굴이 보고 싶다",
-          "audiAcc": 402621,
-          "independent": false
-      }
-  }
+    {
+        "model": "movies.boxoffice",
+        "pk": 1,
+        "fields": {
+            "rank": 1,
+            "movieNm": "오마주",
+            "audiAcc": 1271,
+            "independent": true,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 2,
+        "fields": {
+            "rank": 2,
+            "movieNm": "매스",
+            "audiAcc": 5784,
+            "independent": true,
+            "poster_path": "/25hs4cufSf4bAfwjJbTZbEKWyZg.jpg"
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 3,
+        "fields": {
+            "rank": 3,
+            "movieNm": "우연과 상상",
+            "audiAcc": 18797,
+            "independent": true,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 4,
+        "fields": {
+            "rank": 4,
+            "movieNm": "나를 만나는 길",
+            "audiAcc": 5428,
+            "independent": true,
+            "poster_path": "/fgZ68O1iHrVEQ6g6EVf5UEyV6La.jpg"
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 5,
+        "fields": {
+            "rank": 5,
+            "movieNm": "퍼스트 러브",
+            "audiAcc": 2329,
+            "independent": true,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 6,
+        "fields": {
+            "rank": 6,
+            "movieNm": "완벽한 축사를 준비하는 방법",
+            "audiAcc": 2479,
+            "independent": true,
+            "poster_path": "/eLY5SSlDMmmaAebOXoSauasHvpU.jpg"
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 7,
+        "fields": {
+            "rank": 7,
+            "movieNm": "소설의 신",
+            "audiAcc": 458,
+            "independent": true,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 8,
+        "fields": {
+            "rank": 8,
+            "movieNm": "언어의 정원",
+            "audiAcc": 78114,
+            "independent": true,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 9,
+        "fields": {
+            "rank": 9,
+            "movieNm": "아메리칸 셰프",
+            "audiAcc": 155885,
+            "independent": true,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 10,
+        "fields": {
+            "rank": 10,
+            "movieNm": "미라클 벨리에",
+            "audiAcc": 122802,
+            "independent": true,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 11,
+        "fields": {
+            "rank": 1,
+            "movieNm": "범죄도시 2",
+            "audiAcc": 3886783,
+            "independent": false,
+            "poster_path": "/9oonDgLkh42GsLkbVmW7nU1ib6u.jpg"
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 12,
+        "fields": {
+            "rank": 2,
+            "movieNm": "닥터 스트레인지: 대혼돈의 멀티버스",
+            "audiAcc": 5501499,
+            "independent": false,
+            "poster_path": "/vL5ktZauR0fZMDOHKjakb1idhuU.jpg"
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 13,
+        "fields": {
+            "rank": 3,
+            "movieNm": "안녕하세요",
+            "audiAcc": 4772,
+            "independent": false,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 14,
+        "fields": {
+            "rank": 4,
+            "movieNm": "아치의 노래, 정태춘",
+            "audiAcc": 15694,
+            "independent": false,
+            "poster_path": "/cegp7UNjyk6gxNPY6e0Ua1PPfI7.jpg"
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 15,
+        "fields": {
+            "rank": 5,
+            "movieNm": "배드 가이즈",
+            "audiAcc": 376554,
+            "independent": false,
+            "poster_path": "/x6KSvale7iuxLhsrEfhYNoICyfK.jpg"
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 16,
+        "fields": {
+            "rank": 6,
+            "movieNm": "극장판 엉덩이 탐정: 수플레 섬의 비밀",
+            "audiAcc": 147553,
+            "independent": false,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 17,
+        "fields": {
+            "rank": 7,
+            "movieNm": "EBS 댄스파티! ",
+            "audiAcc": 7229,
+            "independent": false,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 18,
+        "fields": {
+            "rank": 8,
+            "movieNm": "신비한 동물들과 덤블도어의 비밀",
+            "audiAcc": 1191976,
+            "independent": false,
+            "poster_path": "/uvQbXjMgC5weQepx4jLJJ60H3N0.jpg"
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 19,
+        "fields": {
+            "rank": 9,
+            "movieNm": "더 노비스",
+            "audiAcc": 1622,
+            "independent": false,
+            "poster_path": ""
+        }
+    },
+    {
+        "model": "movies.boxoffice",
+        "pk": 20,
+        "fields": {
+            "rank": 10,
+            "movieNm": "뜨거운 피",
+            "audiAcc": 391022,
+            "independent": false,
+            "poster_path": ""
+        }
+    }
 ]

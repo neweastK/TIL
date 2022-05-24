@@ -19,9 +19,17 @@ def movie_list(request):
 
 @api_view(['GET'])    
 def boxoffice_list(request):
-    movies = get_list_or_404(Boxoffice)
+    movies = get_list_or_404(Boxoffice, independent=0)
     serializer = BoxSerializer(movies, many=True)
     return Response(serializer.data)
+
+
+@api_view(['GET'])    
+def boxoffice_list_independent(request):
+    movies = get_list_or_404(Boxoffice, independent=1)
+    serializer = BoxSerializer(movies, many=True)
+    return Response(serializer.data)
+
 
 @api_view(['GET'])
 def movie_detail(request, movie_id):
