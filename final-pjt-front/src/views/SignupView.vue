@@ -21,6 +21,7 @@
         <label for="nickname">Nickname: </label>
         <input  v-model="credentials.nickname" type="text" id="nickname" required/>
       </div>
+
       <div>
         <input type="checkbox" v-model="credentials.using_ott" value="넷플릭스">넷플릭스
         <input type="checkbox" v-model="credentials.using_ott" value="왓챠">왓챠
