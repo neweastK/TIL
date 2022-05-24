@@ -65,7 +65,7 @@ class MovieListSerializer(serializers.ModelSerializer):
 
     class Meta :
         model = Movie
-        fields = ('title','poster_path','vote_average',)
+        fields = '__all__'
 
 # 체크 완료
 class BoxSerializer(serializers.ModelSerializer):

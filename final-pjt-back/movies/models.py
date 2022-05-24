@@ -33,7 +33,7 @@ class Movie(models.Model):
     release_date = models.DateField()
     overview = models.TextField()
     poster_path = models.TextField()
-    genres = models.CharField(max_length=30)
+    genre_ids = models.CharField(max_length=30)
     vote_average = models.FloatField()
     ott_service = models.CharField(max_length=100)
     backdrops = models.TextField()
