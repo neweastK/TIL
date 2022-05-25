@@ -4,6 +4,16 @@
       <div class='row col-12 my-3'>
         <img :src='imgUrl' alt="POSTER" class='col-3'>
         <span class='col-8 mt-auto'>
+          <div class='d-flex justify-content-end'>
+            좋아요:
+            <button
+              @click="likeMovie(moviePk)"
+            >{{ likeCount }}</button>
+            WATCHED:
+            <button
+              @click="watchedMovie(moviePk)"
+            >{{ watchedCount }}</button>
+          </div>
           <h1 class='col-12 text-start'>{{ movie.title }}({{ year }})</h1>
           <p class='fw-bold text-start'> 한국  가족/코미디  1시간 30분 </p>
         </span>
@@ -32,12 +42,7 @@
     </div>
 
     <!-- movie Like UI -->
-    <div>
-      Likeit:
-      <button
-        @click="likeMovie(moviePk)"
-      >{{ likeCount }}</button>
-    </div>
+
     <hr />
   </div>  
 
@@ -57,23 +62,27 @@
       }
     },
     computed: {
-      ...mapGetters(['isAuthor', 'movie']),
+      ...mapGetters(['isAuthor', 'movie', 'watchedmovie']),
       likeCount() {
-        return this.movie.like_users?.length
+        return this.movie.like?.length
+      },
+      watchedCount() {
+        return this.movie.watch?.length
       },
       imgUrl() {
         const BASE_URL = 'https://image.tmdb.org/t/p/w500/'
         return BASE_URL + this.movie.poster_path
       },
       year() {
-        const movie_date = this.movie.release_date
-        return movie_date.substr(0,4)
+        const movie_date = this.movie.release_date.substr(0,4)
+        return movie_date
       }
     },
     methods: {
       ...mapActions([
         'fetchMovie',
         'likeMovie',
+        'watchedMovie',
       ])
     },
     created() {

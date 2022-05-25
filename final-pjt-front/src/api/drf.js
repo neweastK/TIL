@@ -22,6 +22,7 @@ export default {
     boxoffices: () => HOST + MOVIES + 'boxoffice/',
     boxoffices_ind: () => HOST + MOVIES + 'boxoffice/independent/',
     likemovie: movieId => HOST + MOVIES + `${movieId}/` + 'like/',
+    watchedmovie: movieId => HOST + MOVIES + `${movieId}/` + 'watch/',
     reviews: movieId => HOST + MOVIES + `${movieId}/` + 'review/',
     review: (movieId, reviewPk) => HOST + MOVIES + `${movieId}/` + 'review/' `${reviewPk}/` ,
     likeReview: (movieId, reviewPk) => HOST + MOVIES + `${movieId}/` + 'review/' `${reviewPk}/` + 'like/' ,
