@@ -4,7 +4,7 @@
       <img :src="imgUrl" class="card-img-top" alt="POSTER">
       <div class="card-body">
         <h5 class="card-title">{{ movie.movieNm }}</h5>
-        <router-link :to="{ name: 'movie', params: {moviePk: movie.tmdb_id} }">DETAIL</router-link>
+        <router-link :to="{ name: 'movie', params: {moviePk: movie.id} }">DETAIL</router-link>
       </div>
     </div>
 
@@ -36,7 +36,7 @@ export default{
   },
   computed: {
     imgUrl(){
-      const baseUrl = "https://image.tmdb.org/t/p/w500"
+      const baseUrl = "https://image.tmdb.org/t/p/w300/"
       const imageId = this.movie.poster_path
       return baseUrl + imageId
     },

@@ -22,6 +22,7 @@ export default {
   getters: {
     movies : state => state.movies,
     movie: state => state.movie,
+    actors: state => state.movie.actors,
 
 
     fromwatch : state => state.fromwatch,
