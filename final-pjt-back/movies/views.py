@@ -23,17 +23,22 @@ def movie_list(request):
 # !!!!수정수정수정!!!!
 @api_view(['GET'])
 def recommendation_like(request):
-    me = get_object_or_404(get_user_model(), username=request.user.username)
-    like_list = me.like_movie.all()
-
+    personal = get_object_or_404(get_user_model(), username=request.user.username)
+    like_list = personal.like_movie.all()
     if like_list:
-        genres_nums = []
+        genres_name = []
         for movie in like_list:
-            for genre in movie.genres:
-                genres_nums.append(genre)
-        for x, y in Counter(genres_name).most_common(1):
-            favorite = x
-    pass
+            genres = movie.genres[1:-1].replace("'", "").split(', ')
+            for genre in genres:
+                genres_name.append(genre)
+        print(genres_name)
+        for name, cnt in Counter(genres_name).most_common(1):
+            favorite = name
+        result = random.sample(list(Movie.objects.filter(genres__contains=favorite)),5)
+    else:
+        result = Movie.objects.order_by('?')[:6]
+    serializer = MovieListSerializer(result, many=True)
+    return Response(serializer.data)
 # 장르들 다 더하기
 # 장르 수 세서 가장 많은 것 
 # 장르가 = 인 영화 랜덤 6?
@@ -43,26 +48,13 @@ def recommendation_like(request):
 def recommendation_watch(request):
     me = get_object_or_404(get_user_model(), username=request.user.username)
     watch_list = me.watch_movie.all()
-    find = []
     if watch_list:
   
         last = watch_list[len(watch_list)-1]
-        print("여기!!!!!!!")
-        actor = last.actors.all()[0]
-        print(actor)
-        # find.append(actor.id)
+        actor = last.actors.all()[:3]
         director = last.directors.all()[0]
-        # find.append(director.id)
-        movies = Movie.objects.all().filter(actors__contains=actor)
-        print(movies)
-
-
-            # if movie.actors or movie.director:
-                # print(actor.id)
-                # print(movie.actors.get(id=2))
-                # if (actor.id in movie.actors) or (director.id in movie.director):
-                #     find.append(movie)
-        result = random.sample(movie, 1)
+        movies = Movie.objects.filter(Q(actors__id__contains=actor[2].id) | Q(actors__id__contains=actor[1].id) | Q(actors__id__contains=actor[0].id) | Q(directors__id__contains=director.id))
+        result = list(set(movies))
     else:
         result = Movie.objects.order_by('?')[:6]
 
@@ -104,7 +96,7 @@ def recommendation_wavve(request):
             otts = movie.ott_service
             if "웨이브" in otts:
                 wavve.append(movie)
-    result = random.sample(wavve, 3)
+    result = random.sample(wavve, 6)
     serializer = MovieListSerializer(result, many=True)
     return Response(serializer.data)
 
@@ -119,7 +111,7 @@ def recommendation_disney(request):
             if "디즈니" in otts:
                 disney.append(movie)
     if disney:
-        result = random.sample(disney, 1)
+        result = random.sample(disney, 6)
     else:
         result = Movie.objects.order_by('?')[:6]
     serializer = MovieListSerializer(result, many=True)

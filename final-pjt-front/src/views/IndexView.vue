@@ -23,6 +23,16 @@
           </movie-card>
           <br>
           <hr>
+          <p>좋아해~~</p>
+          <movie-card
+            v-for="movie in fromlike" 
+            :key="movie.pk"
+            :movie="movie"
+            class='col-12 col-sm-6 col-lg-3 mb-5 mx-1'
+          >
+          </movie-card>
+          <br>
+          <hr>
           <p>넷플릭스</p>
           <movie-card
             v-for="movie in netflix" 
@@ -82,14 +92,15 @@
       MovieCard,
     },
     computed: {
-      ...mapGetters(['boxoffices', 'fromwatch', 'netflix', 'watcha', 'wavve', 'disney'])
+      ...mapGetters(['boxoffices', 'fromwatch', 'fromlike', 'netflix', 'watcha', 'wavve', 'disney'])
     },
     methods: {
-      ...mapActions(['fetchBoxoffices', 'WatchMovies', 'NetflixMovies', 'WatchaMovies', 'WavveMovies', 'DisneyMovies'])
+      ...mapActions(['fetchBoxoffices', 'WatchMovies', 'LikeMovies', 'NetflixMovies', 'WatchaMovies', 'WavveMovies', 'DisneyMovies'])
     },
     created() {
       this.fetchBoxoffices()
       this.WatchMovies()
+      this.LikeMovies()
       this.NetflixMovies()
       this.WatchaMovies()
       this.WavveMovies()

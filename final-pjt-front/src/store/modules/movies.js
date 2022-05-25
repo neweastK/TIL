@@ -13,6 +13,7 @@ export default {
     movie:{},
     poster_path:'',
     fromwatch : [],
+    fromlike : [],
     netflix : [],
     watcha : [],
     wavve : [],
@@ -27,7 +28,7 @@ export default {
     actors: state => state.movie.actors,
     boxoffices : state => state.boxoffices,
     // watchedmovie : state => state.movie,
-
+    fromlike : state => state.fromlike,
     fromwatch : state => state.fromwatch,
     netflix : state => state.netflix,
     watcha : state => state.watcha,
@@ -41,7 +42,7 @@ export default {
     SET_BOXOFFICES: (state, boxoffices) => state.boxoffices = boxoffices,
     // SET_WATCHEDMOVIE: (state, movie) => state.watchedmovie = movie,
 
-
+    SET_FROMLIKE: (state, movies) => state.fromlike = movies,
     SET_FROMWATCH: (state, movies) => state.fromwatch = movies,
     SET_NETFLIX: (state, movies) => state.netflix = movies,
     SET_WATCHA: (state, movies) => state.watcha = movies,
@@ -156,14 +157,17 @@ export default {
       })
         .then(res => commit('SET_FROMWATCH', res.data))
         .catch(err => console.error(err.response))
-        
-        
-        
+    },
+    LikeMovies ({ commit, getters }) {
+      axios({
+        url: drf.movies.recommendationLike(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_FROMLIKE', res.data))
+        .catch(err => console.error(err.response))
+    },
 
-
-
-
-    }
   }
 
 }
