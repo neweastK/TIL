@@ -116,14 +116,14 @@ def recommendation_disney(request):
 
 @api_view(['GET'])    
 def boxoffice_list(request):
-    movies = get_list_or_404(Boxoffice, independent=0)
+    movies = Boxoffice.objects.filter(independent=0).order_by('rank')
     serializer = BoxSerializer(movies, many=True)
     return Response(serializer.data)
 
 
 @api_view(['GET'])    
 def boxoffice_list_independent(request):
-    movies = get_list_or_404(Boxoffice, independent=1)
+    movies = Boxoffice.objects.filter(independent=1).order_by('rank')
     serializer = BoxSerializer(movies, many=True)
     return Response(serializer.data)
 

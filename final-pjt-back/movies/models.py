@@ -5,9 +5,11 @@ from django.conf import settings
 
 class Boxoffice(models.Model):
     id = models.IntegerField(primary_key=True)
-    movieNm = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
     rank = models.IntegerField()
     audiAcc = models.IntegerField()
+    overview = models.TextField(null=True)
+    vote_average = models.FloatField(null=True)
     independent = models.BooleanField()
     poster_path = models.TextField()
 
@@ -39,11 +41,11 @@ class Movie(models.Model):
     runtime = models.IntegerField(null=True)
     ott_service = models.CharField(max_length=100, null=True)
     backdrops = models.TextField(null=True)
-    playlist = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='playlist_movie', null=True)
-    watch = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='watch_movie', null=True)
-    like = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movie', null=True)
-    actors = models.ManyToManyField(Actor, related_name='act_movie', null=True)
-    directors = models.ManyToManyField(Director,related_name='direct_movie', null=True)
+    playlist = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='playlist_movie')
+    watch = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='watch_movie')
+    like = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_movie')
+    actors = models.ManyToManyField(Actor, related_name='act_movie')
+    directors = models.ManyToManyField(Director,related_name='direct_movie')
 
 class Review(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='reviews')
