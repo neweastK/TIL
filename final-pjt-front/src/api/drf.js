@@ -18,6 +18,7 @@ export default {
   movies: {
     movies: () => HOST + MOVIES,
     movie: movieId => HOST + MOVIES + `${movieId}/`,
+    likemovie: movieId => HOST + MOVIES + `${movieId}/` + 'like/',
     reviews: movieId => HOST + MOVIES + `${movieId}/` + 'review/',
     review: (movieId, reviewPk) => HOST + MOVIES + `${movieId}/` + 'review/' `${reviewPk}/` ,
     likeReview: (movieId, reviewPk) => HOST + MOVIES + `${movieId}/` + 'review/' `${reviewPk}/` + 'like/' ,

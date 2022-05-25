@@ -10,9 +10,16 @@ import LogoutView from '@/views/LogoutView.vue'
 import SignupView from '@/views/SignupView.vue'
 import NotFound404 from '../views/NotFound404.vue'
 
+import MovieDetail from '@/components/MovieDetail.vue'
+import MovieInfo from '@/components/MovieInfo.vue'
+import MovieReview from '@/components/MovieReview.vue'
+
 Vue.use(VueRouter)
 
-const routes = [
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
   {
     path: '/',
     name: 'index',
@@ -44,14 +51,26 @@ const routes = [
     component: LogoutView
   },
   {
-    path: '/mypage',
-    name: 'mypage',
-    component: MypageView
-  },
-  {
     path: '/signup',
     name: 'signup',
     component: SignupView
+  },
+  { path: '/movies/:moviePk',
+    name: 'movie',
+    props: true,
+    component: MovieDetail,
+    children: [
+      { 
+        path: 'info',
+        name: 'movieinfo',
+        component: MovieInfo
+      },
+      { 
+        path: 'review',
+        name: 'moviereviews',
+        component: MovieReview
+      },
+    ]
   },
   {
     path: '/404',
@@ -63,12 +82,7 @@ const routes = [
     redirect: '/404'
   },
   
-]
+]})
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
 
 export default router

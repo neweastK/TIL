@@ -12,8 +12,8 @@
           >
           </movie-card>
         </div> 
-    </div>
-</div>   
+      </div>
+    </div>   
     <!-- 글 이동 링크 (제목) -->
     <!-- <router-link 
       :to="{ name: 'movie', params: {moviePk: movie.pk} }">
