@@ -9,6 +9,7 @@ export default {
   state: {
     // 영화 데이터들
     movies : [],
+    boxoffices : [],
     movie:{},
     poster_path:'',
     fromwatch : [],
@@ -23,7 +24,7 @@ export default {
     movies : state => state.movies,
     movie: state => state.movie,
     actors: state => state.movie.actors,
-
+    boxoffices : state => state.boxoffices,
 
     fromwatch : state => state.fromwatch,
     netflix : state => state.netflix,
@@ -35,6 +36,7 @@ export default {
   mutations: {
     SET_MOVIES: (state, movies) => state.movies = movies,
     SET_MOVIE: (state, movie) => state.movie = movie,
+    SET_BOXOFFICES: (state, boxoffices) => state.boxoffices = boxoffices,
 
     SET_FROMWATCH: (state, movies) => state.fromwatch = movies,
     SET_NETFLIX: (state, movies) => state.netflix = movies,
@@ -67,6 +69,15 @@ export default {
             router.push({ name: 'NotFound404' })
           }
         })  
+  },
+    fetchBoxoffices ({ commit,getters }) {    
+      axios({
+        url: drf.movies.boxoffices(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_BOXOFFICES', res.data))
+        .catch(err => console.error(err.response))
   },
     likeMovie({ commit, getters }, moviePk) {
       /* 좋아요

@@ -5,7 +5,7 @@
      <div class='container'>
         <div class='row justify-content-center mx-5'>
           <movie-card
-            v-for="movie in movies" 
+            v-for="movie in boxoffices" 
             :key="movie.pk"
             :movie="movie"
             class='col-12 col-sm-6 col-lg-3 mb-5 mx-1'
@@ -82,13 +82,13 @@
       MovieCard,
     },
     computed: {
-      ...mapGetters(['movies', 'fromwatch', 'netflix', 'watcha', 'wavve', 'disney'])
+      ...mapGetters(['boxoffices', 'fromwatch', 'netflix', 'watcha', 'wavve', 'disney'])
     },
     methods: {
-      ...mapActions(['fetchMovies', 'WatchMovies', 'NetflixMovies', 'WatchaMovies', 'WavveMovies', 'DisneyMovies'])
+      ...mapActions(['fetchBoxoffices', 'WatchMovies', 'NetflixMovies', 'WatchaMovies', 'WavveMovies', 'DisneyMovies'])
     },
     created() {
-      this.fetchMovies()
+      this.fetchBoxoffices()
       this.WatchMovies()
       this.NetflixMovies()
       this.WatchaMovies()

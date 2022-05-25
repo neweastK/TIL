@@ -19,9 +19,13 @@
     </div>
     <div>
       <h5 class='fw-bold text-start'>스틸컷</h5>
-      
-      
-
+      <ul>
+        <li v-for="path in backDrops"
+        :key=path>
+          <img  :src="`https://image.tmdb.org/t/p/w500${ path.substring(1,path.length-1) }`" :alt=path>
+        </li>
+      </ul>
+        
     </div>
 
 
@@ -43,7 +47,7 @@ export default {
     return {
       moviePk: this.$route.params.moviePk,
       trailer: '',
-      videoId:''
+      videoId:'',
     }
   },
   computed: {
@@ -52,8 +56,8 @@ export default {
       return this.movie.like_users?.length
     },
     imgUrl() {
-      const BASE_URL = 'https://image.tmdb.org/t/p/w500/'
-      return BASE_URL + this.movie.poster_path
+      const BASE_URL = 'https://image.tmdb.org/t/p/w500'
+      return BASE_URL
     },
     year() {
       const movie_date = this.movie.release_date
@@ -67,7 +71,15 @@ export default {
       const videoBaseUrl = 'https://youtube.com/embed/'
       // const videoId = (this.trailer.id.videoId ? this.trailer.id.videoId : this.trailer.id)
       return videoBaseUrl + this.videoId
-    }},
+    },
+    backDrops(){
+      const backDrops = this.movie.backdrops
+      const imsi = backDrops.replaceAll(',','')
+      const paths = imsi.substring(1,imsi.length-1).split(' ')
+      return paths
+    }
+    },
+    
   methods: {
     ...mapActions([
       'fetchMovie',

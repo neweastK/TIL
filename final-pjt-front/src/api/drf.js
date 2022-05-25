@@ -18,6 +18,8 @@ export default {
   movies: {
     movies: () => HOST + MOVIES,
     movie: movieId => HOST + MOVIES + `${movieId}/`,
+    boxoffices: () => HOST + MOVIES + 'boxoffice/',
+    boxoffices_ind: () => HOST + MOVIES + 'boxoffice/independent/',
     likemovie: movieId => HOST + MOVIES + `${movieId}/` + 'like/',
     reviews: movieId => HOST + MOVIES + `${movieId}/` + 'review/',
     review: (movieId, reviewPk) => HOST + MOVIES + `${movieId}/` + 'review/' `${reviewPk}/` ,
