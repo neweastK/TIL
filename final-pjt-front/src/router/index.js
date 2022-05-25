@@ -8,6 +8,11 @@ import MypageView from '../views/MypageView.vue'
 import LoginView from '@/views/LoginView.vue'
 import LogoutView from '@/views/LogoutView.vue'
 import SignupView from '@/views/SignupView.vue'
+import BoardView from '@/views/BoardView.vue'
+import EventView from '@/views/EventView.vue'
+import EventNewView from '@/views/EventNewView.vue'
+import ColumnView from '@/views/ColumnView.vue'
+import NewsView from '@/views/NewsView.vue'
 import NotFound404 from '../views/NotFound404.vue'
 
 import MovieDetail from '@/components/MovieDetail.vue'
@@ -71,6 +76,31 @@ const router = new VueRouter({
         component: MovieReview
       },
     ]
+  },
+  {
+    path: '/news',
+    name: 'news',
+    component: NewsView
+  },
+  {
+    path: '/board',
+    name: 'board',
+    component: BoardView
+  },
+  {
+    path: '/event',
+    name: 'event',
+    component: EventView
+  },
+  {
+    path: '/eventnew',
+    name: 'eventnew',
+    component: EventNewView
+  },
+  {
+    path: '/column',
+    name: 'column',
+    component: ColumnView
   },
   {
     path: '/404',
