@@ -4,7 +4,7 @@ from django.conf import settings
 
 # Create your models here.
 CATEGORY_CHOICES = (
-    ('1','1'),
+    ('event','event'),
     ('2','2'),
     ('3','3'),
     ('4','4'),
@@ -17,7 +17,7 @@ CATEGORY_CHOICES = (
 )
 
 class Article(models.Model):
-    category = models.CharField(choices=CATEGORY_CHOICES, max_length=100)
+    category = models.CharField(max_length=100)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='articles')
     title = models.CharField(max_length=100)
     content = models.TextField()

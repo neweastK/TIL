@@ -34,5 +34,8 @@ export default {
   articles: {
     articles: () => HOST + ARTICLES,
     events: () => HOST + ARTICLES + 'event/',
+    news: () => HOST + ARTICLES + 'news/',
+    column: () => HOST + ARTICLES + 'column/',
+    board: () => HOST + ARTICLES + 'board/',
   }
 }

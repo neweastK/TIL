@@ -32,8 +32,8 @@ class ArticleSerializer(serializers.ModelSerializer) :
     
     class Meta :
         model = Article
-        fields = ('pk','user','title','content','comments',)
-        read_only_fields = ('category',)
+        fields = ('pk','user','title','content','comments','category',)
+        # read_only_fields = ('category',)
 
 # 체크 완료(5/24)
 class ArticleListSerializer(serializers.ModelSerializer):

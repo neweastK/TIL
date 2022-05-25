@@ -3,6 +3,7 @@ from django.db.models import Count
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
+from yaml import serialize
 
 from .models import Article, Comment
 from .serializers import ArticleListSerializer, ArticleSerializer, CommentSerializer
@@ -28,6 +29,87 @@ def article_list_or_create(request):
         return article_list()
     elif request.method == 'POST':
         return create_article()
+
+@api_view(['GET', 'POST'])
+def event_list_or_create(request):
+    def event_list():
+        articles = Article.objects.annotate(
+                comment_count=Count('comments', distinct=True),
+                ).filter(category="event").order_by('-pk')
+        serializer = ArticleListSerializer(articles, many=True)
+        return Response(serializer.data)
+
+    def create_event():
+        serializer = ArticleSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    if request.method == 'GET':
+        return event_list()
+    elif request.method == 'POST':
+        return create_event()
+
+@api_view(['GET', 'POST'])
+def news_list_or_create(request):
+    def news_list():
+        articles = Article.objects.annotate(
+                comment_count=Count('comments', distinct=True),
+                ).filter(category="news").order_by('-pk')
+        serializer = ArticleListSerializer(articles, many=True)
+        return Response(serializer.data)
+
+    def create_news():
+        serializer = ArticleSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    if request.method == 'GET':
+        return news_list()
+    elif request.method == 'POST':
+        return create_news()
+    
+@api_view(['GET', 'POST'])
+def column_list_or_create(request):
+    def column_list():
+        articles = Article.objects.annotate(
+                comment_count=Count('comments', distinct=True),
+                ).filter(category="column").order_by('-pk')
+        serializer = ArticleListSerializer(articles, many=True)
+        return Response(serializer.data)
+
+    def create_column():
+        serializer = ArticleSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    if request.method == 'GET':
+        return column_list()
+    elif request.method == 'POST':
+        return create_column()
+
+@api_view(['GET', 'POST'])
+def board_list_or_create(request):
+    def board_list():
+        articles = Article.objects.annotate(
+                comment_count=Count('comments', distinct=True),
+                ).filter(category="board").order_by('-pk')
+        serializer = ArticleListSerializer(articles, many=True)
+        return Response(serializer.data)
+
+    def create_board():
+        serializer = ArticleSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    if request.method == 'GET':
+        return board_list()
+    elif request.method == 'POST':
+        return create_board()
+
 
 
 @api_view(['GET', 'PUT', 'DELETE'])            
@@ -58,6 +140,8 @@ def article_detail_or_update_or_delete(request,article_pk):
     elif request.method == 'DELETE':
         if request.user == article.user:
             return delete_article()
+
+
 
 @api_view(['POST'])
 def create_comment(request, article_pk):

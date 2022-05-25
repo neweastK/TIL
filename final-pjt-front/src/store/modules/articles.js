@@ -2,77 +2,139 @@ import axios from 'axios'
 import drf from '@/api/drf'
 import router from '@/router'
 
-import _ from 'lodash'
 
 export default {
   state: {
-    events: [],
+    event_article: {},
+    news_article: {},
+    column_article: {},
+    board_article: {},
     article: {},
-
+    
   },
 
   getters: {
-    event: state => state.events,
+    news_article: state => state.news_article,
+    event_article: state => state.event_article,
+    column_article: state => state.column_article,
+    board_article: state => state.board_article,
     article: state => state.article,
+    
+    
   },
 
   mutations: {
-    SET_EVENTS: (state, events) => state.events = events,
+    SET_NEWS_ARTICLE: (state, article) => state.news_article = article,
+    SET_EVENT_ARTICLE: (state, article) => state.event_article = article,
+    SET_COLUMN_ARTICLE: (state, article) => state.column_article = article,
+    SET_BOARD_ARTICLE: (state, article) => state.board_article = article,
     SET_ARTICLE: (state, article) => state.article = article,
-
+    
   },
 
   actions: {
     fetchEvents({ commit, getters }) {
-      /* 게시글 목록 받아오기
-      GET: articles URL (token)
-        성공하면
-          응답으로 받은 게시글들을 state.articles에 저장
-        실패하면
-          에러 메시지 표시
-      */
       axios({
         url: drf.articles.events(),
         method: 'get',
         headers: getters.authHeader,
       })
-        .then(res => commit('SET_EVENTS', res.data))
+        .then(res => commit('SET_EVENT_ARTICLE', res.data))
         .catch(err => console.error(err.response))
     },
-    createEvent({ commit, getters }, event) {
-      /* 게시글 생성
-      POST: articles URL (게시글 입력정보, token)
-        성공하면
-          응답으로 받은 게시글을 state.article에 저장
-          ArticleDetailView 로 이동
-        실패하면
-          에러 메시지 표시
-      */
-      
+    createEvent({ commit, getters }, article) {
       axios({
         url: drf.articles.events(),
         method: 'post',
-        data: event,
+        data: article,
         headers: getters.authHeader,
       })
         .then(res => {
-          commit('SET_EVENTS', res.data)
+          commit('SET_EVENT_ARTICLE', res.data)
           router.push({
-            name: 'article',
+            name: 'event_article',
             params: { articlePk: getters.article.pk }
           })
         })
     },
+
+    fetchNews({ commit, getters }) {
+      axios({
+        url: drf.articles.news(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_NEWS_ARTICLE', res.data))
+        .catch(err => console.error(err.response))
+    },
+    creatNews({ commit, getters }, article) {
+      axios({
+        url: drf.articles.news(),
+        method: 'post',
+        data: article,
+        headers: getters.authHeader,
+      })
+        .then(res => {
+          commit('SET_NEWS_ARTICLE', res.data)
+          router.push({
+            name: 'news_article',
+            params: { articlePk: getters.article.pk }
+          })
+        })
+    },
+
+    fetchColumn({ commit, getters }) {
+      axios({
+        url: drf.articles.column(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_COLUMN_ARTICLE', res.data))
+        .catch(err => console.error(err.response))
+    },
+    creatColumn({ commit, getters }, article) {
+      axios({
+        url: drf.articles.column(),
+        method: 'post',
+        data: article,
+        headers: getters.authHeader,
+      })
+        .then(res => {
+          commit('SET_COLUMN_ARTICLE', res.data)
+          router.push({
+            name: 'column_article',
+            params: { articlePk: getters.article.pk }
+          })
+        })
+    },
+
+    fetchBoard({ commit, getters }) {
+      axios({
+        url: drf.articles.board(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_BOARD_ARTICLE', res.data))
+        .catch(err => console.error(err.response))
+    },
+    creatBoard({ commit, getters }, article) {
+      axios({
+        url: drf.articles.board(),
+        method: 'post',
+        data: article,
+        headers: getters.authHeader,
+      })
+        .then(res => {
+          commit('SET_BOARD_ARTICLE', res.data)
+          router.push({
+            name: 'board_article',
+            params: { articlePk: getters.article.pk }
+          })
+        })
+    },
+
+
     createArticle({ commit, getters }, article) {
-      /* 게시글 생성
-      POST: articles URL (게시글 입력정보, token)
-        성공하면
-          응답으로 받은 게시글을 state.article에 저장
-          ArticleDetailView 로 이동
-        실패하면
-          에러 메시지 표시
-      */
-      
       axios({
         url: drf.articles.articles(),
         method: 'post',
@@ -82,11 +144,12 @@ export default {
         .then(res => {
           commit('SET_ARTICLE', res.data)
           router.push({
-            name: 'article',
-            params: { articlePk: getters.article.pk }
+            name: 'community',
+            // params: { articlePk: getters.article.pk }
           })
         })
     },
+
 
   },
 

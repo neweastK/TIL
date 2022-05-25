@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>New Event</h1>
+    <h1>New Column</h1>
     <article-form :article="article" action="create"></article-form>
   </div>
 </template>
@@ -9,12 +9,12 @@
 <script>
   import ArticleForm from '@/components/ArticleForm.vue'
   export default {
-    name: 'EventNewView',
+    name: 'ColumnNewView',
     components: { ArticleForm },
     data() {
       return {
         article: {
-          category: 'event',
+          category: 'column',
           pk: null,
           title: '',
           content: '',
