@@ -43,12 +43,26 @@ def recommendation_like(request):
 def recommendation_watch(request):
     me = get_object_or_404(get_user_model(), username=request.user.username)
     watch_list = me.watch_movie.all()
+    find = []
     if watch_list:
-        last = watch_list[-1]
-        print(last)
-        actor = last.get('actors')[0]
-        director = last.get('dirctors')[0]
-        result = random.sample(list(Movie.objects.filter(Q(actors__contains=actor)|Q(directors__contains=director))),6)
+  
+        last = watch_list[len(watch_list)-1]
+        print("여기!!!!!!!")
+        actor = last.actors.all()[0]
+        print(actor)
+        # find.append(actor.id)
+        director = last.directors.all()[0]
+        # find.append(director.id)
+        movies = Movie.objects.all().filter(actors__contains=actor)
+        print(movies)
+
+
+            # if movie.actors or movie.director:
+                # print(actor.id)
+                # print(movie.actors.get(id=2))
+                # if (actor.id in movie.actors) or (director.id in movie.director):
+                #     find.append(movie)
+        result = random.sample(movie, 1)
     else:
         result = Movie.objects.order_by('?')[:6]
 
@@ -58,7 +72,7 @@ def recommendation_watch(request):
 @api_view(['GET'])
 def recommendation_netflix(request):
     movies = Movie.objects.all()
-    netflix = []
+    netflix = []                                 
     for movie in movies:
         if movie.ott_service:
             otts = movie.ott_service
