@@ -147,6 +147,22 @@ export default {
       })
       .then(res => commit('SET_DISNEY', res.data))
       .catch(err => console.error(err.response))
+    },
+    WatchMovies ({ commit, getters }) {
+      axios({
+        url: drf.movies.recommendationWatch(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_FROMWATCH', res.data))
+        .catch(err => console.error(err.response))
+        
+        
+        
+
+
+
+
     }
   }
 
