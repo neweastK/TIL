@@ -2,9 +2,7 @@
 import drf from '@/api/drf'
 import axios from 'axios'
 import router from '@/router'
-// import drf from '@/api/drf'
-// import router from '@/router'
-import drf from '@/api/drf'
+
 
 
 export default {
@@ -12,7 +10,7 @@ export default {
     // 영화 데이터들
     movies : [],
     movie:{},
-    poster_path:''
+    poster_path:'',
     fromwatch : [],
     netflix : [],
     watcha : [],
@@ -24,6 +22,7 @@ export default {
   getters: {
     movies : state => state.movies,
     movie: state => state.movie,
+    actors: state => state.movie.actors,
 
 
     fromwatch : state => state.fromwatch,
