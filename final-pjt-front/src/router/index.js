@@ -8,11 +8,17 @@ import MypageView from '../views/MypageView.vue'
 import LoginView from '@/views/LoginView.vue'
 import LogoutView from '@/views/LogoutView.vue'
 import SignupView from '@/views/SignupView.vue'
+
 import BoardView from '@/views/BoardView.vue'
+import BoardNewView from '@/views/BoardNewView.vue'
 import EventView from '@/views/EventView.vue'
 import EventNewView from '@/views/EventNewView.vue'
+import ArticleNewView from '@/views/ArticleNewView.vue'
 import ColumnView from '@/views/ColumnView.vue'
+import ColumnNewView from '@/views/ColumnNewView.vue'
 import NewsView from '@/views/NewsView.vue'
+import NewsNewView from '@/views/NewsNewView.vue'
+
 import NotFound404 from '../views/NotFound404.vue'
 
 import MovieDetail from '@/components/MovieDetail.vue'
@@ -78,18 +84,18 @@ const router = new VueRouter({
     ]
   },
   {
-    path: '/news',
-    name: 'news',
-    component: NewsView
-  },
-  {
-    path: '/board',
-    name: 'board',
+    path: '/board_article',
+    name: 'board_article',
     component: BoardView
   },
   {
-    path: '/event',
-    name: 'event',
+    path: '/boardnew',
+    name: 'boardnew',
+    component: BoardNewView
+  },
+  {
+    path: '/event_article',
+    name: 'event_article',
     component: EventView
   },
   {
@@ -98,9 +104,29 @@ const router = new VueRouter({
     component: EventNewView
   },
   {
-    path: '/column',
-    name: 'column',
+    path: '/news_article',
+    name: 'news_article',
+    component: NewsView
+  },
+  {
+    path: '/newsnew',
+    name: 'newsnew',
+    component: NewsNewView
+  },
+  {
+    path: '/column_article',
+    name: 'column_article',
     component: ColumnView
+  },
+  {
+    path: '/columnnew',
+    name: 'columnnew',
+    component: ColumnNewView
+  },
+  {
+    path: '/articles/new',
+    name: 'articleNew',
+    component: ArticleNewView
   },
   {
     path: '/404',

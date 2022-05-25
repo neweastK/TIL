@@ -1,11 +1,15 @@
 <template>
   <form @submit.prevent="onSubmit">
+    <div v-if="false">
+      <label for="category">category: </label>
+      <input v-model="newArticle.category" type="text" id="category" />
+    </div>
     <div>
       <label for="title">title: </label>
       <input v-model="newArticle.title" type="text" id="title" />
     </div>
     <div>
-      <label for="content">contnet: </label>
+      <label for="content">content: </label>
       <textarea v-model="newArticle.content" type="text" id="content"></textarea>
     </div>
     <div>
@@ -26,6 +30,7 @@ import { mapActions } from 'vuex'
     data() {
       return {
         newArticle: {
+          category: this.article.category,
           title: this.article.title,
           content: this.article.content,
         }
