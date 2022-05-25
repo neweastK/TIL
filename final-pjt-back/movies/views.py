@@ -203,7 +203,7 @@ def like_review(request, review_pk):
         serializer = ReviewSerializer(review)
         return Response(serializer.data)
 
-
+@api_view(['POST'])
 def like_movie(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
     user = request.user
@@ -216,7 +216,7 @@ def like_movie(request, movie_id):
         serializer = MovieSerializer(movie)
         return Response(serializer.data)
 
-
+@api_view(['POST'])
 def watch_movie(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
     user = request.user

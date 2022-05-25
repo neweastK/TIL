@@ -17,6 +17,7 @@ export default {
     watcha : [],
     wavve : [],
     disney : [],
+    // watchedmovie:{},
 
   },
 
@@ -25,6 +26,7 @@ export default {
     movie: state => state.movie,
     actors: state => state.movie.actors,
     boxoffices : state => state.boxoffices,
+    // watchedmovie : state => state.movie,
 
     fromwatch : state => state.fromwatch,
     netflix : state => state.netflix,
@@ -37,6 +39,8 @@ export default {
     SET_MOVIES: (state, movies) => state.movies = movies,
     SET_MOVIE: (state, movie) => state.movie = movie,
     SET_BOXOFFICES: (state, boxoffices) => state.boxoffices = boxoffices,
+    // SET_WATCHEDMOVIE: (state, movie) => state.watchedmovie = movie,
+
 
     SET_FROMWATCH: (state, movies) => state.fromwatch = movies,
     SET_NETFLIX: (state, movies) => state.netflix = movies,
@@ -88,21 +92,20 @@ export default {
           에러 메시지 표시
       */
       axios({
-        url: drf.movies.likeMovie(moviePk),
+        url: drf.movies.likemovie(moviePk),
         method: 'post',
         headers: getters.authHeader,
       })
         .then(res => commit('SET_MOVIE', res.data))
         .catch(err => console.error(err.response))
-    },
-
-    WatchMovies ({ commit, getters }) {
+  },
+    watchedMovie({ commit, getters }, moviePk) {
       axios({
-        url: drf.movies.recommendationWatch(),
-        method: 'get',
+        url: drf.movies.watchedmovie(moviePk),
+        method: 'post',
         headers: getters.authHeader,
       })
-      .then(res => commit('SET_FROMWATCH', res.data))
+      .then(res => commit('SET_MOVIE', res.data))
       .catch(err => console.error(err.response))
     },
 
