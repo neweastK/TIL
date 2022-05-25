@@ -1,2393 +1,17 @@
 [
     {
         "model": "movies.movie",
-        "pk": 278,
         "fields": {
             "adult": false,
-            "genre_ids": [
-                18,
-                80
-            ],
-            "overview": "촉망받는 은행 간부 앤디 듀프레인은 아내와 그녀의 정부를 살해했다는 누명을 쓴다. 주변의 증언과 살해 현장의 그럴듯한 증거들로 그는 종신형을 선고받고 악질범들만 수용한다는 지옥같은 교도소 쇼생크로 향한다. 인간 말종 쓰레기들만 모인 그곳에서 그는 이루 말할 수 없는 억압과 짐승보다 못한 취급을 당한다. 그러던 어느 날, 간수의 세금을 면제받게 해 준 덕분에 그는 일약 교도소의 비공식 회계사로 일하게 된다. 그 와중에 교도소 소장은 죄수들을 이리저리 부리면서 검은 돈을 긁어 모으고 앤디는 이 돈을 세탁하여 불려주면서 그의 돈을 관리하는데...",
-            "poster_path": "/oAt6OtpwYCdJI76AVtVKW1eorYx.jpg",
-            "release_date": "1994-09-23",
-            "title": "쇼생크 탈출",
-            "vote_average": 8.7,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL21OZEtCa08"
-                },
-                {
-                    "넷플릭스": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cubmV0ZmxpeC5jb20vdGl0bGUvNzAwMDUzNzk"
-                },
-                {
-                    "웨이브": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cud2F2dmUuY29tL3BsYXllci9tb3ZpZT9tb3ZpZWlkPU1WX0NEMDFfV1IwMDAwMDExMzcx"
-                }
-            ],
-            "backdrops": [
-                "/iNh3BivHyg5sQRPP1KOkzguEX0H.jpg",
-                "/tXHpvlr5F7gV5DwgS7M5HBrUi2C.jpg",
-                "/wPU78OPN4BYEgWYdXyg0phMee64.jpg",
-                "/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
-                "/twUBY8YYVW4pgl6ESfdfooIO2qi.jpg"
-            ],
-            "directors": [
-                4027
-            ],
-            "actors": [
-                504,
-                192,
-                4029,
-                6573,
-                6574
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 19404,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                35,
-                18,
-                10749
-            ],
-            "overview": "영국에서 유학중인 라즈(샤룩 칸)와 인도 처녀 심란(까졸).  심란은 부모님이 정해주신 약혼자가 있는데 약혼을 앞두고 친구들과 유럽 여행을 떠나게 된다.  여행 중 우연히 만남 샤룩과 까졸. 두 남녀의 연속된 우연과 좌충우돌 사랑 만들기.  그렇게 사랑하게 된 그들이지만 까졸은 약혼자가 있는 몸. 인도로 돌아가게 된다.  샤룩 또한 그녀를 못 잊어 인도로 뒤 따라 들어가지만 엄격한 까졸의 부모를 설득하기가 힘이 든다. 도망가자는 까졸의 제안을 거부하고 샤룩은 끝내 그녀의 부모님의 허락을 얻어 내기 위해 고군분투한다.",
-            "poster_path": "/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
-            "release_date": "1995-10-20",
-            "title": "용감한 자가 신부를 데려가리",
-            "vote_average": 8.7,
-            "ott_service": [],
-            "backdrops": [
-                "/90ez6ArvpO8bvpyIngBuwXOqJm5.jpg",
-                "/5hNcsnMkwU2LknLoru73c76el3z.jpg",
-                "/c3FR5vfnR61ySpO9CqO7pBsfz7m.jpg",
-                "/gNBCvtYyGPbjPCT1k3MvJuNuXR6.jpg",
-                "/5lKzzuw5TBor4uaWSrTJ4VRZdJL.jpg"
-            ],
-            "directors": [
-                35771
-            ],
-            "actors": [
-                35742,
-                55061,
-                691,
-                6217,
-                35759
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 238,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18,
-                80
-            ],
-            "overview": "시실리에서 이민온 뒤, 정치권까지 영향력을 미치는 거물로 자리잡은 돈 꼴레오네는 갖가지 고민을 호소하는 사람들의 문제를 해결해주며 대부라 불리운다. 한편 솔로소라는 인물은 꼴레오네가와 라이벌인 탓타리아 패밀리와 손잡고 새로운 마약 사업을 제안한다. 돈 꼴레오네가 마약 사업에 참여하지 않기로 하자, 돈 꼴레오네를 저격해 그는 중상을 입고 사경을 헤매게 된다. 그 뒤, 돈 꼴레오네의 아들 소니는 조직력을 총 동원해 다른 패밀리들과 피를 부르는 전쟁을 시작하는데... 가족의 사업과 상관없이 대학에 진학한 뒤 인텔리로 지내왔던 막내 아들 마이클은 아버지가 총격을 당한 뒤, 아버지를 구하기 위해 위험천만한 협상 자리에 나선다.",
-            "poster_path": "/cOwVs8eYA4G9ZQs7hIRSoiZr46Q.jpg",
-            "release_date": "1972-03-14",
-            "title": "대부",
-            "vote_average": 8.7,
-            "ott_service": "error",
-            "backdrops": [
-                "/AbgEQO2mneCSOc8CSnOMa8pBS8I.jpg",
-                "/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg",
-                "/41xIKcLiM5ryfz4C9sZFcBOJGsK.jpg",
-                "/htuuuEwAvDVECMpb0ltLLyZyDDt.jpg",
-                "/7egEp5iprNPy1HXPME6e1UigOJL.jpg"
-            ],
-            "directors": [
-                1776
-            ],
-            "actors": [
-                3084,
-                1158,
-                3085,
-                3087,
-                3086
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 424,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18,
-                36,
-                10752
-            ],
-            "overview": "2차 세계대전 당시 독일군이 점령한 폴란드. 시류에 맞춰 자신의 성공을 추구하는 기회주의자 쉰들러는 유태인이 경영하는 그릇 공장을 인수한다. 그는 공장을 인수하기 위해 나찌 당원이 되고 독일군에게 뇌물을 바치는 등 갖은 방법을 동원한다. 그러나 냉혹한 기회주의자였던 쉰들러는 유태인 회계사인 스턴과 친분을 맺으면서 냉혹한 유태인 학살에 대한 양심의 소리를 듣기 시작한다. 마침내 그는 강제 수용소로 끌려가 죽음을 맞게될 유태인들을 구해내기로 결심하고, 독일군 장교에게 빼내는 사람 숫자대로 뇌물을 주는 방법으로 유태인들을 구해내려는 계획을 세우는데...",
-            "poster_path": "/oyyUcGwLX7LTFS1pQbLrQpyzIyt.jpg",
-            "release_date": "1993-11-30",
-            "title": "쉰들러 리스트",
-            "vote_average": 8.6,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL21vVzRYbFc"
-                },
-                {
-                    "넷플릭스": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cubmV0ZmxpeC5jb20vdGl0bGUvNjAwMzYzNTk"
-                },
-                {
-                    "웨이브": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cud2F2dmUuY29tL3BsYXllci9tb3ZpZT9tb3ZpZWlkPU1WX0NHMDFfTlUwMDAwMDExMjE5"
-                }
-            ],
-            "backdrops": [
-                "/loRmRzQXZeqG78TqZuyvSlEQfZb.jpg",
-                "/rCfpnBNbPZ9UIkl3ktg48suWuf1.jpg",
-                "/w2ezhZUk7ZJH9Mdk1Y6CTmaDRg5.jpg",
-                "/doTbKYSihM8NUJ1nSrUutbiDGOY.jpg",
-                "/ei5xjikx59WR2oDFl2lNLbtQHkx.jpg"
-            ],
-            "directors": [
-                488
-            ],
-            "actors": [
-                3896,
-                2282,
-                5469,
-                6692,
-                6693
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 240,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18,
-                80
-            ],
-            "overview": "아버지의 장례식 도중에 맏아들 파올로가 총에 맞아 죽고, 비토(로버트 드니로)는 겨우 도망쳐 미국으로 건너온다. 대부로 성장한 후 비토는 다시 치치오를 찾아 복수를 한다. 새롭게 등장한 젊은 대부 마이클(알 파치노)은 본거지를 라스베가스로 옮기고 가족의 사업을 가능한 합법적인 것으로 바꾸려고 애쓴다. 그런 과중 중에 자신을 제거하려는 음모를 알게되고 그는 냉혹하고 신속하게 반대파들을 제거, 조직을 더욱 확대해 나간다. 이를 위해 마이클은 배신한 형마저 죽이고, 일 때문에 아내와 헤어지는 등 인간적으로는 계속 외로워져 가는데...",
-            "poster_path": "/cj9UsJEN5bNf6ZoF1BbKjKN81hc.jpg",
-            "release_date": "1974-12-20",
-            "title": "대부 2",
-            "vote_average": 8.6,
-            "ott_service": "error",
-            "backdrops": [
-                "/poec6RqOKY9iSiIUmfyfPfiLtvB.jpg",
-                "/3ggZWEoa2aegF6AYyjyNRm8noM5.jpg",
-                "/uG0JWCEwQnyQA4yGjGrTYvLfu7L.jpg",
-                "/xeHmGix9fI5vkP33tYzDWPEkLBX.jpg",
-                "/oo4PVK6AyLZN49BokxDFGyclN86.jpg"
-            ],
-            "directors": [
-                1776
-            ],
-            "actors": [
-                1158,
-                3087,
-                3092,
-                380,
-                3096
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 667257,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                10751,
-                18
-            ],
-            "overview": "",
-            "poster_path": "/eaf7GQj0ieOwm08rrvjJQNbN0kN.jpg",
-            "release_date": "2021-06-17",
-            "title": "Cosas imposibles",
-            "vote_average": 8.6,
-            "ott_service": "error",
-            "backdrops": [
-                "/ryr532va3rN7MADPAO2updA4Akz.jpg",
-                "/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg"
-            ],
-            "directors": [
-                1205254
-            ],
-            "actors": [
-                1508206,
-                1379379,
-                224508,
-                941366,
-                1549908
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 545611,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                12,
-                878,
-                35
-            ],
-            "overview": "남편과 세탁소를 운영하며 근근히 살아가고 있는 이민자 이블린 왕. 20대 시절 남편과 순수한 사랑을 불태우며 모든 것을 뒤로 하고 미국으로 이민을 떠났지만, 50대가 된 지금은 세탁소 운영 등 온갖 일로 허덕이며 단란했던 가족과도 삐그덕거리는 등 고달프게 살고 있다. 세무조사를 받던 중 자신이 멀티버스의 여러 다른 자신들과 연결되어 있음을 알게 되고, 강력한 악의 기운으로부터 모든 우주와 가족을 구해내기 위한 모험에 나서게 되는데......",
-            "poster_path": "/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg",
-            "release_date": "2022-03-24",
-            "title": "에브리씽 에브리웨어 올 앳 원스",
-            "vote_average": 8.6,
-            "ott_service": [],
-            "backdrops": [
-                "/iN3vKCuOGRdZ9Cn3yRGCyMlaiST.jpg",
-                "/wp3vpSWAIjKSEeYb8F5NSZfONqw.jpg",
-                "/c96Ut9dzCm2PTGTxtA9JlvCbhj3.jpg",
-                "/wUUwjNJ0OM8xfRCePTHRGOrq2p4.jpg",
-                "/fIwiFha3WPu5nHkBeMQ4GzEk0Hv.jpg"
-            ],
-            "directors": [
-                1383612
-            ],
-            "actors": [
-                1620,
-                1381186,
-                690,
-                20904,
-                8944
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 372754,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                10749,
-                16
-            ],
-            "overview": "밴드 활동을 하며 여자에게도 인기가 많은 쿠사카베 히카루.  고교 입시에서 만점을 받은 인재 사죠 리히토. 도무지 접점이 없어 보이는 두 남학생은 합창 대회 연습을 계기로 친해진다. 음을 느끼고 목소리에 귀를 기울이고 화음을 만들어가며 둘의 마음은 공명하기 시작하는데… 느긋하게 고조되다 뜻밖의 순간에 터져버리는 사랑의 감정. 순수하고 솔직한 쿠사카베 히카루와 그를 밀어내면서도 조금씩 마음을 열어가는 사죠 리히토.  청춘의 풋풋함 속에서 고민하고, 망설이며 앞으로 나아가고자 하는 그들이 깨달은 마음이란…",
-            "poster_path": "/jNJ9shLhjRavjrCGRnoTmYB18d2.jpg",
-            "release_date": "2016-02-20",
-            "title": "동급생",
-            "vote_average": 8.6,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL21kRXczR0U"
-                },
-                {
-                    "웨이브": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cud2F2dmUuY29tL3BsYXllci9tb3ZpZT9tb3ZpZWlkPU1WX0FQMDFfQVAwMDAwMDAwNDQ"
-                }
-            ],
-            "backdrops": [
-                "/3RMLbSEXOn1CzLoNT7xFeLfdxhq.jpg",
-                "/ifbARMzxQ7k4EbnHT6fAVsuX4FI.jpg"
-            ],
-            "directors": [
-                1549377
-            ],
-            "actors": [
-                126698,
-                93801,
-                9720
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 129,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                16,
-                10751,
-                14
-            ],
-            "overview": "평범한 열 살 짜리 소녀 치히로 식구는 이사 가던 중 길을 잘못 들어 낡은 터널을 지나가게 된다. 터널 저편엔 폐허가 된 놀이공원이 있었고 그곳엔 이상한 기운이 흘렀다. 인기척 하나 없는 이 마을의 낯선 분위기에 불길한 기운을 느낀 치히로는 부모님에게 돌아가자고 조르지만 부모님은 호기심에 들떠 마을 곳곳을 돌아다니기 시작한다. 어느 음식점에 도착한 치히로의 부모님은 그 곳에 차려진 음식들을 보고 즐거워하며 허겁지겁 먹어대다가 돼지로 변해버린다. 겁에 질려 당황하는 치히로에게 낯선 소년 하쿠가 나타나 빨리 이곳을 나가라고 소리치는데...",
-            "poster_path": "/u1L4qxIu5sC2P082uMHYt7Ifvnj.jpg",
-            "release_date": "2001-07-20",
-            "title": "센과 치히로의 행방불명",
-            "vote_average": 8.5,
-            "ott_service": [
-                {
-                    "넷플릭스": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cubmV0ZmxpeC5jb20vdGl0bGUvNjAwMjM2NDI"
-                }
-            ],
-            "backdrops": [
-                "/hZth9NCeXvvO7Xi98d8q34e1Ier.jpg",
-                "/hXd2cgvvVh1EzSxuyNysiLErjVM.jpg",
-                "/Ab8mkHmkYADjU7wQiOkia9BzGvS.jpg",
-                "/mSDsSDwaP3E7dEfUPWy4J0djt4O.jpg",
-                "/s8qnMBMvqvz7FxtOxbztoA8IDif.jpg"
-            ],
-            "directors": [
-                608
-            ],
-            "actors": [
-                19587,
-                19588,
-                19589,
-                19590,
-                19591
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 372058,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                10749,
-                16,
-                18
-            ],
-            "overview": "시골에 사는 소녀 미츠하(가미시라이시 모네)는 어느 날 잠에서 깬 후 자신의 몸이 남자로 바뀐 걸 알게 된다. 같은 시간, 도쿄에 사는 소년 타키(가미키 류노스케) 역시 이 기이한 상황을 겪고 있다. 낯선 가족, 낯선 친구들, 낯선 풍경들... 서로에게 이어진 끈을 알게 된 둘은 둘만의 규칙을 정하고 점차 상황을 받아들이기 시작한다. 서로에게 남긴 메모를 확인하며  점점 친구가 되어가는 타키와 미츠하. 언제부턴가 더 이상 몸이 바뀌지 않자  자신들이 특별하게 이어져있었음을 깨달은  타키는 미츠하를 만나러 가는데...",
-            "poster_path": "/wx1Dxr4UyvN18SyC5GsVWWWtYja.jpg",
-            "release_date": "2016-08-26",
-            "title": "너의 이름은.",
-            "vote_average": 8.5,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL21PbzBQa04"
-                },
-                {
-                    "넷플릭스": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cubmV0ZmxpeC5jb20vdGl0bGUvODAxNjEzNzE"
-                }
-            ],
-            "backdrops": [
-                "/mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg",
-                "/5WzXEPSFYKSyooEzWgFkTshlpi.jpg",
-                "/dIWwZW7dJJtqC6CgWzYkNVKIUm8.jpg",
-                "/blEF6I5n7X0GXMfv8fFl1o0Tz3z.jpg",
-                "/8x9iKH8kWA0zdkgNdpAew7OstYe.jpg"
-            ],
-            "directors": [
-                74091
-            ],
-            "actors": [
-                225730,
-                1369100,
-                1668610,
-                936275,
-                1210634
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 696374,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                10749
-            ],
-            "overview": "",
-            "poster_path": "/oyG9TL7FcRP4EZ9Vid6uKzwdndz.jpg",
-            "release_date": "2020-05-29",
-            "title": "가브리엘의 지옥",
-            "vote_average": 8.5,
-            "ott_service": "error",
-            "backdrops": [
-                "/w2uGvCpMtvRqZg6waC1hvLyZoJa.jpg",
-                "/jY7GCCadVLscHgQj92IatN2H9bQ.jpg",
-                "/z6WgXrieVPb6I9JYUQkkg59gvlB.jpg",
-                "/969BfPHGJcjg2aUv60g5uiiXFzf.jpg"
-            ],
-            "directors": [
-                935563
-            ],
-            "actors": [
-                1312450,
-                544002,
-                73659,
-                1188681,
-                2595115
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 724089,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                10749
-            ],
-            "overview": "",
-            "poster_path": "/8Rxutea68d940kg44Box5gFmKcF.jpg",
-            "release_date": "2020-07-31",
-            "title": "가브리엘의 지옥 파트 2",
-            "vote_average": 8.5,
-            "ott_service": "error",
-            "backdrops": [
-                "/jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg",
-                "/fwZss2RwO6pSVXd9DyAs2U7BynF.jpg",
-                "/h0qh7VBTXb8DMLzqyB0Z6E8UKNq.jpg"
-            ],
-            "directors": [
-                935563
-            ],
-            "actors": [
-                1312450,
-                544002,
-                2345991,
-                2595115,
-                1188681
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 496243,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                35,
-                53,
-                18
-            ],
-            "overview": "전원 백수로 살 길 막막하지만 사이는 좋은 기택 가족. 장남 기우에게 명문대생 친구가 연결시켜 준 고액 과외 자리는 모처럼 싹튼 고정수입의 희망이다. 온 가족의 도움과 기대 속에 박 사장 집으로 향하는 기우. 글로벌 IT기업의 CEO인 박 사장의 저택에 도착하자 젊고 아름다운 사모님 연교와 가정부 문광이 기우를 맞이한다. 큰 문제 없이 박 사장의 딸 다혜의 과외를 시작한 기우. 그러나 이렇게 시작된 두 가족의 만남 뒤로, 걷잡을 수 없는 사건이 기다리고  있는데.....",
-            "poster_path": "/jjHccoFjbqlfr4VGLVLT7yek0Xn.jpg",
-            "release_date": "2019-05-30",
-            "title": "기생충",
-            "vote_average": 8.5,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL21kUkw0ZUw"
-                },
-                {
-                    "넷플릭스": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cubmV0ZmxpeC5jb20vdGl0bGUvODEyMjE5Mzg"
-                },
-                {
-                    "TVING": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cudHZpbmcuY29tL2NvbnRlbnRzL00wMDAyNDQyMzM"
-                }
-            ],
-            "backdrops": [
-                "/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
-                "/ApiBzeaa95TNYliSbQ8pJv4Fje7.jpg",
-                "/cI1RBfqXbWaITTjcKGYLhd9F083.jpg",
-                "/p0giX7IG8hXv6lr1KE3jFn0VqXA.jpg",
-                "/fjPhDdmJJNK68cx19X0QQuNuHNY.jpg"
-            ],
-            "directors": [
-                21684
-            ],
-            "actors": [
-                20738,
-                115290,
-                556435,
-                1255881,
-                1442583
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 389,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18
-            ],
-            "overview": "뉴욕시의 법정에 아버지를 칼로 찌른 한 소년의 살인혐의를 두고, 12인의 배심원들은 만장일치 합의를 통해 소년의 유무죄 여부를 가려줄 것을 요구받는다. 판사는 유죄일 경우 이 소년은 사형이 불가피하다는 것을 이들에게 미리 일러둔다.  배심원 방에 모인 이들은 투표를 통해 유무죄 여부를 가리기로 한다. 사람들이 전부 소년이 유죄로 판단하는 가운데, 오직 배심원 8(헨리 폰다)는 소년이 무죄라고 주장하는데...",
-            "poster_path": "/wh0f80G6GZvYBNiYmvqFngt3IYq.jpg",
-            "release_date": "1957-04-10",
-            "title": "12명의 성난 사람들",
-            "vote_average": 8.5,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL21kQnp4emQ"
-                }
-            ],
-            "backdrops": [
-                "/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
-                "/w4bTBXcqXc2TUyS5Fc4h67uWbPn.jpg",
-                "/tj6iPnz18hGfr0LKqWmG6Cp3niO.jpg",
-                "/9CEb1xVkk6Mhusxw2gTsDsuZt8v.jpg",
-                "/3x1hh3VGugF4pvLURkLLOmb1rj5.jpg"
-            ],
-            "directors": [
-                39996
-            ],
-            "actors": [
-                1936,
-                5247,
-                5248,
-                5249,
-                5250
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 497,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                14,
-                18,
-                80
-            ],
-            "overview": "미국 루이지애나의 콜드 마운틴 교도소. 폴은 사형수 감방의 간수장으로 일하고 있다. 그의 일은 사형수들을 감독하고, 그린 마일이라 불리는 초록색 복도를 거쳐 그들을 사형 집행장까지 안내하는 것. 폴은 그들이 죽음을 맞이하는 순간까지 평화롭게 지낼 수 있도록 최선을 다한다. 어느 날 존 커피라는 사형수가 이송되어 온다. 그는 쌍둥이 여자아이를 살해한 흉악범. 하지만 순진한 눈망울에 겁을 잔뜩 집어먹은 그의 모습에 폴은 당혹감을 느낀다. 게다가 그는 초자연적 능력으로 폴의 지병을 깨끗하게 치료해주기까지 한다. 존을 전기 의자로 데려가야 할 날이 다가오면서 폴은 그가 무죄라는 확신을 갖게 되는데...",
-            "poster_path": "/yuSpRhrTIJa5JN8oESrfD2bndp1.jpg",
-            "release_date": "1999-12-10",
-            "title": "그린 마일",
-            "vote_average": 8.5,
-            "ott_service": [
-                {
-                    "넷플릭스": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cubmV0ZmxpeC5jb20vdGl0bGUvNjAwMDA0MTc"
-                }
-            ],
-            "backdrops": [
-                "/l6hQWH9eDksNJNiXWYRkWqikOdu.jpg",
-                "/vxJ08SvwomfKbpboCWynC3uqUg4.jpg",
-                "/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
-                "/2XRapPxR6t1wzMes8VbpzWHtrdG.jpg",
-                "/nb4ImdpdMSGIi5LkjZ68jRdOIy1.jpg"
-            ],
-            "directors": [
-                4027
-            ],
-            "actors": [
-                31,
-                52,
-                5149,
-                61981,
-                2505
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 155,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18,
-                28,
-                80,
-                53
-            ],
-            "overview": "범죄와 부정부패를 제거하여 고담시를 지키려는 배트맨. 그는 짐 고든 형사와 패기 넘치는 고담시 지방 검사 하비 덴트와 함께 도시를 범죄 조직으로부터 영원히 구원하고자 한다. 세 명의 의기투합으로 위기에 처한 악당들이 모인 자리에 보라색 양복을 입고 얼굴에 짙게 화장을 한 괴이한 존재가 나타나 배트맨을 죽이자는 사상 초유의 제안을 한다. 그는 바로 어떠한 룰도, 목적도 없는 사상 최악의 악당 미치광이 살인광대 조커. 배트맨을 죽이고 고담시를 끝장내버리기 위한 조커의 광기 어린 행각에 도시는 혼란에 빠지는데...",
-            "poster_path": "/f6dNinWX8rBM79JXKcShkfSh2oA.jpg",
-            "release_date": "2008-07-14",
-            "title": "다크 나이트",
-            "vote_average": 8.5,
-            "ott_service": "error",
-            "backdrops": [
-                "/6fA9nie4ROlkyZAUlgKNjGNCbHG.jpg",
-                "/nMKdUUepR0i5zn0y1T4CsSB5chy.jpg",
-                "/cfT29Im5VDvjE0RpyKOSdCKZal7.jpg",
-                "/enNubozHn9pXi0ycTVYUWfpHZm.jpg",
-                "/tLvSjFaqKDPYcV0OUJ2TLXq70Di.jpg"
-            ],
-            "directors": [
-                525
-            ],
-            "actors": [
-                3894,
-                1810,
-                3895,
-                64,
-                6383
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 761053,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                10749,
-                35
-            ],
-            "overview": "",
-            "poster_path": "/uqmTxOP3gNl5MWRt1wlrUnzTphM.jpg",
-            "release_date": "2020-11-19",
-            "title": "Gabriel's Inferno: Part III",
-            "vote_average": 8.5,
-            "ott_service": "error",
-            "backdrops": [
-                "/fQq1FWp1rC89xDrRMuyFJdFUdMd.jpg"
-            ],
-            "directors": [
-                935563
-            ],
-            "actors": [
-                1312450,
-                544002,
-                1844204,
-                2345991,
-                2595115
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 533514,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                16,
-                14,
-                10749,
-                18
-            ],
-            "overview": "친애하는 길베르트 소령님, 오늘도 또 당신을 떠올리고 말았습니다.  무엇을 보든 무엇을 하든 당신이 떠오릅니다.  시간이 지나도 당신과 보냈던 기억은 선명하게 되살아납니다. 당신은 날 곁에 두었고 아무것도 모르는 제게 살아가는 방법을 가르쳐 주셨고 처음으로 사랑이라는 감정을 알려주셨습니다.  그래서 이렇게 또 편지를 쓰게 됩니다.  -언젠가 이 편지가 당신에게 닿기를 바라며-",
-            "poster_path": "/mBUy2lCwk6fpByQ7GBFKRApKEHb.jpg",
-            "release_date": "2020-09-18",
-            "title": "극장판 바이올렛 에버가든",
-            "vote_average": 8.5,
-            "ott_service": [
-                {
-                    "넷플릭스": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cubmV0ZmxpeC5jb20vdGl0bGUvODExOTMyMTQ"
-                }
-            ],
-            "backdrops": [
-                "/lp6SmwyNRspEYkkLXFEVuNlCw77.jpg",
-                "/idGoGVR9HUhrfAh0ork4Z0FIHxx.jpg",
-                "/zKaIddkh79eQoITn50Im5UXbFf6.jpg",
-                "/gpxfZNJ7GB9CYFUVLqe836yOmXZ.jpg",
-                "/zBvR0lJyKH37FPQTj5mFfYr2X4s.jpg"
-            ],
-            "directors": [
-                1484773
-            ],
-            "actors": [
-                1224288,
-                110665,
-                84508,
-                225655,
-                1248340
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 680,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                53,
-                80
-            ],
-            "overview": "펌프킨와 허니 버니가 레스토랑에서 강도 행각을 벌이기 시작한다. 빈센트와 그 동료 쥴스는 두목의 금가방을 찾기 위해 다른 건달이 사는 아파트를 찾아간다. 마르셀러스는 부치에게 돈을 주며 상대 선수에게 져 주라고 하지만 부치는 상대 선수를 때려 눕히고 도망치다, 어릴 때 아버지에게 물려받은 시계를 찾기 위해 아파트로 향한다. 아무런 상관 없이 보이는 이 사건들이 서로 얽히고 섥히면서 예상치 못한 인과관계가 만들어지는데...",
-            "poster_path": "/6lXRHGoEbnnBUKsuqpL9JxD4DzT.jpg",
-            "release_date": "1994-09-10",
-            "title": "펄프 픽션",
-            "vote_average": 8.5,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL21PZ0JEYVc"
-                },
-                {
-                    "웨이브": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cud2F2dmUuY29tL3BsYXllci9tb3ZpZT9tb3ZpZWlkPU1WX0NRMDJfQ1EwMDAwMDAwMDI3"
-                },
-                {
-                    "TVING": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cudHZpbmcuY29tL2NvbnRlbnRzL00wMDAzNjAwNzY"
-                }
-            ],
-            "backdrops": [
-                "/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
-                "/w7RDIgQM6bLT7JXtH4iUQd3Iwxm.jpg",
-                "/oZXdEEOZhqq8827DXHPnt2GI5Fz.jpg",
-                "/jlVOS4D6ledQGxGdL0EIte3TXfL.jpg",
-                "/19joFuQ6YTkcru4rvOf8b9CIjjg.jpg"
-            ],
-            "directors": [
-                138
-            ],
-            "actors": [
-                8891,
-                2231,
-                139,
-                62,
-                10182
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 429,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                37
-            ],
-            "overview": "미국의 남북전쟁이 한창인 때, 블론디(클린트 이스트우드)는 멕시칸 총잡이 투코(엘리 월라치)와 함께 동업 중이다. 블론디는 현상범 투코를 잡아 현상금을 받고, 투코가 교수형을 당하는 순간 구해주는 역할. 한편 세텐자(리 반 클리프)라 불리우는 범죄자는 엄청나 돈이 묻힌 비밀장소를 추적 중이다. 그런데, 투코와 실랑이를 벌이던 블론디는 돈이 묻힌 장소를 죽어가는 사람에게 듣게 되고, 결국 둘은 돈을 찾아 나서는데...  ※ \"석양의 무법자\"로도 알려져 있지만 최초 개봉시 제목을 기준으로 \"석양에 돌아오다\"로 정정함",
-            "poster_path": "/sOTQkPoEZd7ImsZBuXfu4BqZ6JS.jpg",
-            "release_date": "1966-12-23",
-            "title": "석양에 돌아오다",
-            "vote_average": 8.5,
-            "ott_service": "error",
-            "backdrops": [
-                "/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
-                "/eoCSp75lxatmIa6aGqfnzwtbttd.jpg",
-                "/3H0TPj81yFK17tFNtNXkRTeuzng.jpg",
-                "/xnFmcq40R0umHHLXTpvOW5GTdMh.jpg",
-                "/zZv1ZgglS80WvBktQUBBEooVqqH.jpg"
-            ],
-            "directors": [
-                4385
-            ],
-            "actors": [
-                190,
-                3265,
-                4078,
-                5813,
-                5814
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 526896,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                878,
-                14
-            ],
-            "overview": "희귀혈액병을 앓고 있는 생화학자 모비우스는 동료인 마르틴과 함께 치료제 개발에 몰두한다. 흡혈 박쥐를 연구하던 중 마침내 치료제 개발에 성공한 모비우스는 새 생명과 강력한 힘을 얻게 되지만, 동시에 흡혈을 하지 않고는 생명을 유지할 수 없게 된다. 그러던 중 모비우스와 같은 병을 앓고 있던 그의 친구 마일로도 모비우스와 같은 힘을 얻게 되는데…",
-            "poster_path": "/8uiV88A5eB7PjMTtY6lQBUZ0Cpl.jpg",
-            "release_date": "2022-03-30",
-            "title": "모비우스",
-            "vote_average": 6.4,
-            "ott_service": [],
-            "backdrops": [
-                "/gG9fTyDL03fiKnOpf2tr01sncnt.jpg",
-                "/rl49Qr4KbfTSYjXYAN8fMDIt2xS.jpg",
-                "/kmCBLNHsNnlDEtghSaF2nabpG2T.jpg",
-                "/d2EhCtT7vSm7RiqbxZkrcLgJGXg.jpg",
-                "/xFAbQnrV7vsW4obvqfyWoEF1YuZ.jpg"
-            ],
-            "directors": [
-                125738
-            ],
-            "actors": [
-                7499,
-                136532,
-                1371297,
-                15440,
-                90534
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 752623,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                12,
-                35,
-                10749
-            ],
-            "overview": "전설의 트레저를 차지하기 위해 재벌 페어팩스(다니엘 래드클리프)는  유일한 단서를 알고 있는 베스트셀러 작가 로레타(산드라 블록)를 납치하게 된다.  어쩔 수 없는 비지니스 관계로 사라진 그녀를 찾아야만 하는 책 커버모델 앨런(채닝 테이텀)은  의문의 파트너(브래드 피트)와 함께 위험한 섬에서 그녀를 구하고 무사히 탈출해야만 하는데…  적과 자연의 위험이 도사리는 일촉즉발 화산섬.",
-            "poster_path": "/8kZapNBZYGJu7AUbJVBDMmQgO1D.jpg",
-            "release_date": "2022-03-24",
-            "title": "로스트 시티",
-            "vote_average": 6.8,
-            "ott_service": [],
-            "backdrops": [
-                "/A3bsT0m1um6tvcmlIGxBwx9eAxn.jpg",
-                "/1Ds7xy7ILo8u2WWxdnkJth1jQVT.jpg",
-                "/8yA4At87Cj2SO6nIvdcmGgVcMyT.jpg",
-                "/hw7foD5in5YCs7qY3Pap9pdc1Vc.jpg",
-                "/6fNGc1bnVPOa1ZAVItkCqrXObe9.jpg"
-            ],
-            "directors": [
-                931525
-            ],
-            "actors": [
-                18277,
-                38673,
-                10980,
-                287,
-                1180099
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 675353,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                878,
-                35,
-                10751,
-                12
-            ],
-            "overview": "강력한 파워의 ‘너클즈’와 함께 돌아온 천재 과학자 ‘닥터 로보트닉’에 맞서 지구를 구하기 위해 ‘소닉’과 새로운 파트너 ‘테일즈’가 전 세계를 누비는 스피드 액션 블록버스터.",
-            "poster_path": "/8dzKn3RtPWUJRG9ymSpi423eMNV.jpg",
-            "release_date": "2022-03-30",
-            "title": "수퍼 소닉 2",
-            "vote_average": 7.8,
-            "ott_service": "error",
-            "backdrops": [
-                "/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg",
-                "/8wwXPG22aNMpPGuXnfm3galoxbI.jpg",
-                "/dDErfHZVeSQ9gO2GSXWWqNJbiZ8.jpg",
-                "/oXIyGa4Mn3h4yIkEVPKmLgK7KhH.jpg",
-                "/50DSlLDTB9l99A26vpEeyjWic14.jpg"
-            ],
-            "directors": [
-                93364
-            ],
-            "actors": [
-                222121,
-                17605,
-                1212864,
-                206,
-                11006
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 639933,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                12,
-                14,
-                53
-            ],
-            "overview": "10세기 아이슬란드, 숙부를 향한 '암레트' 왕자의 복수극을 그린 영화",
-            "poster_path": "/bfeM8NGWm1riLvvVxHDPLtWCRkF.jpg",
-            "release_date": "2022-04-07",
-            "title": "노스맨",
-            "vote_average": 7.5,
-            "ott_service": [],
-            "backdrops": [
-                "/cqnVuxXe6vA7wfNWubak3x36DKJ.jpg",
-                "/fqw8nJLPRgKRyFSDC0xBsC06NGC.jpg",
-                "/cIjmEgK67974md4Z9Xe6350sAS2.jpg",
-                "/xOMLQ0NypqxlEge75I7prBRvRbc.jpg",
-                "/AjR2bZICiEOeI63tQfNw7AtahmU.jpg"
-            ],
-            "directors": [
-                138781
-            ],
-            "actors": [
-                28846,
-                2227,
-                150802,
-                569,
-                1397778
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 836225,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                27
-            ],
-            "overview": "멕시코 디오스에서 사역 중이던 미국인 신부 피터는 귀신 들린 마갈리 수녀에 대한 엑소시즘 도중 악령에 홀려 그녀를 탐하는 죄를 짓는다. 18년 후, 피터는 고아들과 소외된 자를 도우며 성인으로 칭송받는다. 어느 날, 원인을 알 수 없는 역병으로 4명의 아이들이 세상을 떠나고 피터는 자신이 지은 과거의 잘못에 대한 하나님의 징벌이라고 자책한다. 피터는 파문을 각오하고 잘못을 고하기 위해 발두치 주교를 찾아가지만, 교황청에서 피터를 주목하고 있다는 말을 들은 후 지원받은 약과 장비를 들고 돌아온다. 그날 밤, 악령 들린 하나님의 아들 예수에 대한 악몽을 꾼 피터는 우리베 교도소장의 전화를 받고 사라가도 코라존 교도소를 방문한다. 마갈리는 악마에 사로잡힌 에스페란자가 피터의 딸이라고 말하며 악령을 쫓아내 달라고 부탁한다. 피터는 에스페란자에 대한 엑소시즘을 위해 최고의 구마 사제인 마이클 신부에게 도움을 요청한다. 피터와 마이클 신부는 에스페란자의 육체를 빌려 돌아온 악마 발반에 맞서 구마 의식을 행하는데...",
-            "poster_path": "/hangTmbxpSV4gpHG7MgSlCWSSFa.jpg",
-            "release_date": "2022-02-10",
-            "title": "엑소시즘 오브 갓",
-            "vote_average": 6.9,
-            "ott_service": [],
-            "backdrops": [
-                "/jCDycDqFJ1dIv5iJfTfub2h4ZAB.jpg",
-                "/fdiLgQqfFFITMGET31CPdPsfhIW.jpg",
-                "/1RIbsZwmwjOWTR94LxEG7MO48v4.jpg",
-                "/8l3tekpQprF47G5bsRZ6VNts9c9.jpg",
-                "/7kHqWo9kPlufivJbSdhnQChbKCW.jpg"
-            ],
-            "directors": [
-                1190581
-            ],
-            "actors": [
-                58942,
-                1601451,
-                1050186,
-                1212803,
-                133766
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 335787,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                12
-            ],
-            "overview": "평범한 삶을 살던 네이선은 인생을 바꿀 뜻밖의 제안을 받는다. 그의 미션은 크루와 함께 사라진 형과 500년 전 잃어버린 천문학적인 가치를 지닌 트레져를 찾아내는 것. 그러나 몬카다의 위협 속, 누구보다 빠르게 미지의 세계에 닿기 위해 결단을 내려야만 하는데…",
-            "poster_path": "/2R8smeSDkPx6TKIRveKPXi0JVI6.jpg",
-            "release_date": "2022-02-10",
-            "title": "언차티드",
-            "vote_average": 7.2,
-            "ott_service": [],
-            "backdrops": [
-                "/aEGiJJP91HsKVTEPy1HhmN0wRLm.jpg",
-                "/742EbFO5TUAV9372sfojsf96M3X.jpg",
-                "/cTTggc927lEPCMsWUsdugSj6wAY.jpg",
-                "/bTKcMEO1Mh2pIvLcZ9NYSplRO8v.jpg",
-                "/vMTlir2E9mJN5PbM1DPran0LWjG.jpg"
-            ],
-            "directors": [
-                91268
-            ],
-            "actors": [
-                1136406,
-                13240,
-                1163789,
-                1859934,
-                3131
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 414906,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                80,
-                9648,
-                53
-            ],
-            "overview": "지난 2년 간 고담시의 어둠 속에서 범법자들을 응징하며 배트맨으로 살아온 브루스 웨인. 알프레드와 제임스 고든 경위의 도움 아래 그는 도시의 부패한 공직자들과 고위 관료들 사이에서 복수의 화신으로 활약한다. 고담의 시장 선거를 앞두고 고담의 엘리트 집단을 목표로 잔악한 연쇄살인을 저지르는 수수께끼 킬러 리들러가 나타나자, 최고의 탐정 브루스 웨인이 수사에 나서고 남겨진 단서를 풀어가며 캣우먼, 펭귄, 카마인 팔코네, 리들러를 차례대로 만난다. 사이코 범인의 미스터리를 수사하면서 그 모든 증거가 자신을 향한 의도적인 메시지였음을 깨닫고,  리들러에게 농락 당한 배트맨은 광기에 사로잡힌다. 범인의 무자비한 계획을 막고 오랫동안 고담시를 썩게 만든 권력 부패의 고리를 끊어야 하지만, 부모님의 죽음에 얽힌 진실이 밝혀지자 복수와 정의 사이에서 갈등하는데...",
-            "poster_path": "/bCz71ysciwNL2xddSm25ufrgZ7V.jpg",
-            "release_date": "2022-03-01",
-            "title": "더 배트맨",
-            "vote_average": 7.8,
-            "ott_service": [],
-            "backdrops": [
-                "/xHrp2pq73oi9D64xigPjWW1wcz1.jpg",
-                "/tRS6jvPM9qPrrnx2KRp3ew96Yot.jpg",
-                "/5P8SmMzSNYikXpxil6BYzJ16611.jpg",
-                "/IYUD7rAIXzBM91TT3Z5fILUS7n.jpg",
-                "/b0PlSFdDwbyK0cf5RxwDpaOJQvQ.jpg"
-            ],
-            "directors": [
-                32278
-            ],
-            "actors": [
-                11288,
-                37153,
-                17142,
-                2954,
-                1241
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 453395,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                14,
-                28,
-                12
-            ],
-            "overview": "끝없이 균열되는 차원과 뒤엉킨 시공간의 멀티버스가 열리며 오랜 동료들, 그리고 차원을 넘어 들어온 새로운 존재들을 맞닥뜨리게 된 닥터 스트레인지. 대혼돈 속, 그는 예상치 못한 극한의 적과 맞서 싸워야만 하는데….",
-            "poster_path": "/vL5ktZauR0fZMDOHKjakb1idhuU.jpg",
-            "release_date": "2022-05-04",
-            "title": "닥터 스트레인지: 대혼돈의 멀티버스",
-            "vote_average": 7.4,
-            "ott_service": [],
-            "backdrops": [
-                "/AdyJH8kDm8xT8IKTlgpEC15ny4u.jpg",
-                "/zUYGHXnIVkP7HHipLm1P0jhwIbJ.jpg",
-                "/ndCSoasjIZAMMDIuMxuGnNWu4DU.jpg",
-                "/11ZcwW7KqNPwKzFcyFGrA0MBt49.jpg",
-                "/gUNRlH66yNDH3NQblYMIwgZXJ2u.jpg"
-            ],
-            "directors": [
-                7623
-            ],
-            "actors": [
-                71580,
-                550843,
-                5294,
-                30082,
-                1912381
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 634649,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                12,
-                878
-            ],
-            "overview": "‘미스테리오’의 계략으로 세상에 정체가 탄로난 스파이더맨 ‘피터 파커’는 하루 아침에 평범한 일상을 잃게 된다. 문제를 해결하기 위해 ‘닥터 스트레인지’를 찾아가 도움을 청하지만 뜻하지 않게 멀티버스가 열리면서 각기 다른 차원의 불청객들이 나타난다. ‘닥터 옥토퍼스’를 비롯해 스파이더맨에게 깊은 원한을 가진 숙적들의 강력한 공격에 ‘피터 파커’는 사상 최악의 위기를 맞게 되는데…",
-            "poster_path": "/voddFVdjUoAtfoZZp2RUmuZILDI.jpg",
-            "release_date": "2021-12-15",
-            "title": "스파이더맨: 노 웨이 홈",
-            "vote_average": 8.1,
-            "ott_service": [],
-            "backdrops": [
-                "/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
-                "/uhYpkLSnlOXTQDmNnu1X4MHMt1S.jpg",
-                "/p4ZeIgm14xiLVGJv1hguBDx9QvJ.jpg",
-                "/ocUp7DJBIc8VJgLEw1prcyK1dYv.jpg",
-                "/VlHt27nCqOuTnuX6bku8QZapzO.jpg"
-            ],
-            "directors": [
-                1293994
-            ],
-            "actors": [
-                1136406,
-                505710,
-                71580,
-                1649152,
-                15277
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 629542,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                16,
-                35,
-                28,
-                10751,
-                80
-            ],
-            "overview": "작전 설계부터 금고 해제, 해킹, 액션, 위장까지 완벽한 팀플레이를 펼치는 자타공인 최고의 나쁜 녀석들이 한순간의 실수로 체포된다.  하지만 그들도 착해질 수 있다는 ‘마멀레이드 박사’의 주장으로 나쁜 녀석들은 바른 생활 갓생 프로젝트에 투입되고, 이들은 다시 한번 자유의 몸을 위해 태어나 처음으로 바른 생활에 도전하게 되는데…  나쁜 녀석들의 사상 초유 바른 생활 갓생 프로젝트가 시작된다!",
-            "poster_path": "/x6KSvale7iuxLhsrEfhYNoICyfK.jpg",
-            "release_date": "2022-03-17",
-            "title": "배드 가이즈",
-            "vote_average": 7.8,
-            "ott_service": [],
-            "backdrops": [
-                "/fEe5fe82qHzjO4yej0o79etqsWV.jpg",
-                "/95zHwiYHyVNuKwaJyz3KIvJGXUr.jpg",
-                "/9IDJpHROaC0S1ZlIxrvzOcOX5yC.jpg",
-                "/a9LuryXGOYOGxkAUE8FDoI97D35.jpg",
-                "/ea3nuV8XgPe5HOrQec1uzX1mzdY.jpg"
-            ],
-            "directors": [
-                1261455
-            ],
-            "actors": [
-                6807,
-                1231717,
-                1625558,
-                64342,
-                1560244
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 628900,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                53
-            ],
-            "overview": "특수부대 중사 출신 ‘제임스 하퍼’는 전역을 명 받고 법의 테두리 밖에서 국가에 충성하는 극비 조직에 합류한다. 그에게 주어진 첫번째 미션은, 전세계를 혼란에 빠뜨릴 바이러스 테러를 막는 것. 그러나, 미션 수행 도중 거대한 음모에 휘말리게 되고 충격과 위기를 겪게 되는데… 더 이상 물러설 곳은 없다.  모든 것을 건, 새로운 미션이 시작된다!",
-            "poster_path": "/fZid9LbFTZV7NjM0qMwL1mPjhqu.jpg",
-            "release_date": "2022-03-10",
-            "title": "더 컨트랙터",
-            "vote_average": 6.6,
-            "ott_service": [],
-            "backdrops": [
-                "/figlwUsXXFehX3IebdjqNLV6vWk.jpg",
-                "/kHd4rwdRtJXnYMraQSrlgPSCsIt.jpg",
-                "/mAaKf1A08UlzVPGVgpYiugZ6Gfw.jpg",
-                "/fJLOHQaoeeekwdW3fHhbJQz3Oos.jpg",
-                "/ncBXjIsciqCSBtvIBzE69ps81t9.jpg"
-            ],
-            "directors": [
-                119293
-            ],
-            "actors": [
-                62064,
-                11107,
-                94098,
-                1665,
-                2628
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 508947,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                16,
-                10751,
-                35,
-                14
-            ],
-            "overview": "엄마의 착한 딸, 아니면 미운 13살? 성적도 우수하고 친구들과 사이도 좋은 데다 부모와도 친밀한 관계를 유지하고 있는, 똑 부러지면서도 엉뚱한 매력의 소유자 메이는 요즘 질풍노도의 시기를 겪느라 고민이 많다. 이 나이에 엄마의 과잉보호를 받자니 스트레스가 이만저만이 아닌 데다, 관심사, 인간관계, 신체 등 그녀의 모든 것이 변하고 있기 때문. 그런데 이 와중에 흥분하면 거대한 레서판다로 변신하는 비밀까지 떠안게 되다니! 아침도 먹어야 하고 학교도 가야 하는데, 이 엄청난 비밀을 어떻게 숨겨야 할까?",
-            "poster_path": "/hsOhOcX7qDy7bPwbrt1OoITngrf.jpg",
-            "release_date": "2022-03-10",
-            "title": "메이의 새빨간 비밀",
-            "vote_average": 7.5,
-            "ott_service": [
-                {
-                    "디즈니+": "https://www.disneyplus.com/ko-kr/movies/turning-red/4mFPCXJi7N2m"
-                }
-            ],
-            "backdrops": [
-                "/fOy2Jurz9k6RnJnMUMRDAgBwru2.jpg",
-                "/iPhDToxFzREctUA0ZQiYZamXsMy.jpg",
-                "/b8Ma7TkasTDpMIkoIngzHVcgANa.jpg",
-                "/aYMntsP1Zqn6pKE7U7jLj1XGJtc.jpg",
-                "/iLe3xmol3XQeH1Devw3AydKIyYk.jpg"
-            ],
-            "directors": [
-                2009739
-            ],
-            "actors": [
-                25540,
-                3156344,
-                1373681,
-                2602879,
-                2719558
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 406759,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                878,
-                12,
-                28
-            ],
-            "overview": "궤도를 이탈한 달이 지구를 향해 떨어지기 시작하면서 지구의 중력과 모든 물리적인 법칙이 붕괴된다. 거대한 해일과 지진, 화산폭발, 쓰나미와 이상기후까지 상상조차 불가능했던 모든 재난으로 전 세계는 공포와 혼란에 빠진다. 달과 충돌까지 남은 시간은 단 30일. NASA 연구원 파울러, 전직 우주 비행사 브라이언, 그리고 우주 덕후 KC는 달을 막을 방법을 찾기 위해 마지막 우주선에 오른다.",
-            "poster_path": "/2xmJCxrt5t2dFhvwvmxZ5Cy577j.jpg",
-            "release_date": "2022-02-03",
-            "title": "문폴",
-            "vote_average": 6.5,
-            "ott_service": [],
-            "backdrops": [
-                "/9Ngw106BLlNJ4iVpRHlrDfaLpCV.jpg",
-                "/owoGbb4LgWuegRjc4CHRwxUz9G0.jpg",
-                "/A6cAb1T3a0uO9fdVAClOhWzQZS2.jpg",
-                "/yv0HaauvhYeVhx3FDXhBroiTKs3.jpg",
-                "/gRbaexI5HvKUj9eJh3WACSZSt51.jpg"
-            ],
-            "directors": [
-                6046
-            ],
-            "actors": [
-                4587,
-                17178,
-                1010135,
-                1440574,
-                2225985
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 785985,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                35,
-                28
-            ],
-            "overview": "절대 상극인 두 형사가 10년 만에 콤비가 된다. 분열된 프랑스의 한 시골 마을에서 벌어진 살인 사건 수사를 위해 다시 손을 잡은 두 남자. 그곳에 도사리던 거대한 음모와 만난다.",
-            "poster_path": "/6NHyuF440HprqRfYrecdMQH6iQb.jpg",
-            "release_date": "2022-05-06",
-            "title": "투캅스 인 파리: 더 테이크다운",
-            "vote_average": 5.8,
-            "ott_service": [
-                {
-                    "넷플릭스": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cubmV0ZmxpeC5jb20vdGl0bGUvODE0MTY5Nzc"
-                }
-            ],
-            "backdrops": [
-                "/wtbRUVxQVvU6QIJH1oGLDThJLib.jpg",
-                "/6o7Y1G9Zyu0aNioyVZyD9qc15Fk.jpg",
-                "/7GaF8y5BfWINTCAVzg9xVuHhOUs.jpg",
-                "/1ILtep2T3BS6BY4TOxFW1mXwX6d.jpg",
-                "/faakrr5jKGTQtAGHp6MFpMrF7Me.jpg"
-            ],
-            "directors": [
-                18865
-            ],
-            "actors": [
-                78423,
-                93532,
-                1121169,
-                71038,
-                1977894
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 893370,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                27
-            ],
-            "overview": "",
-            "poster_path": "/3CvBuw9aoziJJAbqymmsF2drnzH.jpg",
-            "release_date": "2022-04-21",
-            "title": "Virus-32",
-            "vote_average": 6.9,
-            "ott_service": "error",
-            "backdrops": [
-                "/i0zbSmiyyylh7H3Qb4jgscz46Pm.jpg",
-                "/4v0A20fki06r3O3ZNcS5DHyVtWX.jpg",
-                "/pmYEjuVw76E4zcEURTCPxNLsqfC.jpg"
-            ],
-            "directors": [
-                542246
-            ],
-            "actors": [
-                131867,
-                2300951,
-                3326346,
-                1591940
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 763285,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                53,
-                80
-            ],
-            "overview": "인생 역전을 위해 완벽한 범죄를 설계한 형 대니와 아내의 수술비를 마련해야만 하는 동생 윌, 함께 자랐지만 서로 다른 인생을 살아온 두 형제는 각기 다른 목적을 위해 인생을 바꿀 위험한 계획에 뛰어들게 된다. 그러나 한 순간의 잘못된 선택으로 인해 모든 계획이 틀어지게 된 두 형제는 구급대원 캠과 부상당한 경찰이 탑승한 앰뷸런스를 탈취해 LA 역사상 가장 위험한 질주를 하게 되는데....",
-            "poster_path": "/t28iy60uX4sRZhKo2MMxCKyQw1a.jpg",
-            "release_date": "2022-03-16",
-            "title": "앰뷸런스",
-            "vote_average": 7,
-            "ott_service": [],
-            "backdrops": [
-                "/dW3fQJrshh2wYDoW4HUA7ZabsN1.jpg",
-                "/wkEMF1achbsFWhymUDmEJmOyYXk.jpg",
-                "/192vHmAPbk5esL34XMKZ1YLGFjr.jpg",
-                "/rdOIqwR7P7fvTpC6LILSmQxEg6O.jpg",
-                "/eo2hMG9Je4J3mwp6SGhTfb1YKt8.jpg"
-            ],
-            "directors": [
-                865
-            ],
-            "actors": [
-                131,
-                1639847,
-                1222992,
-                39520,
-                39213
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 284052,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                12,
-                14,
-                878
-            ],
-            "overview": "오만함과 실력 모두 최고인 신경외과 의사 닥터 스티븐 스트레인지는 운전 중에 핸드폰을 한 대가로 두 손의 신경이 끊어지는 심각한 부상을 입고 큰 상심에 빠진다. 게다가 모난 말들로 사랑하는 여인 크리스틴 팔머마저 그의 곁을 떠나게 만든다. 그는 치료를 위해 히말라야의 영적 지도자, 에인션트 원을 만나 마지막 희망을 걸고 수련을 시작한다. 스트레인지는 빠르게 마법을 터득해 나가는 동시에 세계의 작동원리와 우주를 정복하려는 도르마무 일당의 계략을 알게 된다.",
-            "poster_path": "/xA7ic72L0mejJX1SYMU38F7wwiF.jpg",
-            "release_date": "2016-10-25",
-            "title": "닥터 스트레인지",
-            "vote_average": 7.4,
-            "ott_service": "error",
-            "backdrops": [
-                "/eQN31P4IEhyp6NkdccvppJnyuJ4.jpg",
-                "/qUv51IFUvVRAP2379ThmA3eLJx6.jpg",
-                "/aL53oMdZKZRJRH8txH07DLuleF9.jpg",
-                "/maa4191Pfvs3SGR3ECYC34kaRGQ.jpg",
-                "/dGsr8AjDYs5JaboTpHiSJEXdwyp.jpg"
-            ],
-            "directors": [
-                55499
-            ],
-            "actors": [
-                71580,
-                5294,
-                53714,
-                30082,
-                1019
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 799876,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                80,
-                18,
-                53
-            ],
-            "overview": "시카고에 자리잡은 영국인 양복점 명장이 갱스터들과 엮이면서 겪게 되는 위험한 생존 게임을 다룬 영화",
-            "poster_path": "/yju3CSIR8fdNsZyPdMsUun7XQnd.jpg",
-            "release_date": "2022-02-25",
-            "title": "아웃핏",
-            "vote_average": 7,
-            "ott_service": [],
-            "backdrops": [
-                "/jIdZmqElYgNwlCsUtCwmN1rDu7I.jpg",
-                "/2n95p9isIi1LYTscTcGytlI4zYd.jpg",
-                "/rv0QBVB1TwI93Ch7iNibslAiC4s.jpg",
-                "/74SiHDNvWQAO89S9j04vLiLucP0.jpg",
-                "/8nwsxEZbNfBcuSTmuKE2lVV7FEz.jpg"
-            ],
-            "directors": [
-                221850
-            ],
-            "actors": [
-                40900,
-                137108,
-                1059597,
-                527393,
-                57461
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 883502,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                80,
-                28
-            ],
-            "overview": "",
-            "poster_path": "/61J34xHVVdQHbJ4MSCWQo4e727v.jpg",
-            "release_date": "2022-04-29",
-            "title": "포트리스: 스나이퍼스 아이",
-            "vote_average": 6,
-            "ott_service": [],
-            "backdrops": [
-                "/qNRkfXBdAuXk9Qs3BEDIfmbAK9w.jpg",
-                "/uOGcYv0Su01CFpfhXFVVKia6j3U.jpg",
-                "/hQjmd3m1z2pXqThJQhRcScPqbJw.jpg"
-            ],
-            "directors": [
-                139558
-            ],
-            "actors": [
-                62747,
-                62,
-                57171,
-                1278867,
-                1160181
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 568124,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                16,
-                35,
-                10751,
-                14
-            ],
-            "overview": "콜롬비아의 깊은 산 속, 놀라운 마법과 활기찬 매력이 넘치는 세계 엔칸토. 이곳을 만든 장본인은 마드리갈 가문의 기둥인 알마 할머니(마리아 세실리아 보테로)다. 그녀는 젊었을 때 세 쌍둥이를 데리고 이곳으로 오던 중에 위기를 맞았다. 그때 그녀가 들고 있던 촛불에 기적이 일어났고 그이후로 마법의 능력이 손주 세대까지 대물림된다. 3대에 걸친 이대가족은 음식으로 병을 고치는 능력, 꽃을 피우는 능력, 날씨를 조종 하는 능력 등 저마다 독특한 능력을 지니게 됐다. 하지만 가족 중 유일하게 미라벨(스테퍼니 비어트리즈)만 아무런 능력이 없다. 어느 날 엔칸토가 지닌 마법의 힘이 위험에 처하고 가족들은 점차 자신의 능력을 잃어가기 시작한다. 이를 감지한 미라벨은 유일하게 평범한 자신이 특별한 이 가족의 마지막 희망일지 모른다고 생각하는데...",
-            "poster_path": "/b8gz7UKMwMz39mz6EH5Jjicjdth.jpg",
-            "release_date": "2021-11-24",
-            "title": "엔칸토: 마법의 세계",
-            "vote_average": 7.7,
-            "ott_service": [
-                {
-                    "디즈니+": "https://www.disneyplus.com/ko-kr/movies/encanto/33q7DY1rtHQH"
-                }
-            ],
-            "backdrops": [
-                "/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg",
-                "/2hZd9enh7Fhyrw8Fw08T7EDtin9.jpg",
-                "/4rQPEA0k6EursVxmOEaZsKGlFfB.jpg",
-                "/2Sm3asuwKVNTzgm2nF6hp5mwEfh.jpg",
-                "/1wv9TV3nSHT5UBYwxG6r0UAEVe2.jpg"
-            ],
-            "directors": [
-                1318201
-            ],
-            "actors": [
-                968367,
-                2521631,
-                5723,
-                3150235,
-                2489411
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 752623,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                12,
-                35,
-                10749
-            ],
-            "overview": "전설의 트레저를 차지하기 위해 재벌 페어팩스(다니엘 래드클리프)는  유일한 단서를 알고 있는 베스트셀러 작가 로레타(산드라 블록)를 납치하게 된다.  어쩔 수 없는 비지니스 관계로 사라진 그녀를 찾아야만 하는 책 커버모델 앨런(채닝 테이텀)은  의문의 파트너(브래드 피트)와 함께 위험한 섬에서 그녀를 구하고 무사히 탈출해야만 하는데…  적과 자연의 위험이 도사리는 일촉즉발 화산섬.",
-            "poster_path": "/8kZapNBZYGJu7AUbJVBDMmQgO1D.jpg",
-            "release_date": "2022-04-20",
-            "title": "로스트 시티",
-            "vote_average": 6.8,
-            "ott_service": [],
-            "backdrops": [
-                "/A3bsT0m1um6tvcmlIGxBwx9eAxn.jpg",
-                "/1Ds7xy7ILo8u2WWxdnkJth1jQVT.jpg",
-                "/8yA4At87Cj2SO6nIvdcmGgVcMyT.jpg",
-                "/hw7foD5in5YCs7qY3Pap9pdc1Vc.jpg",
-                "/6fNGc1bnVPOa1ZAVItkCqrXObe9.jpg"
-            ],
-            "directors": [
-                931525
-            ],
-            "actors": [
-                18277,
-                38673,
-                10980,
-                287,
-                1180099
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 453395,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                14,
-                28,
-                12
-            ],
-            "overview": "끝없이 균열되는 차원과 뒤엉킨 시공간의 멀티버스가 열리며 오랜 동료들, 그리고 차원을 넘어 들어온 새로운 존재들을 맞닥뜨리게 된 닥터 스트레인지. 대혼돈 속, 그는 예상치 못한 극한의 적과 맞서 싸워야만 하는데….",
-            "poster_path": "/vL5ktZauR0fZMDOHKjakb1idhuU.jpg",
-            "release_date": "2022-05-04",
-            "title": "닥터 스트레인지: 대혼돈의 멀티버스",
-            "vote_average": 7.4,
-            "ott_service": [],
-            "backdrops": [
-                "/AdyJH8kDm8xT8IKTlgpEC15ny4u.jpg",
-                "/zUYGHXnIVkP7HHipLm1P0jhwIbJ.jpg",
-                "/ndCSoasjIZAMMDIuMxuGnNWu4DU.jpg",
-                "/11ZcwW7KqNPwKzFcyFGrA0MBt49.jpg",
-                "/gUNRlH66yNDH3NQblYMIwgZXJ2u.jpg"
-            ],
-            "directors": [
-                7623
-            ],
-            "actors": [
-                71580,
-                550843,
-                5294,
-                30082,
-                1912381
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 628900,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                53
-            ],
-            "overview": "특수부대 중사 출신 ‘제임스 하퍼’는 전역을 명 받고 법의 테두리 밖에서 국가에 충성하는 극비 조직에 합류한다. 그에게 주어진 첫번째 미션은, 전세계를 혼란에 빠뜨릴 바이러스 테러를 막는 것. 그러나, 미션 수행 도중 거대한 음모에 휘말리게 되고 충격과 위기를 겪게 되는데… 더 이상 물러설 곳은 없다.  모든 것을 건, 새로운 미션이 시작된다!",
-            "poster_path": "/fZid9LbFTZV7NjM0qMwL1mPjhqu.jpg",
-            "release_date": "2022-04-28",
-            "title": "더 컨트랙터",
-            "vote_average": 6.6,
-            "ott_service": [],
-            "backdrops": [
-                "/figlwUsXXFehX3IebdjqNLV6vWk.jpg",
-                "/kHd4rwdRtJXnYMraQSrlgPSCsIt.jpg",
-                "/mAaKf1A08UlzVPGVgpYiugZ6Gfw.jpg",
-                "/fJLOHQaoeeekwdW3fHhbJQz3Oos.jpg",
-                "/ncBXjIsciqCSBtvIBzE69ps81t9.jpg"
-            ],
-            "directors": [
-                119293
-            ],
-            "actors": [
-                62064,
-                11107,
-                94098,
-                1665,
-                2628
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 763285,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                53,
-                80
-            ],
-            "overview": "인생 역전을 위해 완벽한 범죄를 설계한 형 대니와 아내의 수술비를 마련해야만 하는 동생 윌, 함께 자랐지만 서로 다른 인생을 살아온 두 형제는 각기 다른 목적을 위해 인생을 바꿀 위험한 계획에 뛰어들게 된다. 그러나 한 순간의 잘못된 선택으로 인해 모든 계획이 틀어지게 된 두 형제는 구급대원 캠과 부상당한 경찰이 탑승한 앰뷸런스를 탈취해 LA 역사상 가장 위험한 질주를 하게 되는데....",
-            "poster_path": "/t28iy60uX4sRZhKo2MMxCKyQw1a.jpg",
-            "release_date": "2022-04-06",
-            "title": "앰뷸런스",
-            "vote_average": 7,
-            "ott_service": [],
-            "backdrops": [
-                "/dW3fQJrshh2wYDoW4HUA7ZabsN1.jpg",
-                "/wkEMF1achbsFWhymUDmEJmOyYXk.jpg",
-                "/192vHmAPbk5esL34XMKZ1YLGFjr.jpg",
-                "/rdOIqwR7P7fvTpC6LILSmQxEg6O.jpg",
-                "/eo2hMG9Je4J3mwp6SGhTfb1YKt8.jpg"
-            ],
-            "directors": [
-                865
-            ],
-            "actors": [
-                131,
-                1639847,
-                1222992,
-                39520,
-                39213
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 338953,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                28,
-                12,
-                14
-            ],
-            "overview": "1930년대, 제2차 세계대전에 마법사들이 개입하게 되면서 강력한 어둠의 마법사 그린델왈드의 힘이 급속도로 커진다. 덤블도어는 뉴트 스캐맨더에게 위대한 마법사 가문 후손, 마법학교의 유능한 교사, 머글 등으로 이루어진 팀에게 임무를 맡긴다. 이에 뉴트와 친구들은 머글과의 전쟁을 선포한 그린델왈드와 추종자들, 그의 위험한 신비한 동물들에 맞서 세상을 구할 거대한 전쟁에 나선다. 한편 전쟁의 위기가 최고조로 달한 상황 속에서 덤블도어는 더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데...",
-            "poster_path": "/uvQbXjMgC5weQepx4jLJJ60H3N0.jpg",
-            "release_date": "2022-04-13",
-            "title": "신비한 동물들과 덤블도어의 비밀",
-            "vote_average": 6.7,
-            "ott_service": [],
-            "backdrops": [
-                "/zGLHX92Gk96O1DJvLil7ObJTbaL.jpg",
-                "/wdjdHBDwmynWUrJcNzS24uegvK5.jpg",
-                "/85xYejKh6JPTEUGrn2SIPCxxiQO.jpg",
-                "/wQXb8y401ztnwlFCTLssnvAgGjF.jpg",
-                "/tg1rIgZiUCkZOj95Mvu7ABdiZFU.jpg"
-            ],
-            "directors": [
-                11343
-            ],
-            "actors": [
-                37632,
-                9642,
-                1019,
-                132157,
-                58873
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 661231,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                10752,
-                36,
-                18
-            ],
-            "overview": "사상 최대의 인명 피해를 낳은 제2차 세계대전, 연합군과 추축군은 전쟁을 승리로 이끌 교두보 시칠리아를 두고 팽팽한 대립을 펼친다. 하지만 추축군 독일의 위세가 상당해 시칠리아에는 이미 추축군 병력 무려 23만 명이 주둔해 있던 상황! 연합군은 해군 정보장교 이웬 몬태규와 찰스 첨리를 주축으로 전쟁의 승기를 잡을 단 한 번의 민스미트 작전을 계획하는데…",
-            "poster_path": "/hPNb2m2jgchIpAoyGauol3wZHub.jpg",
-            "release_date": "2022-05-12",
-            "title": "민스미트 작전",
-            "vote_average": 6.7,
-            "ott_service": [],
-            "backdrops": [
-                "/jCSpD2Sj67qOVnOu4b3JsXl8NO4.jpg",
-                "/xaqAINN4n0LtvqQ2MSKrVkFpYgV.jpg",
-                "/eMICCVbY3YvqVYnISflxi6oFKRj.jpg",
-                "/mV0jhZA5LQJg4D6NOcmsw5YwKaW.jpg",
-                "/3qlE397334zAi0zgLaxlMMMtHrk.jpg"
-            ],
-            "directors": [
-                18844
-            ],
-            "actors": [
-                5472,
-                15576,
-                9015,
-                1249,
-                137108
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 751237,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                27,
-                9648
-            ],
-            "overview": "미국의 한 외딴 농장에서 딸 크리스와 단둘이 평온하게 살아오던 아만다. 어느 날, 그녀의 앞에 한국에서 죽은 엄마의 유골이 도착하고 그때부터 정체불명의 현상이 일어나기 시작한다.",
-            "poster_path": "/sIopir3XJa7gGrIUdWrOV143Le.jpg",
-            "release_date": "2022-05-11",
-            "title": "UMMA: 엄마",
-            "vote_average": 5.9,
-            "ott_service": "error",
-            "backdrops": [
-                "/8DHvtmF15wGwkMOW3nqZmpEzEaq.jpg",
-                "/pLkx5DfowRZZjQYQgMHW6D7QioO.jpg",
-                "/kjNN1s11LeioCcOd39ua6Qt27RM.jpg",
-                "/runG5UGrWaQfwSLdNBn2gPe0Qc0.jpg",
-                "/osDhiSM6wERyvR416yN0JP6qhlh.jpg"
-            ],
-            "directors": [
-                1381495
-            ],
-            "actors": [
-                25540,
-                205955,
-                20212,
-                1121786,
-                2727080
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 532710,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                53,
-                14,
-                27
-            ],
-            "overview": "평범한 사람들은 없는 특별한 능력을 가졌다는 이유만으로 과거 정부의 비밀 실험 기관인 ‘더 샵’에 의해 이용당했던 ‘앤디’와 ‘비키’는  ‘더 샵’에서 가까스로 탈출한 뒤 딸 ‘찰리’를 낳고 조용한 나날을 보내고 있다.  시간이 흘러 말로는 설명할 수 없는 내면의 힘을 느끼기 시작한 ‘찰리’는  어느 날 학교에서 한 남학생에게 괴롭힘을 당하고  순간적인 분노에 휩싸여 숨어 들어간 화장실을 파괴하는 지경에 이른다.  이로 인해 ‘더 샵’에서 개편된 비밀 기관인 ‘DSI’가 ‘찰리’의 존재를 알게 되고  또 다른 초능력자 ‘레인버드’에게 이들을 잡아오라는 명령을 내린다.  ‘찰리’는 통제할 수 없는 엄청난 힘의 발현에 혼란스러워 하고  그런 딸을 보호하기 위해 ‘앤디’와 ‘비키’는 고군분투하지만  ‘레인버드’를 앞세운 ‘DSI’가 이들의 숨통을 빠르게 조여 오기 시작하는데…",
-            "poster_path": "/ko1iKcUp4iIjTNAYFOWFVG8tUi7.jpg",
-            "release_date": "2022-05-19",
-            "title": "파이어스타터",
-            "vote_average": 6.3,
-            "ott_service": [],
-            "backdrops": [
-                "/bIFrsAcqkLUUxaaiqqpFexYPeCh.jpg",
-                "/cX8VmY3vS3UA7gyLDE4M7Gtvq4x.jpg",
-                "/hgwgv9L7IOdLFc8ISVeHDk2ZPq4.jpg",
-                "/dhjQ9fijawRp08bq9LN7Vf2zZVC.jpg",
-                "/aOBz50fGJ40gREmEs0y90NuGGlZ.jpg"
-            ],
-            "directors": [
-                2381662
-            ],
-            "actors": [
-                2072566,
-                29222,
-                1303156,
-                2115,
-                154647
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 619803,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                80,
-                28
-            ],
-            "overview": "가리봉동 소탕작전 후 4년 뒤,\r 금천서 강력반은 베트남으로 도주한 용의자를 인도받아 오라는 미션을 받는다.  괴물형사 ‘마석도’(마동석)와 ‘전일만’(최귀화) 반장은 현지 용의자에게서 수상함을 느끼고,\r 그의 뒤에 무자비한 악행을 벌이는 ‘강해상’(손석구)이 있음을 알게 된다.  ‘마석도’와 금천서 강력반은 한국과 베트남을 오가며\r 역대급 범죄를 저지르는 ‘강해상’을 본격적으로 쫓기 시작하는데...  나쁜 놈들 잡는 데 국경 없다!\r 통쾌하고 화끈한 범죄 소탕 작전이 다시 펼쳐진다!",
-            "poster_path": "/9oonDgLkh42GsLkbVmW7nU1ib6u.jpg",
-            "release_date": "2022-05-18",
-            "title": "범죄도시 2",
-            "vote_average": 2,
-            "ott_service": "error",
-            "backdrops": [
-                "/iuM006FCrVXqvwLg4R0hkST0HPy.jpg",
-                "/5NHw7N1oR6HBfa2cy1Mw1jawAwt.jpg",
-                "/tqOM14UDPBANj0t4zf7hyOaSRL6.jpg",
-                "/ycrjBTKrqcBxDmKiHfXJZfmWxba.jpg",
-                "/9zsp2HAcRh3rybtTTykgBfMvyVL.jpg"
-            ],
-            "directors": [
-                2376041
-            ],
-            "actors": [
-                1024395,
-                2035488,
-                1418581,
-                1078674,
-                1332468
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 795811,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18,
-                10749
-            ],
-            "overview": "메이코는 집으로 돌아가는 택시 안에서 친구에게 새로운 연애 상대 이야기를 듣는다. 여대생 나오는 교수 앞에서 그가 쓴 소설의 일부를 낭독한다. 20년 만에 고향을 찾은 나츠코는 그토록 만나고 싶던 동창생과 재회한다.  우연이 만들어내는 조용히 아주 크게 움직이는 인생의 순간들이 있다. 이 영화는 그에 대한 상상의 결과물이다.",
-            "poster_path": "/hxB28TAfDAL7ZstvRj4w820pgtk.jpg",
-            "release_date": "2022-05-04",
-            "title": "우연과 상상",
-            "vote_average": 6.9,
-            "ott_service": "error",
-            "backdrops": [
-                "/uvoOoMvI5n4K5PXi44yPMfu2Ibt.jpg",
-                "/esDMDu1CqGXPHT0RJ8K4Bg1pcB8.jpg",
-                "/1g6JNBgn5TKFcbmZqvwCJuTOe6A.jpg",
-                "/iB87MZ0PPGr3SOoCa5lx4ADk0gq.jpg",
-                "/4BIjU16p7mtKdnnQ8Twepwht3S7.jpg"
-            ],
-            "directors": [
-                1487492
-            ],
-            "actors": [
-                2187869,
-                1505062,
-                1324449,
-                58611,
-                2975325
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 628914,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                35,
-                80
-            ],
-            "overview": "쿠폰 모으기를 삶의 낙으로 삼으며 마트 직원에게 쿠폰으로 창조 경제를 설파하던 주부 코니. 어느 날, 공짜 쿠폰으로 돈을 벌 수 있는 획기적인 아이디어를 떠올리고 이웃집 절친이자 유튜버 꿈나무인 조조를 설득해 실행에 착수, 대박을 터뜨린다. 비즈니스 대성공의 기쁨을 만끽하며 명품부터 슈퍼카, 최신 무기 쇼핑까지 돈세탁에 열중하던 그때, 수상함을 감지한 마트 손실 방지 전문가 켄이 본격 수사에 나서는데…!",
-            "poster_path": "/vXZybsr2xqewdjZTJgQRmA4Yta1.jpg",
-            "release_date": "2022-04-27",
-            "title": "쿠폰의 여왕",
-            "vote_average": 6.5,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL2NvbnRlbnRzL21XejNrRFA"
-                }
-            ],
-            "backdrops": [
-                "/4t8T9NCte10R5CAXVhHDnmkPd3X.jpg",
-                "/xqnsybRM3JXYsqjy2ItPKzGolVw.jpg",
-                "/33171ryalmjdl9WXF5BnfbUlZ8O.jpg",
-                "/yedhMhRSViMjd3v1gLNQSjo9wMl.jpg",
-                "/sk9nzMKFJwE9iId9Ws7t5xq7SwJ.jpg"
-            ],
-            "directors": [
-                95575
-            ],
-            "actors": [
-                40462,
-                1532312,
-                1294982,
-                4937,
-                74949
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 746131,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18,
-                10749
-            ],
-            "overview": "낭만을 잃었다 생각한 그곳에서 불현듯 사랑을 만났다. 사랑을 원하는 에밀리, 사랑이 두려운 노라, 사랑이 값비싼 앰버 스위트, 사랑을 몰랐던 카미유, 흔들리고 불안했던 그 사랑이, 우리는 전부라 생각했다. 여전히 사랑을 믿는 도시.",
-            "poster_path": "/mKgEkNBBN6vfY463oy7AKQ5Xe2f.jpg",
-            "release_date": "2022-05-12",
-            "title": "파리, 13구",
-            "vote_average": 7.1,
-            "ott_service": [],
-            "backdrops": [
-                "/qc2gwz3yFssevJVuz0RiZuciAj3.jpg",
-                "/99ELcYVIWtbNeP9qH4Ae6o3VAtn.jpg",
-                "/diVh124ydoB2lKdT0ce3QjlSnlD.jpg",
-                "/vqq919MB2x0xL8PcMTLw9HHXDxo.jpg",
-                "/pWvQoC1kTrkawEWiQqAtHQ3mYeE.jpg"
-            ],
-            "directors": [
-                17496
-            ],
-            "actors": [
-                1385600,
-                1167055,
-                2828742,
-                1029285,
-                1889718
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 617762,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18,
-                36,
-                35
-            ],
-            "overview": "모든 동물이 행복해지길 바랐던 엉뚱한 천재 화가 ‘루이스’(베네딕트 컴버배치). 그림 말고는 모든 게 서툴렀던 그 앞에 어느 날 운명 같은 사랑이 찾아온다. 그의 세상을 송두리째 바꿔 놓은 삶의 전부, ‘에밀리’(클레어 포이) 그리고 고양이 ‘피터’. 2022년 봄, 모두를 다정하게 끌어안을 가장 사랑스러운 로맨스가 온다!",
-            "poster_path": "/n1kXNSjRCeHoyQI5bkmobfVSeHf.jpg",
-            "release_date": "2022-04-06",
-            "title": "루이스 웨인: 사랑을 그린 고양이 화가",
-            "vote_average": 7.1,
-            "ott_service": [],
-            "backdrops": [
-                "/znpokr30qWVJztgO3t98PVyFLdC.jpg",
-                "/3Mw6eKDZuGfcU10OqPURGcbTZlm.jpg",
-                "/iImW7zEShRb1fZ4gkkNwIPwH2lm.jpg",
-                "/vERtuBZguwuRZWoa1wYjJTMVCA6.jpg",
-                "/s7qE2YROM7pJkzilqpahrLuTTcE.jpg"
-            ],
-            "directors": [
-                939337
-            ],
-            "actors": [
-                71580,
-                120932,
-                127558,
-                13014,
-                1474028
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 401146,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18,
-                10402,
-                10749
-            ],
-            "overview": "모노톤의 인생을 살고 있는 천재 피아니스트 코세이. 어느 날 바이올리니스트 카오리를 만난다. 어머니의 사망 이후 피아노를 치지 않는 코세이에게 카오리는 콩쿨에서 함께 연주해 줄 것을 부탁하는데…  벚꽃처럼 나타난 너, 컬러풀한 세상을 연주하기 시작한다!",
-            "poster_path": "/cV1GENA5H0DOF4h64MVHnpmqEGI.jpg",
-            "release_date": "2022-04-20",
-            "title": "4월은 너의 거짓말",
-            "vote_average": 7,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL3RQeW5wZ2w"
-                },
-                {
-                    "넷플릭스": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cubmV0ZmxpeC5jb20vdGl0bGUvODAwNDEwODk"
-                },
-                {
-                    "웨이브": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cud2F2dmUuY29tL3BsYXllci92b2Q_cHJvZ3JhbWlkPUM2MTAxX0M2MTAwMDAwMDAwMg"
-                },
-                {
-                    "TVING": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cudHZpbmcuY29tL2NvbnRlbnRzL1AwMDAxNTEzMDY"
-                }
-            ],
-            "backdrops": [
-                "/hta0meEAmmRbmJohEr63s4JqFiu.jpg",
-                "/c8hzr9LE5hhfrSNugk3kO0KW50v.jpg",
-                "/fvc5CF6UuXmmdcEAkTPK9kGWqbW.jpg"
-            ],
-            "directors": [
-                123885
-            ],
-            "actors": [
-                1177942,
-                1454976,
-                1632067,
-                1255318,
-                121752
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 423333,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                18
-            ],
-            "overview": "돌이킬 수 없는 사건으로 아이를 잃은 두 부부의 슬픔, 분노, 절망, 후회가 폭발하는 111분의 마스터피스",
-            "poster_path": "/25hs4cufSf4bAfwjJbTZbEKWyZg.jpg",
-            "release_date": "2022-05-18",
-            "title": "매스",
-            "vote_average": 7.9,
-            "ott_service": [],
-            "backdrops": [
-                "/cv6Nn8Yt9mgFoUSievEdW9JK82A.jpg",
-                "/4kqmdx6OLZp8hSCI1RCAVgGD0XC.jpg",
-                "/6dJ5uEvI0zh46kFnVjPQOzqGWqy.jpg",
-                "/k6CDLKbeCxOcmU3pErIAm8D5Eb1.jpg",
-                "/mgrfF1hrvlzmbzNZgeWMMzUco6c.jpg"
-            ],
-            "directors": [
-                51533
-            ],
-            "actors": [
-                17495,
-                11355,
-                43366,
-                163774,
-                1442829
-            ],
-            "independent": true,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 680813,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                99,
-                16
-            ],
-            "overview": "가장 보편적인 공간인 집의 의미를 물으며 시작하는 이 다큐멘터리는 아민으로 불리길 원하는 한 남성에게 가장 개인적인 이야기를 할 수 있는 안전한 공간을 만들어준다. 누나의 원피스를 입고 장 클로드 반담에 빠져 있던 아프가니스탄 카불의 해맑은 소년이 코펜하겐의 성공한 학자가 되기까지 25년의 시간 동안, 그는 무채색의 시간 속을 걸어왔다. 진정한 미래를 살아가기 위해 자신의 과거를 직면해야 했던 한 남자의 실화를 다룬 애니메이션 다큐멘터리.",
-            "poster_path": "/cdZWnvEuG9diAmOD1j7C4Hm88GZ.jpg",
-            "release_date": "2022-04-07",
-            "title": "나의 집은 어디인가",
-            "vote_average": 7.9,
-            "ott_service": [
-                {
-                    "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL2NvbnRlbnRzL21XOXBuTEs"
-                }
-            ],
-            "backdrops": [
-                "/CKGSEnFTpcxPJM5TzTFUJz53s.jpg",
-                "/r7r2jxFgRN0TFcEldM1hjUD5LQS.jpg",
-                "/yT4NWhy4i5SKSGSmwrflzR2iHyb.jpg",
-                "/4kxnqo30Xq43ozNfOkShRAavC9Q.jpg",
-                "/lsdrNp0iDBdBg2zYW7MSg5dD7yv.jpg"
-            ],
-            "directors": [
-                1148927
-            ],
-            "actors": [
-                3439290,
-                3268863,
-                3268864,
-                3268865,
-                3268867
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 761563,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                27
-            ],
-            "overview": "남자들에게 농락당하는 인생이 싫어 떠난 칼라는 다시 한번 상처를 받고 다시 돌아간다. 마약에 의존해 슬픔을 잊던 칼라는 의문의 사내를 찾아갔다가 뱀에게 물리게 되고, 치명적인 독 바이러스가 몸속에 퍼지면서 그때부터 몸에 이상한 변화가 생기게 된다. 하지만 원치 않는 변화에 놀라는 것도 잠시, 칼라는 알 수 없는 본능에 이끌리면서 그동안 숨겨왔던 분노를 서서히 드러내는데…",
-            "poster_path": "/2ExgyJWNbPlb2wYnyCn4a417tkJ.jpg",
-            "release_date": "2022-04-28",
-            "title": "메두사",
-            "vote_average": 6.3,
-            "ott_service": [],
-            "backdrops": [
-                "/yslyqQ5gDD553AXn1qex3HU6KID.jpg",
-                "/3h1AXkYA1yazZaFPVA12FtmtYye.jpg",
-                "/iCRwYkJFYtDHCFV2yATAD2vnTOx.jpg",
-                "/qbTfFuKCPvnMK5N7cSp8CanroYq.jpg"
-            ],
-            "directors": [
-                2846787
-            ],
-            "actors": [
-                2021785,
-                2469350,
-                216988,
-                2821700,
-                2564032
-            ],
-            "independent": false,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 681580,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                53,
-                80
-            ],
-            "overview": "세계일주여행을 앞둔 어느 날 어디서나 마주칠 수 있을 것 같은 평범한 남자 ‘다니’는 식당에서 우연히 ‘밀라’를 만나고 평소와 다르게 일탈을 즐기며 낯선 밤을 보낸다.  그날 밤, ‘밀라’에게 이끌려 난생처음 문신을 새기고 집까지 따라가게 된 ‘다니’는 뜻하지 않은 사건에 휘말려 우발적으로 살인을 저지르고 만다.  아직 용의 선상에 오르지 않은 ‘다니’는 사람들을 피해 도심 속으로 숨어들지만, 지루한 드라마 같던 삶을 반전시킨 단 한 번의 실수는 계속해서 그를 벗어날 수 없는 악몽 속으로 끌고 가는데…",
-            "poster_path": "/x3G9qjVpvXZwMOrbVUIBO2Il1Ow.jpg",
-            "release_date": "2022-05-12",
-            "title": "크로스 더 라인",
-            "vote_average": 6.8,
-            "ott_service": [],
-            "backdrops": [
-                "/zAgvIpxByhCroQIRHGuwfEKZW1T.jpg",
-                "/vdu0PDW3dV5lKoQ4Vk8zFaWIHWD.jpg",
-                "/ezoZRyrP7c0XKc7CA0kPHeh87m3.jpg",
-                "/otjerJqpHKUg7Mv3lpfGaKaq4A0.jpg",
-                "/m9P3viZ0HvnZ23GgoAYPIzZmmrM.jpg"
-            ],
-            "directors": [
-                1093748
-            ],
-            "actors": [
-                82700,
-                1500573,
-                2560224,
-                1367156,
-                1434242
-            ],
-            "independent": true,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 762575,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                99
-            ],
-            "overview": "1980년대에 지어진 청주 봉명동의 1세대 주공아파트, 봉명주공. 철마다 형형색색으로 물드는 나무들, 놀이터에서 쉬어가는 새들과 골목을 지키는 길 고양이들, 곳곳에 울려 퍼지는 어린아이들의 웃음소리…  떠나가는 거주민들은 저마다 가슴속에 봉명주공에서의 추억을 남긴다. 우리가 남기고 가는 것은 무엇인가요?",
-            "poster_path": "/s9x9y8C54pWn8EaAyOU2Yo4yVKI.jpg",
-            "release_date": "2022-05-19",
-            "title": "봉명주공",
-            "vote_average": 7,
-            "ott_service": [],
-            "backdrops": [],
-            "directors": [
-                2850492
-            ],
-            "actors": [],
-            "independent": true,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 712150,
-        "fields": {
-            "adult": false,
-            "genre_ids": [
-                35
-            ],
-            "overview": "헤어지고 38일째, 소니아에게 문자를 보냈다.  소니아의 답장은 여전히 오지 않고 눈치 없는 누나와 예비 매형이 나에게 결혼식 축사를 부탁한다. 다양한 방법으로 축사를 망치고 모두의 원망을 듣는 나의 미래가 눈앞에 보이는 것만 같아 두렵다. 그나저나 소니아는 왜 문자 답장이 없을까?",
-            "poster_path": "/eLY5SSlDMmmaAebOXoSauasHvpU.jpg",
-            "release_date": "2022-05-19",
-            "title": "완벽한 축사를 준비하는 방법",
-            "vote_average": 6.5,
-            "ott_service": [],
-            "backdrops": [
-                "/w3sqSIZDQLthCPpOCkcN5CkLRYM.jpg",
-                "/7HC13lGBbev4luCTflqeaiBXOyt.jpg",
-                "/qev6pnKDmsdQ3vcBjTogX8iqOmI.jpg",
-                "/ltBhPMzA2CW4SsgGeEOKNlHA4eo.jpg"
-            ],
-            "directors": [
-                64575
-            ],
-            "actors": [
-                1159954,
-                237881,
-                1321014,
-                1074716,
-                77929
-            ],
-            "independent": true,
-            "like": [],
-            "watch": [],
-            "playlist": []
-        }
-    },
-    {
-        "model": "movies.movie",
-        "pk": 829275,
-        "fields": {
-            "adult": false,
+            "genres": [
+                "로맨스",
+                "드라마"
+            ],
+            "original_language": "ko",
             "overview": "수진을 짝사랑해 왔던 충길은 주변 친구들에게 고백을 하고 친구들을 동원해 철저하게 계획된 고백 작전을 펼친다. 엉뚱하지만 기발한, 치밀하지만 귀여운 충길의 고백 작전은 계획한대로 순조롭게 이루어지는 듯 하지만 예상치 못한 복병을 맞이하게 된다. 과연 충길의 고백은 성공할 수 있을까?",
             "poster_path": "/qTZBKfyb4J8GERzoshMupWVpR0w.jpg",
             "release_date": "2021-06-01",
+            "runtime": 66,
             "title": "네가 내가 되었으면 좋겠다",
             "vote_average": 5.0,
             "ott_service": [
@@ -2415,16 +39,23 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 829275
     },
     {
         "model": "movies.movie",
-        "pk": 11104,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마",
+                "코미디",
+                "로맨스"
+            ],
+            "original_language": "cn",
             "overview": "경찰 223은 헤어진 옛 애인을 기다리며, 1달 동안 그녀에게서 연락이 오지 않으면 그녀를 잊기로 마음먹는다. 같은 시간, 마약 딜러는 자신을 배신한 마약 중개인을 제거한 뒤 술집을 찾고 그곳에서 경찰 223은 술집으로 처음 들어오는 여자를 사랑하겠노라 마음먹는다. 한편 패스트푸드점에서 일하는 점원 페이는 언제나처럼 똑같은 샐러드를 고른 경찰 663을 남몰래 좋아하고 있다. 어느 날, 경찰 663의 애인이 이별의 편지와 함께 경찰 663의 아파트 열쇠를 페이의 가게에게 맡긴다. 페이는 경찰 663이 집을 비운 사이 남아있는 그녀의 흔적을 하나 둘 지워나가는데...",
             "poster_path": "/mOP0XWkChKhxuCmjD7CNXpa8M1p.jpg",
             "release_date": "1994-07-14",
+            "runtime": 103,
             "title": "중경삼림",
             "vote_average": 8.0,
             "ott_service": "error",
@@ -2449,14 +80,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 11104
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -2467,38 +97,46 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": 968501,
         "fields": {
             "adult": false,
+            "genres": [],
+            "original_language": "ko",
             "overview": "80년 5월 광주를 서로 다른 위치에서 겪었던 세 인물이 9년 후 우연히 한 곳에서 만나 함께 살아가고 있다. 두 남자는 공사판에서 일하고 있고, 한 여자는 함바집에서 일하고 있다. 각자 상처와 악몽에서 벗어나지 못한 채 살아가고 있던 세 인물들이, 어느 날 뚜렷하게 되살아난 9년 전의 기억과 정면으로 마주하게 된다.",
             "poster_path": "/wPNyHS2sTjaQR8muFvtjgUEtedL.jpg",
             "release_date": "",
+            "runtime": 0,
             "title": "쏴!쏴!쏴!쏴!탕",
             "vote_average": 0.0,
             "ott_service": [],
-            "backdrops": [],
             "directors": [
-                ""
+                
             ],
             "actors": [],
             "independent": true,
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 968501
     },
     {
         "model": "movies.movie",
-        "pk": 615165,
         "fields": {
             "adult": false,
+            "genres": [
+                "애니메이션",
+                "로맨스"
+            ],
+            "original_language": "ja",
             "overview": "“후회하지 않기 위해, 다시 널 만나러 왔어”  산으로 둘러싸인 시골 마을,\r 그곳엔 꿈을 위해 쉼 없이 달려가는\r 자매 ‘아오이’, ‘아카네’ 그리고 ‘신노’가 있었다.  ‘신노’는 함께 도쿄 상경을 약속했던 ‘아카네’를 찾아갔지만,\r ‘아카네’는 혼자 남을 동생 ‘아오이’로 인해 꿈을 접는다.  13년 후, 고등학생이 된 ‘아오이’는 언니에 대한 죄책감과\r 자신의 꿈 사이에서 방황하고 두 사람의 관계는 점점 멀어져 간다.  그러던 어느 날, 두 사람 앞에 다시는 만날 수 없을 것 같았던 ‘그’가\r 전혀 다른 모습의 두 사람이 되어 동시에 나타나게 되는데…  “어째서 내게 다시 찾아온 거야?”",
             "poster_path": "/3hjqr9zZmREFbUEixPwj5npf4CO.jpg",
             "release_date": "2019-10-11",
+            "runtime": 108,
             "title": "하늘의 푸르름을 아는 사람이여",
             "vote_average": 7.1,
             "ott_service": [],
@@ -2523,16 +161,22 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 615165
     },
     {
         "model": "movies.movie",
-        "pk": 675490,
         "fields": {
             "adult": false,
+            "genres": [
+                "스릴러",
+                "공포"
+            ],
+            "original_language": "en",
             "overview": "군의관 엘리자베스는 스스로 PTSD를 의심하며 집으로 돌아온다. 가족과 함께 치료를 하던 중 무서운 환상이 점점 더 심해짐을 경험한다. 그리고 이웃에 살고 있는 퇴마사로부터 그녀와 가족들이 집 주변에 스며든 고대 악령으로부터 공격을 받고 있다는 경고를 받는다. 이제 그녀는 가족을 지키기 위해 악령과 목숨을 건 싸움을 벌이게 된다.",
             "poster_path": "/8dGsP4nNZWyXf6DT4URmKH0UlI.jpg",
             "release_date": "2020-08-21",
+            "runtime": 89,
             "title": "변신 : 어느날 갑자기",
             "vote_average": 6.0,
             "ott_service": [
@@ -2561,16 +205,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 675490
     },
     {
         "model": "movies.movie",
-        "pk": 791900,
         "fields": {
             "adult": false,
+            "genres": [
+                "액션"
+            ],
+            "original_language": "zh",
             "overview": "정의롭고 유능한 군인 우웨이는 딸 위안위안이 테러리스트에게 인질로 잡혀 죽을 위기에 처한 경험을 한 이후 군복을 벗고 제대한다. 아내 쉬즈란과도 이혼한 우웨이는 밤마다 그날의 악몽에 시달린다. 한편 건강이 악화된 PE그룹의 페이 회장은 쉬즈란 박사에게 아들 카이원을 앙고라 섬에서 데려 오라고 부탁한다. 그리고 중단된 R혈구응집소의 비밀 자료가 담긴 USB를 즈란에게 주고 돌아가던 회장은 교통사고를 당한다. 이틀 뒤 즈란이 가진 USB를 뺏기 위해 낯선 자들이 나타나고 위기의 순간 우웨이가 즈란을 구해준다. 그 후 우웨이와 즈란, 류사오와 의사 자오런은 함께 앙고라 섬으로 향한다. 산에서 카이원을 만난 즈란은 페이 회장과 그룹을 위해 카이원에게 돌아가자고 이야기한다. 하지만 카이원은 인신매매의 단서를 찾아 앙고라 섬으로 온 뒤 사라진 여자 친구 전전을 찾아야 된다고 말한다. 다음 날, R혈구응집소 연구 중단에 불만을 품은 줘만칭이 앙고라 섬에서 국제 A급 수배범인 독사와 만나는 장면이 목격된다. 줘만칭이 독사의 기지에서 납치한 사람들을 대상으로 혈액 관련 실험을 한다는 것을 알게 된 우웨이 일행은 진쯔를 통해 무기를 구한 뒤 독사의 기지에 잠입한다. 그곳에서 고문을 당하고 있던 잠입 형사 고천명을 구해 달아나던 우웨이 일행은 방에 포위되어 위기에 처한다. 그때 즈란이 전력 시스템을 고장 낸 뒤 차로 우웨이 등을 구해 독사의 기지에서 벗어난다. 분노한 독사는 우웨이가 있는 산채를 기습하고 화력에서 밀린 우웨이 일행은 일단 후퇴한다. 그리고 살아남은 우웨이, 즈란, 고천명, 카이원, 진쯔, 자오 6명은 친구들의 복수와 실험 대상이 된 사람들을 구하기 위해 악마 같은 독사의 기지로 향하는데...",
             "poster_path": "/fxt7RTd7zd9KkOWmt716Yv8YiKZ.jpg",
             "release_date": "2021-09-15",
+            "runtime": 90,
             "title": "작전: 라스트 어썰트",
             "vote_average": 3.0,
             "ott_service": [
@@ -2595,16 +244,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 791900
     },
     {
         "model": "movies.movie",
-        "pk": 793998,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "fr",
             "overview": "작가를 꿈꾸는 대학생 안은 예기치 못한 임신 사실을 알게 된다. 낳으면 미혼모가 되고, 낳지 않으면 감옥에 가야 하는 현실. 의지와 상관없이 흘러가는 시간 속에서 안은 어떤 대가를 치러서라도 끝까지 가기로 결심하는데…",
             "poster_path": "/bZMRlqlmVcWo9iqp61l7JyQM8rS.jpg",
             "release_date": "2021-11-24",
+            "runtime": 100,
             "title": "레벤느망",
             "vote_average": 7.0,
             "ott_service": [
@@ -2633,14 +287,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 793998
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -2651,16 +304,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": 798751,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "zh",
             "overview": "꿈을 이루기 위해 홀로 돈을 벌고 공부하며 고군분투하던 `안란`. 어느 날, 간절히 바라던 대학원 진학을 앞두고 갑작스러운 교통사고로 부모님이 돌아가시자 몇 번 본적도 없는 어린 남동생이 안란에게 덜컥 맡겨진다. 동생을 키우려면 모든 것을 포기해야 하는데 누나의 희생은 당연하다고 말하는 어른들. 세상에서 제일 못되고, 이기적이고, 그래서 서글픈 여자아이가 말한다. “나에게도 우주가 있어”",
             "poster_path": "/q2DApZKPHZsjFPhDTBLa5RaIR3g.jpg",
             "release_date": "2021-04-02",
+            "runtime": 127,
             "title": "내가 날 부를 때",
             "vote_average": 6.3,
             "ott_service": [
@@ -2686,20 +344,26 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 798751
     },
     {
         "model": "movies.movie",
-        "pk": 303021,
         "fields": {
             "adult": false,
+            "genres": [
+                "가족",
+                "역사",
+                "드라마"
+            ],
+            "original_language": "ar",
             "overview": "폭력과 탄압으로 세상을 지배하던 로마 시대\r 예수는 12제자와 함께 하나님의 말씀을 전하고\r 고통받던 사람들을 사랑으로 치유한다.\r 위기를 느낀 로마는 예수를 십자가에 처형한다.\r 3일 후, 예수는 자신의 예언과 같이 부활하는데…  위대한 인류 구원의 역사가 시작된다!",
             "poster_path": "/8rOSyXOmjhG4JzklZA23gX12lMk.jpg",
             "release_date": "2014-03-29",
+            "runtime": 136,
             "title": "그리스도 디 오리진",
             "vote_average": 7.0,
             "ott_service": [],
-            "backdrops": [],
             "directors": [
                 2008866
             ],
@@ -2714,16 +378,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 303021
     },
     {
         "model": "movies.movie",
-        "pk": 939259,
         "fields": {
             "adult": false,
+            "genres": [
+                "코미디"
+            ],
+            "original_language": "ko",
             "overview": "모든 열정이 식어버린 15년차 아이돌 매니저 배재성. 우연히 찾아온 꿈 같은 기회와 현금 10억을 단 하룻밤 사이에 날린다. 대신, 분신 같은 아이돌 그룹 벨라를 지켜내는데. 여기서 문제 한 가지. 지난 밤의 활약이 전혀 기억나지 않는다는 것! 기가 막힌 상황, 재성은 사라진 기억과 돈을 쫓아 어젯밤을 되짚기 시작하는데…",
             "poster_path": "/pFu5c1YNG549u4Vmziccum6my52.jpg",
             "release_date": "2022-03-17",
+            "runtime": 102,
             "title": "아이돌레시피",
             "vote_average": 0.0,
             "ott_service": [
@@ -2749,16 +418,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 939259
     },
     {
         "model": "movies.movie",
-        "pk": 597722,
         "fields": {
             "adult": false,
+            "genres": [
+                "공포"
+            ],
+            "original_language": "en",
             "overview": "어릴 적 헤어진 아빠가 스스로 목숨을 끊었다는 소식에  오랜만에 고향으로 돌아온 `새디`.  그곳에 머물며 신문사에 취직한 그는  동료 `댄`과 함께 마을에 오래도록 전해져 온  `악마의 눈`에 대해 파헤치기 시작한다.  그러다 아빠의 서랍장에서 발견한 괴기스러운 눈알 모양의 목걸이.  그것과 눈을 마주치고 무언가 욕망하는 순간, 벗어날 수 없는 끔찍한 대가가 따를 것이다!",
             "poster_path": "/fwgtB7UwV1AjCKi0A6CzF9znkdN.jpg",
             "release_date": "2019-02-26",
+            "runtime": 86,
             "title": "엑소시즘: 악령의 눈동자",
             "vote_average": 4.3,
             "ott_service": [
@@ -2787,18 +461,24 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 597722
     },
     {
         "model": "movies.movie",
-        "pk": 840526,
         "fields": {
             "adult": false,
+            "genres": [
+                "공포",
+                "코미디"
+            ],
+            "original_language": "ko",
             "overview": "꿈도 희망도 꺾여버린 취준생 단짝친구, 호두와 예지. 어느 날 호두는 번듯한 풀옵션에 가격마저 저렴한 월세집을 구하게 된다. 그러나 완벽하게만 보였던 집안에서 점차 이상한 기운이 느껴지고, 예지와 호두는 불길한 원혼을 마주하며 혼비백산 한다. 갈 곳도 없고 돈도 없는 그들은 어떻게든 집을 지키기 위해 원혼을 물리치려 하는데...",
             "poster_path": "/nkQucrZCvT07DlA7UZGkwgnR2fv.jpg",
             "release_date": "2021-09-09",
+            "runtime": 83,
             "title": "쇼미더고스트",
-            "vote_average": 7.7,
+            "vote_average": 7.6,
             "ott_service": [
                 {
                     "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL201YWdyVk4"
@@ -2824,16 +504,23 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 840526
     },
     {
         "model": "movies.movie",
-        "pk": 454527,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마",
+                "역사",
+                "로맨스"
+            ],
+            "original_language": "fr",
             "overview": "성흔과 그리스도와의 심장 교환, 신과의 결혼 등 종교적이고 에로틱한 무아경으로 신비주의로 추앙 받으며 수녀원장에 오른 베네데타. 수녀원에 들어온 바톨로매아라는 처녀와의 사랑이 교회에 적발되면서 한순간에 부정한 여인으로 몰락하는데…",
             "poster_path": "/5pzVIYH4VHkFPxGcM5H823dIPIq.jpg",
             "release_date": "2021-07-09",
+            "runtime": 131,
             "title": "베네데타",
             "vote_average": 6.7,
             "ott_service": [
@@ -2865,16 +552,24 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 454527
     },
     {
         "model": "movies.movie",
-        "pk": 734969,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마",
+                "가족",
+                "판타지",
+                "로맨스"
+            ],
+            "original_language": "ja",
             "overview": "옆집 대학생 '토오루'를 짝사랑하는 평범한 14살 여중생 '츠바메'. 그녀는 상냥한 아빠와 그녀를 따뜻하게 보듬어주는 새엄마와 함께 살고 있다. 하지만 부모님 사이에서 새로운 아이가 태어나고, 행복해 보이는 두 사람의 모습을 보며 '츠바메'는 소외감을 느낀다. 그런 그녀에게 있어 유일한 안식처는 서예학원 옥상뿐.\r 그곳에서 홀로 시간을 보내던 '츠바메'의 곁에 어느 날 밤, 누군가 찾아온다. 그녀의 눈에 들어온 건 킥보드를 타고 하늘을 나는 신비한 할머니?! 화려한 치장을 한 '호시바'의 모습을 보고 거리감을 느끼던 것도 잠시 '츠바메'는 점차 마음의 문을 열고 자신의 고민을 털어놓기 시작하는데...",
             "poster_path": "/aoszzTirCuRECWfkHpB6Am2voUO.jpg",
             "release_date": "2020-09-04",
+            "runtime": 115,
             "title": "우주에서 가장 밝은 지붕",
             "vote_average": 7.3,
             "ott_service": [
@@ -2902,20 +597,24 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 734969
     },
     {
         "model": "movies.movie",
-        "pk": 942475,
         "fields": {
             "adult": false,
+            "genres": [
+                "액션"
+            ],
+            "original_language": "zh",
             "overview": "포도대장 ‘양지’가 황금 10만 냥을 호송한다는 정보를 입수한\r 의적 ‘조개’는 여섯 명의 아우들을 불러 모아 황금 탈취 계획을 세운다.\r ‘조개’는 호송대에 잠입한 ‘원소칠’ 덕분에 황금을 탈취하는 데 성공하지만,\r 황금이 가득해야 할 상자 안에는 돌만 가득 차 있는데...",
             "poster_path": "/t8C9aRvA2CNBspeZf5FbcTk1ylm.jpg",
             "release_date": "2017-05-02",
+            "runtime": 95,
             "title": "7인의 악인전",
             "vote_average": 0.0,
             "ott_service": "error",
-            "backdrops": [],
             "directors": [
                 3178581
             ],
@@ -2926,16 +625,22 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 942475
     },
     {
         "model": "movies.movie",
-        "pk": 711963,
         "fields": {
             "adult": false,
+            "genres": [
+                "스릴러",
+                "공포"
+            ],
+            "original_language": "en",
             "overview": "고등학교 교사 호기는 아내 질, 양아들 마이카와 조던과 함께 외진 해안으로 소풍을 나간다. 그러나 두 명의 흉악한 떠돌이와 만나면서 이들의 나들이는 악몽으로 바뀌고 만다. 사이코패스처럼 보이는 두 남자의 진짜 의도가 무엇인지 도무지 알 수 없는데, 밤이 깊어 가면서 호기와 질은 이 악몽의 근원이 20년 사건에 있었음을 깨닫게 된다.",
             "poster_path": "/8gHXPh8PFxNre9JqA9WzCsocfYE.jpg",
             "release_date": "2021-08-12",
+            "runtime": 93,
             "title": "커밍 홈 인 더 다크",
             "vote_average": 5.8,
             "ott_service": [],
@@ -2960,20 +665,24 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 711963
     },
     {
         "model": "movies.movie",
-        "pk": 863313,
         "fields": {
             "adult": false,
+            "genres": [
+                "다큐멘터리"
+            ],
+            "original_language": "ko",
             "overview": "촬영차 방문한 벨기에에서 맞이한 코로나19 전 세계적 팬데믹 선포에 모두 각자의 나라로 돌아가고 국경조차 막혀 한국에 돌아오지 못한 유태오는 벨기에 앤트워프의 록다운으로 호텔에서 자가 격리를 하게 된다. 벨기에 앤트워프 호텔에서의 15일 간의 록다운, 그 기간 동안 겪게 되는 외로움과 영화 그리고 자신의 인생에 대한 가장 솔직하고 사적인 이야기를 기록으로 담은 배우 유태오의 감독 데뷔작이다.",
             "poster_path": "/zry50CKlcvc8Czu6UImbkjECN5R.jpg",
             "release_date": "2021-12-01",
+            "runtime": 65,
             "title": "로그 인 벨지움",
             "vote_average": 8.0,
             "ott_service": [],
-            "backdrops": [],
             "directors": [
                 1387126
             ],
@@ -2984,16 +693,23 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 863313
     },
     {
         "model": "movies.movie",
-        "pk": 602211,
         "fields": {
             "adult": false,
+            "genres": [
+                "액션",
+                "코미디",
+                "판타지"
+            ],
+            "original_language": "en",
             "overview": "성질머리 괴팍한 산타클로스 크리스 크링글은 망해가는 산타클로스 사업을 살리기 위해 애를 쓴다. 한편 조숙하고 못된 12살 꼬마 빌리는 산타로부터 석탄 덩어리를 선물로 받은 후 산타를 죽이기 위해 킬러를 고용하는데...",
             "poster_path": "/oeK2aRjnaslJMLI5D7g9M51v4wq.jpg",
             "release_date": "2020-10-19",
+            "runtime": 99,
             "title": "산타킬러스",
             "vote_average": 5.5,
             "ott_service": [],
@@ -3018,14 +734,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 602211
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -3036,16 +751,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": 861282,
         "fields": {
             "adult": false,
+            "genres": [
+                "액션"
+            ],
+            "original_language": "ko",
             "overview": "명나라 말, 염당 조직의 일원인 ‘형강봉’은 천한 신분에서 벗어나 자유를 찾기 위해  부현의 우두머리 격인 ‘조통’의 심부름꾼을 자처하며 살아간다.  살해 용의자 독룡방 방주를 처단하는 임무를 마지막으로 떠나려면 ‘형강봉’은  ‘조통’과 그를 둘러싼 관리들이 관직과 재물을 탐하는 간악한 음모를 꾸민다는 사실을 알게 되고,  ‘형강봉’은 자유를 위해, 백성을 위해 그들을 처단하기로 마음 먹는데…",
             "poster_path": "/zIG9CvPeOrSoeBarrjCK0SyZSoW.jpg",
             "release_date": "2021-05-20",
+            "runtime": 91,
             "title": "무간귀도",
             "vote_average": 0.0,
             "ott_service": [
@@ -3071,16 +791,23 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 861282
     },
     {
         "model": "movies.movie",
-        "pk": 714401,
         "fields": {
             "adult": false,
+            "genres": [
+                "가족",
+                "판타지",
+                "모험"
+            ],
+            "original_language": "no",
             "overview": "아름다운 대자연으로 캠핑 여행을 떠난 ‘베가’와 ‘빌리’. 5살 나이에 딱 걸맞게 모든 게 신나기만 한 ‘빌리’와 달리, 9살 나이에 걸맞지 않게 어른스러운 ‘베가’는 병원에 있는 엄마의 특명을 받아 아빠와 동생 챙기기에 바쁘다. 그런데 아뿔싸! 아빠가 강가 바위 틈으로 추락했다!  아빠를 구하기 위해 왔던 길을 거슬러 가보지만, 곧 드넓은 숲속에서 길을 잃고 만다. 모든걸 포기하고 싶은 그 순간, 떠오른 엄마의 한마디. “포기할 거야? 아니면 슈퍼히어로가 될 거야?”",
             "poster_path": "/aYL89mQqpFUNKTObrXMcg9vsvLO.jpg",
             "release_date": "2020-08-07",
+            "runtime": 77,
             "title": "토토리! 우리 둘만의 여름",
             "vote_average": 6.3,
             "ott_service": [
@@ -3113,16 +840,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 714401
     },
     {
         "model": "movies.movie",
-        "pk": 782013,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "en",
             "overview": "거리의 사람들을 관찰하는 비디오 아티스트 `레아`  브릭스턴의 거리를 배경으로 일탈 행위를 일삼는 청소년들을 관찰하던  그녀의 카메라 화면에 새로 이사 온 소년 `벤지`가 들어온다.  우연한 이끌림에 두 사람은 점차 서로에게 마음을 열어가고  카메라를 통해 이뤄진 이들의 관계는 점차 위험한 길로 이어지는데…",
             "poster_path": "/mwOrHIre7c4SQjUXyrbSDgOFxWy.jpg",
             "release_date": "2021-09-17",
+            "runtime": 76,
             "title": "브릭스턴 테일",
             "vote_average": 6.8,
             "ott_service": [
@@ -3148,16 +880,22 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 782013
     },
     {
         "model": "movies.movie",
-        "pk": 514879,
         "fields": {
             "adult": false,
+            "genres": [
+                "미스터리",
+                "판타지"
+            ],
+            "original_language": "ja",
             "overview": "얼굴에 큰 상처를 가진 카사네(요시네 쿄코)는 키스를 받는 사람의 \"얼굴\"을 훔칠 수 있는 신비한 립스틱을 가지고 있다. 그녀는 미모와 능력은 타고난 배우지만 힘든 개인사로 고군분투하며 성공하고자 하는 욕망에 사로잡힌 니나 탄자와(츠치야 타오)를 만난다. 두 사람은 립스틱의 힘을 사용하고 얼굴을 바꾸게 되고 처절한 비극의 막이 오른다.",
             "poster_path": "/bMeUdBdUrGKJFk46jPgqerdgJKo.jpg",
             "release_date": "2018-09-07",
+            "runtime": 112,
             "title": "카사네 : 빼앗는 얼굴",
             "vote_average": 6.7,
             "ott_service": [],
@@ -3181,16 +919,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 514879
     },
     {
         "model": "movies.movie",
-        "pk": 906466,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "ko",
             "overview": "중국 국적의 27세 청년 진다. 그를 키운 친할머니는 한국 사람이다. 그는 친할머니와 함께 중국에서 자랐다. 진다는 할머니가 돌아가신 이후 친구 정남과 함께 할머니께서 생전 그리워하시던 한국 남해를 찾게 되고, 정남의 동생 한별, 그녀의 친구 수진도 함께 남해로 모이게 된다. 집에 있냐고 부르면 “와, 누가 죽었나?”가 인사일 만큼 이별이 먼 이야기만은 아닌 남해 홍현마을 노인들이다. 이런 홍현마을에서 진다일행은 남해노인들과 함께 생활하며 도움을 드리기도 하고 위로를 받으며 남해 생활에 점점 정을 붙이게 된다. 정이 들어 예정보다 오래 남해에 머문 그들은 결국 떠나야 하는 순간을 맞이하게 되는데…",
             "poster_path": "/gqmzAf1uNsg8cOqIXkzWHdCd5gj.jpg",
             "release_date": "2021-12-02",
+            "runtime": 79,
             "title": "꽃손",
             "vote_average": 5.0,
             "ott_service": [
@@ -3198,7 +941,6 @@
                     "왓챠": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93YXRjaGEuY29tL3dhdGNoL21PUDB2OWw"
                 }
             ],
-            "backdrops": [],
             "directors": [
                 3329789
             ],
@@ -3213,16 +955,22 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 906466
     },
     {
         "model": "movies.movie",
-        "pk": 658210,
         "fields": {
             "adult": false,
+            "genres": [
+                "애니메이션",
+                "드라마"
+            ],
+            "original_language": "ko",
             "overview": "평화시장에서 재단사 보조로 취직한 태일이는 정식 재단사가 되어 가족의 생계도 꾸리고 동생들 공부도 시키는 것이 꿈이다. 그러나 열심히 일해 재단사가 된 태일이의 눈에 띈 것은 죽도록 일하고 커피 한 잔 값도 받지 못한 채 피를 토하는 어린 여공들의 얼굴이다. 동료를 위하는 따뜻한 마음만으로는 아무것도 바꿀 수 없고, 근로기준법이 있어도 지켜지지 않는 현실 앞에서 스물두 살 청년 태일이는 스스로 희망의 불꽃이 되기를 결심한다.",
             "poster_path": "/jgfNqGZ4afLiZVHkVxnIRefOVBk.jpg",
             "release_date": "2021-12-01",
+            "runtime": 99,
             "title": "태일이",
             "vote_average": 5.0,
             "ott_service": [],
@@ -3244,14 +992,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 658210
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -3262,16 +1009,22 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": 655082,
         "fields": {
             "adult": false,
+            "genres": [
+                "로맨스",
+                "드라마"
+            ],
+            "original_language": "fr",
             "overview": "자유의 여신상을 완성하고 프랑스로 돌아와 최고의 전성기를 누리는 천재 건축가 구스타브 에펠은 1889년 파리의 세계 만국 박람회를 기념하기 위해 세계 최초로 300m 높이의 탑 설계도를 제안한다. 안전을 우려한 주민들의 반발과 예술가들의 탄원서, 언론의 비평으로 위기에 처하지만 20년전 떠나 보낸 옛사랑 아드리안느를 되찾기 위해 혼신의 힘을 다해 탑을 완성하는데..",
             "poster_path": "/4HRmtplYQm60Yb6TlENEQbYXgdy.jpg",
             "release_date": "2021-10-07",
+            "runtime": 107,
             "title": "에펠",
             "vote_average": 6.3,
             "ott_service": [],
@@ -3296,16 +1049,22 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 655082
     },
     {
         "model": "movies.movie",
-        "pk": 594691,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마",
+                "스릴러"
+            ],
+            "original_language": "fr",
             "overview": "열정적인 사랑으로 하루하루를 보내던 파리의 행복한 연인 리사와 시몬.\r 시몬의 부주의로 벌어진 사고에 함께 도피를 계획하지만, 시몬이 약속 장소에 나타나지 않아 둘은 헤어지게 된다.\r 3년 후, 남편 레들러와 떠난 인도양의 여행지에서 우연히 리조트 직원으로 일하고 있는 시몬을 만난 리사는\r 걷잡을 수 없는 감정의 소용돌이에 휘청거리고.\r 한편, 레들러를 떠나지도, 시몬을 버리지도 못하는 리사를 찾아 제네바까지 쫓아온 시몬은 위험한 계획을 제안하고,\r 리사의 주변을 맴도는 시몬의 정체를 알아차리고도 레들러는 끝까지 침착함을 잃지 않는데…",
             "poster_path": "/y2ZHBreyxTu62RDD5QOZT2ZqpVi.jpg",
             "release_date": "2021-11-17",
+            "runtime": 96,
             "title": "아망떼",
             "vote_average": 5.6,
             "ott_service": [],
@@ -3329,14 +1088,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 594691
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -3347,16 +1105,22 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": 742740,
         "fields": {
             "adult": false,
+            "genres": [
+                "로맨스",
+                "드라마"
+            ],
+            "original_language": "ko",
             "overview": "평범하게 생긴 남자와 여자, 흔한 주택가의 골목길, 그리고 개미 한 마리만 있으면 불가사의한 무한의 세계를 만들어 낸다. 박홍민 감독 영화의 비범한 특징이며 그의 신작 \"그대 너머에\"의 매력이다. 기억과 시간에 관한 켜켜이 접혀 있는 주름들이 예측 불가한 짜릿함을 안기며 접히고 펼쳐지기를 반복한다. 마법은 영화가 시작된 뒤 50여 분 정도 지나 본격적으로 일어난다. 이즈음까지 영화는 앞으로 벌어질 기이한 일들을 위해 차곡차곡 기단을 쌓아간다. 경호라는 영화감독에게는 첫사랑 인숙이 있었다. 시간이 오래 흐른 어느 날, 성인이 된 인숙의 딸이 경호를 찾아와 그가 친부인지를 묻는다. 익숙한 멜로드라마가 전개될 만한 전형적인 상황으로 보이지만, 이제 영화는 이 인물들을 데리고 그들과 우리의 뇌로 파고들어 놀라운 미로를 만든다.",
             "poster_path": "/1TtpiA7dqJYGQCE3ZgtYekd3KoG.jpg",
             "release_date": "2021-09-09",
+            "runtime": 119,
             "title": "그대 너머에",
             "vote_average": 5.0,
             "ott_service": [],
@@ -3375,20 +1139,24 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 742740
     },
     {
         "model": "movies.movie",
-        "pk": 794933,
         "fields": {
             "adult": false,
+            "genres": [
+                "다큐멘터리"
+            ],
+            "original_language": "ko",
             "overview": "고양이들은 단지 죽지 않고 살고 싶단 꿈을 꾸고 사람들은 미안하다 말하며 꿈을 지켜주고 싶었습니다. 작은 생명과 생명을 지키는 사람들의 꿈을 담은 이야기.",
             "poster_path": "/swwYTXSVLmAPDk8hoWY60D1xzed.jpg",
             "release_date": "2021-06-04",
+            "runtime": 90,
             "title": "꿈꾸는 고양이",
             "vote_average": 0.0,
             "ott_service": [],
-            "backdrops": [],
             "directors": [
                 2970382
             ],
@@ -3397,16 +1165,23 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 794933
     },
     {
         "model": "movies.movie",
-        "pk": 766358,
         "fields": {
             "adult": false,
+            "genres": [
+                "공포",
+                "스릴러",
+                "범죄"
+            ],
+            "original_language": "en",
             "overview": "청각장애자였던 알렉시스는 열 살 때 가족들이 살해당하는 장면을 목격하면서 청력을 회복한다. 본능을 뒤흔드는 경험으로 알렉시스의 공감각 능력이 깨어나고, 신체가 훼손되는 끔찍한 폭력의 소리를 음악으로 옮기며 위안을 얻게 된다. 어른이 된 후 다시 청력을 잃을 가능성이 대두되자, 알렉시스는 소름 끼치는 살인 사건을 통해 명곡을 작곡하려고 마음먹는다.",
             "poster_path": "/kfBkV3fhLjZJDSRizV9guEx9iqC.jpg",
             "release_date": "2021-05-21",
+            "runtime": 94,
             "title": "사운드 오브 데스",
             "vote_average": 6.3,
             "ott_service": [],
@@ -3430,42 +1205,50 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 766358
     },
     {
         "model": "movies.movie",
-        "pk": 829273,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "ko",
             "overview": "끊임없이 배워야 성장하는 배우라는 직업을 가진 사람들의 일탈 전주로드무비 또한 연기자로서 상처받고 외로운 배우들의 새로운 탈 바뀜 성장 프로젝트 여행기",
             "poster_path": "/1P5VAFsshhvtaXKND8RJRh6eHH3.jpg",
             "release_date": "2021-06-01",
+            "runtime": 91,
             "title": "전주에서 길을 묻다",
             "vote_average": 0.0,
             "ott_service": [],
-            "backdrops": [],
             "directors": [
-                ""
+                
             ],
             "actors": [],
             "independent": true,
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 829273
     },
     {
         "model": "movies.movie",
-        "pk": 828868,
         "fields": {
             "adult": false,
+            "genres": [
+                "다큐멘터리"
+            ],
+            "original_language": "ko",
             "overview": "뛰는 ‘문제아’ 위에 나는 ‘교장’ 있다!  꿈도, 배우고자 하는 열의도 없던 학생들이 모인  그곳에 날라리 교장선생님이 부임했다!  이상한 탈을 쓰고 등교하는 건 기본이요,  점심시간마다 학교를 가득 채우는 버스킹에  발 디딜 틈 없이 북적거리는 교장실까지!  “공부를 포기했다고 인생도 포기한 건 아니야!”  아무도 귀 기울이지 않던 아이들의 이야기를 들어주는 선생님과  그 안에서 인생의 목표를 찾아가는 아이들.  어디서도 본 적 없는 날라리 교장쌤의 특별한 ‘인생수업’이 시작된다!  공부보다 중요한 ‘진짜 인생’은 지금부터!  오늘도 신나게 학교 다녀오겠습니다!",
             "poster_path": "/3R6pcoie87gEiZlCInqKdvQXTId.jpg",
             "release_date": "2021-05-13",
+            "runtime": 70,
             "title": "스쿨 오브 락(樂)",
             "vote_average": 10.0,
             "ott_service": "error",
-            "backdrops": [],
             "directors": [
                 1851128
             ],
@@ -3474,16 +1257,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 828868
     },
     {
         "model": "movies.movie",
-        "pk": 857998,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "ko",
             "overview": "“나 여기 목숨 걸었다!”  영화감독지망생 수진의 첫 장편영화 제작기!  영화감독 지망생인 수진은 자신의 첫 장편영화를 성공적으로 완성하기 위해 노력한다.  주변의 도움과 직접 모은 돈으로 제작하는 영화기에 제작비는 터무니없이 적다.  수진은 피우던 담배마저 저렴한 ‘디스 오리지널’로 바꾸고, 배우였던 전 남자친구에게 주연배우를 부탁해가며 열심히 영화를 준비하는데...  수진에게 청천벽력 같은 일이 일어난다!  과연 수진은 성공적으로 영화를 완성시킬 수 있을까?",
             "poster_path": "/kmf3j5KhuSHVc9c0yiYn1bysFUB.jpg",
             "release_date": "2021-09-01",
+            "runtime": 79,
             "title": "디스 아메리카노",
             "vote_average": 5.0,
             "ott_service": [
@@ -3511,14 +1299,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 857998
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -3529,14 +1316,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -3547,16 +1333,23 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": 660598,
         "fields": {
             "adult": false,
+            "genres": [
+                "범죄",
+                "스릴러",
+                "액션"
+            ],
+            "original_language": "it",
             "overview": "거대 카르텔의 뒤를 봐주며 승승장구한 이탈리아 최고의 마피아 변호사 '피아차'. 눈먼 비자금 1억 유로를 가로채 잇속을 챙기려던 그는 뒤늦게 자신이 무자비한 마피아 조직의 검은 돈을 잘못 건드렸음을 알게 된다. 수단과 방법을 가리지 않는 잔혹한 마피아 전쟁의 표적이 된 피아차는 자신의 목숨은 물론, 가족 그리고 연인 '마이아'까지 돌이킬 수 없는 위험에 빠뜨리게 되는데… 사라진 1억 유로, 모두가 그를 노린다! 최소한의 낭만도 허락되지 않는 더러운 악의 전쟁이 시작된다!",
             "poster_path": "/i972SYwKe5LaxUnrA1e4dXHQcE5.jpg",
             "release_date": "2021-09-02",
+            "runtime": 98,
             "title": "칼리버 9: 마피아 워",
             "vote_average": 5.1,
             "ott_service": [
@@ -3586,16 +1379,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 660598
     },
     {
         "model": "movies.movie",
-        "pk": 549362,
         "fields": {
             "adult": false,
+            "genres": [
+                "애니메이션"
+            ],
+            "original_language": "ko",
             "overview": "꼬마 건우는 숨바꼭질을 하다 나무에서 떨어져 이마에 ‘뿔’이 생긴다. 숲의 지킴이가 된 건우는 로드킬 사고로 죽은 친구 멧돼지의 영혼을 구하기위해 슈퍼문으로 모험을 시작한다.",
             "poster_path": "/6QHTazzo1KqNCcgeetNJoFGpuH2.jpg",
             "release_date": "2021-09-09",
+            "runtime": 80,
             "title": "슈퍼문",
             "vote_average": 5.0,
             "ott_service": [],
@@ -3610,16 +1408,22 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 549362
     },
     {
         "model": "movies.movie",
-        "pk": 492565,
         "fields": {
             "adult": false,
+            "genres": [
+                "서부",
+                "드라마"
+            ],
+            "original_language": "en",
             "overview": "전설적인 총잡이 `빌리 더 키드`(데인 드한)는 미국을 뒤흔든 희대의 현상 수배범으로 쫓기고 있는 상황. 여기에, 자비 없는 추격자 `개릿`(에단 호크)까지 합류하며 `빌리 더 키드`는 벼랑 끝에 내몰려 결국 체포되고 만다. 이에, `빌리 더 키드`는 탈옥을 하고자 미국을 향해 선전포고하며 전면전을 감행하는데… 쫓고 쫓기는 무법 질주 액션이 시작된다!",
             "poster_path": "/ghDpaPq93yj2sCk6bHLKmIi8Z2A.jpg",
             "release_date": "2019-03-08",
+            "runtime": 99,
             "title": "원티드 킬러",
             "vote_average": 5.9,
             "ott_service": [],
@@ -3644,14 +1448,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 492565
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -3662,16 +1465,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": 490794,
         "fields": {
             "adult": false,
+            "genres": [
+                "다큐멘터리"
+            ],
+            "original_language": "en",
             "overview": "여성 아티스트 역대 경매가 1위! 국내 미술 경매가 해외 아티스트 중 1위! 미술 전시 중 세계 최다 관람객 동원! ‘호박’, ‘무한 거울의 방’ 등 지금 전 세계에서 가장 사랑받는 현대 미술의 거장, 쿠사마 야요이. 성차별과 인종의 편견을 무너뜨린 독보적인 스타일! 압도적 존재감의 명작들을 스크린에서 만난다!",
             "poster_path": "/v2uJ0IMXzdiWnf98j8gZvT50bYD.jpg",
             "release_date": "2018-09-07",
+            "runtime": 80,
             "title": "쿠사마 야요이: 무한의 세계",
             "vote_average": 7.5,
             "ott_service": [],
@@ -3689,16 +1497,23 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 490794
     },
     {
         "model": "movies.movie",
-        "pk": 375177,
         "fields": {
             "adult": false,
+            "genres": [
+                "판타지",
+                "애니메이션",
+                "SF"
+            ],
+            "original_language": "ja",
             "overview": "물의 행성 아쿠아 수상 안내원들의 꿈과 우정을 그린 애니메이션 영화",
             "poster_path": "/AvJPYGBdkN5haRjGlRBQwg7vuyo.jpg",
             "release_date": "2015-09-26",
+            "runtime": 60,
             "title": "아리아 : 디 아베니레",
             "vote_average": 7.3,
             "ott_service": "error",
@@ -3723,16 +1538,22 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 375177
     },
     {
         "model": "movies.movie",
-        "pk": 585056,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마",
+                "로맨스"
+            ],
+            "original_language": "ko",
             "overview": "과도한 업무와 상사의 횡포에 시달리던 사회복지사가 상담을 위해 방문한 집에서 벌어지는 사건을 그린 영화",
             "poster_path": "/wGEGiLUudkjbBsEyNqW6Wxeu0so.jpg",
             "release_date": "2018-07-04",
+            "runtime": 64,
             "title": "테이블 매너",
             "vote_average": 0.0,
             "ott_service": [
@@ -3743,7 +1564,6 @@
                     "TVING": "https://redirect.watcha.com/galaxy/aHR0cHM6Ly93d3cudHZpbmcuY29tL2NvbnRlbnRzL00wMDAzNjYyMzc"
                 }
             ],
-            "backdrops": [],
             "directors": [
                 2633322
             ],
@@ -3758,14 +1578,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 585056
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -3776,16 +1595,23 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": 716855,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마",
+                "로맨스",
+                "스릴러"
+            ],
+            "original_language": "fi",
             "overview": "난치병인 다발 경화증으로 시력과 기동성을 잃은 야코는 연인 시르파와 전화로 원거리 연애 중이다. 그러던 어느 날, 혈액염을 앓고 있는 시르파로부터 치료를 위한 약을 쓰면 죽을지도 모른다는 말을 듣는다. 야코는 천 킬로미터 떨어진 도시에 사는 연인을 만나기 위해서 안전한 집을 벗어나 위험천만한 여정을 떠나는데...",
             "poster_path": "/idLvY4G9ZnEeYeCl1wBL6yyGGb.jpg",
             "release_date": "2022-03-10",
+            "runtime": 82,
             "title": "그 남자는 타이타닉을 보고 싶지 않았다",
             "vote_average": 0.0,
             "ott_service": [],
@@ -3806,16 +1632,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 716855
     },
     {
         "model": "movies.movie",
-        "pk": 666636,
         "fields": {
             "adult": false,
+            "genres": [
+                "로맨스"
+            ],
+            "original_language": "zh",
             "overview": "대만 화련의 작은 고등학교에 기간제 교사로 부임한 싱즈위안은 노래에 천재적인 재능을 가진 리동숴를 만난다. 학생들이 자기만의 재능을 찾기를 바란 싱즈위안은 피아노 레슨을 하는 위징과 함께 리동숴를 대만 최고의 오디션 프로그램에 참가시키기로 한다. 오디션을 준비하며 세 사람은 서로의 상처와 비밀을 털어놓으며 저마다의 사랑과 설렘을 키워 나가는데…",
             "poster_path": "/rypxGFP0eIvMjrA8jtXUXfPoqCB.jpg",
             "release_date": "2020-01-23",
+            "runtime": 115,
             "title": "유어 러브 송",
             "vote_average": 6.0,
             "ott_service": [],
@@ -3840,14 +1671,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 666636
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -3858,14 +1688,13 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": null,
         "fields": {
             "ott_service": "error",
-            "backdrops": null,
             "directors": [
                 null
             ],
@@ -3876,16 +1705,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": null
     },
     {
         "model": "movies.movie",
-        "pk": 817485,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "ko",
             "overview": "돈만 빼고 세상 무서울 게 없다고 호언장담하던 재식은 갑자기 세상을 떠난 지영의 전재산을 먹튀하기 위해 지영의 딸 은혜의 가짜 아빠를 자처하게 된다. 알고 보니 은혜는 시각과 청각 장애를 모두 가진 아이. 보지도, 듣지도 못하는 은혜를 귀찮아 하던 재식은 손끝으로 세상을 느끼는 은혜만의 특별한 방식에 조금씩 익숙해지기 시작하는데…",
             "poster_path": "/nC1iMOKvIORxqOt4IiiymuDGsms.jpg",
             "release_date": "2021-05-12",
+            "runtime": 100,
             "title": "내겐 너무 소중한 너",
             "vote_average": 8.5,
             "ott_service": [
@@ -3915,16 +1749,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 817485
     },
     {
         "model": "movies.movie",
-        "pk": 622420,
         "fields": {
             "adult": false,
+            "genres": [
+                "공포"
+            ],
+            "original_language": "en",
             "overview": "손잡이를 돌리면 갑자기 피에로가 튀어나와 사람들을 놀라게 하는 장난감인 잭 인 더 박스. 어느 날 장난감 박물관의 관리역을 맡게 된 '케이시'는  스산한 기분을 느끼게 하는 잭 인 더 박스를 보고 자기도 모르게 손잡이를 돌린다. 그곳에서 튀어나온 것은 아이들 장난감이라고 부르기에는 너무나 소름 끼치는 피에로 인형. 이후 한번 열리기 시작한 ‘잭 인 더 박스’ 속의 인형은 끔찍한 크리쳐가 되어 접근하는 사람들을 하나 둘 상자 안으로 끌고 들어간다. ‘케이시’는 사람들이 하나씩 사라져가는 이유가 잭 인 더 박스의 저주임을 눈치채고 그에 얽힌 놀라운 비밀을 조사하게 되는데...",
             "poster_path": "/fUXTO58qX5cLRvIidCn7evnuUuV.jpg",
             "release_date": "2019-11-09",
+            "runtime": 87,
             "title": "잭 인 더 박스",
             "vote_average": 5.5,
             "ott_service": [],
@@ -3949,16 +1788,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 622420
     },
     {
         "model": "movies.movie",
-        "pk": 653708,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "en",
             "overview": "자신을 학대하던 남편과 이혼하고 홀로 어린 두 딸을 키우는 싱글맘 산드라. 임시 거처에 머물며 새로운 보금자리를 찾기 위해 노력하지만 집도 일도 구하기란 쉽지 않다. 이에 굴하지 않고 적은 비용으로 아이들과 함께 살 새로운 집을 짓기로 결심한다. 한편, 남편은 아이들의 양육권을 뺏기 위해 그녀를 고소하고 공무원들마저 그녀를 방해하기 시작하는데…",
             "poster_path": "/aRLu8SRNKVyl2wH8bB3g9nabMqH.jpg",
             "release_date": "2020-11-26",
+            "runtime": 97,
             "title": "허셀프",
             "vote_average": 7.0,
             "ott_service": [],
@@ -3981,16 +1825,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 653708
     },
     {
         "model": "movies.movie",
-        "pk": 795797,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "ko",
             "overview": "아들은 아버지가 불러서 한의원을 찾았다. 도착했을 때 아버지는 환자들 때문에 바빴고 아들은 하루 종일을 기다려야 했다. 딸은 독일로 패션디자인을 공부하러 갔다. 어머니는 독일에 사는 옛 친구의 집에 딸이 묵게 하려고 같이 동행했다. 친구 집에 묵게 된다면 방세를 절약할 수 있을 것이다. 아들은 어머니가 갑자기 불러서 동해안의 횟집으로 찾아갔다. 어머니는 나이 든 남자배우와 함께 있었다. 그 배우는 오랜 전에 아버지의 한의원을 찾아갔을 때 만난 적 있는 사람이었다.",
             "poster_path": "/oXiUoFhrBMPktWHZ5gAzSjquly4.jpg",
             "release_date": "2021-05-27",
+            "runtime": 66,
             "title": "인트로덕션",
             "vote_average": 6.5,
             "ott_service": [],
@@ -4014,16 +1863,21 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 795797
     },
     {
         "model": "movies.movie",
-        "pk": 805058,
         "fields": {
             "adult": false,
+            "genres": [
+                "드라마"
+            ],
+            "original_language": "ko",
             "overview": "요즘 같은 세상엔 혼자가 편하다. 이건 콜센터 상담원 진아도 마찬가지. 근데 시답잖게 말을 걸어오던 옆집 남자가 죽었다는 소식 이후, 진아의 고요했던 일상에 변화가 생기기 시작한다.",
             "poster_path": "/9QlCmWYMXlIoN8GhU1iFH8zfVg.jpg",
             "release_date": "2021-05-19",
+            "runtime": 89,
             "title": "혼자 사는 사람들",
             "vote_average": 6.8,
             "ott_service": [
@@ -4052,6 +1906,7 @@
             "like": [],
             "watch": [],
             "playlist": []
-        }
+        },
+        "pk": 805058
     }
 ]
