@@ -27,18 +27,16 @@ def recommendation_like(request):
     like_list = me.like_movie.all()
 
     if like_list:
-        genres_name = []
+        genres_nums = []
         for movie in like_list:
-            movie_title = movie.title
-            mv = get_object_or_404(Movie, title=movie_title)
-            genres = mv.genres.all()
-
-            for gr in genres:
-                genres_name.append(gr.name)
-        
+            for genre in movie.genres:
+                genres_nums.append(genre)
         for x, y in Counter(genres_name).most_common(1):
             favorite = x
     pass
+# 장르들 다 더하기
+# 장르 수 세서 가장 많은 것 
+# 장르가 = 인 영화 랜덤 6?
 
 
 @api_view(['GET'])
@@ -47,6 +45,7 @@ def recommendation_watch(request):
     watch_list = me.watch_movie.all()
     if watch_list:
         last = watch_list[-1]
+        print(last)
         actor = last.get('actors')[0]
         director = last.get('dirctors')[0]
         result = random.sample(list(Movie.objects.filter(Q(actors__contains=actor)|Q(directors__contains=director))),6)

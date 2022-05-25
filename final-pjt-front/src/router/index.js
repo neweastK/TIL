@@ -14,6 +14,8 @@ import BoardNewView from '@/views/BoardNewView.vue'
 import EventView from '@/views/EventView.vue'
 import EventNewView from '@/views/EventNewView.vue'
 import ArticleNewView from '@/views/ArticleNewView.vue'
+import ArticleDetailView from '@/views/ArticleDetailView.vue'
+import ArticleEditView from '@/views/ArticleEditView.vue'
 import ColumnView from '@/views/ColumnView.vue'
 import ColumnNewView from '@/views/ColumnNewView.vue'
 import NewsView from '@/views/NewsView.vue'
@@ -127,6 +129,16 @@ const router = new VueRouter({
     path: '/articles/new',
     name: 'articleNew',
     component: ArticleNewView
+  },
+  {
+    path: '/articles/:articlePk',
+    name: 'article',
+    component: ArticleDetailView
+  },
+  {
+    path: '/articles/:articlePk/edit',
+    name: 'articleEdit',
+    component: ArticleEditView
   },
   {
     path: '/404',

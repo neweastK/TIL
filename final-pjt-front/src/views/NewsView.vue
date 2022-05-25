@@ -12,7 +12,10 @@
 
       <li v-for="article in news_article" :key="article.pk">
         {{ article.user.nickname }} :
-        {{ article.title }}
+        <router-link 
+          :to="{ name: 'article', params: {articlePk: article.pk} }">
+          {{ article.title }}
+        </router-link>
 
       </li>
     </ul>
