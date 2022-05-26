@@ -44,8 +44,7 @@ def recommendation_watch(request):
     me = get_object_or_404(get_user_model(), username=request.user.username)
     watch_list = me.watch_movie.all()
     find = []
-    if watch_list:
-  
+    if watch_list:  
         last = watch_list[len(watch_list)-1]
         print("여기!!!!!!!")
         actor = last.actors.all()[0]
@@ -53,16 +52,15 @@ def recommendation_watch(request):
         # find.append(actor.id)
         director = last.directors.all()[0]
         # find.append(director.id)
-        movies = Movie.objects.all().filter(actors__contains=actor)
-        print(movies)
+        [movies] = Movie.objects.filter(actors__id__contains=actor.id)
 
 
-            # if movie.actors or movie.director:
-                # print(actor.id)
-                # print(movie.actors.get(id=2))
-                # if (actor.id in movie.actors) or (director.id in movie.director):
-                #     find.append(movie)
-        result = random.sample(movie, 1)
+        #     # if movie.actors or movie.director:
+        #         # print(actor.id)
+        #         # print(movie.actors.get(id=2))
+        #         # if (actor.id in movie.actors) or (director.id in movie.director):
+        #         #     find.append(movie)
+        result = random.sample(movies, 1)
     else:
         result = Movie.objects.order_by('?')[:6]
 
@@ -204,7 +202,7 @@ def review_update_or_delete(request, movie_id, review_pk):
 
     
 @api_view(['POST'])
-def like_review(request, review_pk):
+def like_review(request, movie_id, review_pk):
     review = get_object_or_404(Review, pk=review_pk)
     user = request.user
     if review.like.filter(pk=user.pk).exists():

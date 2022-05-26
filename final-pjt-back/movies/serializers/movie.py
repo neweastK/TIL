@@ -12,7 +12,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     class UserSerializer(serializers.ModelSerializer) :
         class Meta:
             model = User
-            fields = ('nickname',)
+            fields = ('nickname','username','id')
     
     user = UserSerializer(read_only=True)
     like = UserSerializer(read_only=True, many=True)
@@ -20,7 +20,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     class MovieSerializer(serializers.ModelSerializer) :
         class Meta :
             model = Movie
-            fields = ('title',)
+            fields = '__all__'
 
     movie = MovieSerializer(read_only=True)
 
