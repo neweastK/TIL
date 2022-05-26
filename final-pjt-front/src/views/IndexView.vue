@@ -47,7 +47,7 @@
           </movie-card>
           <br>
           <hr>
-          <p v-if="innetflix">넷플릭스를 구독하고 계시군요!</p>
+          <p v-if="innetflix">넷플릭스를 구독하고 계시군요! 저두요~</p>
           <p v-else>넷플릭스에 구독하시면 아래 영화들을 보실 수 있습니다!</p>
           <movie-card
             v-for="movie in netflix" 
@@ -58,8 +58,8 @@
           </movie-card>
           <br>
           <hr>
-          <p v-if="inwatcha">보이냐?</p>
-          <p v-else>노놓ㅎㅎ</p>
+          <p v-if="inwatcha">왓챠챠~ 왓챠를 구독중인 자네! 이런 영화는 어떠신가?</p>
+          <p v-else>왓챠에선 이런 영화들을 서비스하고 있어요</p>
           <movie-card
             v-for="movie in watcha" 
             :key="movie.pk"
@@ -69,7 +69,8 @@
           </movie-card>
           <br>
           <hr>
-          <p>와~</p>
+          <p v-if="inwavve">WAVVE 서비스 영화</p>
+          <p v-else>WAVVE 구독 시 볼 수 있는 영화</p>
           <movie-card
             v-for="movie in wavve" 
             :key="movie.pk"
@@ -79,7 +80,8 @@
           </movie-card>
           <br>
           <hr>
-          <p>디즈니</p>
+          <p v-if="indisney">당신을 위한 디즈니+</p>
+          <p v-else>디즈니 구독하고 동신(심) 찾자!</p>
           <movie-card
             v-for="movie in disney" 
             :key="movie.pk"
@@ -120,12 +122,19 @@
       innetflix () {
         return this.profile.using_ott.includes('넷플릭스')
       },
+      inwavve () {
+        return this.profile.using_ott.includes('웨이브')
+      },
+      indisney () {
+        return this.profile.using_ott.includes('디즈니+')
+      },
       inwatch () {
         return this.profile.watch_movie
       },
       inlike () {
         return this.profile.like_movie
       },
+  
 
       // inWatch() {
       //   this.inwatcha = this.currentUser.ott_using.include("왓챠")
