@@ -1,13 +1,5 @@
 <template>
   <div>
-    <!-- <div>
-      <div v-if="'왓챠' in profile.using_ott">
-        잘보임
-      </div>
-      <div v-else>
-        안보임
-      </div>
-    </div> -->
     <div>
      <div class='container'>
         <p>박스오피스</p>
