@@ -178,8 +178,8 @@ export default {
         .then(res => {
           commit('SET_ARTICLE', res.data)
           router.push({
-            name: 'community',
-            // params: { articlePk: getters.article.pk }
+            name: 'article',
+            params: { articlePk: getters.article.pk }
           })
         })
     },

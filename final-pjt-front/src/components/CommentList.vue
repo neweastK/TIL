@@ -1,16 +1,18 @@
 <template>
-  <div class="comment-list">
+  <table class="table table-sm comment-list">
     
-    <ul>
-      <comment-list-item 
-        v-for="comment in comments" 
-        :comment="comment" 
-        :key="comment.pk">
-      </comment-list-item>        
-    </ul>
+    <tbody>
+      <tr>
+        <comment-list-item 
+          v-for="comment in comments" 
+          :comment="comment" 
+          :key="comment.pk">
+        </comment-list-item>
+      </tr>
+    </tbody>
 
     <comment-list-form></comment-list-form>
-  </div>
+  </table>
 </template>
 
 <script>
@@ -27,7 +29,5 @@ export default {
 </script>
 
 <style>
-.comment-list {
-  border: 1px solid blue;
-}
+
 </style>

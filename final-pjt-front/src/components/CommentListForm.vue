@@ -1,9 +1,20 @@
 <template>
-  <form @submit.prevent="onSubmit" class="comment-list-form">
-    <label for="comment">comment: </label>
-    <input type="text" id="comment" v-model="content" required>
-    <button>Comment</button>
-  </form>
+
+
+  <div class="mb-3">
+    <form @submit.prevent="onSubmit" class="comment-list-form">
+      <label for="comment" class="form-label"></label>
+      <input type="text" class="form-control" id="comment" placeholder="comment" v-model="content" required>
+      <div class="m-1 d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-light">comment</button>
+      </div>
+    </form> 
+    <br>
+
+    <hr> 
+  </div>
+
+
 </template>
 
 <script>
@@ -30,9 +41,5 @@ export default {
 </script>
 
 <style>
-.comment-list-form {
-  border: 1px solid black;
-  margin: 1rem;
-  padding: 1rem;
-}
+
 </style>

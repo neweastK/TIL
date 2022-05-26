@@ -19,14 +19,17 @@
         </span>
       </div>
       <div class='mt-5 text-start'>
-        <router-link :to="{ name: 'movieinfo', params: { moviePk } }">
+        <router-link :to="{ name: 'movieinfo', params: { moviePk } } " @click="next">
           정보
         </router-link> 
         | 
-        <router-link :to="{ name: 'moviereviews', params: { moviePk } }">
+        <router-link :to="{ name: 'moviereviews', params: { moviePk } }" @click="next">
           리뷰
         </router-link>        
         <hr />
+
+
+
         <router-view></router-view>
       </div>
 
@@ -51,10 +54,12 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
+  // import MovieInfo from '@/components/MovieInfo.vue'
   
   export default {
     name: 'MovieDetail',
     components: {
+      // MovieInfo
     },
     data() {
       return {
@@ -83,7 +88,9 @@
         'fetchMovie',
         'likeMovie',
         'watchedMovie',
-      ])
+
+      ]),
+
     },
     created() {
       this.fetchMovie(this.moviePk)

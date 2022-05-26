@@ -1,5 +1,34 @@
 <template>
-  <form @submit.prevent="onSubmit">
+  <div class="container">
+    <div class="mb-3">
+      <hr>
+
+      <form @submit.prevent="onSubmit">
+        <div v-if="false">
+          <label for="category">category: </label>
+          <input v-model="newArticle.category" type="text" id="category" />          
+        </div>
+        <div>
+          <label for="title" class="form-label"></label>
+          <input type="text" v-model="newArticle.title" class="form-control" id="title" placeholder="title">
+        </div>
+        <hr>
+        <div class="mb-3">
+          <label for="content" class="form-label"></label>
+          <textarea class="form-control" v-model="newArticle.content" id="content" rows="20" placeholder="content"></textarea>
+        </div>
+        <div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn text-white" style="background-color: MidnightBlue;">{{ action }}</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+  </div>
+
+
+  <!-- <form @submit.prevent="onSubmit">
     <div v-if="false">
       <label for="category">category: </label>
       <input v-model="newArticle.category" type="text" id="category" />
@@ -15,7 +44,7 @@
     <div>
       <button>{{ action }}</button>
     </div>
-  </form>
+  </form> -->
 </template>
 
 <script>
