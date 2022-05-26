@@ -43,8 +43,8 @@ class ArticleListSerializer(serializers.ModelSerializer):
             fields = ('nickname',)   
 
     user = UserSerializer(read_only=True) 
-    comment_count = serializers.IntegerField()
+    # comment_count = serializers.IntegerField()
     class Meta:
         model = Article
-        fields = ('pk', 'user', 'title', 'comment_count', 'created_at' )
+        fields = ('pk', 'user', 'title', )
 
