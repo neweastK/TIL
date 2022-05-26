@@ -6,7 +6,7 @@ export default {
   state: {
     token: localStorage.getItem('token') || '' ,
     currentUser: {},
-    profile: {},
+    mypage: {},
     authError: null,
   },
 
@@ -108,9 +108,9 @@ export default {
       }
     },
 
-    fetchProfile({ commit, getters }, { username }) {
+    fetchMypage({ commit, getters }, { nickname }) {
       axios({
-        url: drf.accounts.profile(username),
+        url: drf.accounts.profile(nickname),
         method: 'get',
         headers: getters.authHeader,
       })
