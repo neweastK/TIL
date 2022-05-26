@@ -34,6 +34,9 @@
           리뷰
         </router-link>        
         <hr />
+
+
+
         <router-view></router-view>
       </div>
 
@@ -46,10 +49,12 @@
 
 <script>
   import { mapGetters, mapActions } from 'vuex'
+  // import MovieInfo from '@/components/MovieInfo.vue'
   
   export default {
     name: 'MovieDetail',
     components: {
+      // MovieInfo
     },
     data() {
       return {

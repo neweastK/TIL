@@ -87,10 +87,6 @@
       // MovieCard,
       MovieCardList,
     },
-    data() {
-      return {
-      }
-    },
     computed: {
       ...mapGetters(['boxoffices','indboxoffices', 'fromwatch', 'fromlike', 'netflix', 'watcha', 'wavve', 'disney', 'currentUser', 'profile']),
       inwatcha () {
@@ -111,7 +107,9 @@
       inlike () {
         return this.profile.like_movie.length
       },
-  
+      // title () {
+      //   return this.profile.watch_movie[this.profile.watch_movie.length-1].title
+      // }
 
       // inWatch() {
       //   this.inwatcha = this.currentUser.ott_using.include("왓챠")
@@ -122,6 +120,7 @@
       ...mapActions(['fetchIndMovies','fetchProfile','fetchBoxoffices', 'WatchMovies', 'LikeMovies', 'NetflixMovies', 'WatchaMovies', 'WavveMovies', 'DisneyMovies', 'fetchCurrentUser', 'fetchMypage']),
       
     },
+
     created() {
       this.fetchBoxoffices()
       this.WatchMovies()

@@ -1,11 +1,11 @@
 <template>
-  <li class="comment-list-item">
-    <router-link :to="{ name: 'profile', params: { username: comment.user.username } }">
+  <div class="comment-list-item">
+    <!-- <router-link :to="{ name: 'profile', params: { username: comment.user.username } }">
       {{ comment.user.username }}
-    </router-link>: 
+    </router-link>:  -->
     
-    <span v-if="!isEditing">{{ payload.content }}</span>
-
+    <td v-if="!isEditing">{{ payload.content }}</td>
+<!-- 
     <span v-if="isEditing">
       <input type="text" v-model="payload.content">
       <button @click="onUpdate">Update</button> |
@@ -15,8 +15,8 @@
     <span v-if="currentUser.username === comment.user.username && !isEditing">
       <button @click="switchIsEditing">Edit</button> |
       <button @click="deleteComment(payload)">Delete</button>
-    </span>
-  </li>
+    </span> -->
+  </div>
 </template>
 
 <script>
@@ -31,7 +31,8 @@ export default {
       payload: {
         articlePk: this.comment.article,
         commentPk: this.comment.pk,
-        content: this.comment.content
+        content: this.comment.content,
+        user: this.comment.user
       },
     }
   },
@@ -53,8 +54,5 @@ export default {
 </script>
 
 <style>
-.comment-list-item {
-  border: 1px solid green;
 
-}
 </style>
