@@ -17,6 +17,7 @@ export default {
     watcha : [],
     wavve : [],
     disney : [],
+    reviews : [],
     // watchedmovie:{},
 
   },
@@ -26,6 +27,7 @@ export default {
     movie: state => state.movie,
     actors: state => state.movie.actors,
     boxoffices : state => state.boxoffices,
+    reviews : state => state.movie.reviews,
     // watchedmovie : state => state.movie,
 
     fromwatch : state => state.fromwatch,
@@ -41,7 +43,7 @@ export default {
     SET_BOXOFFICES: (state, boxoffices) => state.boxoffices = boxoffices,
     // SET_WATCHEDMOVIE: (state, movie) => state.watchedmovie = movie,
 
-
+    SET_MOVIE_REVIEWS : (state, reviews) => (state.movie.reviews = reviews),
     SET_FROMWATCH: (state, movies) => state.fromwatch = movies,
     SET_NETFLIX: (state, movies) => state.netflix = movies,
     SET_WATCHA: (state, movies) => state.watcha = movies,
@@ -156,14 +158,102 @@ export default {
       })
         .then(res => commit('SET_FROMWATCH', res.data))
         .catch(err => console.error(err.response))
+    },        
         
-        
-        
+    createReview({ commit, getters }, { moviePk, content, rate }) {
+      /* 댓글 생성
+      POST: reviews URL(댓글 입력 정보, token)
+        성공하면
+          응답으로 state.movie의 reviews 갱신
+        실패하면
+          에러 메시지 표시
+      */
+
+      axios({
+        url: drf.movies.reviews(moviePk),
+        method: 'post',
+        data: { content, rate },
+        headers: getters.authHeader,
+      })
+        .then(res => {
+          commit('SET_MOVIE_REVIEWS', res.data)
+        })
+        .catch(err => console.error(err.response))
+    },
+
+    updateReview({ commit, getters }, { moviePk, reviewPk, content, rate }) {
+      /* 댓글 수정
+      PUT: review URL(댓글 입력 정보, token)
+        성공하면
+          응답으로 state.movie의 reviews 갱신
+        실패하면
+          에러 메시지 표시
+      */
+
+      axios({
+        url: drf.movies.review(moviePk, reviewPk),
+        method: 'put',
+        data: { content, rate },
+        headers: getters.authHeader,
+      })
+        .then(res => {
+          commit('SET_MOVIE_REVIEWS', res.data)
+        })
+        .catch(err => console.error(err.response))
+    },
+
+    deleteReview({ commit, getters }, { moviePk, reviewPk }) {
+      /* 댓글 삭제
+      사용자가 확인을 받고
+        DELETE: review URL (token)
+          성공하면
+            응답으로 state.movie의 reviews 갱신
+          실패하면
+            에러 메시지 표시
+      */
+        if (confirm('정말 삭제하시겠습니까?')) {
+          axios({
+            url: drf.movies.review(moviePk, reviewPk),
+            method: 'delete',
+            data: {},
+            headers: getters.authHeader,
+          })
+            .then(res => {
+              commit('SET_MOVIE_REVIEWS', res.data)
+            })
+            .catch(err => console.error(err.response))
+        }
+      },
+
+    likeReview({ commit, getters }, {moviePk, reviewPk}) {
+      /* 좋아요
+      POST: likeMovie URL(token)
+        성공하면
+          state.Movie 갱신
+        실패하면
+          에러 메시지 표시
+      */
+      axios({
+        url: drf.movies.likeReview(moviePk,reviewPk),
+        method: 'post',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_MOVIE_REVIEWS', res.data))
+        .catch(err => console.error(err.response))
+  },
+    fetchReviews ({ commit,getters }, moviePk) {    
+      axios({
+        // url: 'http://127.0.0.1:8000/api/v1/movies/',
+        url: drf.movies.reviews(moviePk),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_MOVIE_REVIEWS', res.data))
+        .catch(err => console.error(err.response))
+  },    
 
 
 
 
     }
   }
-
-}

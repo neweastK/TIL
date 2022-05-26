@@ -18,7 +18,7 @@
         <router-link :to="{ name: 'community' }">커뮤니티</router-link>
       </li>
       <li v-if="isLoggedIn">
-        <router-link :to="{ name: 'profile', params: { username } }">
+        <router-link :to="{ name: 'mypage', params: { username } }">
           {{ currentUser.username }}'s page
         </router-link>
       </li>

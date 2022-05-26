@@ -3,7 +3,7 @@
     <div class="card">
       <img :src="imgUrl" class="card-img-top" alt="POSTER">
       <div class="card-body">
-        <h5 class="card-title">{{ movie.movieNm }}</h5>
+        <h5 class="card-title">{{ movie.title }}</h5>
         <router-link :to="{ name: 'movie', params: {moviePk: movie.id} }">DETAIL</router-link>
       </div>
     </div>

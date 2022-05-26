@@ -10,6 +10,9 @@
         <li v-for='movieActor in movieActors'
         :key='movieActor.name'>
           {{ movieActor.name }}
+          <div class='box'>
+            <img class='profile' :src="`https://image.tmdb.org/t/p/w200${ movieActor.profile }`" :alt=path>
+          </div>
         </li>
       </ul>
     </div>
@@ -22,7 +25,7 @@
       <ul>
         <li v-for="path in backDrops"
         :key=path>
-          <img  :src="`https://image.tmdb.org/t/p/w500${ path.substring(1,path.length-1) }`" :alt=path>
+            <img :src="`https://image.tmdb.org/t/p/w300${ path.substring(1,path.length-1) }`" :alt=path>
         </li>
       </ul>
         
@@ -114,5 +117,15 @@ export default {
 </script>
 
 <style>
-
+  .box {
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+  }
+  .profile {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
 </style>

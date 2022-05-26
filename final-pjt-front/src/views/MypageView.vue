@@ -1,33 +1,33 @@
 <template>
   <div>
-    <h1>{{ profile.username }}</h1>
-
-    <h2>작성한 글</h2>
+    <h1>{{ profile.nickname }}</h1>
+    <p style='font-size: 1.5rem; font-weight: bold;' class='text-start'>좋아요 누른 영화</p>
     <ul>
-      <li v-for="article in profile.articles" :key="article.pk">
-        <router-link :to="{ name: 'article', params: { articlePk: article.pk } }">
-          {{ article.title }}
-        </router-link>
-      </li>
+
     </ul>
 
-    <h2>좋아요 한 글</h2>
-    <ul>
-      <li v-for="article in profile.like_articles" :key="article.pk">
-        <router-link :to="{ name: 'article', params: { articlePk: article.pk } }">
-          {{ article.title }}
-        </router-link>
-      </li>
-    </ul>
+    <div class='container'>
+      <div class='row col-4 ms-auto'>
+        <profile-view
+        :key='profile.id'
+        :profile='profile'
+        ></profile-view>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-
+import ProfileView from '@/components/ProfileView.vue'
+// import ProfileMovie from '@/components/ProfileMovie.vue'
 
 export default {
-  name: 'ProfileView',
+  name: 'MypageView',
+  components:{
+    ProfileView,
+    // ProfileMovie,
+  },
   computed: {
     ...mapGetters(['profile'])
   },

@@ -2,47 +2,42 @@
   <div class='container'>
     <div class='row'>
       <h5 class='fw-bold text-start'>리뷰</h5>  
-      <p> {{ movie.reviews }}</p>
     </div>
+    <review-list-form></review-list-form>
+    
+    <ul>
+      <review-list-item 
+        v-for="review in reviews" 
+        :review="review" 
+        :key="review.pk">
+      </review-list-item>        
+    </ul>
 
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import ReviewListItem from '@/components/ReviewListItem.vue'
+import ReviewListForm from '@/components/ReviewListForm.vue'
+import { mapGetters } from 'vuex'
+
 export default {
 
-  name: 'MovieInfo',
-
+  name: 'MovieReview',
+  components: { ReviewListForm, ReviewListItem },
   data() {
-    return {
-      moviePk: this.$route.params.moviePk,
-    }
+  return {
+    moviePk: this.$route.params.moviePk,
+  }
   },
   computed: {
-    ...mapGetters(['isAuthor', 'movie']),
-    likeCount() {
-      return this.movie.like_users?.length
-    },
-    imgUrl() {
-      const BASE_URL = 'https://image.tmdb.org/t/p/w500/'
-      return BASE_URL + this.movie.poster_path
-    },
-    year() {
-      const movie_date = this.movie.release_date
-      return movie_date.substr(0,4)
-    }
-  },
-  methods: {
-    ...mapActions([
-      'fetchMovie',
-      'likeMovie',
-    ])
-  },
-  created() {
-    this.fetchMovie(this.moviePk)
-  },
+      ...mapGetters(['isAuthor', 'movie']),
+      reviews(){
+        return this.movie.reviews
+      }
+  }
 }
+
 </script>
 
 <style>

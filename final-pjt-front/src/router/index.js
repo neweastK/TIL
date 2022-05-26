@@ -49,7 +49,7 @@ const router = new VueRouter({
     component: CommunityView
   },
   {
-    path: '/mypage',
+    path: '/mypage/:username',
     name: 'mypage',
     component: MypageView
   },
