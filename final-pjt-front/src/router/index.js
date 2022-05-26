@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import IndexView from '../views/IndexView.vue'
 import SinyemaView from '../views/SinyemaView.vue'
 import CommunityView from '../views/CommunityView.vue'
-import MypageView from '../views/MypageView.vue'
+import ProfileView from '@/views/ProfileView.vue'
 
 import LoginView from '@/views/LoginView.vue'
 import LogoutView from '@/views/LogoutView.vue'
@@ -49,9 +49,9 @@ const router = new VueRouter({
     component: CommunityView
   },
   {
-    path: '/mypage',
-    name: 'mypage',
-    component: MypageView
+    path: '/profile',
+    name: 'profile',
+    component: ProfileView
   },
   {
     path: '/login',
