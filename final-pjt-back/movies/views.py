@@ -36,7 +36,7 @@ def recommendation_like(request):
             favorite = name
         result = random.sample(list(Movie.objects.filter(genres__contains=favorite)),5)
     else:
-        result = Movie.objects.order_by('?')[:6]
+        result = Movie.objects.order_by('?')[:10]
     serializer = MovieListSerializer(result, many=True)
     return Response(serializer.data)
 # 장르들 다 더하기
@@ -56,7 +56,7 @@ def recommendation_watch(request):
         movies = Movie.objects.filter(Q(actors__id__contains=actor[2].id) | Q(actors__id__contains=actor[1].id) | Q(actors__id__contains=actor[0].id) | Q(directors__id__contains=director.id))
         result = list(set(movies))
     else:
-        result = Movie.objects.order_by('?')[:6]
+        result = Movie.objects.order_by('?')[:10]
 
     serializer = MovieListSerializer(result, many=True)
     return Response(serializer.data)
@@ -70,7 +70,7 @@ def recommendation_netflix(request):
             otts = movie.ott_service
             if "넷플릭스" in otts:
                 netflix.append(movie)
-    result = random.sample(netflix, 6)
+    result = random.sample(netflix, 10)
     serializer = MovieListSerializer(result, many=True)
     return Response(serializer.data)
 
@@ -83,7 +83,7 @@ def recommendation_watcha(request):
             otts = movie.ott_service
             if "왓챠" in otts:
                 watcha.append(movie)
-    result = random.sample(watcha, 6)
+    result = random.sample(watcha, 10)
     serializer = MovieListSerializer(result, many=True)
     return Response(serializer.data)
 
@@ -96,7 +96,7 @@ def recommendation_wavve(request):
             otts = movie.ott_service
             if "웨이브" in otts:
                 wavve.append(movie)
-    result = random.sample(wavve, 6)
+    result = random.sample(wavve, 10)
     serializer = MovieListSerializer(result, many=True)
     return Response(serializer.data)
 
@@ -111,9 +111,9 @@ def recommendation_disney(request):
             if "디즈니" in otts:
                 disney.append(movie)
     if disney:
-        result = random.sample(disney, 6)
+        result = random.sample(disney, 10)
     else:
-        result = Movie.objects.order_by('?')[:6]
+        result = Movie.objects.order_by('?')[:10]
     serializer = MovieListSerializer(result, many=True)
     return Response(serializer.data)
 
