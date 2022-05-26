@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h1>{{ profile }}</h1>
-
     <div>
       <profile-view
       :key='profile.id'
@@ -23,14 +21,7 @@
     </div>
 
     <p style='font-size: 1.5rem; font-weight: bold;' class='text-start'>선호장르</p>
-    <ul>
-      <li v-for='movie in profile.like_movie'
-        :key='movie.id'
-      > {{ movie.genres }}
-
-      </li>
-    </ul>
-
+    <h2>{{ likeGenre }}</h2>
     
   </div>
 </template>
@@ -47,7 +38,16 @@ export default {
     ProfileMovie,
   },
   computed: {
-    ...mapGetters(['profile'])
+    ...mapGetters(['profile']),
+    likeGenre () {
+      let likegenres = []
+      const movies = this.profile.like_movie
+      movies.forEach(movie => {
+        let tmp = movie.genres.replace(/"/gi,'')
+        likegenres.push(tmp.replace(/"/gi,""))
+      }) 
+      return likegenres
+    }
   },
   methods: {
     ...mapActions(['fetchMypage','totalGenres'])

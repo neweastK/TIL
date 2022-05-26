@@ -245,3 +245,19 @@ def sinye_movies(request):
     serializer = MovieSerializer(movies, many=True)
     return Response(serializer.data)
     
+@api_view(['GET'])
+def convertToInitialLetters(movie_name):
+    CHOSUNG_START_LETTER = 4352
+    JAMO_START_LETTER = 44032
+    JAMO_END_LETTER = 55203
+    JAMO_CYCLE = 588
+    
+    def isHangul(ch):
+        return ord(ch) >= JAMO_START_LETTER and ord(ch) <= JAMO_END_LETTER
+    
+    result = ""
+    for ch in movie_name:
+        if isHangul(ch): #한글이 아닌 글자는 걸러냅니다.
+            result += chr((ord(ch) - JAMO_START_LETTER)//JAMO_CYCLE + CHOSUNG_START_LETTER)
+        
+    return result

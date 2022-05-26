@@ -21,6 +21,7 @@ export default {
     disney : [],
     reviews : [],
     genres : [],
+    indboxoffices : [],
     // watchedmovie:{},
 
   },
@@ -30,6 +31,7 @@ export default {
     movie: state => state.movie,
     actors: state => state.movie.actors,
     boxoffices : state => state.boxoffices,
+    indboxoffices : state => state.indboxoffices,
     reviews : state => state.movie.reviews,
     genres : state => state.genres,
     // watchedmovie : state => state.movie,
@@ -46,6 +48,8 @@ export default {
     SET_MOVIES: (state, movies) => state.movies = movies,
     SET_MOVIE: (state, movie) => state.movie = movie,
     SET_BOXOFFICES: (state, boxoffices) => state.boxoffices = boxoffices,
+    SET_INDBOXOFFICES: (state, indboxoffices) => state.indboxoffices = indboxoffices,
+
     // SET_WATCHEDMOVIE: (state, movie) => state.watchedmovie = movie,
     SET_SINYEMOVIE: (state, movies) => state.sinyemovie = movies,
     LIKE_GENRES: (state, genres) => state.genres = genres,
@@ -69,6 +73,15 @@ export default {
         .then(res => commit('SET_MOVIES', res.data))
         .catch(err => console.error(err.response))
   },
+    fetchIndMovies ({ commit,getters }) {    
+      axios({
+        url: drf.movies.indboxoffices_ind(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_MOVIES', res.data))
+        .catch(err => console.error(err.response))
+  },
     fetchMovie ({ commit,getters }, moviePk) {    
       axios({
         url: drf.movies.movie(moviePk),
@@ -77,7 +90,6 @@ export default {
       })
         .then(res => commit('SET_MOVIE', res.data))
         .catch(err => {
-          console.error(err.response)
           if (err.response.status === 404) {
             router.push({ name: 'NotFound404' })
           }
