@@ -54,6 +54,7 @@
     data() {
       return {
         moviePk: this.$route.params.moviePk,
+        watchaUrl : ''
       }
     },
     computed: {

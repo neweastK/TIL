@@ -75,11 +75,11 @@ export default {
   },
     fetchIndMovies ({ commit,getters }) {    
       axios({
-        url: drf.movies.indboxoffices_ind(),
+        url: drf.movies.boxoffices_ind(),
         method: 'get',
         headers: getters.authHeader,
       })
-        .then(res => commit('SET_MOVIES', res.data))
+        .then(res => commit('SET_INDBOXOFFICES', res.data))
         .catch(err => console.error(err.response))
   },
     fetchMovie ({ commit,getters }, moviePk) {    

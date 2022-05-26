@@ -1,9 +1,10 @@
 <template>
-  <div class="card">
-    <img :src="imgUrl" class="card-img-top" alt="POSTER">
+  <div class="card my-2 justify-content-center">
+    <router-link :to="{ name: 'movie', params: {moviePk: movie.id} }">
+      <img :src="imgUrl" class="card-img-top" alt="POSTER">
+    </router-link>
     <div class="card-body">
-      <h5 class="card-title">{{ movie.title }}</h5>
-      <router-link :to="{ name: 'movie', params: {moviePk: movie.id} }">DETAIL</router-link>
+      <h6 class="card-title">{{ movie.title }}</h6>
     </div>
   </div>
 </template>

@@ -6,7 +6,7 @@
       :profile='profile'
       ></profile-view>
     </div>
-    <p style='font-size: 1.5rem; font-weight: bold;' class='text-start'>좋아요 누른 영화</p>
+    <p style='font-size: 1.5rem; font-weight: bold;' class='text-start ms-5'>좋아요 누른 영화</p>
 
     <div class='container'>
       <div class='row'>
@@ -20,9 +20,17 @@
       </div>
     </div>
 
-    <p style='font-size: 1.5rem; font-weight: bold;' class='text-start'>선호장르</p>
-    <h2>{{ likeGenre }}</h2>
-    
+    <p style='font-size: 1.5rem; font-weight: bold;' class='text-start mt-5 ms-5'>선호장르</p>
+    <div class='d-flex'>
+      <div class='my-5 mx-5'>
+        <b-icon icon='hammer' font-scale="5"> </b-icon>
+        <h5 class='mt-2'> 범죄 </h5>
+      </div>
+      <div class='my-5'>
+        <b-icon icon='music-note-beamed' font-scale="5"> </b-icon>
+        <h5 class='mt-2'> 음악 </h5>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -38,17 +46,7 @@ export default {
     ProfileMovie,
   },
   computed: {
-    ...mapGetters(['profile']),
-    likeGenre () {
-      let likegenres = []
-      const movies = this.profile.like_movie
-      movies.forEach(movie => {
-        let tmp = movie.genres.replace(/"/gi,'')
-        likegenres.push(tmp.replace(/"/gi,""))
-      }) 
-      return likegenres
-    }
-  },
+    ...mapGetters(['profile'])},  
   methods: {
     ...mapActions(['fetchMypage','totalGenres'])
   },

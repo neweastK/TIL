@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <div class='container' style='border: solid 1px black;'>
-      <div class='row'>
-        <b-avatar class='d-flex' src="https://placekitten.com/300/300" size="6rem"></b-avatar>
-        {{ profile.nickname }}<br>
-        {{ profile.point ? profile.point : 0 }} point
+  <div class=container>
+    <div class='row col-4 ms-auto rounded' style='border: solid 1px black;'>
+      <div>
+        <b-avatar style="width: 70%; height: 100%;"></b-avatar>
+      </div>
+      <div>
+        <h6 class='text-center'>{{ profile.nickname }}</h6>
+        <h6>{{ profile.point ? profile.point : 0 }} point</h6>
       </div>
     </div>
     
