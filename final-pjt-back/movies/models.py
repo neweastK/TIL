@@ -12,6 +12,8 @@ class Boxoffice(models.Model):
     vote_average = models.FloatField(null=True)
     independent = models.BooleanField()
     poster_path = models.TextField()
+    release_date = models.TextField(null=True)
+
 
 
 class Actor(models.Model):
