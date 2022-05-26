@@ -256,10 +256,6 @@ export default {
         .then(res => commit('SET_MOVIE_REVIEWS', res.data))
         .catch(err => console.error(err.response))
   },    
-<<<<<<< HEAD
-  }
-=======
-
     LikeMovies ({ commit, getters }) {
       axios({
         url: drf.movies.recommendationLike(),
@@ -268,14 +264,13 @@ export default {
       })
         .then(res => commit('SET_FROMLIKE', res.data))
         .catch(err => console.error(err.response))
-    },
-    totalGenres({commit}, genre){
-      const total = []
-      total.add(genre)
-      let result = [...new Set(total)];
-      commit('LIKE_GENRES',result)
-    }
-  }
+  },
 
->>>>>>> 584853e2cbd523d618f16e9ca0f057365f55d61e
+      totalGenres({commit}, genre){
+        const total = []
+        total.add(genre)
+        let result = [...new Set(total)];
+        commit('LIKE_GENRES',result)
+      }
+  }
 }

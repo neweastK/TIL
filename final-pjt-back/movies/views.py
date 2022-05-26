@@ -237,3 +237,7 @@ def watch_movie(request, movie_id):
 @api_view(['GET'])
 def search(request):
     pass
+
+@api_view(['GET'])
+def sinye_movies(request):
+    pass
