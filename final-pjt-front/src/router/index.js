@@ -24,18 +24,25 @@ import NewsView from '@/views/NewsView.vue'
 import NewsNewView from '@/views/NewsNewView.vue'
 // import SinyemaCommunityView from '@/views/SinyemaCommunityView.vue'
 
+import MypageView from '@/views/MypageView.vue'
 import NotFound404 from '../views/NotFound404.vue'
 
 import MovieDetail from '@/components/MovieDetail.vue'
 import MovieInfo from '@/components/MovieInfo.vue'
 import MovieReview from '@/components/MovieReview.vue'
-
+// import WordCloud from '@/components/WordCloud.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+
+  // {
+  //   path: 'test/',
+  //   name: 'test',
+  //   component: WordCloud
+  // },
   {
     path: '/',
     name: 'index',
@@ -67,6 +74,12 @@ const router = new VueRouter({
     component: SinyeNewView
   },
 
+  {
+    path: '/mypage/:username',
+    name: 'mypage',
+    component: MypageView
+
+  },
   {
     path: '/profile',
     name: 'profile',

@@ -19,6 +19,7 @@ export default {
     wavve : [],
     disney : [],
     reviews : [],
+    genres : [],
     // watchedmovie:{},
 
   },
@@ -29,6 +30,7 @@ export default {
     actors: state => state.movie.actors,
     boxoffices : state => state.boxoffices,
     reviews : state => state.movie.reviews,
+    genres : state => state.genres,
     // watchedmovie : state => state.movie,
     fromlike : state => state.fromlike,
     fromwatch : state => state.fromwatch,
@@ -44,6 +46,7 @@ export default {
     SET_BOXOFFICES: (state, boxoffices) => state.boxoffices = boxoffices,
     // SET_WATCHEDMOVIE: (state, movie) => state.watchedmovie = movie,
 
+    LIKE_GENRES: (state, genres) => state.genres = genres,
     SET_MOVIE_REVIEWS : (state, reviews) => (state.movie.reviews = reviews),
     SET_FROMLIKE: (state, movies) => state.fromlike = movies,
     SET_FROMWATCH: (state, movies) => state.fromwatch = movies,
@@ -253,5 +256,26 @@ export default {
         .then(res => commit('SET_MOVIE_REVIEWS', res.data))
         .catch(err => console.error(err.response))
   },    
+<<<<<<< HEAD
   }
+=======
+
+    LikeMovies ({ commit, getters }) {
+      axios({
+        url: drf.movies.recommendationLike(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_FROMLIKE', res.data))
+        .catch(err => console.error(err.response))
+    },
+    totalGenres({commit}, genre){
+      const total = []
+      total.add(genre)
+      let result = [...new Set(total)];
+      commit('LIKE_GENRES',result)
+    }
+  }
+
+>>>>>>> 584853e2cbd523d618f16e9ca0f057365f55d61e
 }
