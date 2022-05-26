@@ -8,6 +8,7 @@ export default {
     currentUser: {},
     mypage: {},
     authError: null,
+    profile: {},
   },
 
   getters: {
@@ -91,6 +92,34 @@ export default {
         })
     },
 
+    fetchProfile({ commit, getters, dispatch }) {
+      if (getters.isLoggedIn) {
+        axios({
+          url: drf.accounts.profile(),
+          method: 'get',
+          headers: getters.authHeader,
+        })
+          .then(res => commit('SET_PROFILE', res.data))
+          .catch(err => {
+            if (err.response.status === 401) {
+              dispatch('removeToken')
+              router.push({ name: 'login' })
+            }
+          })
+      }
+    },
+
+    fetchMypage({ commit, getters }, { username }) {
+      axios({
+        url: drf.accounts.profile(username),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => {
+          commit('SET_PROFILE', res.data)
+        })
+    },
+    
     fetchCurrentUser({ commit, getters, dispatch }) {
       if (getters.isLoggedIn) {
         axios({
@@ -106,17 +135,6 @@ export default {
             }
           })
       }
-    },
-
-    fetchMypage({ commit, getters }, { nickname }) {
-      axios({
-        url: drf.accounts.profile(nickname),
-        method: 'get',
-        headers: getters.authHeader,
-      })
-        .then(res => {
-          commit('SET_PROFILE', res.data)
-        })
     },
   },
 

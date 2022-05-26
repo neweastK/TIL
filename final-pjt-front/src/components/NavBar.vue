@@ -5,7 +5,7 @@
         <router-link :to="{ name: 'articles' }">Home</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'sinyema' }">Sinyema</router-link>
+        <router-link :to="{ name: 'test' }">Sinyema</router-link>
       </li>
       <li v-if="!isLoggedIn">
         <router-link :to="{ name: 'login' }">Login</router-link>

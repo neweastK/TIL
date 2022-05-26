@@ -19,6 +19,7 @@ export default {
     wavve : [],
     disney : [],
     reviews : [],
+    genres : [],
     // watchedmovie:{},
 
   },
@@ -29,6 +30,7 @@ export default {
     actors: state => state.movie.actors,
     boxoffices : state => state.boxoffices,
     reviews : state => state.movie.reviews,
+    genres : state => state.genres,
     // watchedmovie : state => state.movie,
     fromlike : state => state.fromlike,
     fromwatch : state => state.fromwatch,
@@ -43,12 +45,9 @@ export default {
     SET_MOVIE: (state, movie) => state.movie = movie,
     SET_BOXOFFICES: (state, boxoffices) => state.boxoffices = boxoffices,
     // SET_WATCHEDMOVIE: (state, movie) => state.watchedmovie = movie,
-
-<<<<<<< HEAD
+    LIKE_GENRES: (state, genres) => state.genres = genres,
     SET_MOVIE_REVIEWS : (state, reviews) => (state.movie.reviews = reviews),
-=======
     SET_FROMLIKE: (state, movies) => state.fromlike = movies,
->>>>>>> e7eb26f979c78bae45d0183f2bdee932da628019
     SET_FROMWATCH: (state, movies) => state.fromwatch = movies,
     SET_NETFLIX: (state, movies) => state.netflix = movies,
     SET_WATCHA: (state, movies) => state.watcha = movies,
@@ -163,7 +162,6 @@ export default {
       })
         .then(res => commit('SET_FROMWATCH', res.data))
         .catch(err => console.error(err.response))
-<<<<<<< HEAD
     },        
         
     createReview({ commit, getters }, { moviePk, content, rate }) {
@@ -258,13 +256,6 @@ export default {
         .catch(err => console.error(err.response))
   },    
 
-
-
-
-    }
-  }
-=======
-    },
     LikeMovies ({ commit, getters }) {
       axios({
         url: drf.movies.recommendationLike(),
@@ -274,8 +265,12 @@ export default {
         .then(res => commit('SET_FROMLIKE', res.data))
         .catch(err => console.error(err.response))
     },
-
+    totalGenres({commit}, genre){
+      const total = []
+      total.add(genre)
+      let result = [...new Set(total)];
+      commit('LIKE_GENRES',result)
+    }
   }
 
 }
->>>>>>> e7eb26f979c78bae45d0183f2bdee932da628019

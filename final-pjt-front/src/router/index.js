@@ -20,19 +20,25 @@ import ColumnView from '@/views/ColumnView.vue'
 import ColumnNewView from '@/views/ColumnNewView.vue'
 import NewsView from '@/views/NewsView.vue'
 import NewsNewView from '@/views/NewsNewView.vue'
-
+import MypageView from '@/views/MypageView.vue'
 import NotFound404 from '../views/NotFound404.vue'
 
 import MovieDetail from '@/components/MovieDetail.vue'
 import MovieInfo from '@/components/MovieInfo.vue'
 import MovieReview from '@/components/MovieReview.vue'
-
+// import WordCloud from '@/components/WordCloud.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+
+  // {
+  //   path: 'test/',
+  //   name: 'test',
+  //   component: WordCloud
+  // },
   {
     path: '/',
     name: 'index',
@@ -49,15 +55,15 @@ const router = new VueRouter({
     component: CommunityView
   },
   {
-<<<<<<< HEAD
     path: '/mypage/:username',
     name: 'mypage',
     component: MypageView
-=======
+
+  },
+  {
     path: '/profile',
     name: 'profile',
     component: ProfileView
->>>>>>> e7eb26f979c78bae45d0183f2bdee932da628019
   },
   {
     path: '/login',
