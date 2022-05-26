@@ -240,4 +240,8 @@ def search(request):
 
 @api_view(['GET'])
 def sinye_movies(request):
-    pass
+    movies = Movie.objects.filter(independent=1).order_by('release_date')[::-1][:5]
+    print(movies)
+    serializer = MovieSerializer(movies, many=True)
+    return Response(serializer.data)
+    

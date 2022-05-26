@@ -20,12 +20,14 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import ProfileView from '@/components/ProfileView.vue'
+
 // import ProfileMovie from '@/components/ProfileMovie.vue'
 
 export default {
   name: 'MypageView',
   components:{
     ProfileView,
+
     // ProfileMovie,
   },
   computed: {

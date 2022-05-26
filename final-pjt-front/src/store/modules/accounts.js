@@ -109,7 +109,7 @@ export default {
       }
     },
 
-    fetchMypage({ commit, getters }, { username }) {
+    fetchMypage({ commit, getters }, username) {
       axios({
         url: drf.accounts.profile(username),
         method: 'get',
@@ -117,6 +117,7 @@ export default {
       })
         .then(res => {
           commit('SET_PROFILE', res.data)
+          console.log('나실행됨')
         })
     },
     
@@ -127,7 +128,11 @@ export default {
           method: 'get',
           headers: getters.authHeader,
         })
-          .then(res => commit('SET_CURRENT_USER', res.data))
+          .then(res => {
+            commit('SET_CURRENT_USER', res.data)
+            dispatch('fetchMypage', res.data.username)
+            console.log('1차')
+            })
           .catch(err => {
             if (err.response.status === 401) {
               dispatch('removeToken')

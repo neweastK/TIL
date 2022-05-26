@@ -13,12 +13,13 @@ export default {
 
     currentUserInfo: () => HOST + ACCOUNTS + 'user/',
 
-    profile: username => HOST + ACCOUNTS + 'profile/' + username,
+    profile: username => HOST + ACCOUNTS + 'profile/' + username +'/',
   },
 
   movies: {
     movies: () => HOST + MOVIES,
     movie: movieId => HOST + MOVIES + `${movieId}/`,
+    sinye: () => HOST + MOVIES + 'sinye/' + 'movies/',
     boxoffices: () => HOST + MOVIES + 'boxoffice/',
     boxoffices_ind: () => HOST + MOVIES + 'boxoffice/independent/',
     likemovie: movieId => HOST + MOVIES + `${movieId}/` + 'like/',

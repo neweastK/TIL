@@ -34,10 +34,11 @@ class ProfileSerializer(serializers.ModelSerializer) :
             model = Movie
             fields = '__all__'
 
+    watch_movie = MovieSerializer(read_only=True, many=True)
     like_movie = MovieSerializer(read_only=True, many=True)
     articles = ArticleListSerializer(read_only=True, many=True)
     hashtag = HashTagSerializer(read_only=True, many=True)
 
     class Meta :
         model = get_user_model()
-        fields = ('pk','nickname', 'like_movie', 'articles', 'hashtag', 'point', 'using_ott', 'profile_image',)
+        fields = ('pk','nickname', 'watch_movie', 'like_movie', 'articles', 'hashtag', 'point', 'using_ott', 'profile_image',)

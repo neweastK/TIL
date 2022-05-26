@@ -10,6 +10,7 @@ export default {
     // 영화 데이터들
     movies : [],
     boxoffices : [],
+    sinyemovie : [],
     movie:{},
     poster_path:'',
     fromwatch : [],
@@ -38,6 +39,7 @@ export default {
     watcha : state => state.watcha,
     wavve : state => state.wavve,
     disney : state => state.disney,
+    sinyemovie : state => state.sinyemovie,
   },
 
   mutations: {
@@ -45,7 +47,7 @@ export default {
     SET_MOVIE: (state, movie) => state.movie = movie,
     SET_BOXOFFICES: (state, boxoffices) => state.boxoffices = boxoffices,
     // SET_WATCHEDMOVIE: (state, movie) => state.watchedmovie = movie,
-
+    SET_SINYEMOVIE: (state, movies) => state.sinyemovie = movies,
     LIKE_GENRES: (state, genres) => state.genres = genres,
     SET_MOVIE_REVIEWS : (state, reviews) => (state.movie.reviews = reviews),
     SET_FROMLIKE: (state, movies) => state.fromlike = movies,
@@ -271,6 +273,16 @@ export default {
         total.add(genre)
         let result = [...new Set(total)];
         commit('LIKE_GENRES',result)
-      }
+    },
+
+    SinyeMovies ({ commit, getters }) {
+      axios({
+        url: drf.movies.sinye(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+      .then(res => commit('SET_SINYEMOVIE', res.data))
+      .catch(err => console.error(err.response))
+    },
   }
 }
