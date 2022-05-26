@@ -40,6 +40,7 @@ export default {
     news: () => HOST + ARTICLES + 'news/',
     column: () => HOST + ARTICLES + 'column/',
     board: () => HOST + ARTICLES + 'board/',
+    sinye: () => HOST + ARTICLES + 'sinye/',
 
     article: articlePk => HOST + ARTICLES + `${articlePk}/`,
     comments: articlePk => HOST + ARTICLES + `${articlePk}/` + COMMENTS,

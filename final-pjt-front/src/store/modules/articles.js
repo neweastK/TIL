@@ -10,11 +10,13 @@ export default {
     news_article: [],
     column_article: [],
     board_article: [],
+    sinye_article: [],
     article: {},
     
   },
 
   getters: {
+    sinye_article: state => state.sinye_article,
     news_article: state => state.news_article,
     event_article: state => state.event_article,
     column_article: state => state.column_article,
@@ -29,6 +31,7 @@ export default {
   },
 
   mutations: {
+    SET_SINYE_ARTICLE: (state, article) => state.sinye_article = article,
     SET_NEWS_ARTICLE: (state, article) => state.news_article = article,
     SET_EVENT_ARTICLE: (state, article) => state.event_article = article,
     SET_COLUMN_ARTICLE: (state, article) => state.column_article = article,
@@ -39,6 +42,31 @@ export default {
   },
 
   actions: {
+    fetchSinye({ commit, getters }) {
+      axios({
+        url: drf.articles.sinye(),
+        method: 'get',
+        headers: getters.authHeader,
+      })
+        .then(res => commit('SET_SINYE_ARTICLE', res.data))
+        .catch(err => console.error(err.response))
+    },
+    creatSinye({ commit, getters }, article) {
+      axios({
+        url: drf.articles.sinye(),
+        method: 'post',
+        data: article,
+        headers: getters.authHeader,
+      })
+        .then(res => {
+          commit('SET_SINYE_ARTICLE', res.data)
+          router.push({
+            name: 'sinye_article',
+            params: { articlePk: getters.article.pk }
+          })
+        })
+    },
+
     fetchEvents({ commit, getters }) {
       axios({
         url: drf.articles.events(),

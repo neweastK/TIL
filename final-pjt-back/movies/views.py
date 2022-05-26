@@ -233,4 +233,7 @@ def watch_movie(request, movie_id):
         movie.watch.add(user)
         serializer = MovieSerializer(movie)
         return Response(serializer.data)  
-    
+
+@api_view(['GET'])
+def search(request):
+    pass

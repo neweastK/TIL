@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     # 영화 리스트를 가져올 때, view에서 추천 로직을 짜는가 vue에서 짜는가
     path('', views.movie_list),
+    path('search/', views.search),
     path('recommendation/like/', views.recommendation_like),
     path('recommendation/watch/', views.recommendation_watch),
     path('recommendation/netflix/', views.recommendation_netflix),

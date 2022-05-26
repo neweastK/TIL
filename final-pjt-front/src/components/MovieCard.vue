@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="card">
-      <img :src="imgUrl" class="card-img-top" alt="POSTER">
+      <!-- <img :src="imgUrl" class="card-img-top" alt="POSTER"> -->
       <div class="card-body">
-        <h5 class="card-title">{{ movie.title }}</h5>
-        <router-link :to="{ name: 'movie', params: {moviePk: movie.id} }">DETAIL</router-link>
+        <!-- <h5 class="card-title">{{ movie.title }}</h5> -->
+        <router-link :to="{ name: 'movie', params: {moviePk: movie.id} }"><img :src="imgUrl" class="card-img-top" alt="POSTER"></router-link>
       </div>
     </div>
 

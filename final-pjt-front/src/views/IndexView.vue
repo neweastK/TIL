@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Home</h1>
     <div>
      <div class='container'>
         <div class='row justify-content-center mx-5'>
@@ -79,6 +78,7 @@
       :to="{ name: 'movie', params: {moviePk: movie.pk} }">
       {{ movie.title }}
     </router-link> -->   
+
   </div>
 </template>
 

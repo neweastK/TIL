@@ -10,4 +10,7 @@ urlpatterns = [
     path('news/', views.news_list_or_create),
     path('column/', views.column_list_or_create),
     path('board/', views.board_list_or_create),
+    path('sinye/', views.sinye_list_or_create),
+
 ]
+

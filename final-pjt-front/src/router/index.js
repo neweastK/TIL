@@ -9,6 +9,8 @@ import LoginView from '@/views/LoginView.vue'
 import LogoutView from '@/views/LogoutView.vue'
 import SignupView from '@/views/SignupView.vue'
 
+import SinyeView from '@/views/SinyeView.vue'
+import SinyeNewView from '@/views/SinyeNewView.vue'
 import BoardView from '@/views/BoardView.vue'
 import BoardNewView from '@/views/BoardNewView.vue'
 import EventView from '@/views/EventView.vue'
@@ -20,6 +22,7 @@ import ColumnView from '@/views/ColumnView.vue'
 import ColumnNewView from '@/views/ColumnNewView.vue'
 import NewsView from '@/views/NewsView.vue'
 import NewsNewView from '@/views/NewsNewView.vue'
+// import SinyemaCommunityView from '@/views/SinyemaCommunityView.vue'
 
 import NotFound404 from '../views/NotFound404.vue'
 
@@ -48,16 +51,26 @@ const router = new VueRouter({
     name: 'community',
     component: CommunityView
   },
+  // {
+  //   path: '/sinyema_community',
+  //   name: 'sinyema_community',
+  //   component: SinyemaCommunityView
+  // },
   {
-<<<<<<< HEAD
-    path: '/mypage/:username',
-    name: 'mypage',
-    component: MypageView
-=======
+    path: '/sinye_article',
+    name: 'sinye_article',
+    component: SinyeView
+  },
+  {
+    path: '/sinyenew',
+    name: 'sinyenew',
+    component: SinyeNewView
+  },
+
+  {
     path: '/profile',
     name: 'profile',
     component: ProfileView
->>>>>>> e7eb26f979c78bae45d0183f2bdee932da628019
   },
   {
     path: '/login',

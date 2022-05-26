@@ -31,6 +31,26 @@ def article_list_or_create(request):
         return create_article()
 
 @api_view(['GET', 'POST'])
+def sinye_list_or_create(request):
+    def sinye_list():
+        articles = Article.objects.annotate(
+                comment_count=Count('comments', distinct=True),
+                ).filter(category="sinye").order_by('-pk')
+        serializer = ArticleListSerializer(articles, many=True)
+        return Response(serializer.data)
+
+    def create_sinye():
+        serializer = ArticleSerializer(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            serializer.save(user=request.user)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    if request.method == 'GET':
+        return sinye_list()
+    elif request.method == 'POST':
+        return create_sinye()
+
+@api_view(['GET', 'POST'])
 def event_list_or_create(request):
     def event_list():
         articles = Article.objects.annotate(

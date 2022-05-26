@@ -1,6 +1,6 @@
 <template>
   <div>
-    신예마
+    <router-link :to="{ name: 'sinye_article' }">신예</router-link>
   </div>
 </template>
 
