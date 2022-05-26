@@ -2,36 +2,56 @@
   <div class='container'>
     <div class='row'>
       <h5 class='fw-bold text-start'>줄거리</h5>  
-      <p> {{ movie.overview }}</p>
     </div>
-    <div class='row'>
-      <h5 class='fw-bold text-start'>출연 배우</h5>  
-      <ul>
-        <li v-for='movieActor in movieActors'
-        :key='movieActor.name'>
-          {{ movieActor.name }}
+    <br>
+    <h5 class='fw-bold text-start mb-3'>출연 배우</h5>  
+      <div class='d-flex justify-content-between mx-3'>
+        <div v-for='movieActor in movieActors'
+        :key='movieActor.name'
+        >
           <div class='box'>
             <img class='profile' :src="`https://image.tmdb.org/t/p/w200${ movieActor.profile }`" :alt=path>
           </div>
-        </li>
-      </ul>
+          <p class='text-center'>{{ movieActor.name }}</p>
+        </div>
+      </div>
+    <h5 class='fw-bold text-start mt-5'>트레일러</h5>
+    <div class='d-flex my-4 justify-content-center'>
+      <iframe class='mb-5' :src="videourl" frameborder="0" width='900' height='400' allowfullscreen></iframe>
     </div>
-    <div>
-      <h5 class='fw-bold text-start'>트레일러</h5>
-      <iframe :src="videourl" frameborder="0" width='900' height='400' allowfullscreen></iframe>
-    </div>
-    <div>
-      <h5 class='fw-bold text-start'>스틸컷</h5>
-      <ul>
-        <li v-for="path in backDrops"
-        :key=path>
-            <img :src="`https://image.tmdb.org/t/p/w300${ path.substring(1,path.length-1) }`" :alt=path>
-        </li>
-      </ul>
+    <div class='mt-4'>
+      <h5 class='mt-4 fw-bold text-start'>스틸컷</h5>
+      
+      <div>
+        <b-carousel
+          id="carousel-fade"
+          style="text-shadow: 0px 0px 2px #000"
+          fade
+          :controls='true'
+          label-next='>'
+          label-prev='<'
+          img-width="1024"
+          img-height="480"
+        >
+          <b-carousel-slide
+          v-for="path in backDrops"
+          :key=path>
+            <template #img>
+              <img
+                class="d-block mx-auto img-fluid w-50"
+                width="700"
+                height="480"
+                :src="`https://image.tmdb.org/t/p/w500${path.substring(1,path.length-1)}`"
+                alt="image slot"
+              >
+            </template>
+          </b-carousel-slide>
+        </b-carousel>
         
+      </div>
+
+
     </div>
-
-
   </div>
 </template>
 
@@ -118,8 +138,8 @@ export default {
 
 <style>
   .box {
-    width: 150px;
-    height: 150px; 
+    width: 100px;
+    height: 100px; 
     border-radius: 70%;
     overflow: hidden;
   }
