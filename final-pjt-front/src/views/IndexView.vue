@@ -8,6 +8,14 @@
 
         <br>
         <hr>
+    <p> 유니크한 당신을 위한 작품 모음 </p>
+    <movie-card-list
+    :movies='indboxoffices'
+    class='d-flex justify-content-center'>
+    </movie-card-list>
+        <br>
+        <hr>
+
 
     <p v-if="inwatch">최근 {{ profile.watch_movie[profile.watch_movie.length-1].title }}를 본 당신! 이 영화는 어떠신가요?</p>
     <p v-else>최근 본 영화를 체크하세요! 더 정확한 추천을 받을 수 있습니다!</p>
@@ -79,7 +87,7 @@
       }
     },
     computed: {
-      ...mapGetters(['boxoffices', 'fromwatch', 'fromlike', 'netflix', 'watcha', 'wavve', 'disney', 'currentUser', 'profile']),
+      ...mapGetters(['boxoffices','indboxoffices', 'fromwatch', 'fromlike', 'netflix', 'watcha', 'wavve', 'disney', 'currentUser', 'profile']),
       inwatcha () {
         return this.profile.using_ott.includes('왓챠')
       },
@@ -117,6 +125,7 @@
       this.WatchaMovies()
       this.WavveMovies()
       this.DisneyMovies()
+      this.fetchIndMovies()
       this.fetchCurrentUser()
       const payload = { username: this.currentUser.username }
       this.fetchMypage(payload)
