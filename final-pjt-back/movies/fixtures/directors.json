@@ -1,0 +1,3395 @@
+[
+    {
+        "model": "movies.director",
+        "pk": 1,
+        "fields": {
+            "name": "조지 루카스",
+            "birthday": "1944-05-14",
+            "profile": "/WCSZzWdtPmdRxH9LUCVi2JPCSJ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 8,
+        "fields": {
+            "name": "Lee Unkrich",
+            "birthday": "1967-08-08",
+            "profile": "/crb297utC6W4HSstOe5djDPTwEN.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 4109,
+        "fields": {
+            "name": "Michael Curtiz",
+            "birthday": "1886-12-24",
+            "profile": "/qRKA4eYY5Jhu1FaDsh4IUAg264f.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1976339,
+        "fields": {
+            "name": "Lawrence Fowler",
+            "birthday": "1990-06-24",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 24,
+        "fields": {
+            "name": "로버트 저메키스",
+            "birthday": "1951-05-14",
+            "profile": "/lPYDQ5LYNJ12rJZENtyASmVZ1Ql.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1040414,
+        "fields": {
+            "name": "Harold Trompetero",
+            "birthday": "1971-04-12",
+            "profile": "/90vyaEGFSJPC1Z2KhPAEnyVw8r7.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 12329,
+        "fields": {
+            "name": "Vittorio De Sica",
+            "birthday": "1901-07-07",
+            "profile": "/p793imBa2qIqTKyuXynphs5daYJ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 116780,
+        "fields": {
+            "name": "Yuichi Satoh",
+            "birthday": "1962-08-18",
+            "profile": "/4Op5UFKp39lJOQsViqlgbedpmHD.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 59,
+        "fields": {
+            "name": "뤼크 베송 뤽 베송",
+            "birthday": "1959-03-18",
+            "profile": "/dXJdczT1NcvcZtnoWVGT0NmG11v.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1083452,
+        "fields": {
+            "name": "Tadayoshi Yamamuro",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1640511,
+        "fields": {
+            "name": "Jorge Ulloa",
+            "birthday": "1990-10-08",
+            "profile": "/aTRa0w2KlUCFsIhyg1UUSLpJcdg.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2846787,
+        "fields": {
+            "name": "Matthew B.C.",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 68,
+        "fields": {
+            "name": "Fritz Lang",
+            "birthday": "1890-12-05",
+            "profile": "/9YT60DvkqsSPxoS4b8ezIv76ses.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2613318,
+        "fields": {
+            "name": "에드워드 드레이크",
+            "birthday": "1990-12-26",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1224778,
+        "fields": {
+            "name": "Monika Mitchell",
+            "birthday": null,
+            "profile": "/rVQdInhmvt6VaX8apV9AxSU5JQb.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 41039,
+        "fields": {
+            "name": "주드 아패토우",
+            "birthday": "1967-12-06",
+            "profile": "/iXlnv4NvZkmhB7bJBXea5T21gBT.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 106577,
+        "fields": {
+            "name": "Junichi Sato",
+            "birthday": "1960-03-11",
+            "profile": "/ckKxvO5rmHG9nh4ZarKffR3iYUv.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3178581,
+        "fields": {
+            "name": "Zhang Meng",
+            "birthday": "1989-08-08",
+            "profile": "/ta9ohQRY3gqqQgHQy3nWB3NrTVO.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 77921,
+        "fields": {
+            "name": "안노 히데아키",
+            "birthday": "1960-05-22",
+            "profile": "/AfV9h1RW6uALpx751APdUoX8ONc.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 77923,
+        "fields": {
+            "name": "Kazuya Tsurumaki",
+            "birthday": "1966-02-02",
+            "profile": "/dVlVa0Wqnep8MzhmHt1oY41vrVO.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 110691,
+        "fields": {
+            "name": "Shinsuke Terasawa",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1661032,
+        "fields": {
+            "name": "Haruka Fujita",
+            "birthday": null,
+            "profile": "/d17kGnlHzGKXA1zOp5PJCaDY0r.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 108,
+        "fields": {
+            "name": "피터 잭슨",
+            "birthday": "1961-10-31",
+            "profile": "/4hh7hips4xc6kgpNDQKQH3goRvJ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1093748,
+        "fields": {
+            "name": "David Victori",
+            "birthday": "1982-09-06",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 59521,
+        "fields": {
+            "name": "Jaume Collet-Serra",
+            "birthday": "1974-03-23",
+            "profile": "/s1MdlS2wnzfKevPfXK63V1qkwfI.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 133251,
+        "fields": {
+            "name": "미키 타카히로",
+            "birthday": "1974-08-29",
+            "profile": "/jUNq43kSRj6dXzDaUzmcDEsT095.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 138,
+        "fields": {
+            "name": "쿠엔틴 타란티노",
+            "birthday": "1963-03-27",
+            "profile": "/1gjcpAa99FAOWGnrUvHEXXsRs7o.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1908875,
+        "fields": {
+            "name": "Elle Callahan",
+            "birthday": null,
+            "profile": "/7VgsP9sFM7aNVyBqoxw3CsX9r8c.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 80012,
+        "fields": {
+            "name": "Patrick White",
+            "birthday": null,
+            "profile": "/AthQZd6O3SaxCpYr0megVSlHy1m.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1360022,
+        "fields": {
+            "name": "Michihito Fujii",
+            "birthday": "1986-08-14",
+            "profile": "/pchTCIDWTzlZ6NsX3WMOYC3PVKy.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 102560,
+        "fields": {
+            "name": "Guel Arraes",
+            "birthday": "1953-12-12",
+            "profile": "/nDkWIjgHJWrYSBTdZHPjvAQlrAQ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 12453,
+        "fields": {
+            "name": "왕 가위",
+            "birthday": "1956-07-17",
+            "profile": "/gWfo3lseDx5h9YzsfnaVblG3S6c.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 125105,
+        "fields": {
+            "name": "증국상",
+            "birthday": "1979-11-08",
+            "profile": "/aEh2IH7r37idxR1xMXtugOOrtBw.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 53431,
+        "fields": {
+            "name": "나딘 라바키",
+            "birthday": "1974-02-18",
+            "profile": "/mV1JAlM4CAdzosSqZs2ch2TPKLS.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2920637,
+        "fields": {
+            "name": "최종학",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 39104,
+        "fields": {
+            "name": "Abel Ferrara",
+            "birthday": "1951-07-19",
+            "profile": "/wm8zu3YIYcvZmB2uJyXQ2WdRZ1f.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3561667,
+        "fields": {
+            "name": "George Symmans",
+            "birthday": "2005-08-30",
+            "profile": "/xm2fE30SwVnAXCXHcYegWBW5Kkt.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 197,
+        "fields": {
+            "name": "David Silverman",
+            "birthday": "1957-03-15",
+            "profile": "/4ia152M03hntrS7FBHveRx2VeuP.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 55499,
+        "fields": {
+            "name": "Scott Derrickson",
+            "birthday": "1966-07-16",
+            "profile": "/nOQkRTC6OPkUHebBfjIgtiZ0hvE.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 137427,
+        "fields": {
+            "name": "드니 빌뇌브",
+            "birthday": "1967-10-03",
+            "profile": "/zdDx9Xs93UIrJFWYApYR28J8M6b.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1659094,
+        "fields": {
+            "name": "Cecilia Aranovich",
+            "birthday": null,
+            "profile": "/scM506aaG9M3jsN74tOR76l2kBp.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1192152,
+        "fields": {
+            "name": "Tomasz Mandes",
+            "birthday": "1976-06-14",
+            "profile": "/wmYwPfWSXfjXpwvljvXEX8h0wfC.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1374429,
+        "fields": {
+            "name": "Wes Miller",
+            "birthday": null,
+            "profile": "/kI1gXT66mqlHwx1wS7n2sXvOnnH.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2146536,
+        "fields": {
+            "name": "Soichiro Komatsu",
+            "birthday": "1964-12-07",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 143593,
+        "fields": {
+            "name": "자비에 돌란",
+            "birthday": "1989-03-20",
+            "profile": "/ohlR0okNYx0lg4NFqQJoys8c4Zp.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 76009,
+        "fields": {
+            "name": "아리 포신",
+            "birthday": null,
+            "profile": "/kG00Bm098iTtK6RJRowss7QMRZ7.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1042668,
+        "fields": {
+            "name": "Henk Pretorius",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2793711,
+        "fields": {
+            "name": "Mark Andrew Hamer",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 240,
+        "fields": {
+            "name": "스탠리 큐브릭",
+            "birthday": "1928-07-26",
+            "profile": "/exfQ6vXXq7rMS5YWb3B88PK39a1.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2109683,
+        "fields": {
+            "name": "소피아 앨버레즈",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 10491,
+        "fields": {
+            "name": "Paul Verhoeven",
+            "birthday": "1938-07-18",
+            "profile": "/wxkroRBtM6NKZdx9sYLFfFSGnaR.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1265918,
+        "fields": {
+            "name": "조용선",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 86270,
+        "fields": {
+            "name": "Joseph Kosinski",
+            "birthday": "1974-05-03",
+            "profile": "/8EIjP8ZP1BTXgZjn134luPlMWKN.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 8452,
+        "fields": {
+            "name": "안드레이 타르콥스키",
+            "birthday": "1932-04-04",
+            "profile": "/j0toVLrgLNuyGnUxGPnSfnPiSf5.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2664731,
+        "fields": {
+            "name": "수잔 랭동",
+            "birthday": null,
+            "profile": "/vv41Pkd3vYJn3GvU3RUHvkl5XaT.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 4385,
+        "fields": {
+            "name": "세르지오 레오네",
+            "birthday": "1929-01-03",
+            "profile": "/2576qoW8l9Z1nKGM10ar60aIwUu.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 57633,
+        "fields": {
+            "name": "로슨 마샬 터버",
+            "birthday": "1975-02-09",
+            "profile": "/4gpzB12oy73qr5nWNNyZICz9nFB.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 139558,
+        "fields": {
+            "name": "Josh Sternfeld",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3391783,
+        "fields": {
+            "name": "Hebru Brantley",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 57641,
+        "fields": {
+            "name": "Dino Risi",
+            "birthday": "1916-12-23",
+            "profile": "/4Lfp0Yk9UiAH2fJtDcBbTCtnNIM.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1311031,
+        "fields": {
+            "name": "Svyatoslav Podgaevsky",
+            "birthday": "1983-02-08",
+            "profile": "/lFJyhIp5960Urn1MmJ7eW8G7p4k.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 55615,
+        "fields": {
+            "name": "Megan Park",
+            "birthday": "1986-07-24",
+            "profile": "/dZbpZjJm5ZIMKRoV2gzEpeJhRmt.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 4415,
+        "fields": {
+            "name": "페데리코 펠리니",
+            "birthday": "1920-01-20",
+            "profile": "/dtT6h0q7t3wLVlzc0ARNR8n5vlm.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 98631,
+        "fields": {
+            "name": "Adam Wingard",
+            "birthday": "1982-10-03",
+            "profile": "/3Dk4vAmhdb59VTnNRnW1ln52wG6.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1823051,
+        "fields": {
+            "name": "Mattson Tomlin",
+            "birthday": "1990-07-16",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 51533,
+        "fields": {
+            "name": "프란 크란즈",
+            "birthday": "1983-07-13",
+            "profile": "/xIDRyMVPIbqRWck39zWxX7mrulC.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1001805,
+        "fields": {
+            "name": "Janell Shirtcliff",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 78160,
+        "fields": {
+            "name": "Luca Guadagnino",
+            "birthday": "1971-08-10",
+            "profile": "/lO2GD4s6fRloZLEhsZgBlhJQasE.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 72024,
+        "fields": {
+            "name": "Malcolm D. Lee",
+            "birthday": "1970-01-11",
+            "profile": "/aae8K7qO5XYployiStHbAMMbahM.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 123238,
+        "fields": {
+            "name": "브라이언 스키바",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2376041,
+        "fields": {
+            "name": "이상용",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 10601,
+        "fields": {
+            "name": "Joseph L. Mankiewicz",
+            "birthday": "1909-02-11",
+            "profile": "/1zqHOZQlevCE2ld15qUt24Nxr7u.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 74091,
+        "fields": {
+            "name": "신카이 마코토",
+            "birthday": "1973-02-09",
+            "profile": "/mSCk6PmAR99bCsKJYlMx94vq5qe.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 162156,
+        "fields": {
+            "name": "Philip DeGuere Jr.",
+            "birthday": "1944-07-19",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 8557,
+        "fields": {
+            "name": "Fernando Meirelles",
+            "birthday": "1955-11-09",
+            "profile": "/at0fRZl4fJwqaytXOfvgs1lOM9E.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1800570,
+        "fields": {
+            "name": "Cristian Bernard",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 100734,
+        "fields": {
+            "name": "Johannes Roberts",
+            "birthday": "1976-05-24",
+            "profile": "/8hHny6atmFXcuNl2m1AP3fIOayz.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 133502,
+        "fields": {
+            "name": "Simon Curtis",
+            "birthday": "1960-03-11",
+            "profile": "/ou3aNkyA50TNCyoHaEP90lMqAQO.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 8574,
+        "fields": {
+            "name": "Walter Salles",
+            "birthday": "1956-04-12",
+            "profile": "/k3XHgm0f9nJK3ugilBqlm0tHfsw.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 125324,
+        "fields": {
+            "name": "윌리엄 유뱅크",
+            "birthday": "1982-11-15",
+            "profile": "/u2px8MjeVsqk4WMqH6MSzSMqrZa.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1044881,
+        "fields": {
+            "name": "Teemu Nikki",
+            "birthday": "1975-01-01",
+            "profile": "/t8aNjqvYTUZ8udfy7UUTGn4azK6.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 18844,
+        "fields": {
+            "name": "존 매든",
+            "birthday": "1949-04-08",
+            "profile": "/z0msDsLeFxfE70DkIKstymRlTKf.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1307036,
+        "fields": {
+            "name": "Kenji Nagasaki",
+            "birthday": "1979-02-12",
+            "profile": "/ocQTs3KldutDj5zmqpxN4QsZzxC.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2461,
+        "fields": {
+            "name": "멜 깁슨",
+            "birthday": "1956-01-03",
+            "profile": "/jnqHMaOslt8cef2atSmOpGRvNla.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1530279,
+        "fields": {
+            "name": "Toshifumi Akai",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1065384,
+        "fields": {
+            "name": "Asif Akbar",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 586154,
+        "fields": {
+            "name": "Mitja Okorn",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 18864,
+        "fields": {
+            "name": "톰 맥그라스",
+            "birthday": "1964-08-07",
+            "profile": "/83lSBvaRShYObPvhE89UDUkUfWo.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 18865,
+        "fields": {
+            "name": "루이 르테리에",
+            "birthday": "1973-06-17",
+            "profile": "/pJl1hNtZOIxrdzQjwGlicWWGSXg.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1706418,
+        "fields": {
+            "name": "Susana Garcia",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 115122,
+        "fields": {
+            "name": "Dmitriy Dyachenko",
+            "birthday": "1972-09-16",
+            "profile": "/3q184BKx0f6D13YMrB8UAoVUFZc.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2875827,
+        "fields": {
+            "name": "Claire Knight",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 115128,
+        "fields": {
+            "name": "Bo Burnham",
+            "birthday": "1990-08-21",
+            "profile": "/dUScnqhmmSgxbzxq8D2QlxgpRVA.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 8635,
+        "fields": {
+            "name": "버스터 키튼",
+            "birthday": "1895-10-04",
+            "profile": "/kEybBFkO5AX83o3WKyNDfuvfVrn.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1876416,
+        "fields": {
+            "name": "Can Ulkay",
+            "birthday": "1964-11-27",
+            "profile": "/37ZlEKDZUrYcysyHTD6YMee5EvI.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3324354,
+        "fields": {
+            "name": "Guo Hu",
+            "birthday": null,
+            "profile": "/lAlFwhPqf9oGpTYufQ6Q8FhOMlX.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 84426,
+        "fields": {
+            "name": "Olivier Nakache",
+            "birthday": "1973-04-15",
+            "profile": "/cLfpk5eIT8h7NnZcz6Iti3DPkRu.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 10702,
+        "fields": {
+            "name": "Martin Campbell",
+            "birthday": "1943-10-24",
+            "profile": "/4AiUb5lciEXdgOXFWAdebQUhEb9.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 18898,
+        "fields": {
+            "name": "Rob Minkoff",
+            "birthday": "1962-08-11",
+            "profile": "/fn5QA0bqJn6tk4Wt1QonjojFPjd.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1665497,
+        "fields": {
+            "name": "Zhao Ji",
+            "birthday": null,
+            "profile": "/3SbMsocDUMhh6BMPFen0Mv92fzl.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 488,
+        "fields": {
+            "name": "스티븐 스필버그",
+            "birthday": "1946-12-18",
+            "profile": "/tZxcg19YQ3e8fJ0pOs7hjlnmmr6.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1219048,
+        "fields": {
+            "name": "Swinton O. Scott III",
+            "birthday": "1956-10-31",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1223146,
+        "fields": {
+            "name": "알렉스 하드캐슬",
+            "birthday": "1972-11-19",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 55789,
+        "fields": {
+            "name": "Tate Taylor",
+            "birthday": "1969-06-03",
+            "profile": "/zJaLbNHLoQMhCAeJhn1J1B0xrup.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1395183,
+        "fields": {
+            "name": "클로이 자오",
+            "birthday": "1982-03-31",
+            "profile": "/4Zmu4uigEtq5qAwJKQZW5e2QhDg.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2765298,
+        "fields": {
+            "name": "Talia Osteen",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 6648,
+        "fields": {
+            "name": "잉마르 베리만",
+            "birthday": "1918-07-14",
+            "profile": "/nkmOaXNRoioViN9OQf2n9Iu6akA.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 119293,
+        "fields": {
+            "name": "타릭 살레",
+            "birthday": "1972-01-28",
+            "profile": "/rHuCSEQAkMYmAw5xz58YFfomj8P.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1223175,
+        "fields": {
+            "name": "엘리자베스 앨런 로젠바움",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2984455,
+        "fields": {
+            "name": "Yin Ruoxin",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 525,
+        "fields": {
+            "name": "크리스토퍼 놀란",
+            "birthday": "1970-07-30",
+            "profile": "/xuAIuYSmsUzKlUMBFGVZaWsY3DZ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1145368,
+        "fields": {
+            "name": "Souichi Masui",
+            "birthday": "1966-03-29",
+            "profile": "/eRCRldZdRnflFnzRJbSs6QNEmwm.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 33308,
+        "fields": {
+            "name": "제임스 애쉬크로프트",
+            "birthday": "1978-06-12",
+            "profile": "/2M2ClZUPZjBJVm2CLgcMBrlfvTG.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1245726,
+        "fields": {
+            "name": "Rebecca Sugar",
+            "birthday": "1987-07-09",
+            "profile": "/n3EAsbD9AiQZAP2VVcGylzDat1L.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 96801,
+        "fields": {
+            "name": "Hiroshi Teshigahara",
+            "birthday": "1927-01-28",
+            "profile": "/yz6G5YUkbq4NKw7sAjmo74JzuEb.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2097707,
+        "fields": {
+            "name": "김충길",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1448492,
+        "fields": {
+            "name": "Castille Landon",
+            "birthday": "1991-10-02",
+            "profile": "/s1oXtmqyG9X0uDfiU5HidPB6BJx.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1638970,
+        "fields": {
+            "name": "Brett Bentman",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 578,
+        "fields": {
+            "name": "리들리 스콧",
+            "birthday": "1937-11-30",
+            "profile": "/zABJmN9opmqD4orWl3KSdCaSo7Q.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1223236,
+        "fields": {
+            "name": "Mathieu Turi",
+            "birthday": "1987-01-01",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 25161,
+        "fields": {
+            "name": "Marcel Carné",
+            "birthday": "1906-08-18",
+            "profile": "/6ZFHCA0MlQDLIMUzUykmA1Nx08G.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 66121,
+        "fields": {
+            "name": "George Tillman, Jr.",
+            "birthday": "1969-01-26",
+            "profile": "/l2O5FILKdFQoBW7uDzmm3wyr6cA.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1309258,
+        "fields": {
+            "name": "Takaharu Ozaki",
+            "birthday": null,
+            "profile": "/1SZhEOeg7oZ90HI1zYBTC99QWN.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2636,
+        "fields": {
+            "name": "알프레드 히치콕",
+            "birthday": "1899-08-13",
+            "profile": "/108fiNM6poRieMg7RIqLJRxdAwG.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 10828,
+        "fields": {
+            "name": "기예르모 델 토로",
+            "birthday": "1964-10-09",
+            "profile": "/gldeyCtKcaqnK1v4Vu9vqayhzUQ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 12890,
+        "fields": {
+            "name": "Pete Docter",
+            "birthday": "1968-10-09",
+            "profile": "/rrAW10FlcOjqMllSwNBrFjfUT4k.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 12891,
+        "fields": {
+            "name": "Joss Whedon",
+            "birthday": "1964-06-23",
+            "profile": "/mVvpZnKYKSCtkOQixQnOonV5kv3.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3076703,
+        "fields": {
+            "name": "판수 니에",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 608,
+        "fields": {
+            "name": "미야자키 하야오",
+            "birthday": "1941-01-05",
+            "profile": "/mG3cfxtA5jqDc7fpKgyzZMKoXDh.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1088096,
+        "fields": {
+            "name": "제임스 넌",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1579618,
+        "fields": {
+            "name": "Marc James Roels",
+            "birthday": null,
+            "profile": "/bmB0o5DM2NMWx9qWFxwTizDOWIi.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 88675,
+        "fields": {
+            "name": "Justin Baldoni",
+            "birthday": "1984-01-24",
+            "profile": "/2sc6iUWljADnqtjsaKU3s6f0DGW.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2112100,
+        "fields": {
+            "name": "Alice Blehart",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1454692,
+        "fields": {
+            "name": "Jean-Philippe Vine",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2662,
+        "fields": {
+            "name": "Frank Capra",
+            "birthday": "1897-05-18",
+            "profile": "/1OTZ7CEdEawDgA4qiBidpWTKE2x.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 628,
+        "fields": {
+            "name": "Isao Takahata",
+            "birthday": "1935-10-29",
+            "profile": "/qbvnGLByh0N9ni7gZSREIgvO1sM.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1565301,
+        "fields": {
+            "name": "Thomas Astruc",
+            "birthday": "1975-01-18",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1387126,
+        "fields": {
+            "name": "유태오",
+            "birthday": "1981-04-11",
+            "profile": "/yaYSLRP41hsb4bdyLlRZSOvBwKu.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2679,
+        "fields": {
+            "name": "David Hackl",
+            "birthday": "1973-02-07",
+            "profile": "/4aODtDgWnZ9Q59YdkXnJKcNOkbK.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 127611,
+        "fields": {
+            "name": "Jim Donovan",
+            "birthday": null,
+            "profile": "/cwL4t5RMxDiLkvaenmnT6Misc5M.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2690,
+        "fields": {
+            "name": "Peter Weir",
+            "birthday": "1944-08-21",
+            "profile": "/4GxIZX5gtbMpW4ZgHwvGmLSIHOE.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1487492,
+        "fields": {
+            "name": "하마구치 류스케",
+            "birthday": "1978-12-16",
+            "profile": "/k4SL9JyQySNEujllj16rRZm2qkY.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2009739,
+        "fields": {
+            "name": "도미 시",
+            "birthday": "1989-09-08",
+            "profile": "/qswD23e2Hx91SiaxyiLZHz8glNu.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2640534,
+        "fields": {
+            "name": "최진영",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2710,
+        "fields": {
+            "name": "제임스 캐머런",
+            "birthday": "1954-08-16",
+            "profile": "/9NAZnTjBQ9WcXAQEzZpKy4vdQto.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 221850,
+        "fields": {
+            "name": "그레이엄 무어",
+            "birthday": "1981-10-18",
+            "profile": "/7L7d6ImqoKaGaokO8xxN0ILnVfx.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2564771,
+        "fields": {
+            "name": "Hikaru Yamaguchi",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 10930,
+        "fields": {
+            "name": "Irvin Kershner",
+            "birthday": "1923-04-29",
+            "profile": "/imtFUtcASoh2e1Emtt62UuFkIWA.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1190581,
+        "fields": {
+            "name": "알레한드로 히달고",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 567996,
+        "fields": {
+            "name": "Régis Blondeau",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3197630,
+        "fields": {
+            "name": "Chen Yi-hua",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2259647,
+        "fields": {
+            "name": "만들라 두베",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 4818,
+        "fields": {
+            "name": "Roberto Benigni",
+            "birthday": "1952-10-27",
+            "profile": "/noelOhwX1oaNSvU9NLKhPrHTFI3.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 10965,
+        "fields": {
+            "name": "Chris Columbus",
+            "birthday": "1958-09-10",
+            "profile": "/p7VSWFQ6V99p3jLJOrNI1NlnTrg.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 936670,
+        "fields": {
+            "name": "Bob Persichetti",
+            "birthday": "1973-01-17",
+            "profile": "/kk1cN73iulyn3G4PvZ01TnsW4gN.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2689765,
+        "fields": {
+            "name": "강다연",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3457766,
+        "fields": {
+            "name": "이호성",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3070695,
+        "fields": {
+            "name": "Greig Cameron",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1807082,
+        "fields": {
+            "name": "Ryan Simons",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1098477,
+        "fields": {
+            "name": "Cal Brunker",
+            "birthday": null,
+            "profile": "/40FRTywgDa9KwFwHUxkVqeSrESl.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3074803,
+        "fields": {
+            "name": "샤이페이 웬",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1250035,
+        "fields": {
+            "name": "Takayuki Hamana",
+            "birthday": "1967-11-03",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3441395,
+        "fields": {
+            "name": "Kwon Yu-ju",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1661695,
+        "fields": {
+            "name": "Damien Power",
+            "birthday": null,
+            "profile": "/uwLQ6melUfwoWkjYh3h19MogC2M.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 930567,
+        "fields": {
+            "name": "Enrico Casarosa",
+            "birthday": "1971-11-20",
+            "profile": "/3UzBWIqYw0T0aLkdp6oEyLzWOE0.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1168139,
+        "fields": {
+            "name": "Ashley Avis",
+            "birthday": "1987-01-27",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1180430,
+        "fields": {
+            "name": "김은경",
+            "birthday": "1978-01-01",
+            "profile": "/uiYAMmV2lGLb5RCYAB2Os6E7erq.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2970382,
+        "fields": {
+            "name": "강민현",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2491154,
+        "fields": {
+            "name": "홍준표",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 64278,
+        "fields": {
+            "name": "마이클 페이퍼",
+            "birthday": "1968-09-11",
+            "profile": "/jpN5kuRan3QSlTYkKNn71HbKfdi.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 80675,
+        "fields": {
+            "name": "Evan Spiliotopoulos",
+            "birthday": "1973-01-01",
+            "profile": "/cznBeImhZFRIcRBKHo99nAdf1zJ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 125738,
+        "fields": {
+            "name": "Daniel Espinosa",
+            "birthday": "1977-03-23",
+            "profile": "/rq6TkUBkSXvOrmKEjG5lt8kuhF4.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 814,
+        "fields": {
+            "name": "Tony Kaye",
+            "birthday": "1946-01-11",
+            "profile": "/5FMrsJ6yDbA3JccaFAKpGk5s6MR.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 219961,
+        "fields": {
+            "name": "Kim Farrant",
+            "birthday": "1975-09-07",
+            "profile": "/vvvrNK0VhzsedMEgrzoDnnvdZW1.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1243962,
+        "fields": {
+            "name": "Tatsuyuki Nagai",
+            "birthday": "1976-01-24",
+            "profile": "/xbeq2qxwjjuJVs2FVvDoP91wjup.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 19272,
+        "fields": {
+            "name": "Joe Russo",
+            "birthday": "1971-07-18",
+            "profile": "/ph1GRCWVKk6Mz9lMBrxKvlb6Imo.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 9032,
+        "fields": {
+            "name": "브라이언 싱어",
+            "birthday": "1965-09-17",
+            "profile": "/ts06thbCv9Ug2mNpcbcrmLGRL4Q.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 58189,
+        "fields": {
+            "name": "Justin Lin",
+            "birthday": "1971-10-01",
+            "profile": "/w0ryazdt8iS3GBrjXfv0FIwvUGY.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1633104,
+        "fields": {
+            "name": "Eddie Trigueros",
+            "birthday": "1980-02-09",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 11092,
+        "fields": {
+            "name": "Simon Kinberg",
+            "birthday": "1973-08-02",
+            "profile": "/3xvTvkIaKfU276cpajiAoGjvaaO.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1227608,
+        "fields": {
+            "name": "Doug Murphy",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 865,
+        "fields": {
+            "name": "마이클 베이",
+            "birthday": "1965-02-17",
+            "profile": "/8I9H9IKROECFEn7usvyChbRMhbI.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 19311,
+        "fields": {
+            "name": "Stephen Chbosky",
+            "birthday": "1970-01-25",
+            "profile": "/9PdTBjn8dJqfn3ygKvsCdl9G06J.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 15217,
+        "fields": {
+            "name": "잭 스나이더",
+            "birthday": "1966-03-01",
+            "profile": "/iD0GDqkvJXDXiNEZej198hjt3Tt.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 15218,
+        "fields": {
+            "name": "James Gunn",
+            "birthday": "1966-08-05",
+            "profile": "/2kFzvqCGeYBrgbuuvvyGE75d9gM.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1782644,
+        "fields": {
+            "name": "Ross Stewart",
+            "birthday": null,
+            "profile": "/1O6yRqoPBqvZabLgzUK9LmzQEUN.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1057655,
+        "fields": {
+            "name": "Christopher Storer",
+            "birthday": null,
+            "profile": "/9p9tfRCwUeyUBeeKmyA2dc2v8XT.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 893,
+        "fields": {
+            "name": "토니 스콧",
+            "birthday": "1944-06-21",
+            "profile": "/5PYRgW97xk9iNVC8dS0seoIliRR.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2399103,
+        "fields": {
+            "name": "김경엽",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 207749,
+        "fields": {
+            "name": "Gail Harvey",
+            "birthday": null,
+            "profile": "/jr7cDCzi4iWkhBdKY1QVwDXTjVV.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3193734,
+        "fields": {
+            "name": "Sammi Cohen",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 930707,
+        "fields": {
+            "name": "Colin Trevorrow",
+            "birthday": "1976-09-13",
+            "profile": "/i0HBClPMPKn3aq8QeQqyThS67EK.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 5026,
+        "fields": {
+            "name": "구로사와 아키라",
+            "birthday": "1910-03-23",
+            "profile": "/uCFWmYXu0EqF5Bd6zWaOS4FxvEB.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2542498,
+        "fields": {
+            "name": "Aakash Bhatia",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1835944,
+        "fields": {
+            "name": "Eamonn Butler",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3396527,
+        "fields": {
+            "name": "Juan Carlos Vásquez",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 97202,
+        "fields": {
+            "name": "미조구치 켄지",
+            "birthday": "1898-05-16",
+            "profile": "/ngKRZZPKh8d7GaeMgcM0eXbzMte.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2114488,
+        "fields": {
+            "name": "Steven Lawson",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 35771,
+        "fields": {
+            "name": "Aditya Chopra",
+            "birthday": "1971-05-22",
+            "profile": "/eXYKfA6bg12pn9LPrWeRfxYQwcb.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 956,
+        "fields": {
+            "name": "가이 리치",
+            "birthday": "1968-09-10",
+            "profile": "/9pLUnjMgIEWXi0mlHYzie9cKUTD.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 957,
+        "fields": {
+            "name": "매튜 본",
+            "birthday": "1971-03-07",
+            "profile": "/Dnbz3B7yy4u0abixuD5LakZgsy.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1283010,
+        "fields": {
+            "name": "Haruo Sotozaki",
+            "birthday": null,
+            "profile": "/9SsLeBJkFluywq7YaEQiC9iIFBq.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3488716,
+        "fields": {
+            "name": "홍원기",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 230360,
+        "fields": {
+            "name": "권수경",
+            "birthday": "1968-07-05",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1698778,
+        "fields": {
+            "name": "Michael Pearce",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2919387,
+        "fields": {
+            "name": "Darragh Carey",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 7132,
+        "fields": {
+            "name": "빈센트 도노프리오",
+            "birthday": "1959-06-30",
+            "profile": "/qkyiLolEqYMGH25xD4sFIXAjZQB.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 68573,
+        "fields": {
+            "name": "Walt Becker",
+            "birthday": "1968-09-16",
+            "profile": "/mxhqwB0WjXjVH8EgjWDmACPKLxP.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 103393,
+        "fields": {
+            "name": "Jacques Becker",
+            "birthday": "1906-09-15",
+            "profile": "/bagZCqB9Ezg2QWEMQwhWbJd9fNi.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 84969,
+        "fields": {
+            "name": "김용화",
+            "birthday": "1971-09-25",
+            "profile": "/7Y7v7kInxRFLYYr6zNib8E3CcXR.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 123885,
+        "fields": {
+            "name": "Takehiko Shinjo",
+            "birthday": null,
+            "profile": "/nJNjCgDh71uwldqO77sg8o8aK0j.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 13294,
+        "fields": {
+            "name": "Gene Kelly",
+            "birthday": "1912-08-23",
+            "profile": "/g98yyY7oGrkocUxxJgOt82I7z6A.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1844207,
+        "fields": {
+            "name": "Kiko Mistrorigo",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1612783,
+        "fields": {
+            "name": "Sung Jin Ahn",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 140283,
+        "fields": {
+            "name": "아담 버그",
+            "birthday": "1972-12-06",
+            "profile": "/li76h6uRU63s9PBHSMekbUNxR0T.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1485823,
+        "fields": {
+            "name": "Thomas Kail",
+            "birthday": "1978-01-20",
+            "profile": "/fe568wCZjaM7ZmSMcraYe3XN3tt.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1692677,
+        "fields": {
+            "name": "Toni D'Angelo",
+            "birthday": "1979-12-06",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1205254,
+        "fields": {
+            "name": "Ernesto Contreras",
+            "birthday": "1969-10-17",
+            "profile": "/57RDgBYP5qkQ5LHUdFJdABpq5yw.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1032,
+        "fields": {
+            "name": "마틴 스코세이지 마틴 스콜세지",
+            "birthday": "1942-11-17",
+            "profile": "/9U9Y5GQuWX3EZy39B8nkk4NY01S.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1457161,
+        "fields": {
+            "name": "파코 카발레로",
+            "birthday": null,
+            "profile": "/z4rvKHnWHTBsZV7spengr3HYOU.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 60426,
+        "fields": {
+            "name": "Christopher Borrelli",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1582093,
+        "fields": {
+            "name": "Kotaro Tamura",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2579481,
+        "fields": {
+            "name": "Christina Sotta",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1965097,
+        "fields": {
+            "name": "Maritte Lee Go",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1373229,
+        "fields": {
+            "name": "Tomohisa Taguchi",
+            "birthday": null,
+            "profile": "/c2UHmjFjfQ9fxoFjz2990VdXWhF.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 39996,
+        "fields": {
+            "name": "Sidney Lumet",
+            "birthday": "1924-06-25",
+            "profile": "/zuYwoP6mTEAJu9pTZ7u3NKP67gu.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3007548,
+        "fields": {
+            "name": "서태수",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 64575,
+        "fields": {
+            "name": "Laurent Tirard",
+            "birthday": null,
+            "profile": "/y5rTm98EYEAFZQvCWVLbnCCHINt.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1549377,
+        "fields": {
+            "name": "Shouko Nakamura",
+            "birthday": null,
+            "profile": "/lIPoHRbL7JKBwwf9FeR36utOUfO.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3146,
+        "fields": {
+            "name": "Billy Wilder",
+            "birthday": "1906-06-22",
+            "profile": "/tfVte6h2dlLn59Q0Mi6AvWAyRLP.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3007563,
+        "fields": {
+            "name": "홍성은",
+            "birthday": null,
+            "profile": "/jdeV3yDtFHtnic3ZXkqwNIv4mUf.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 11343,
+        "fields": {
+            "name": "데이빗 예이츠",
+            "birthday": "1963-10-08",
+            "profile": "/hAHOxR0NK4cZDumqNIpDoEdGVAh.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 17496,
+        "fields": {
+            "name": "자크 오디아르",
+            "birthday": "1952-04-30",
+            "profile": "/dwNBJvUBIlIRCoR1AeGv72b1f4v.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 87130,
+        "fields": {
+            "name": "마크 디페",
+            "birthday": "1956-11-09",
+            "profile": "/AkBCnCgeOWlZM7Yg5qAyI4cQnwK.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2591834,
+        "fields": {
+            "name": "Tim Heitz",
+            "birthday": "1982-09-25",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 105565,
+        "fields": {
+            "name": "Silje Salomonsen",
+            "birthday": "1978-07-12",
+            "profile": "/tARPwWt3d2POtqsT4hPA4t8RpWt.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 185438,
+        "fields": {
+            "name": "Genndy Tartakovsky",
+            "birthday": "1970-01-17",
+            "profile": "/9zDGQgvPopxcPWCelOfXZfpffqi.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1111138,
+        "fields": {
+            "name": "Marçal Forés",
+            "birthday": "1981-05-01",
+            "profile": "/jyc4BWShhtfH9QvYnJt8VoEpOiy.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 93286,
+        "fields": {
+            "name": "Cate Shortland",
+            "birthday": "1968-08-10",
+            "profile": "/4XvyAyqYH8QDMbo0OwZtRHtbLti.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 7270,
+        "fields": {
+            "name": "Adrian Lyne",
+            "birthday": "1941-03-04",
+            "profile": "/fUOF9IbyOZgUJCNZdVamMfLGA2c.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2772086,
+        "fields": {
+            "name": "김종신",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1381495,
+        "fields": {
+            "name": "아이리스 심",
+            "birthday": null,
+            "profile": "/zsMBYb9ML1flNPHUe3Z5CudKk3s.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 9340,
+        "fields": {
+            "name": "Lana Wachowski",
+            "birthday": "1965-06-21",
+            "profile": "/5KNV7YBSPTBUAIXGfIcPmbhho9w.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1150,
+        "fields": {
+            "name": "브라이언 드 팔마",
+            "birthday": "1940-09-11",
+            "profile": "/rQNkUdKRKv1A4s7N4xcFnJior6n.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 91268,
+        "fields": {
+            "name": "Ruben Fleischer",
+            "birthday": "1974-10-31",
+            "profile": "/3JLxOPFTLigSy8FjFjDyMwD9GIp.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 31894,
+        "fields": {
+            "name": "Ettore Scola",
+            "birthday": "1931-05-10",
+            "profile": "/yk1wI0N3McnzJHzzPPyN5qLZPMb.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1039527,
+        "fields": {
+            "name": "Tyler Gillett",
+            "birthday": "1982-03-06",
+            "profile": "/puopb3xK23iJPQHmgJW0o2iggjh.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 21673,
+        "fields": {
+            "name": "Ericson Core",
+            "birthday": null,
+            "profile": "/rRsJ9WaiK9575k5DMaIFuyLUxIM.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 76978,
+        "fields": {
+            "name": "Masaki Kobayashi",
+            "birthday": "1916-02-14",
+            "profile": "/5epZ39mf1Ii7xOjqYx2YYq39y5X.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 21684,
+        "fields": {
+            "name": "봉준호",
+            "birthday": "1969-09-14",
+            "profile": "/tKLJBqbdH6HFj2QxLA5o8Zk7IVs.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 93364,
+        "fields": {
+            "name": "제프 파울러",
+            "birthday": "1978-07-27",
+            "profile": "/wExdubFgeBkEUP8MojKPKoOcgdZ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1209529,
+        "fields": {
+            "name": "Ian Nelms",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1383612,
+        "fields": {
+            "name": "다니엘 콴",
+            "birthday": null,
+            "profile": "/pwzfO4BUd49jLrcrrb9u0DOi30b.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1664196,
+        "fields": {
+            "name": "Chiaki Kon",
+            "birthday": null,
+            "profile": "/fkOcEMPrOMVhPx6YCsPC6hDCEEj.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 68813,
+        "fields": {
+            "name": "셀린 시아마",
+            "birthday": "1978-11-12",
+            "profile": "/j35wQETDUc6CdzIgbKWkeahlTlG.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 87257,
+        "fields": {
+            "name": "Cary Joji Fukunaga",
+            "birthday": "1977-07-10",
+            "profile": "/qhrtYCUM2NEaqVP3oB7vqkOTpx0.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 52443,
+        "fields": {
+            "name": "Jason Reitman",
+            "birthday": "1977-10-19",
+            "profile": "/eNNN1dwfB6b6p2hoEG1xyoa7H2p.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 93406,
+        "fields": {
+            "name": "Elem Klimov",
+            "birthday": "1933-07-09",
+            "profile": "/vzed7lMJ3ADWm2DnF9C0bSIbiaO.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 95456,
+        "fields": {
+            "name": "Elio Petri",
+            "birthday": "1929-01-29",
+            "profile": "/ugTMHGVTEYxcxPqhXOxIROydepZ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 17633,
+        "fields": {
+            "name": "롭 마샬",
+            "birthday": "1960-10-17",
+            "profile": "/4cTHkbMpsHHNI23HP3RHNLFoPRz.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 7396,
+        "fields": {
+            "name": "피터 패럴리",
+            "birthday": "1956-12-17",
+            "profile": "/8vLjukhhj4dKQSbtZ8qFr2Ybf5T.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1264876,
+        "fields": {
+            "name": "Lê Văn Kiệt",
+            "birthday": null,
+            "profile": "/i8sojickGYGbPnIYRj5KBjQmxjr.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1211636,
+        "fields": {
+            "name": "James Cullen Bressack",
+            "birthday": "1992-02-29",
+            "profile": "/8GHtek0a5EtCPpfiMZbUzAZPT2o.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 54526,
+        "fields": {
+            "name": "Paco Plaza",
+            "birthday": "1973-08-02",
+            "profile": "/7STjUYAbJyr3gMKm9Qvfy5ESpIt.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 56578,
+        "fields": {
+            "name": "Jeff Tremaine",
+            "birthday": "1966-09-04",
+            "profile": "/3R8FemTgvyY1vLn9r0lYlL45P3Q.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 95501,
+        "fields": {
+            "name": "오즈 야스지로",
+            "birthday": "1903-12-11",
+            "profile": "/s0KBnwAxr6Aujbi6cA3inDqH8Fe.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 97555,
+        "fields": {
+            "name": "Roel Reiné",
+            "birthday": "1969-06-19",
+            "profile": "/nOc53uSl8bBNfkuLGlXnOZwbYdu.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2628883,
+        "fields": {
+            "name": "Pedro Flores Maldonado",
+            "birthday": null,
+            "profile": "/9uGVBcwmBwRDxYrIMlUqZg49Pd7.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1459484,
+        "fields": {
+            "name": "Katharina Schöde",
+            "birthday": "1974-01-01",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 42274,
+        "fields": {
+            "name": "Nick Hurran",
+            "birthday": "1959-01-01",
+            "profile": "/eE7RYTPnICZlGLIX02GRj5CfMk6.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 7467,
+        "fields": {
+            "name": "데이비드 핀처",
+            "birthday": "1962-08-28",
+            "profile": "/tpEczFclQZeKAiCeKZZ0adRvtfz.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2264366,
+        "fields": {
+            "name": "박성후",
+            "birthday": null,
+            "profile": "/psIsL0Ht5RAiuGYRG2PYFnRz9fI.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 136495,
+        "fields": {
+            "name": "데미언 샤젤데이미언 셔젤",
+            "birthday": "1985-01-19",
+            "profile": "/14kRZ3XxNMyBv717YQSXr3wCucy.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1748273,
+        "fields": {
+            "name": "Max Pugh",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3276081,
+        "fields": {
+            "name": "Haizea Pastor",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1333,
+        "fields": {
+            "name": "앤디 서키스",
+            "birthday": "1964-04-20",
+            "profile": "/eNGqhebQ4cDssjVeNFrKtUvweV5.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1938744,
+        "fields": {
+            "name": "Shinichiro Ushijima",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1318201,
+        "fields": {
+            "name": "Jared Bush",
+            "birthday": "1974-06-12",
+            "profile": "/2gIwj1cnqZIKWaFg0ihmZnuZypR.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 40256,
+        "fields": {
+            "name": "카루소",
+            "birthday": "1965-01-17",
+            "profile": "/f1SZVhhjvzVot596JYVJdf60dWY.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 939337,
+        "fields": {
+            "name": "Will Sharpe",
+            "birthday": "1986-09-22",
+            "profile": "/u1r07jbgeObrIDixZljdS88llUG.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 95575,
+        "fields": {
+            "name": "Gita Pullapilly",
+            "birthday": "1977-10-01",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 230767,
+        "fields": {
+            "name": "메흐멧 아다 외즈테킨",
+            "birthday": "1976-01-01",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1281402,
+        "fields": {
+            "name": "Takaomi Kanasaki",
+            "birthday": "1977-04-24",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3048836,
+        "fields": {
+            "name": "권성모",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 40333,
+        "fields": {
+            "name": "Satoshi Kon",
+            "birthday": "1963-10-12",
+            "profile": "/b7Oqg1bjS0e2iEzEjYWnsyVVagt.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 566672,
+        "fields": {
+            "name": "Masahiro Takata",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2131347,
+        "fields": {
+            "name": "홍대영",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1527196,
+        "fields": {
+            "name": "Andrew Chien",
+            "birthday": null,
+            "profile": "/qaCvFiyTZWch4k3wvEgEEciVeMK.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 71068,
+        "fields": {
+            "name": "Phyllida Lloyd",
+            "birthday": "1957-06-17",
+            "profile": "/3tfWhs8gV16kLieo0QrFfLpZZ8c.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 17825,
+        "fields": {
+            "name": "숀 레비",
+            "birthday": "1968-07-23",
+            "profile": "/b1ulkCHz8biG87LjLQQiMCebEZo.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1017274,
+        "fields": {
+            "name": "Audrey Diwan",
+            "birthday": null,
+            "profile": "/pXKuORrbZFq9rFGW5DcAIlloYrF.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 150975,
+        "fields": {
+            "name": "홍상수",
+            "birthday": "1960-10-25",
+            "profile": "/cjZT9zhN5Yl65vTYAoyxCE02rm4.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1981891,
+        "fields": {
+            "name": "David Blue Garcia",
+            "birthday": null,
+            "profile": "/7hOkGPtXZQK9siUvrmLnlLwPEf3.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 7623,
+        "fields": {
+            "name": "샘 레이미",
+            "birthday": "1959-10-23",
+            "profile": "/zQoLMlrwuVYE9KqhVVgo7t5osXl.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1097187,
+        "fields": {
+            "name": "Maximilian Elfeldt",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3556,
+        "fields": {
+            "name": "로만 폴란스키",
+            "birthday": "1933-08-18",
+            "profile": "/yHwHSXdZatkoLgIjPeW14GKlrZs.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1043941,
+        "fields": {
+            "name": "전규환",
+            "birthday": "1965-01-15",
+            "profile": "/azzSIE8VyIGSKm1d31mjrhse6Sm.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 89575,
+        "fields": {
+            "name": "마르코스 카르네발레",
+            "birthday": "1963-09-04",
+            "profile": "/2eqOn5QXWwPigQ2IqzX50azerh6.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 583166,
+        "fields": {
+            "name": "김지훈",
+            "birthday": "1971-07-03",
+            "profile": "/eJr6Bzo45mR8CDCrecjYpJIZObz.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3503626,
+        "fields": {
+            "name": "이주이",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1222157,
+        "fields": {
+            "name": "Shuko Murase",
+            "birthday": "1964-05-31",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 32278,
+        "fields": {
+            "name": "맷 리브스",
+            "birthday": "1966-04-27",
+            "profile": "/5rA459xpMt6IeJG7ZqvhLbSozEH.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 13848,
+        "fields": {
+            "name": "찰리 채플린 찰스 스펜서 채플린",
+            "birthday": "1889-04-16",
+            "profile": "/lRI9Ky1SMOehn04OqhYJ5hQfgIK.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1125916,
+        "fields": {
+            "name": "이돈구",
+            "birthday": "1984-02-10",
+            "profile": "/lMkXIT4bwdowInvhvAJQxODQT1r.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 138781,
+        "fields": {
+            "name": "로버트 에거스",
+            "birthday": "1983-07-07",
+            "profile": "/v9ukVIUGT1vQ3KuPVLSua7FfS9s.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2190883,
+        "fields": {
+            "name": "고영재",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 542246,
+        "fields": {
+            "name": "Gustavo Hernández",
+            "birthday": null,
+            "profile": "/y6kM7EIY0YCde0yV6VCtDpyTMUo.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 562730,
+        "fields": {
+            "name": "Danila Kozlovsky",
+            "birthday": "1985-05-03",
+            "profile": "/tCyw5GzBFUwEgB8Qg2JSR3ZWd0y.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1934900,
+        "fields": {
+            "name": "Heather Lenz",
+            "birthday": null,
+            "profile": "/wmimjuc9tX5HIHt7tCzkmrVgOlq.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 28233,
+        "fields": {
+            "name": "Wisit Sasanatieng",
+            "birthday": "1963-06-28",
+            "profile": "/aDtopkWY2cH1cKQxRCjJa1RoIqH.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 50767,
+        "fields": {
+            "name": "Craig Gillespie",
+            "birthday": "1967-09-01",
+            "profile": "/pVHspL9QWsXCm3t3VXEaCJ9y8Zz.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1150548,
+        "fields": {
+            "name": "Florian Zeller",
+            "birthday": "1979-06-28",
+            "profile": "/e2koSVDhNPlENZ7zRZq2eyC3A7y.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1668693,
+        "fields": {
+            "name": "Izu Ojukwu",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 5718,
+        "fields": {
+            "name": "존 돈킨",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2448983,
+        "fields": {
+            "name": "정지연",
+            "birthday": "1984-06-20",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1422940,
+        "fields": {
+            "name": "Martin Bourboulon",
+            "birthday": "1979-06-27",
+            "profile": "/2AXctVOQp9T12r1L4iB0UptLNsj.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 992866,
+        "fields": {
+            "name": "Takahiro Omori",
+            "birthday": "1965-06-25",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 52842,
+        "fields": {
+            "name": "Garth Jennings",
+            "birthday": "1972-03-04",
+            "profile": "/zl6ZWijGySSIYJRFalleAiGkxyQ.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2633322,
+        "fields": {
+            "name": "Kim Min kyu",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 32375,
+        "fields": {
+            "name": "Mario Monicelli",
+            "birthday": "1915-05-16",
+            "profile": "/rNa6Y3aCqQ0rVnQpr1JUfyPNPUV.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1169024,
+        "fields": {
+            "name": "Ilya Naishuller",
+            "birthday": "1983-11-19",
+            "profile": "/gvBwViahAMgKrrXi5RX69JZ60dY.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1109635,
+        "fields": {
+            "name": "나현",
+            "birthday": "1970-11-04",
+            "profile": "/HH71eDEHuCnEQyBKpoN5qA7MW0.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3235460,
+        "fields": {
+            "name": "박이웅",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 52870,
+        "fields": {
+            "name": "Tim Johnson",
+            "birthday": null,
+            "profile": "/yQkP9wuYcIceIzH9QnECNqVwkAr.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1072778,
+        "fields": {
+            "name": "Naoko Yamada",
+            "birthday": "1984-11-28",
+            "profile": "/17vSds67jLQu0pfW6LP5R8LJSul.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 935563,
+        "fields": {
+            "name": "Tosca Musk",
+            "birthday": null,
+            "profile": "/usR5NspRlWgXKUe9qVsCtTCpe4l.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 65167,
+        "fields": {
+            "name": "Scott Cooper",
+            "birthday": "1970-04-20",
+            "profile": "/zuT4LxFrGq2fCHYD8R6441OmRym.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1336980,
+        "fields": {
+            "name": "Mike Hostench",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1257117,
+        "fields": {
+            "name": "오카다 마리",
+            "birthday": "1976-01-01",
+            "profile": "/mfq0VCH3tWJGOUGk1ivtyBH1wz3.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1704,
+        "fields": {
+            "name": "Gore Verbinski",
+            "birthday": "1964-03-16",
+            "profile": "/vu50X3GaGz1q1xoVfoKHS7hFkiG.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1293994,
+        "fields": {
+            "name": "Jon Watts",
+            "birthday": "1981-06-28",
+            "profile": "/fkXChMX6CUXY1yOxBehAzvaTCl7.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2549422,
+        "fields": {
+            "name": "Julien Fournet",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2850492,
+        "fields": {
+            "name": "김기성",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 931525,
+        "fields": {
+            "name": "Aaron Nee",
+            "birthday": null,
+            "profile": "/q4ru70Opo26mvv9pkbyqtXE5rxL.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3458769,
+        "fields": {
+            "name": "박경목",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 114404,
+        "fields": {
+            "name": "Miguel Sapochnik",
+            "birthday": "1974-01-07",
+            "profile": "/jlZGTjiifvvFDoEtlwrKz7QxuJS.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 206574,
+        "fields": {
+            "name": "마크 윌리엄스",
+            "birthday": "1959-08-22",
+            "profile": "/dmOeFb4qxG5TmDy1RW8CBzCCEOT.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1828590,
+        "fields": {
+            "name": "Simon McQuoid",
+            "birthday": null,
+            "profile": "/pFKRKvSb6N3CMNZYLpGmdSPIjch.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1776,
+        "fields": {
+            "name": "프랜시스 포드 코폴라",
+            "birthday": "1939-04-07",
+            "profile": "/mGKkVp3l9cipPt10AqoQnwaPrfI.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1851128,
+        "fields": {
+            "name": "강호준",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3329789,
+        "fields": {
+            "name": "권순중",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 204553,
+        "fields": {
+            "name": "Ethan Spaulding",
+            "birthday": null,
+            "profile": "/pUIaHF2enwtacdArUOysvYjmqaW.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1697551,
+        "fields": {
+            "name": "김수정",
+            "birthday": null,
+            "profile": "/9Wq1BNbZJPl4rcB0mln5pjJO4qW.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 220956,
+        "fields": {
+            "name": "Pedro Pablo Ibarra",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1144604,
+        "fields": {
+            "name": "데스틴 크리튼",
+            "birthday": "1978-11-23",
+            "profile": "/s8uAUG9egZlRIU0PKNkTkIz9E6g.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 65314,
+        "fields": {
+            "name": "Giuseppe Tornatore",
+            "birthday": "1956-05-27",
+            "profile": "/hZQvyGpHiw5dBsifSNDiBsiQLgl.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1310498,
+        "fields": {
+            "name": "Ivan Kavanagh",
+            "birthday": null,
+            "profile": "/ApKiOpvGnRzlK3QCtbxk1K5haud.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2008866,
+        "fields": {
+            "name": "Robert Savo",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3493671,
+        "fields": {
+            "name": "김현우",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 57130,
+        "fields": {
+            "name": "Todd Phillips",
+            "birthday": "1970-12-20",
+            "profile": "/A6FPht87DiqXzp456WjakLi2AtP.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1236788,
+        "fields": {
+            "name": "Gail Lerner",
+            "birthday": null,
+            "profile": "/9GitqTfJFW3TPaV0aO0W7Vgis53.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 81718,
+        "fields": {
+            "name": "호소다 마모루",
+            "birthday": "1967-09-19",
+            "profile": "/MBrgo5yaOdV454lUgDJsqvbdxP.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2436936,
+        "fields": {
+            "name": "Gianluca Leuzzi",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 8012,
+        "fields": {
+            "name": "Alan Barillaro",
+            "birthday": null,
+            "profile": "/7GXd8zQUoEWpcD01EaG29oHSwQE.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 124749,
+        "fields": {
+            "name": "Sergio Pablos",
+            "birthday": null,
+            "profile": "/gef101kaaTev5OxLSYnrC3ev9F1.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 118606,
+        "fields": {
+            "name": "야누스 메츠",
+            "birthday": "1974-09-27",
+            "profile": "/nF7PSaUIufGNNYUpgo2arPxMp0D.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 20308,
+        "fields": {
+            "name": "Espen Sandberg",
+            "birthday": "1971-06-17",
+            "profile": "/meoiaU4mxGVHFHLIedATpqROEnz.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2183000,
+        "fields": {
+            "name": "Alex Noyer",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 126809,
+        "fields": {
+            "name": "이준익",
+            "birthday": "1959-09-21",
+            "profile": "/smZU1xzsTBThtM7Rp6vjaJUpchm.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1884,
+        "fields": {
+            "name": "스티븐 소더버그",
+            "birthday": "1963-01-14",
+            "profile": "/y8JlSDcQzd7gAaKyxFpExupMwDz.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2381662,
+        "fields": {
+            "name": "Keith Thomas",
+            "birthday": null,
+            "profile": "/j9M9M6U6wcm4TrWgSBd1l5h2hsj.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 10099,
+        "fields": {
+            "name": "박찬욱",
+            "birthday": "1963-08-23",
+            "profile": "/jsSFCVB7MhuVbSLwTgESiXEiNjt.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 71548,
+        "fields": {
+            "name": "피터 솔렛",
+            "birthday": "1976-02-09",
+            "profile": "/4D3XmnBMdaCZqv48h79I0q8vBru.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 3974,
+        "fields": {
+            "name": "Miloš Forman",
+            "birthday": "1932-02-18",
+            "profile": "/pTGGJjutITJzgV0ctgHUF9pcbiM.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1400718,
+        "fields": {
+            "name": "박홍민",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1261455,
+        "fields": {
+            "name": "피에르 페리펠",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 6046,
+        "fields": {
+            "name": "롤랜드 에머리히",
+            "birthday": "1955-11-10",
+            "profile": "/mN8x74uv9yQ7dJl8nh2q26mkY8v.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 24485,
+        "fields": {
+            "name": "Nicole Garcia",
+            "birthday": "1946-04-22",
+            "profile": "/xkC5td6pVMQPxH7OqBXJvh8wmJL.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 16294,
+        "fields": {
+            "name": "Jonathan Demme",
+            "birthday": "1944-02-22",
+            "profile": "/hm4wkbBOKaeLwMIk51hZ06OUkW3.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1458106,
+        "fields": {
+            "name": "피에트로 로프리에노",
+            "birthday": null,
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 4027,
+        "fields": {
+            "name": "프랭크 다라본트",
+            "birthday": "1959-01-28",
+            "profile": "/6U1eHg30snkOhSM9WJT2asAesR9.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 75711,
+        "fields": {
+            "name": "앤소니 헤이스",
+            "birthday": "1977-09-21",
+            "profile": "/fh4fTkRr6aNHeZpyjyXglNb3UVw.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 2093022,
+        "fields": {
+            "name": "Jennifer Kluska",
+            "birthday": null,
+            "profile": "/wpYWJ7Kw5qcXEOZyTuIEsfqMqXq.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 94177,
+        "fields": {
+            "name": "Darrell Van Citters",
+            "birthday": "1956-10-29",
+            "profile": null
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1484773,
+        "fields": {
+            "name": "이시다테 타이치",
+            "birthday": "1979-12-20",
+            "profile": "/nBPuRvo9oWFWqzZiS8U4P9j0qtg.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1607672,
+        "fields": {
+            "name": "Michael Chaves",
+            "birthday": null,
+            "profile": "/uS8waIEPA4N2llVZO1su1cIo0sW.jpg"
+        }
+    },
+    {
+        "model": "movies.director",
+        "pk": 1148927,
+        "fields": {
+            "name": "Jonas Poher Rasmussen",
+            "birthday": "1981-05-19",
+            "profile": "/57Fzt4l06hCgALxAiEsJvtJ3yhF.jpg"
+        }
+    }
+]

@@ -1,0 +1,156 @@
+[
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "어부바",
+            "overview": "부산 해안가 포구의 멋쟁이 ‘어부바호’ 선장 종범은 철없는 동생의 느닷없는 결혼 선언과 늦둥이 아들의 첫사랑, 친구들과의 우정까지 사랑하는 가족을 지키기 위해 하루하루 고군분투한다. 그러던 어느 날 자신의 분신이자 아들 노마에게 엄마같은 존재인 ‘어부바호’가 빼앗길 위기에 처하게 되는데…",
+            "poster_path": "/fzRBD0LFXxMFnCH9xiSecp8QbOK.jpg",
+            "vote_average": 5.0,
+            "release_date": "2022-05-11",
+            "independent": true,
+            "rank": 1,
+            "audiAcc": 20795
+        },
+        "pk": 959249
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "나를 만나는 길",
+            "overview": "전 세계인에게 평화와 행복의 가르침을 남긴 이 시대의 스승 ‘틱낫한’ 스님\r 그가 프랑스 보르도 근교에 설립한 명상 공동체 ‘플럼 빌리지’\r 아름다운 자연 속에서 함께 걷고, 먹고, 일하고, 차를 마시는 그곳에서\r 3년에 걸쳐 최초로 기록한 마음챙김의 일상",
+            "poster_path": "/fgZ68O1iHrVEQ6g6EVf5UEyV6La.jpg",
+            "vote_average": 5.7,
+            "release_date": "2017-05-11",
+            "independent": true,
+            "rank": 2,
+            "audiAcc": 6310
+        },
+        "pk": 438488
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "시네마 천국",
+            "overview": "어린 시절 영화가 세상의 전부였던 소년 토토는 학교 수업을 마치면 마을 광장에 있는 낡은 시네마 천국이라는 극장으로 달려가 영사 기사 알프레도와 친구로 지내며 어깨너머로 영사기술을 배운다. 어느 날 관객들을 위해 광장에서 야외 상영을 해주던 알프레도가 그만 화재 사고로 실명하게 되고, 토토가 그의 뒤를 이어 시네마 천국의 영상기사로 일하게 된다. 실명한 후에도 토토의 친구이자 아버지로 든든한 정신적 지주가 되어준 알프레도는 청년이 된 토토가 사랑하는 여자 엘레나의 부모님의 반대로 좌절하자 넓은 세상으로 나가서 더 많은 것을 배우라며 권유하는데...",
+            "poster_path": "/r782z4H7GzkyNaf3hAtBB4pVkOj.jpg",
+            "vote_average": 8.5,
+            "release_date": "1988-11-17",
+            "independent": true,
+            "rank": 4,
+            "audiAcc": 61318
+        },
+        "pk": 11216
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "매스",
+            "overview": "돌이킬 수 없는 사건으로 아이를 잃은 두 부부의 슬픔, 분노, 절망, 후회가 폭발하는 111분의 마스터피스",
+            "poster_path": "/25hs4cufSf4bAfwjJbTZbEKWyZg.jpg",
+            "vote_average": 7.9,
+            "release_date": "2021-10-08",
+            "independent": true,
+            "rank": 5,
+            "audiAcc": 6943
+        },
+        "pk": 423333
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "완벽한 축사를 준비하는 방법",
+            "overview": "헤어지고 38일째, 소니아에게 문자를 보냈다.  소니아의 답장은 여전히 오지 않고 눈치 없는 누나와 예비 매형이 나에게 결혼식 축사를 부탁한다. 다양한 방법으로 축사를 망치고 모두의 원망을 듣는 나의 미래가 눈앞에 보이는 것만 같아 두렵다. 그나저나 소니아는 왜 문자 답장이 없을까?",
+            "poster_path": "/eLY5SSlDMmmaAebOXoSauasHvpU.jpg",
+            "vote_average": 6.5,
+            "release_date": "2020-09-01",
+            "independent": true,
+            "rank": 8,
+            "audiAcc": 2707
+        },
+        "pk": 712150
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "바닷마을 다이어리",
+            "overview": "조그마한 바닷가 마을 카마쿠라에 살고 있는 사치, 요시노, 치카는 15년 전 집을 떠난 아버지의 부고를 듣고 장례식장으로 향한다. 아버지에 대한 미움도, 추억도 어느덧 희미해졌지만 홀로 남겨진 이복 여동생 스즈에게만은 왠지 마음이 쓰이는데...",
+            "poster_path": "/1IJp7lM88gA319mjudUSNlPUmL8.jpg",
+            "vote_average": 7.5,
+            "release_date": "2015-06-13",
+            "independent": true,
+            "rank": 9,
+            "audiAcc": 103725
+        },
+        "pk": 315846
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "중경삼림",
+            "overview": "경찰 223은 헤어진 옛 애인을 기다리며, 1달 동안 그녀에게서 연락이 오지 않으면 그녀를 잊기로 마음먹는다. 같은 시간, 마약 딜러는 자신을 배신한 마약 중개인을 제거한 뒤 술집을 찾고 그곳에서 경찰 223은 술집으로 처음 들어오는 여자를 사랑하겠노라 마음먹는다. 한편 패스트푸드점에서 일하는 점원 페이는 언제나처럼 똑같은 샐러드를 고른 경찰 663을 남몰래 좋아하고 있다. 어느 날, 경찰 663의 애인이 이별의 편지와 함께 경찰 663의 아파트 열쇠를 페이의 가게에게 맡긴다. 페이는 경찰 663이 집을 비운 사이 남아있는 그녀의 흔적을 하나 둘 지워나가는데...",
+            "poster_path": "/mOP0XWkChKhxuCmjD7CNXpa8M1p.jpg",
+            "vote_average": 8.0,
+            "release_date": "1994-07-14",
+            "independent": true,
+            "rank": 10,
+            "audiAcc": 96915
+        },
+        "pk": 11104
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "범죄도시 2",
+            "overview": "가리봉동 소탕작전 후 4년 뒤,\r 금천서 강력반은 베트남으로 도주한 용의자를 인도받아 오라는 미션을 받는다.  괴물형사 ‘마석도’(마동석)와 ‘전일만’(최귀화) 반장은 현지 용의자에게서 수상함을 느끼고,\r 그의 뒤에 무자비한 악행을 벌이는 ‘강해상’(손석구)이 있음을 알게 된다.  ‘마석도’와 금천서 강력반은 한국과 베트남을 오가며\r 역대급 범죄를 저지르는 ‘강해상’을 본격적으로 쫓기 시작하는데...  나쁜 놈들 잡는 데 국경 없다!\r 통쾌하고 화끈한 범죄 소탕 작전이 다시 펼쳐진다!",
+            "poster_path": "/9oonDgLkh42GsLkbVmW7nU1ib6u.jpg",
+            "vote_average": 2.0,
+            "release_date": "2022-05-18",
+            "independent": false,
+            "rank": 1,
+            "audiAcc": 4513270
+        },
+        "pk": 619803
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "닥터 스트레인지: 대혼돈의 멀티버스",
+            "overview": "끝없이 균열되는 차원과 뒤엉킨 시공간의 멀티버스가 열리며 오랜 동료들, 그리고 차원을 넘어 들어온 새로운 존재들을 맞닥뜨리게 된 닥터 스트레인지. 대혼돈 속, 그는 예상치 못한 극한의 적과 맞서 싸워야만 하는데….",
+            "poster_path": "/vL5ktZauR0fZMDOHKjakb1idhuU.jpg",
+            "vote_average": 7.4,
+            "release_date": "2022-05-04",
+            "independent": false,
+            "rank": 2,
+            "audiAcc": 5560598
+        },
+        "pk": 453395
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "배드 가이즈",
+            "overview": "작전 설계부터 금고 해제, 해킹, 액션, 위장까지 완벽한 팀플레이를 펼치는 자타공인 최고의 나쁜 녀석들이 한순간의 실수로 체포된다.  하지만 그들도 착해질 수 있다는 ‘마멀레이드 박사’의 주장으로 나쁜 녀석들은 바른 생활 갓생 프로젝트에 투입되고, 이들은 다시 한번 자유의 몸을 위해 태어나 처음으로 바른 생활에 도전하게 되는데…  나쁜 녀석들의 사상 초유 바른 생활 갓생 프로젝트가 시작된다!",
+            "poster_path": "/k5TL1oBUqSr6dL9NlHGRr3vJcXd.jpg",
+            "vote_average": 7.8,
+            "release_date": "2022-03-17",
+            "independent": false,
+            "rank": 6,
+            "audiAcc": 378569
+        },
+        "pk": 629542
+    },
+    {
+        "model": "movies.boxoffice",
+        "fields": {
+            "title": "아치의 노래, 정태춘",
+            "overview": "싱어송라이터이자 시인, 그리고 사회운동가였던 정태춘. 그는 오래 전, 노래를 멈추었다. ‘아치의 노래’는 그의 절망의 끝에 나온 독백과도 같은 곡이다. 그런 그가 데뷔 40주년을 맞아 다시 대중 앞에 섰다. 노래는 무엇을 할 수 있는가? 세상과 타협하지 않고 자신의 길을 40년간 걸어온 노장 예술가의 사상과 음악, 우리 시대의 연대기가 음악 다큐멘터리로 펼쳐진다. 세대를 넘어서 정태춘의 노래가 주는 영감과 희망을 이야기한다.",
+            "poster_path": "/cegp7UNjyk6gxNPY6e0Ua1PPfI7.jpg",
+            "vote_average": 0.0,
+            "release_date": "2022-05-18",
+            "independent": false,
+            "rank": 7,
+            "audiAcc": 18083
+        },
+        "pk": 863267
+    }
+]
