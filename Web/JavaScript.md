@@ -2,7 +2,10 @@
 
 [toc]
 
-## JS
+## JavaScript
+
+- 이전까지의 영역이 server side  였다면 지금부터는 client side
+- front-end의 대부분이라고 볼 수 있음
 
 ------
 
@@ -10,6 +13,9 @@
 
 - 브라우저 화면을 '동적'으로 만들기 위함
 - 브라우저를 조작할 수 있는 유일한 언어
+  - RDBMS가 이해할 수 있고 RDBMS를 조작할 수 있는 언어는 SQL이 유일
+  - but, 브라우저의 경우에는 JavaScript가 유일
+
 - **웹사이트가 로딩된 이후에 CSS와 HTML 구성요소들을 변경할 수 있게 해주며, 이를 통해서 웹사이트를 보다 interactive하게 만들고 사용자의 참여율도 높일 수 있음** (from. wishket)
 - HTML로 웹페이지의 뼈대를 만들고 CSS로 웹 페이지의 옷을 입히고, Javascript로 기능을 추가한다고 할 수 있음
   - HTML-CSS-JS 의 기능 [비교 사이트](https://html-css-js.com/)
@@ -35,7 +41,9 @@
   - navigator, screen, location, frames, history, XHR
 - JavaScript Core (ECMAScript)
   - Data Structure(Object, Array), Conditional Expression, Iteration
-- 즉, 브라우저(BOM)과 그 내부의 문서(DOM)를 조작하기 위해 ECMAScript(JS)를 학습하는 것
+- 브라우저(BOM)과 그 내부의 문서(DOM)를 조작하기 위해 ECMAScript(JS)를 학습하는 것
+  - 즉, ECMAScript를 활용하여 BOM과 DOM을 조작할 수 있음
+
 
 ![browser](../assets/web/browser.png)
 
@@ -58,7 +66,7 @@
 - 파싱(Parsing)
   - 구문 분석, 해석
   - 브라우저가 문자열을 해석하여 DOM Tree로 만드는 과정
-- HTML 역시도 결국은 string 덩어리일 뿐, 이러한 string 덩어리를 구조화시키는 과정이 필요하고 그 **구조화된 트리 모습의 자료구조를 DOM**이라고 부른다
+- HTML 역시도 결국은 string 덩어리일 뿐, 이러한 string 덩어리를 구조화시키는 과정 즉, 파싱이 필요하고 그 **구조화된 트리 모습의 자료구조를 DOM**이라고 부른다
 - console 에서 document 입력 후 범위 확인해볼 것
 
 
@@ -69,10 +77,21 @@
 - 자바스크립트가 브라우저와 소통하기 위한 모델
 - 브라우저의 창이나 프레임을 추상화해서 프로그래밍적으로 제어할 수 있도록 제공하는 수단
   - 버튼, url 입력창, 타이틀 바 등 브라우저 윈도우 및 웹 페이지 일부분을 제어 가능
-- window 객체는 모든 브라우저로부터 지원받으며 브라우저의 창(window)을 지칭하고 브라우저를 상징
-- JavaScript Core : 브라우저을 조작하기 위한 명령어 약속
+  - 예시
+    - widow.cofirm, window.print() 등등
+- window 객체는 모든 브라우저로부터 지원받으며 브라우저의 창(window)을 지칭하고 브라우저의 탭을 상징
 
 
+
+#### JavaScript Core
+
+- 브라우저을 조작하기 위한 명령어 약속
+
+- 기본적인 언어적 문법
+
+- 즉, 위 두가지 DOM과 BOM을 조작하기 위한 문법
+
+  
 
 #### ECMAScript
 
@@ -173,6 +192,8 @@ console.log(greeting)
     ```
 
     ※ console.log 는 파이썬의 print와 같은 역할
+
+    - Js는 python과 달리 할당 없이 선언만 할 수도 있음. 단, 해당 변수는 undefined
 
   - 재선언 let vs const
 
@@ -281,8 +302,11 @@ console.log(greeting)
 
 - 함수 스코프
 
+  - 파이썬과 같은 함수 스코프
   - 함수의 중괄호 내부를 가리킴
   - 함수 스코프를 가지는 변수는 함수 바깥에서 접근 불가능
+  - let 이나 const의 경우 블록 스코프 이기 때문에 if,for 문 등에서도 중괄호 외부에서 접근이 불가했음. but, var는 함수에 한해서만 접근이 불가하고, if,for문 등에서는 접근이 가능해져버림
+  
 
 
 
@@ -295,6 +319,8 @@ console.log(greeting)
 > 자바스크립트의 모든 값은 특정한 데이터 타입을 가짐
 >
 > 크게 원시타입(Primitive type)과 참조타입(Reference type)으로 분류됨
+>
+> 즉, 직접 값을 갖고 있는지 아니면 참조하는지의 차이
 
 
 
@@ -321,8 +347,9 @@ console.log(greeting) //그대로 '안녕하세요!' 출력
 - 정수, 실수 구분 없는 하나의 숫자 타입
 - 부동소수점 형식을 따름
 - NaN(Not A Number)
-  - 계산 불가능한 경우 오류가 아닌 해당 NaN이 반환되는 값
+  - 계산 불가능한 경우 오류가 아닌 해당 NaN이 반환
   - NaN은 문자열이 아니고 숫자 타입
+  - 즉, '숫자가 아니야!' 라고 알려주는 역할. but, type은 숫자임
 
 
 
@@ -338,7 +365,7 @@ console.log(greeting) //그대로 '안녕하세요!' 출력
 
   - 파이썬의 f-string과 같은 기능
   - ES6부터 지원
-  - 따옴표 대신 backtick(`)으로 표현하며 `${exression}`형태로 표현식 삽입
+  - 따옴표 대신 backtick(\`)으로 표현하며 \`${exression}`형태로 표현식 삽입
 
   ```javascript
   const firstName = 'Brandan'
@@ -354,6 +381,8 @@ console.log(greeting) //그대로 '안녕하세요!' 출력
 
 - 변수의 값이 없음을 나타내는 데이터 타입
 
+- 개발자의 의도한게 아님
+
 - 변수 선언 이후 직접 값을 할당하지 않으면, **자동**으로 undefined가 할당됨
 
   ```javascript
@@ -366,13 +395,17 @@ console.log(greeting) //그대로 '안녕하세요!' 출력
 ##### null
 
 - 변수의 값이 없음을 **의도적으로** 표현할 때 사용하는 데이터 타입
-  - 따라서, 자동으로 할당되지 않으며 직접 할당해야함
+  - 따라서, **자동으로 할당되지 않으며 직접 할당해야함**
+  
+    ```javascript
+    let firstName = null
+    ```
+  
 - '없다' 라고 표현하고 싶을 때 사용
+
 - null의 typeof 결과
   - typeof : 자료형 평가를 위한 연산자
   - null 타입은 ECMA에 따라 원시타입에 속하지만, typeof 연산자의 결과는 객체(object)로 표현
-
-
 
 | undefined                                                  | null                                   |
 | ---------------------------------------------------------- | -------------------------------------- |
@@ -401,8 +434,10 @@ console.log(greeting) //그대로 '안녕하세요!' 출력
   | Number      | 0,-0,NaN  | 나머지 모든 경우                   |
   | String      | 빈 문자열 | 나머지 모든 경우                   |
   | Object      | X         | 항상 참 <br />(비어있는 배열도 참) |
-
-
+  
+  - 파이썬에서는 비어있는 배열이 False지만 Js에서는 true
+  
+  
 
 #### 참조 타입(Reference type)
 
@@ -446,7 +481,7 @@ console.log(greeting) //['Hello, world!'] 출력
 
 - 문자열은 유니코드 값을 사용하며 표준 사전 순서를 기반으로 비교
   - 알파벳끼리의 비교
-    - 알파벳 순서상 후순위가 더 크다
+    - 알파벳 순서상 후순위가 더 크다 ex) 가>나 = false
     - 소문자가 대문자보다 더 크다
   - 즉, 글자마다 고유한 숫자가 부여되어있고 해당 숫자의 크기를 비교한다
 - `<`, `>`, `<=`, `>=` 등의 연산자 사용 가능
@@ -459,7 +494,7 @@ console.log(greeting) //['Hello, world!'] 출력
 
 - **비교할 때 암묵적 타입 변환을 통해 타입을 일치시킨 후에 같은 값인지 비교**
 - 두 피연산자가 모두 객체일 경우에는 같은 객체를 참조하고 있는지 판별
-- 예상치 못한 결과가 발생할 가능성이 매우 크므로 특별한 경우를 제외하고는 사용하지 않음
+- 예상치 못한 결과가 발생할 가능성이 매우 크므로 **특별한 경우를 제외하고는 사용하지 않음**
 
 ```javascript
 const a = 1004
@@ -483,7 +518,7 @@ console.log(c+d) // 결과: 2
 
 - 엄격한 비교가 이뤄지며 암묵적 타입변환이 발생하지 않음
   - 엄격한 비교 : 두 비교 대상의 타입과 값 모두 일치하는지 비교하는 방식
-- 두 피연산자가 모두 객체일 경우 메모리의 같은 객체를 바라보는지 판별
+- 두 피연산자가 모두 객체일 경우 **메모리의 같은 객체를 바라보는지 판별**
 
 ```javascript
 const a = 1004
@@ -572,9 +607,14 @@ conslole.log(result) // 결과 : No
 
 - if, else if, else 사용
   - 파이썬과는 다르게 elif가 아닌 else if 사용
+  
 - 조건은 소괄호 안에 작성
+
 - 실행할 코드는 중괄호 안에 작성
-- **블록 스코프** 생성
+
+- **블록 스코프** 생성 
+
+  ※ let과 const는 블록스코프, var는 함수스코프
 
 ```javascript
 if (조건) {
@@ -641,7 +681,7 @@ switch(nation) {
 }
 ```
 
-- **break가 없으면 해당하는 case 이후부터 모든 case의 코드들이 실행됨**
+- **break가 없으면 조건에 해당하는 case 이후부터 모든 case의 함수들이 실행됨**
 - default 는 if문에서의 else와 유사
 
 
