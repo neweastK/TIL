@@ -740,7 +740,7 @@ for (let i = 0; i<6; i++) {
 #### for ... in
 
 - **객체(object)**의 속성들을 순회할 때 사용
-  - object : key-value로 이루어진 자료구조(≒ 딕셔너리)
+  - JavaScript의 객체(object) : key-value로 이루어진 자료구조(≒ 딕셔너리)
 - **배열도 순회 가능하지만 권장하지는 않는다**
 - 실행할 코드는 중괄호 안에 작성
 - **블록 스코프** 생성
@@ -763,8 +763,10 @@ for (let capital in capitals) {
 }
 ```
 
-- 순회하면서 결과값으로 key값을 반환
+- 순회하면서 결과값으로 **key값을 반환**
 - value 값을 원하면 `capitals[capital]` 처럼 dic[key] 형식으로 출력해야함
+  - 객체의 value값에 접근할 때는 `object.key_name` 으로도 접근 가능하나 key_name을 정확하게 작성해야함
+
 - 배열을 for ... in 으로 반복시킬 경우 key 값을 뽑게 되는데 배열에서의 key값은 index가 됨
 
 
@@ -773,6 +775,7 @@ for (let capital in capitals) {
 
 - 반복 가능한 객체를 순회하며 값을 꺼낼 때 사용
   - 객체(object)는 iterable 하지 않음.(Object의 하위에 위치한 Array는 iterable)
+  - 따라서, 객체는 `for ... of` 로 돌릴 수 없음
 - **배열을 반복문에서 사용하고 싶을 때 권장되는 사용법**
 - 실행할 코드는 중괄호 안에 작성
 - **블록 스코프** 생성
@@ -794,6 +797,8 @@ for (let fruit of fruits) {
 
 - for문을 돌면 재할당을 하게 되는데 반복 변수를 const로 지정해도 되는 이유
   - 블록 스코프가 끝나고 해당 변수는 사라지기 때문
+  - 즉, 재할당 혹은 재선언이 아닌 아예 삭제되었다가 다시 생성되는 것
+- 만약 for 문 안에서 변수에 어떤 작업을 하고 싶은 경우엔 let, 아닌 경우에는 const 사용 권장
 
 
 
