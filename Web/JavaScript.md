@@ -1029,7 +1029,7 @@ string.split(value)
 ```
 
 - value가 없을 경우, 기존 문자열 전체를 배열에 담아 반환
-- value가 빈 문자열(='')일 경우 각 문자로 나눈 배열을 반환(공백 포함)
+- value가 빈 문자열('')일 경우 각 문자로 나눈 배열을 반환(공백 포함)
 - value가 기타 문자열일 경우, 해당 문자열로 나눈 배열을 반환
 
 ```javascript
@@ -1052,7 +1052,7 @@ string.replaceAll(from, to)
 - replace
   - 문자열에 from 값이 존재할 경우, **가장 앞의 1개만 to 값으로 교체하여 반환**
 - replaceAll
-  - 문자열에 from 값이 존재할 경우, 모두 to 값으로 교체하여 반환
+  - 문자열에 from 값이 존재할 경우, **모두 to 값으로 교체하여 반환**
 
 ```javascript
 const str = "a b c d"
@@ -1244,7 +1244,7 @@ console.log(result)	// 결과 : -1
 array.join([separator])
 ```
 
-- **배열의 모든 요소를 연결**한 문자열 반환
+- **배열의 모든 요소를 연결**한 **문자열** 반환
 - separator(구분자)는 선택적으로 지정 가능하며, 생략 시 **쉼표를 기본 값**으로 사용
 
 ```javascript
