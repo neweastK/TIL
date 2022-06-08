@@ -1875,8 +1875,6 @@ const obj = {
 #### DOM 선택
 
 <hr> ※ (참고)선택자
-
-
 > 선택자에는 요소, 클래스, id(#), attribute([]), 자식 결합자(>), 형제 결합자(~,+) 등이 들어 갈 수 있다
 
 
@@ -2022,7 +2020,7 @@ const obj = {
   ```
 
 <hr>
-
+<hr>
 
 ##### 선택 관련 메서드
 
@@ -2058,8 +2056,10 @@ document.querySelectorAll(selector)
 
 
 <hr> ※ NodeList
+
 - index로만 각 항목에 접근 가능(유사 배열) 
 - HTMLCollection과 달리 배열에서 사용하는 forEach 메서드 및 다양한 메서드 사용 가능
+
 
 - vs HTMLCollection
   1. 둘 다 Live Collection으로 DOM의 변경사항을 실시간으로 반영
@@ -2067,6 +2067,7 @@ document.querySelectorAll(selector)
   3. 배열과 같이 각 항목에 접근할 수 있는 유사 배열
 
 <hr> ※ collection
+
 - Live Collection
   - 문서가 바뀔 때 실시간으로 업데이트 됨
   - DOM의 변경사항을 실시간으로 collection에 반영
@@ -2079,9 +2080,8 @@ document.querySelectorAll(selector)
 - 무조건 실시간으로 변하는 것이 좋은건 아님
 
 
+
 <hr>
-
-
 ###### 기타 선택 관련 메서드
 
 - getElementById(id)
