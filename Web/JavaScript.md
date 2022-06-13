@@ -1304,6 +1304,7 @@ array.forEach((element, index, array) => {
 ```
 
 - **배열의 각 요소에 대해 콜백 함수를 한 번씩 실행**
+- NodeList에서도 사용할 수 있음
 - 콜백 함수는 3가지 매개변수로 구성
   - element : 배열의 요소
   - index : 배열 요소의 인덱스
@@ -2082,7 +2083,9 @@ document.querySelectorAll(selector)
 
 
 <hr>
+
 ###### 기타 선택 관련 메서드
+
 
 - getElementById(id)
 - getElementsByTagName(names)
@@ -2131,6 +2134,8 @@ ParentNode.appendChild('추가할 요소')
 
 - 한 Node를 특정 부모 Node의 자식 NodeList 중 **마지막 자식으로** 삽입 (Node만 추가 가능)
 - **한번에 오직 하나의 Node만 추가할 수 있음**
+  - Node는 createElement로 만들어진 결과값을 의미
+
 - 만약 주어진 Node가 이미 문서에 존재하는 다른 Node를 참조한다면 새로운 위치 이동
 
 |              append               |         appendChild          |
