@@ -22,6 +22,7 @@
 - 동작 원리의 일부가 CSR(Client Side Rendering)의 구조를 따름
 - 즉, vue로 제작하게 된다면 단 한장의 html로 모든 애플리케이션을 구성할 수 있음
   - 하나의 HTML과 많은 JS를 전달하여 앱을 구성한다고 생각하면 됨
+- 하나의 페이지만 다운받고 나머지를 렌더링하는게 매번 전체페이지를 새로 받는 것보다 빠름
 - 과거 웹 사이트들은 요청에 따라 매번 새로운 페이지를 응답하는 방식인 MPA
   - but, 스마트폰이 등장하면서 모바일 최적화의 필요성이 대두됐으며, 모바일 네이티브 앱과 같은 형태의 웹 페이지가 필요해짐
   - 이러한 문제를 해결하기 위해 Vue.js와 같은 프론트엔드 프레임워크 등장
@@ -121,7 +122,7 @@
   - 데이터의 흐름대로 코드 작성
   - url → views → template
 - Vue
-  - Data가 변화하면 DOM이 변경
+  - **Data가 변화하면 DOM이 변경**
     - Data 로직 작성 (CDN 필요)
     - DOM 작성
 
@@ -130,6 +131,12 @@
 
 
 ### Syntax of Vue.js
+
+#### Extension
+
+- vscode extension에서 vetur 다운
+- chrome web store에 Vue.js devtools 설치
+  - 해당 확장 프로그램 세부정보에서 `파일 URL에 대한 액세스 허용` 체크on
 
 #### Vue Instance
 
@@ -142,6 +149,8 @@
   ```
 
 - 모든 Vue 앱은 Vue 함수로 새 인스턴스를 만드는 것부터 시작
+
+- MVVM의 VM 역할로서, 데이터와 템플릿을 연결해주는 중재자 
 
 - Vue 인스턴스를 생성할 때는 Options 객체를 전달해야함
 
@@ -159,9 +168,11 @@
 
 
 
-#### Options/DOM - 'el'
+##### Options/DOM - 'el'
 
 - Vue 인스턴스에 연결(=마운트)할 기존 DOM 요소 필요
+
+  - 즉, 어떤 HTML 객체와 묶여야하는가? 에 대한 답
 
 - 'el' 옵션의 이름은 바꿀 수 없음 (무조건 'el'로 써야함)
 
@@ -179,9 +190,9 @@
 
 
 
-#### Options/Data - 'data'
+##### Options/Data - 'data'
 
-- Vue 인스턴스의 데이터 객체. Model과 같은 역할
+- Vue 인스턴스의 데이터 **객체**. Model과 같은 역할
 - Vue 인스턴스의 상태 데이터를 정의하는 곳
 - Vue template에서 interpolation을 통해 접근 가능
 - v-bind, v-on 과 같은 directive에서도 사용 가능
@@ -200,12 +211,18 @@
 
   
 
-#### Options/Data - 'methods'
+##### Options/Data - 'methods'
 
 - Vue 인스턴스에 추가할 메서드
-- Vue template에서 interpolation을 통해 접근 가능
+
+- 함수 이름을 key로 하고 함수를 value로 갖는 객체 형식
+
+- Vue template에서 interpolation(중괄호 두개)을 통해 접근 가능
+
 - v-on과 같은 directive에서도 사용 가능
+
 - Vue 객체 내 다른 함수에서 this 키워드를 통해 접근 가능
+
 - 주의
   - **화살표 함수를 메서드를 정의하는데 사용하면 안됨**
   - 화살표 함수가 부모 컨텍스트를 바인딩하기 때문에, this 는 Vue 인스턴스를 가리키지 않음
@@ -404,7 +421,7 @@
   - `v-show=` **이후의 값이 true로 평가될 때 설정한 내부 문자열을 출력**함
 
   - **false일 경우 해당 코드가 문서에는 존재**하지만 display 속성을 hidden(none)으로 설정하여 사용자의 눈에 보이지는 않음
-  - **화면에서 보였다가 안보였다가를 자주 반복할 때 사용하기 좋음**
+  - **화면에서 보였다가 안보였다가를 <u>자주 반복할 때</u> 사용하기 좋음**
 
   
 
@@ -469,7 +486,7 @@
   - 하지만, 자주 변경되는 요소의 경우 다시 렌더링 해야하므로 비용이 증가할 수 있음
     - 즉, 변경되면 다시 해당 태그를 만들어서 html에 삽입해야하므로 비용이 크다는 것
 
-
+※ directive들을 해석하기 위해서는 script 구문에 도달해야만 함. 따라서, script보다 위에있는 body 부분이 처음에 렌더링될 때 살짝 보임
 
 ##### v-for
 
@@ -549,8 +566,9 @@
 
 - 즉, html 요소의 기본 속성을 vue와 연동시켜주는 것
   - href,src,class 등의 속성을 `v-bind:href`,`v-bind:src` 등과 같이 써주면 vue에서 작성한 data 를 활용하여 html 요소의 속성을 지정할 수 있음
-
-- **Object 형태로 사용하면 value가 true인 key가 class 바인딩 값으로 할당**
+  - 원래 vue와 연결이 안되어있는 html의 기본 속성을 vue에 연결시켜주는 것
+  
+- **Object 형태로 사용하면 value가 true일 때 key가 class 바인딩 값으로 할당**
 
   - `<div v-bind:class="{key:value}"></div>` : key에는 지정할 클래스, value는 t/f 값을 할당
 
@@ -723,24 +741,32 @@
 
 
 
-##### computed
+##### Options/computed
 
 > 데이터를 기반으로 하는 계산된 속성
 
 - 함수의 형태로 정의하지만 함수가 아닌 **함수의 반환 값**이 바인딩 됨
+
 - 종속된 데이터에 따라 저장(캐싱)됨
+
 - 종속된 데이터가 변경될 때만 함수를 실행
+
 - 즉, 어떤 데이터에도 의존하지 않는 computed 속성의 경우 절대로 업데이트되지 않음
+
 - 반드시 반환 값이 있어야함
+
+- 의존하는 데이터가 바뀔 때 마다 재빨리 계산을 끝내고 값으로 존재함
+
+- 함수의 모습이지만 function(함수)으로 존재할 수 없음
 
 - vs Methods
 
-  - 기존에 갖고 있던 데이터의 모습을 바꿔서 쓰고 싶을 때 computed 사용
+  - **기존에 갖고 있던 데이터의 모습을 바꿔서(계산해서) 쓰고 싶을 때 computed 사용**
   - method는 실행되는 함수라면 computed는 함수가 실행된 값
   - computed는 종속된 대상이 변경되지 않는 한 computed에 작성된 함수를 여러번 호출해도 계산을 다시 하지 않고 계산되어 있던 결과를 반환
   - 이에 비해 methods를 호출하면 렌더링을 다시 할 때마다 항상 함수를 실행
   - 따라서, 결과값을 반환하고 싶은 경우 method는 함수를 실행시켜서 return값을 얻을 수 있어야함 (ex.`{{ method() }}`). but, computed는 이미 값이기 때문에 바로 출력 (ex. `{{ computed }}`) 
-  - 주로 method는 데이터를 바꿀 때, computed는 데이터를 통한 값을 얻을 때 위주로 사용
+  - 주로 method는 데이터를 바꿀 때(setter), computed는 데이터를 통한 값을 얻을 때(getter) 위주로 사용
 
 - computed와 관련된 데이터가 변할 때만 작동함(== computed 속성은 종속 대상을 따라 캐싱된다.)
 
@@ -774,11 +800,13 @@
 
   
 
-##### watch
+##### Options/watch
 
 > 특정 값이 변동하면 다른 작업을 한다
 
 - 특정 데이터의 변화 상황에 맞춰 다른 data 등이 바뀌어야할 때 주로 사용
+
+- watch 객체의 key는 무조건 data 값
 
 - 감시할 데이터를 지정하고 그 데이터가 바뀌면 특정 함수를 실행하는 방식
 
@@ -827,7 +855,7 @@
 
   
 
-##### filters
+##### Options/filters
 
 > 텍스트 형식화를 적용할 수 있는 필터
 
@@ -881,7 +909,10 @@
   - created : 인스턴스가 생성된 순간
     - 외부 API에서 초기 데이터를 받아올 때 주로 사용
   - mounted : 생성된 인스턴스를 화면에 부착(viewmodel과 view가 붙는 순간 = template과 연결될 때)
+    - vue 인스턴스가 최종적으로 완성된 후 html과 연결되는 순간
   - update : 데이터가 변할 때 순간순간 반응하는 것
+  
+- 각, 주기를 Options 처럼 활용
   
 - 주된 목적은 자동화
 

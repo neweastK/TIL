@@ -700,7 +700,7 @@ git remote add origin github저장소주소
    8. 최종적으로 본인 로컬에서 dev 브랜치 pull
    ```
 
-   
+    
 
 ##### 팀장이 거절하는 경우
 

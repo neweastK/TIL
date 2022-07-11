@@ -72,6 +72,9 @@
   - 즉, 물고기가 물 밖에서 살 수 있도록 물 밖의 환경을 물고기가 살 수 있는 환경으로 바꿔주는 것
 - Chrome V8 엔진을 제공하여 여러 OS 환경에서 실행할 수 있는 환경을 제공
 - 즉, **단순히 브라우저만 조작할 수 있던 자바스크립트를 SSR 아키텍처에서도 사용할 수 있도록 함**
+- 예시
+  - 이전에는 `console.log()` 를 브라우저에서만 실행시킬 수 있었으나, node js 설치 이후에는 PC에서도 실행이 가능해짐
+
 
 
 
@@ -92,6 +95,9 @@
     $ npm install -g @vue/cli
     $ vue --version
     ```
+
+    - `-g` : 특정 프로젝트에 귀속되지 않고 PC 전체에 설치하도록 설정하는 명령어
+    - npm의 경우 python과 다르게 자동으로 프로젝트별 가상환경 생성 
 
   - 프로젝트 생성
 
@@ -146,7 +152,11 @@
 
 ### Vue 프로젝트 구조
 
-#### babel
+> vue cli를 통해 생성된 구조이며 Babel과 Webpack에 대한 초기 설정이 자동으로 되어있음
+
+
+
+#### Babel
 
 > "JavaScript compiler"
 >
@@ -214,6 +224,11 @@
 - Vue 앱의 뼈대가 되는 파일
 - 실제 제공되는 단일 html 파일
   - 해당 부분에서 bootstrap CDN 삽입 등 django base.html의 일부 역할 수행 가능
+- 아무리 많은 코드를 작성해도 사용자가 받는 html은 index.html 파일 하나
+
+
+
+※ src 주소의 상징은 @
 
 
 ##### src/assets
@@ -227,6 +242,7 @@
 ##### src/App.vue
 
 - 최상위 컴포넌트
+- 캔버스 역할
 - 최상위 컴포넌트는 따로 관리
 
 ##### src/main.js
@@ -284,6 +300,8 @@
 
 - 부모 - 자식의 관계를 만드는 것
 
+- 새로운 컴포넌트 생성 후 `vue`+`enter` 로 기본 뼈대 생성 가능(Vetur 확장 프로그램 때문)
+
 - 불러오기(import) → 등록하기(register) → 보여주기(print)
 
   - 각 단계별로 이름을 다르게 지정해도 되지만 굳이 다르게 지정할 필요가 없으므로 주로 같은 이름을 지정
@@ -292,6 +310,14 @@
     - 단, key : value 에서 key 문자열과 value 값이 같으면 key 하나만 써줄 수 있음
     - 이 때문에 아래 예시에서 About만 작성해도 됨 
   - 최근 버전에서는 변수명을 두단어 이상으로 지정해야함 ex) TheAbout
+
+- 컴포넌트 등록시 맞춰줘야하는 변수
+
+  - import 변수명 => components의 value값
+  - components의 key값 => html의 태그명
+  - 만약 components의 key값과 value값이 같으면 한번만 써도 됨 (ex. { About : About } === { About } )
+
+- chrome 확장자 프로그램을 활용하여 브라우저 내에서 컴포넌트 관계 확인 가능 (in 개발자 도구-Vue)
 
 - 보여주기 단계에서는 두 가지 방법으로 진행 가능
 
@@ -332,8 +358,50 @@
   ```
 
   - 부모 - 자식 관계 형성 완료
+  - 자식 컴포넌트는 여러번 불러올 수 있고 불러올 때마다 자식 컴포넌트에게 각기 다른 props를 전달할 수 있음
 
+#### Data & Methods
 
+> Vue cli에서 data와 methods 정의하는 방법
+
+##### data
+
+- 컴포넌트의 'data'는 반드시 함수로 작성해야함
+
+  - 기본적으로 각 인스턴스는 모두 같은 data 객체를 공유하기 때문에(하나의 컴포넌트를 여러번 썼을 경우) 할당, 얕은 복사의 문제가 발생하지 않도록 아예 새로운 객체를 반환해버리는 함수를 사용해야함
+
+  - 함수가 return 하는 값을 data로 사용 (return 값은 참조가 아닌 아예 새로운 값으로 반환됨)
+
+  - return 값은 객체로 되어있으며 `변수 : value` 형식으로 작성
+  - 여러 데이터를 쓰고 싶을 경우, `key : value` 형태를 여러개 작성하면 됨
+
+  ```js
+  data : function () {
+      return {
+          data1: '',
+          data2: '',
+      }
+  }
+  ```
+
+  
+
+##### methods
+
+- 기존 작성 방법과 같음
+
+  ```js
+  methods : {
+      functionName : function() {
+          console.log()
+      },
+      function2Name : function() {
+          console.log('2번째 methods')
+      }
+  }
+  ```
+
+  
 
 ### Props & Emit
 
@@ -360,8 +428,8 @@
 
 - 작성법(전송 = 데이터를 자식 컴포넌트에게 내리는 것)
 
-  - 자식 컴포넌트 태그(보여주기로 작성한 template 부분)의 속성으로 prop 데이터 선언
-  - `prop데이터이름 = 데이터값` 과 같이 선언
+  - 자식 컴포넌트 태그(보여주기로 작성한 template 부분)의 **속성으로** prop 데이터 선언
+  - `prop이름 = 데이터값` 과 같이 선언
   - 예시
 
   ```vue
@@ -377,7 +445,7 @@
 - 수신할 데이터는 자식 컴포넌트의 props 옵션에서 설정
 
   - **prop데이터 이름과 해당 데이터의 타입을 key:value 형태로 props 객체에 삽입**
-  - Props의 이름은 선언할 때(=스크립트에서)는 camelCase로 HTML에서는 kebab-case로 작성한다.
+  - **Props의 이름은 선언할 때(=스크립트에서)는 camelCase로 HTML에서는 kebab-case로 작성한다.**
     - 즉, 데이터를 자식에게 줄 때는 kebab-case 자식이 데이터를 받을 때는 camel 케이스
 
 
@@ -413,6 +481,8 @@
 #### Dynamic Props 
 
 - v-bind directive를 사용해 부모의 데이터의 props를 동적으로 바인딩
+
+  - v-bind(`:`) 는 html 태그의 기본 속성을 vue와 연결시켜주는 역할을 하며 props는 속성을 통해 하위 컴포넌트에 데이터를 전달하기 때문에 하위 컴포넌트에 전달할 데이터를 vue와 묶어준다고 생각하면됨
 
 - 부모에서 데이터가 업데이트 될 때마다 자식 데이터로도 전달됨
 
@@ -471,10 +541,7 @@
   </script>
   ```
 
-  - 컴포넌트의 'data'는 반드시 함수로 작성해야함
-    - 기본적으로 각 인스턴스는 모두 같은 data 객체를 공유하기 때문에 할당, 얕은 복사의 문제가 발생하지 않도록 아예 새로운 객체를 반환해버리는 함수를 사용해야함
-    - 함수가 return 하는 값을 data로 사용
-    - return 값은 객체로 되어있으며 `변수 : value` 형식으로 작성
+  
 
 - 모든 props는 하위 속성과 상위 속성 사이의 **단방향 바인딩**을 형성함
   - 부모의 속성이 변경되면 자식 속성에게 전달되지만, 반대 방향으로는 그렇지 않다는 뜻
@@ -497,7 +564,7 @@
 
 - 추가 인자는 리스너의 콜백 함수로 전달
 
-  - 즉, $emit에서 인자로 전달한 데이터는 부모 컴포넌트에서 이벤트가 발생했을 때 시행되는 함수의 인자로 전달됨
+  - 즉, $emit에서 두번째 인자로 전달한 데이터(첫번째 인자는 이벤트명)는 부모 컴포넌트에서 이벤트가 발생했을 때 시행되는 함수의 인자로 전달됨
   - 인자 개수가 두개 이상인 경우 하나의 변수에 객체로 할당하여 해당 변수를 전달하는 방식으로 구현할 것을 권장
 
 - 부모 컴포넌트는 자식 컴포넌트가 사용되는 템플릿에서 v-on을 사용하여 자식 컴포넌트가 보낸 이벤트를 청취 (v-on을 이용한 사용자 지정 이벤트)
@@ -589,7 +656,7 @@
 - 컴포넌트 및 props와는 달리, 이벤트는 자동 대소문자 변환을 제공하지 않음
 - HTML의 대소문자 구분을 위해 DOM 템플릿의 v-on 이벤트 리스너는 항상 자동으로 소문자 변환되기 때문에 v-on:myEvent 는 자동으로 v-on:myevent로 변환
   - 예를들어, `this.$emit('myEvent')` 로 부모 컴포넌트에 메시지를 보내고, 부모 컴포넌트에서 `@myEvent` 로 받으려고 해도 html은 자동으로 `@myevent`로 변환.
-  - 따라서, 이벤트 이름에는 항상 kebab-case를 사용할 것을 권장
+  - 따라서, `$emit` 이벤트 이름에는 항상 kebab-case를 사용할 것을 권장
 
 
 
@@ -601,6 +668,8 @@
 
 - 라우트(Route)에 컴포넌트를 매핑한 후, 어떤 주소에서 렌더링할지 알려줌
 
+  - 즉, 컴포넌트를 URL에 매핑시켜주는 것 (BUT, 그런 척일 뿐 실제 하이퍼링크처럼 작동하는 것은 아님)
+
 - SPA 상에서 라우팅을 쉽게 개발할 수 있는 기능을 제공
 
 - url과 화면이 변경되어도 실제 화면 전환(혹은 새로고침)이 일어난 것은 아님
@@ -611,7 +680,7 @@
 
 - 시작하기
 
-  - 프로젝트 생성 및 이동
+  - 프로젝트 생성 및 이동(원래 프로젝트 생성하는 방법! _ 이미 배웠던 내용)
 
     ```bash
     $ vue create my-router-app
@@ -637,23 +706,24 @@
 
 
 
-##### index.js
+##### router/index.js
 
 - 라우트에 관련된 정보 및 설정이 작성되는 곳
 - 마치 django의 urlpatterns 와 같은 모습을 가진 객체 확인 가능
-  - template의 router-link 태그에 속성 `to` 값으로 주소 지정
-    - django에서와 마찬가지로 url name을 활용하여 주소 지정 가능
-    - 단, 바인드 지정 필수 
-    - ex) `<router-link :to = "{ name: 'about' }"> About </router-link>`
+  - path - 주소 / name - 별칭 / component - 이동할 컴포넌트
+  - name 을 활용하여 목표 경로를 지정할 수 있음
+- 컴포넌트를 지정하기 위해서는 해당 컴포넌트를 import 해와야함
+
+
 
 
 ##### router-link
 
 - 사용자 네비게이션을 가능하게 하는 컴포넌트
 
-- a 태그인 것 처럼 생겼으나 router-view는 컴포넌트
+- a 태그인 것 처럼 생겼으나 router-view는 **컴포넌트**
 
-- 목표 경로는 'to' prop으로 지정됨
+- 목표 경로는 'to' 속성으로 지정됨
 
   - 예시
 
@@ -662,15 +732,22 @@
     <router-link to="/about">About</router-link>
     ```
 
+  - django에서와 마찬가지로 url name을 활용하여 주소 지정 가능
+
+  - 단, 바인드 지정 필수 
+
+    ex) `<router-link :to = "{ name: 'about' }"> About </router-link>`
+
 - HTML5 히스토리 모드에서 router-link는 클릭 이벤트를 차단하여 브라우저가 페이지를 다시 로드하지 않도록 함
 
 - a 태그지만 우리가 알고 있는 GET 요청을 보내는 a 태그와는 조금 다르게, 기본 GET 요청을 보내는 이벤트를 제거한 형태로 구성됨
+
+
 
 ##### router-view
 
 - 주어진 라우트에 대해 일치하는 컴포넌트를 렌더링하는 컴포넌트
   - 쉽게 말해, 지정한 포털을 불러오고 위치시킬 포털이라고 생각하면 됨
-
 - 실제 컴포넌트가 DOM에 부착되어 보이는 자리를 의미
 - router-link를 클릭하면 해당 경로와 연결되어 있는 index.js에 정의한 컴포넌트가 위치함
 
@@ -756,7 +833,7 @@
 
   ```javascript
   // literal string path
-  router.push('home')
+  router.push('home') -> url을 변경하는 역할 수행
   
   // object
   router.push({ path: 'home'})
@@ -823,7 +900,11 @@
   ]
   ```
 
-  - 동적 인자는 컴포넌트에서 this.$route.params 로 사용 가능
+  - 동적 인자는 컴포넌트에서 `this.$route.params` 로 사용 가능
+    - data에 넣어서 주로 사용
+    - `user : this.$route.params` 로 지정시 user에는 동적인자가 담긴 객체 전달
+  - 동적인자 route push 법
+    - `router.push({ name:'user', params: { userId: '123', username: 'kim', major: 'CS' } })`
 
 
 
@@ -857,7 +938,7 @@
 
 ## Vuex
 
-### Vuex
+### Vuex(중앙 상태 관리)
 
 - Statement management pattern + Library for vue.js
   - 상태 관리 패턴 + 라이브러리
@@ -881,7 +962,6 @@
 #### why Vuex?
 
 - 기존에 각 컴포넌트는 독립적으로 데이터를 관리
-
 - 기존의 부모 컴포넌트 - 자식 컴포넌트 간의 데이터 흐름은 단방향 흐름으로 부모 → 자식 간의 전달만 가능 (반대의 경우에는 이벤트를 트리거)
 - 장점 : 데이터의 흐름을 직관적으로 파악 가능
 - 단점 : 컴포넌트 중첩이 깊어지는 경우 동위 관계의 컴포넌트로의 데이터 전달이 불편해짐
@@ -974,7 +1054,6 @@
 
 - computed를 사용하는 것처럼 getters는 저장소의 상태(state)를 기준으로 계산
   - 따라서, 첫번째 인자는 무조건 state
-
 - computed 속성과 마찬가지로 getters의 결과는 state 종속성에 따라 캐시되고, 종속성이 변경된 경우에만 다시 재계산 됨
 - getters 자체가 state를 변경하지는 않음
   - state를 특정한 조건에 따라 구분(계산)만 함
@@ -983,6 +1062,9 @@
   - data에 하면 안됨
     - state는 오로지 mutations를 통해서만 변경이 되어야함.
     - but, data에 넣는 순간 data를 통해서도 변경이 되기 때문에 매우 위험
+    - component의 data는 변할 수 있음 (오히려 변하는게 핵심)
+    - but, state는 변해서는 안됨. data에서 받아온 후, data의 값이 바뀌면 결국 state가 바뀌는 것
+  - 따라서, state,getters는 모두 computed로 받아와야함
 
 
 
@@ -1126,8 +1208,20 @@
 >
 > - 논리적인 코드 자체가 변하는 것이 아니라 '쉽게' 사용할 수 있도록 되어 있음에 초점
 
+
+
+- 원래는 저장소의 state를 바꾸기 위한 과정은 매우 복잡함
+  1. 컴포넌트에서 methods에 dispatch와 불러올 actions 등록
+  2. store에서 actions에 불러올 mutations 등록
+  3. mutations에서 state를 수정할 내용 등록
+- 이를 조금이라도 간단하게 줄이기 위한 방법이 binding helper
+  - 컴포넌트에서 바로 actions 등록없이 호출
+
+
+
 ````js
 import vuex from 'vuex'
+import vuex.mapActions from 'vuex' === import { mapActions } from 'vuex'
 ````
 
 #### mapState
@@ -1341,7 +1435,7 @@ expoprt default {
   localStorage.setItem('저장할데이터이름',저장할데이터)
   ```
 
-  - json으로 데이터를 변경한 후에 저장해야함
+  - json(문자열)으로 데이터를 변경한 후에 저장해야함
 
   ```js
   JSON.stringify(데이터)
