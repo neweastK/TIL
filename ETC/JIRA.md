@@ -7,168 +7,15 @@
 - 업무에 맞는 워크플로우 작성
 
 
-
-## JIRA Core
-
-#### 기능
-
-##### 템플릿을 통한 프로젝트 생성
-
-1. 작업관리 템플릿
-   - 완료 여부 등 간단한 작업 관리에 적당한 프로젝트 유형
-
-2. 프로젝트 관리
-   - 조금 복잡한 작업들의 진행상태 관리를 위한 프로젝트 유형
-3. 프로세스 관리
-   - 복잡한 처리 절차가 요구되는 작업들로 구성되는 프로젝트 관리
-
-
-
-##### 프로젝트 커스터마이징
-
-- 작업 유형별로 워크플로우, 정보(커스텀 필드), 화면, 접근 보안 등의 구성 가능
-
-
-
-##### 보드(cloud만 지원)
-
-- 직관적인 작업 목록 관리
-- Drag & Drop으로 작업 상태 변경
-
-
-
-##### 필터 기반의 작업 목록 관리
-
-- 작업의 필드 항목에 필터를 만들어 작업 목록 관리 가능
-- 필터 공유를 통해 작업 처리 방식 표준화 유도
-
-
-
-##### 작업 대시보드
-
-- 대시보드를 통한 프로젝트 현황 가시화 제공
-- 조직 공통과 개인별 대시보드 운영 가능, 다양한 가시화 가젯 제공
-
-
-
-##### 보고서 작성
-
-- 프로젝트 또는 필터를 기준으로 다양한 보고서 템플릿 제공
-- 프로젝트 현황 파악과 가시화 제공
-
-
-
-##### 작업 시간 관리
-
-- 작업 소요시간을 예측하고 추적 가능
-- 조직의 프로젝트 일정 계획 정확도 개선 가능
-
-
-
-##### 검색
-
-- JQL을 사용하여 원하는 목록 추출 가능
-
-  
-
-##### 요약
-
-- 프로젝트를 만들고, 이슈 타입을 정의한 후 이슈 타입별로 워크플로우 재조정
-- 내가 관리하고 싶은 데이터 정의 및 추가로 셋업
-- 이슈 안에서 사람들과 협업 하는 것
-
-
-
-## JIRA SW
-
-> 소프트웨어 개발팀의 애자일 프로젝트 관리도구
->
-> 스크럼, 칸반, mixed methodologies, Agile at scale 등을 모두 지원
-
-
-
-#### 스크럼
-
-##### 스프린트 계획
-
-- 버전관리
-- 스프린트 백로그 관리
-- 스프린트 계획
-- 스토리포인트 관리
-- 스크럼 보드
-
-
-
-##### 스프린트 추적 및 관리
-
-- 구성원의 정보 접근 권한 관리
-- 맞춤형 작업 관리를 위한 이슈 타입 정의
-- 이슈 타입별 워크플로우 정의
-- 소스코드와 이슈가 연결된 배포 관리
-
-
-
-##### 스크럼 미팅 지원 기능
-
-- 관심 작업 목록 관리(필터)
-
-
-
-##### 스크럼 작업 대시보드
-
-- 팀 또는 개인 관심 작업 목록 관리와 현황 모니터링 지원 (대시보드)
-
-
-
-##### 스크럼 보고서
-
-- 각종 보고서 양식 제공
-
-
-
-#### 칸반
-
-- 스토리 카드 보기
-- 진행중 작업 개수 제한
-- Swimlanes과 컬럼 설정 가능
-- 워크플로우 수정 지원
-- 스크럼 vs 칸반
-  - 스크럼 : start day와 end day 존재
-  - 칸반 : end day가 있을 수는 있으나 제한은 없음
-
-
-
-##### 애자일 보고서 제공
-
-- 시간별 이슈 상태에 할당된 작업 개수 흐름(누적 흐름 도표)
-
-- 작업에 소요된 시간 분석을 통해 개발에 필요한 시간 예측 (제어 차트)
-
-
-
-#### 구조
-
-#### Version
-
-- 가장 상위 구조
-
-#### Epic
-
-- 프로젝트의 큰 기능
-- 한 프로젝트에 12개 정도 관리할 것을 권장
-
-#### Stroy
-
-- 에픽의 하위 요소
-- 상세 기능
-
 <hr>
-
-<hr>
-
-
 
 ## Jira SW
+
+> Software Project의 추적, 관리 보고를 위한 Agile 기반의 관리 솔루션
+>
+> 개발 방법론 기반의 Project & Issue Management 솔루션
+
+
 
 #### Project & Issue Management
 
@@ -184,13 +31,7 @@
 
 
 
-#### Jira SW
-
-> Software Project의 추적, 관리 보고를 위한 Agile 기반의 관리 솔루션
->
-> 개발 방법론 기반의 Project & Issue Management 솔루션
->
-> 크게 아래 네 가지 기능을 제공
+#### Jira SW 제공 기능
 
 ##### Project Management
 
@@ -217,11 +58,11 @@
 
 
 
-#### Jira SW를 사용하여 Project 구성하기
+#### Jira SW 사용자
 
-##### 관리자 (administrator)
+##### 관리자 (administrator) 수행 역할
 
-###### Project Configurator 역할
+###### 1. Project Configurator 
 
 1. Project 생성
    - 어떠한 방법론을 기반으로 만들 것인가?
@@ -247,9 +88,9 @@
 
 
 
-#### Jira SW를 사용하기
+##### 사용자 (User) 수행 역할
 
-##### 사용자 (User)
+- 사용자가 접하게 될 JIRA 프로젝트 구조
 
 ![image-20220708164448693](../assets/Project Structure_User)
 
@@ -261,26 +102,21 @@
   - 이슈들의 버전 관리
 - Components
   - 이슈들에 대해서 영역을 분리시킬 수 있음 (DB영역, UI영역 등)
-- Issues
+- **Issues**
   - 실제 과제
+  - Issue는 프로젝트에서 각 사용자가 수행하는 활동의 정의
+  - Issue의 관리를 통하여 Project 업무 환경, 생산성, 가중치를 파악
+  - 개발 방법론에 의한 다중의 유형으로 Issue를 관리 및 추적
+  - Issue는 사용자 활동의 세부 정보를 기록 및 관리
+    - 각 Issue 별로 관리하는 정보가 다름
+      - 이를 Field로서 정의
+      - 설명, 첨부파일, 우선순위, 중요도 등의 세부 정보
+  - 각 Issue는 서로 관계성을 갖게 되며 관계성을 통해 추적성을 강화
+    - 횡적으로 관계성을 가질 수도 있고 종적(Parent-Child 관계) 관계로 관계성을 가질 수도 있음
 
 
 
-##### Issue
-
-- Issue는 프로젝트에서 각 사용자가 수행하는 활동의 정의
-- Issue의 관리를 통하여 Project 업무 환경, 생산성, 가중치를 파악
-- 개발 방법론에 의한 다중의 유형으로 Issue를 관리 및 추적
-- Issue는 사용자 활동의 세부 정보를 기록 및 관리
-  - 각 Issue 별로 관리하는 정보가 다름
-    - 이를 Field로서 정의
-    - 설명, 첨부파일, 우선순위, 중요도 등의 세부 정보
-- 각 Issue는 서로 관계성을 갖게 되며 관계성을 통해 추적성을 강화
-  - 횡적으로 관계성을 가질 수도 있고 종적(Parent-Child 관계) 관계로 관계성을 가질 수도 있음
-
-
-
-###### Project Manager
+###### 2. Project Manager
 
 1. Issue 생성
    - 요구사항 기반 개발 과제를 Issue로 등록
@@ -293,7 +129,7 @@
 
 
 
-###### Project Member
+###### 3. Project Member
 
 1. Issue의 생성 및 진행
    - 프로젝트 내 자신이 수행 할 Issue를 등록 및 Manager에게 지정 받은 Issue의 진행
@@ -304,9 +140,9 @@
 
 
 
+#### Jira SW 사용자(User)가 수행할 업무
 
-
-#### Create Issue(Manager)
+##### Create Issue(Manager)
 
 - Jira Project의 사용자 활동은 Issue를 생성으로 활동 시작
 - Issue는 다음의 활동을 기반으로 생성
@@ -319,7 +155,7 @@
 
 
 
-#### Filter & Issue view(Member)
+##### Filter & Issue view(Member)
 
 - 모든 생성된 Issue는 쉽게 추적할 수 있도록 Issue view를 제공
   - Issue List View : 전체 Issue List 및 컬럼 정보를 파악
@@ -331,7 +167,7 @@
 
 
 
-#### Edit & Transition Issue (Member)
+##### Edit & Transition Issue (Member)
 
 - Issue의 관리 되는 정보는 진행에 따라 다양하게 변경이 발생
   - 발생되는 변경은 손쉽게 사용자에게 편집 환경을 제공
@@ -344,7 +180,7 @@
 
 
 
-#### Board Management(Manager)
+##### Board Management(Manager)
 
 - Jira Project template 중 Agile 방법 기반의 Template에서는 각 유형별 Board를 운영할 수 있도록 기능 제공
 - Jira Project Board
@@ -366,7 +202,7 @@
 
 
 
-#### Dashboard (Manager)
+##### Dashboard (Manager)
 
 - Jira Project는 Dashboard를 사용하여 Issue의 현재 상황을 쉽게 파악할 수 있도록 지원
 - Board는 Private / Public 형식으로 구성이 가능
@@ -375,3 +211,83 @@
 
 
 
+<hr>
+
+※ 칸반 vs 스크럼 
+
+https://velog.io/@dal-pi/Scrum-%EA%B3%BC-Kanban
+
+https://pearlluck.tistory.com/649
+
+<hr>
+
+
+
+### 사용방법 (to 팀원들)
+
+#### 1. Issue (할 일) 생성
+
+- 최상단에 위치한 `Create` 클릭
+
+  ![create_issue](JIRA.assets/create_issue.png)
+
+
+
+- 각각의 내용 입력
+
+  <img src="JIRA.assets/issue_detail.png" style="zoom: 50%;" />
+
+  - issue type 
+
+    - Epic
+      - 대분류의 개념
+      - 모든 이슈는 하나의 Epic에 속해야함
+      - ex) FE, DB, 게시판, 기획 등등
+    - Stroy
+      - 하나의 기능을 구현하기 위한 스토리
+      - 사용자의 이야기
+      - ex) 회원가입을 한다, 유저가 로그인한다 등
+    - Task
+      - 실제 상세 업무
+      - ex) 기본 폼 만들기, 유효성 검사 만들기, api 연결하기 등
+
+  - summary & description
+
+    - 해당 issue에 대한 설명 작성
+
+    
+
+  <img src="JIRA.assets/issue_detail2.png" style="zoom:80%;" />
+
+  - Linked Issues 
+
+    - 다른 issue와 연결할 때 사용
+    - blocks : 연결된 issue는 해당 issue가 완료되어야만 시작 가능
+    - is blocked by : 해당 issue는 연결된 issue가 완료되어야만 시작 가능
+
+  - Story Points
+
+    - 무작정 40시간을 채우기 위해 쉬운 업무에 많은 시간을 부여해서는 안됨
+    - 추후에 확인해봤을 때 burndown chart에서 적절치 못한 일정관리로 평가될 수 있음
+
+    
+
+- 생성된 issue detail
+
+  ![](JIRA.assets/workflow.png)
+
+  - 본인이 수행한 업무에 맞게 workflow 지정할 것
+
+
+
+### 2. Sprint
+
+- backlog 영역에서 생성된 모든 Sprint와 issue 확인 가능
+
+  ![image-20220713225438029](JIRA.assets/image-20220713225438029.png)
+
+  - 아래에 있는 issue를 sprint로 이동 시킬 수 있음 (Drag & Drop으로 가능)
+
+- sprint에 할당하면 board에서 정리된 내용 확인 및 필터 처리(내가 해야하는 일만 보기 등) 가능 
+
+  ![image-20220713225906574](JIRA.assets/image-20220713225906574.png)
