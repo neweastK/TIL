@@ -4,7 +4,7 @@
 
 - 편리한 계획 수립 기능
 - 작업 시간 관리
-- 업무에 맞는 워크플로우 작성
+- 업무에 맞는 워크플로우 작성 
 
 
 <hr>
@@ -75,7 +75,7 @@
 
 - Project Configuration Structure : Jira 안에서 만들어지는 프로젝트의 구조
 
-  ![image-20220708163201971](../assets/Project Structure)
+  ![image-20220708163201971](JIRA.assets/Project Structure.png)
 
   - 각 configuration은 모두 custom이 가능
   - JIRA는 하나의 프로젝트를 만들기 위한 기본적인 구성을 템플릿화해서 제공 (Create Project)
@@ -92,7 +92,7 @@
 
 - 사용자가 접하게 될 JIRA 프로젝트 구조
 
-![image-20220708164448693](../assets/Project Structure_User)
+![image-20220708164448693](JIRA.assets/Project Structure_User.png)
 
 - Project Categories
   - 공통된 목적의 프로젝트를 하나의 집합으로 만들 수 있음
@@ -221,6 +221,28 @@ https://pearlluck.tistory.com/649
 
 <hr>
 
+
+### Jira 사용 전 해야 할 일
+
+#### 1. 월요일 회의
+
+- 각자 일주일 동안 할 일 공유하기
+
+- 회의를 통해 이슈 추가 및 삭제
+
+
+#### 2. 플래닝 포커(Scrum Time App 사용)
+
+- 각 이슈마다 걸릴 시간 생각 및 공유하기
+
+- 최대치와 최소치의 평균을 구해 Story Point 산정하기
+
+- 5 포인트 이상 Story로 추정될 시 2개 이상의 Story로 쪼개기
+
+- 한 Story를 최대한 단순하게 만들어 되도록 스프린트 내에 일정 맞추기
+
+
+<hr>
 
 
 ### 사용방법 (to 팀원들)
