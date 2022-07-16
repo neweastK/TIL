@@ -155,12 +155,105 @@ element.addEventListener(event, function)
 ```
 
 - element에 event가 발생하면 function을 실행시킨다는 것
+
 - 함수 이름만 넘겨줌으로써 실행은 Js에게 맡기는 것
   - 내가 직접 실행시키면 안됨!
+  
 - event 검색하는 법
+  
+  1. mdn 페이지 활용
+  
   - 찾고싶은 태그를 mdn에서 탐색
-  - `태그-Web APIs` 라고 적혀있는 mdn 홈페이지로 이동 (JS 관점에서 설명한 태그)
+  - `태그-Web APIs`를 제목으로 하는 mdn 홈페이지로 이동 (JS 관점에서 설명한 태그)
   - HTML elements가 아닌 상위 Element 박스 클릭
   - 페이지에 해당 태그에서 사용할 수 있는 모든 event 확인 가능(사용할 때는 on을 제외하고 사용)
     - onclick은 click
     - onmouseleave는 mouseleave
+  
+  2. console.dir 활용
+  
+  - 선택된 태그를 console.dir로 출력할 경우 event 확인 가능
+  - on이 붙은 모든 것들이 해당 태그에서 사용할 수 있는 event
+
+- event 활용
+
+  ```javascript
+  title.addEventListener("click", function1)
+  title.onclick = function1
+  /// 위 두 코드는 완전히 동일한 작업 수행
+  ```
+
+  - addEventListener 는 나중에 removeEventListener로 삭제할 수 있다는 장점이 있음
+
+
+
+##### window 활용하기
+
+- window는 document와 같이 javascript에서 기본적으로 제공
+  - wifi 연결 상태, 화면 사이즈 변경 등과 같은 다양한 이벤트 존재
+
+- document의 head, body, title 등과 같은 태그는 querySelector 없이 바로 접근 가능
+  - document.body.style~~
+  - document.title~~
+
+
+
+##### event와 css
+
+> JavaScript에서 직접 style을 변경해주는 것은 그닥 바람직하지 않음
+
+1. css에 원하는 스타일 작성 (클래스 활용, 태그 활용 등등)
+
+2. 만약 class를 활용하여 스타일을 작성했다면?
+
+   - Ex
+
+     ```css
+     .active {
+         color : tomato;
+     }
+     ```
+
+3. javascript에서 원하는 행동 혹은 상황에 클래스를 추가
+
+   ```javascript
+   title.className = "active"
+   ```
+
+   - 반드시 css에서의 스타일 이름과 동일해야함
+   
+   - 이미 기존에 class가 있던 상태에서 새로운 class를 추가해주고 싶은 경우
+     - className이 아닌 classList를 활용
+     
+     - 다양한 메서드 활용 가능
+     
+       ```javascript
+       element.classList.contains(~~~)
+       /// ~~~ 라는 클래스가 element의 클래스리스트 안에 있는지 확인
+       element.classList.remove(~~~)
+       /// element의 클래스리스트에서 ~~~라는 클래스 제거
+       element.classList.add(~~~)
+       /// element의 클래스리스트에 ~~~라는 클래스 추가
+       ```
+     
+     - toggle 메서드
+     
+       ```javascript
+       element.classList.toggle('---')
+       ```
+     
+       - 특정 element의 classList에 ---라는 클래스가 이미 있는지 확인하고 **있다면 제거해주고 없다면 추가해줌**
+     
+       ```js
+       if (h1.classList.contains(someClass)){
+           h1.classList.remove(someClass)
+       } else {
+           h1.classList.add(someClass)
+       }
+       
+       // 위 코드와 아래 코드는 동일한 역할 수행
+       h1.classList.toggle(someClass)
+       ```
+     
+       
+
