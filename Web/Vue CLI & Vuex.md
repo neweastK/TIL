@@ -445,7 +445,7 @@
 - 수신할 데이터는 자식 컴포넌트의 props 옵션에서 설정
 
   - **prop데이터 이름과 해당 데이터의 타입을 key:value 형태로 props 객체에 삽입**
-  - **Props의 이름은 선언할 때(=스크립트에서)는 camelCase로 HTML에서는 kebab-case로 작성한다.**
+  - **props의 이름은 선언할 때(=스크립트에서)는 camelCase로 HTML에서는 kebab-case로 작성한다.**
     - 즉, 데이터를 자식에게 줄 때는 kebab-case 자식이 데이터를 받을 때는 camel 케이스
 
 
@@ -827,7 +827,7 @@
 
   - 이 메서드는 새로운 항목을 히스토리 스택에 넣기 때문에 사용자가 브라우저의 뒤로 가기 버튼을 누르면 이전 URL로 이동하게 됨
 
-- `<router-link>`를 클릭할 때 내부적으로 호출되는 메서드이므로 `<router-link : to=''...">`를 클릭하면, `router.push(...)`를 호출하는 것과 같음
+- `<router-link>`를 클릭할 때 내부적으로 호출되는 메서드이므로 `<router-link : to=''...">`를 클릭하면, `$router.push(...)`를 호출하는 것과 같음
 
 - 예시
 
