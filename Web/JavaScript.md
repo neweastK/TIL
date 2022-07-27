@@ -2358,7 +2358,7 @@ event.preventDefault()
 > Asynchronous JavaScript And XML (비동기식 JavaScript와 XML)
 
 - 서버와 통신하기 위해 XMLHttpRequest 객체를 활용
-- JSON, XML, HTML 그리고 일반 텍스트 형식 등을 포함한 다양한 포맷을 주고 받ㅇ르 수 있음
+- JSON, XML, HTML 그리고 일반 텍스트 형식 등을 포함한 다양한 포맷을 주고 받을 수 있음
 - AJAX의 X가 XML을 의미하긴 하지만, 요즘은 더 가벼운 용량과 JavaScript의 일부라는 장점 때문에 JSON을 더 많이 사용함
 - JSON과 XML은 데이터를 표현하는 방식의 차이
   - XML은 HTML과 굉장히 유사한 방식으로 데이터 표현(XML = eXtended Markup Language)
@@ -2697,7 +2697,7 @@ work1().then(function(result1) {
 
 > 브라우저를 위한 Promise 기반의 클라이언트
 
-- 본래는 XHR 이라는 브라우저 내장 객체를 활용해 AJAX 요청을 처리하는데, 이보다 편리한 AJAX 요청이 가능하도록 도움을 줌
+- **본래는 XHR 이라는 브라우저 내장 객체를 활용해 AJAX 요청을 처리하는데, 이보다 편리한 AJAX 요청이 가능하도록 도움을 줌**
   - 확장 가능한 인터페이스와 함께 패키지로 사용이 간편한 라이브러리를 제공
 - 즉, 비동기식 요청을 보내는 작업을 담당
 - then과 catch를 함께 사용하여 Axios를 통해서 보낸 요청이 응답됐을 때 실행시킬 함수를 작성할 수 있음
@@ -2705,3 +2705,46 @@ work1().then(function(result1) {
 - axios로 요청을 보내는 것부터 응답을 받는 과정까지 모두 web api에서 일어남 (callback을 감싸고 있는 메인함수가 web api에서 진행됨)
   - web api에서 정상적으로 실행되면 지정해둔 call back 함수가 task queue로 이동
   - promise나 callback 함수들과 관계없이 call stack에서는 계속 다음 코드를 진행하고 있음
+
+
+
+##### why Axios?
+
+- JS는 Single Thread → 효율적 업무를 위해 Event Loop 필요 → Async한 작업 특성 발생 → 콜백 함수 사용 필요 → 너무나도 관리 및 해독에 어려움 → Promise 필요 → 쉽게 활용하기 위해 Axios 사용
+
+
+
+##### How to use?
+
+- import 필요
+
+  ```js
+  npm install axios
+  ```
+
+  또는 body에 cdn 생성
+
+  ```html
+  <script src='https://unpkg.com/axios/dist/axios.min.js'></script>
+
+- 요청 보내기 및 then chaining
+
+  ```js
+  axios.get(URL)
+    .then(res => {
+      const todosArray = res.data
+      const todo = todosArray.find(todo => todo.id === 10)
+      return axios.get(`${URL}${todo.id}`)
+    })
+    .then(res => console.log(res.data))
+  ```
+
+  
+
+#### Async & Await
+
+- Axios 의 비동기 함수를 동기 함수처럼 작성할 수 있게 도와줌
+- 조건
+  1. 반드시 하나의 함수로 묶어야한다.
+  2. 함수 맨 앞에 async를 붙인다
+  3. 비동기 함수 앞에 await을 붙임으로써 요청 보낸 응답이 올 때까지 기다리도록 한다.

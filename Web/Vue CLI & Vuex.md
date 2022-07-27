@@ -98,6 +98,8 @@
 
     - `-g` : 특정 프로젝트에 귀속되지 않고 PC 전체에 설치하도록 설정하는 명령어
     - npm의 경우 python과 다르게 자동으로 프로젝트별 가상환경 생성 
+    - 뒤에 옵션 없이 `npm install` 만 쓴다면 package.json에 있는 필요 목록들 모두 설치
+      - 즉, pip install -r requirements.txt와 같은 역할 수행
 
   - 프로젝트 생성
 
@@ -1090,7 +1092,7 @@
    ※ vuex나 vue-router는 vue에 포함되어있는 app이 아니라서 따로 설치해줘야함
 
    ```bash
-   $ vue add vuex
+   $vue add vuex
    ```
 
    - commit 여부 물을 경우 yes 클릭
@@ -1208,8 +1210,6 @@
 >
 > - 논리적인 코드 자체가 변하는 것이 아니라 '쉽게' 사용할 수 있도록 되어 있음에 초점
 
-
-
 - 원래는 저장소의 state를 바꾸기 위한 과정은 매우 복잡함
   1. 컴포넌트에서 methods에 dispatch와 불러올 actions 등록
   2. store에서 actions에 불러올 mutations 등록
@@ -1229,6 +1229,9 @@ import vuex.mapActions from 'vuex' === import { mapActions } from 'vuex'
 - **computed와 Store의 state를 매핑**
 - Vuex Store의 하위 구조를 반환하여 component 옵션을 생성
 - 매핑된 computed 이름이 state 이름과 같을 때 문자열 배열을 전달 할 수 있음
+- but, State를 가져올 때는 mapGetters를 이용해서 가져올 것을 권장
+  - 원하는 데이터가 state에 있는지 getters에 있는지 헷갈릴까봐
+
 
 ```vue
 <script>
@@ -1500,3 +1503,206 @@ expoprt default {
   ```
 
   - 특별한 코드 작성 및 로직 구현 없이 위 코드만으로도 자동으로 LocalStorage에 저장되고, 이에 더해 state에까지 저장됨
+
+
+
+
+
+### Vue 응용
+
+#### api 요청 모음
+
+- 요청을 보낼 api 주소를 모두 정리해놓은 파일 생성
+- 즉, 미리 URI를 만들어주는 역할
+- 예시
+  - api 폴더에 drf.js 파일이 존재하는 구조
+  - `drf.accounts.login()`과 같이 함수를 통해 api 주소를 요청할 수 있다
+
+
+
+#### components vs views
+
+- 부품 vs 보여주기
+- 특정 URL과 상관 X vs 특정 URL과 연결
+
+
+
+#### 전역 가드 (Global Before Guards)
+
+- URL을 이동할 때마다, 이동하기 전 모든 경우에 발생
+
+- router 객체의 메서드로, 콜백 함수를 인자로 받고 해당 콜백 함수는 3개의 인자를 받음
+
+  1. to : 이동하려는 route의 정보를 담은 객체
+  2. from : 직전 route의 정보를 담은 객체
+  3. next : 실제 route의 이동을 조작하는 함수
+
+- 반드시 마지막에 next()로 route 이동을 실행해야함
+
+- 예시
+
+  ```js
+  // @/router/index.js
+  
+  // 각종 router 지정
+  const routes = [...]
+                  
+  const router = new VueRouter({
+  	mode: 'history',
+      base: process.env.BASE_URL,
+      routes
+  })
+  
+  router.beforeEach((to, from, next) => {
+      ...
+  })
+  
+  export default router
+  ```
+
+  ```js
+  router.beforeEach((to, from, next) => {
+      // 로그인 여부 확인 (Vuex 사용시)
+      const { isLoggedIn } = store.getters
+      // Auth가 필요한 route의 name
+      const authPages = ['articleNew', 'articleEdit']
+      // 현재 이동하고 있는 페이지가 Auth가 필요한가/
+      const isAuthRequired = authPages.includes(to.name)
+      
+      // Auth가 필요한데, 로그인 되어있지 않다면?
+      if (isAuthRequired && !isLoggedIn) {
+          // 로그인 페이지로 이동
+          next({ name: 'login'})
+      } else {
+          // 원래 이동하려던 곳으로 이동
+          next()
+      }
+  })
+  ```
+
+  
+
+#### Vuex 모듈
+
+> 단일 파일(@/store/index.js)에 모든 state, getters, mutations, actions를 작성할 경우, App이 커질 수록 파일의 크기가 너무 커짐
+>
+> 따라서, 기능에 따라 state, getters, mutations, actions를 모듈(파일)로 분리하여 사용
+
+
+
+##### store/index.js
+
+```js
+import Vue from 'vue'
+import Vuex form 'vuex'
+
+import accounts from './modules/accounts'
+import articles from './modules/articles'
+
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+    modules: {
+        accounts,
+        articles,
+    }
+})
+```
+
+##### store/modules/각종 기능별 분류.js
+
+```js
+export default {
+    state: {
+        ...
+    },
+    getters: {
+        ...
+    },
+    mutations: {
+        ...
+    },
+    actions: {
+        ...
+    }
+}
+```
+
+
+
+##### namespace
+
+- 다른 module에 작성되어 있어도, 실제로는 global namespace에 등록됨
+
+- 만약 확실하게 모듈별로 구분하고 싶다면, namespaced: true 옵션을 사용
+
+  
+
+
+
+#### API 폴더
+
+> 서버로 요청을 보낼 URI 등을 정리해놓는 파일 보관
+
+- 예시
+
+  ```js
+  const HOST = 'http://localhost:8080/api/v1/'
+  
+  const ACCOUNTS = 'accounts/'
+  const ARTICLES = 'articles/'
+  const COMMENTS = 'comments/'
+  
+  export default {
+      accounts: {
+          login: () => HOST + ACCOUNTS + 'login/',
+          logout: () => HOST + ACCOUNTS + 'logout/',
+          signup: () => HOST + ACCOUNTS + 'signup/',
+      ...
+      },
+      articles: {
+          articles: () => HOST + ARTICLES,
+          article: articlePK => HOST + ARTICLES + `${articlePK}/`,
+          ...
+      }
+  }
+  ```
+
+  
+
+- 요청 보내기 예시 (signup)
+
+  ```js
+  // store/modules/accounts.js
+  
+  import drf from '@/api/drf'
+  import router from '@/router'
+  
+  export default {
+      actions: {        
+          signup({ commit, dispatch }, credentials) {
+              axios({
+                  url: drf.accounts.signup(),
+                  method: 'post',
+                  data: credentials
+              })
+              .then(res => {
+                  const token = res.data.key
+                  dispatch('saveToken', token)
+                  router.push({ name: 'article'})
+              })
+              .catch(err => {
+                  console.error(err.response.data)
+                  commit('SET_AUTH_ERROR', err.response.data)
+              })
+           } 
+    	 }
+  ```
+
+  - signup 함수의 credentials 는 어디서?
+    - HTML의 input 태그에서 가져옴
+    - 따라서, form 태그의 submit 이벤트를 prevent 하고 signup 함수를 실행시킬 수 있도록 해야함
+  - HTML에서 credentials 만들기
+    - data에 credentials 객체 생성
+      - username, password 등을 key로 가짐
+    - input 태그와 v-model로 묶어서 데이터 저장
