@@ -1636,6 +1636,8 @@ export default {
 
 - 만약 확실하게 모듈별로 구분하고 싶다면, namespaced: true 옵션을 사용
 
+- export default 바로 밑에 namespaced:true 추가
+
   
 
 
