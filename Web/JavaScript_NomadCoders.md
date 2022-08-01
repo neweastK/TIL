@@ -175,7 +175,7 @@ element.addEventListener(event, function)
   - 선택된 태그를 console.dir로 출력할 경우 event 확인 가능
   - on이 붙은 모든 것들이 해당 태그에서 사용할 수 있는 event
 
-- event 활용
+- event 활용법은 기본적으로 2가지
 
   ```javascript
   title.addEventListener("click", function1)
@@ -192,15 +192,38 @@ element.addEventListener(event, function)
 - window는 document와 같이 javascript에서 기본적으로 제공
   - wifi 연결 상태, 화면 사이즈 변경 등과 같은 다양한 이벤트 존재
 
+  - window도 해당 이벤트를 활용할 수 있음
+  
+    ```js
+    window.addEventListener('resize', funtion1)
+    ```
+  
+  - 관련 이벤트는 mdn에서 탐색 가능
+  
 - document의 head, body, title 등과 같은 태그는 querySelector 없이 바로 접근 가능
   - document.body.style~~
   - document.title~~
+  - but div, span 등과 같은 일반적인 태그는 반드시 querySelector 등을 통해 가져와야함
 
 
 
 ##### event와 css
 
 > JavaScript에서 직접 style을 변경해주는 것은 그닥 바람직하지 않음
+>
+> → CSS를 통해서 style을 변경해주는 것이 가장 바람직함
+> → style은 CSS로 animaition은 JS로 설정하자!
+
+```html
+<!-- index.html -->
+<head>
+    ...
+    <link rel='stylesheet' href='style.css' />
+</head>
+```
+
+- css 파일을 import 해오는 방법
+- import 하면 css 파일에 있는 스타일들 지정 가능
 
 1. css에 원하는 스타일 작성 (클래스 활용, 태그 활용 등등)
 
@@ -220,30 +243,28 @@ element.addEventListener(event, function)
    title.className = "active"
    ```
 
-   - 반드시 css에서의 스타일 이름과 동일해야함
+   - 이미 기존에 class가 있던 상태에서는 덮어쓰기가 되어버림
+     - className이 아닌 classList를 활용 
    
-   - 이미 기존에 class가 있던 상태에서 새로운 class를 추가해주고 싶은 경우
-     - className이 아닌 classList를 활용
-     
      - 다양한 메서드 활용 가능
-     
+   
        ```javascript
        element.classList.contains(~~~)
-       /// ~~~ 라는 클래스가 element의 클래스리스트 안에 있는지 확인
+       /// ~~~ 라는 클래스가 element(html태그)의 클래스리스트 안에 있는지 확인
        element.classList.remove(~~~)
-       /// element의 클래스리스트에서 ~~~라는 클래스 제거
+       /// element(html태그)의 클래스리스트에서 ~~~라는 클래스 제거
        element.classList.add(~~~)
-       /// element의 클래스리스트에 ~~~라는 클래스 추가
+       /// element(html태그)의 클래스리스트에 ~~~라는 클래스 추가
        ```
-     
+   
      - toggle 메서드
-     
+   
        ```javascript
        element.classList.toggle('---')
        ```
-     
+   
        - 특정 element의 classList에 ---라는 클래스가 이미 있는지 확인하고 **있다면 제거해주고 없다면 추가해줌**
-     
+   
        ```js
        if (h1.classList.contains(someClass)){
            h1.classList.remove(someClass)
@@ -254,6 +275,6 @@ element.addEventListener(event, function)
        // 위 코드와 아래 코드는 동일한 역할 수행
        h1.classList.toggle(someClass)
        ```
-     
+   
        
 

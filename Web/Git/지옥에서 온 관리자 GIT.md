@@ -183,6 +183,8 @@ git reset --hard 돌아가고싶은hash번호
 - 작업 영역에 있는 파일까지 날아가버림
   - 즉, 로컬 폴더에 파일까지 사라진다
 
+#### 
+
 ### git reflog
 
 > 한 번이라도 커밋했던 모든 내용들이 담겨 있음
@@ -671,23 +673,14 @@ git remote add origin github저장소주소
 
 4. 승인 받은 후의 팀원
 
-   1. branch 삭제 (원격 저장소의 브랜치 삭제)
+   1. branch 삭제 
 
       ```bash
       git push --delete origin 브랜치명
       ```
 
       - 위 코드는 github에서 해당 브랜치가 삭제되는 것
-
       - 팀원의 로컬에는 남아있음 (혹시 모를 상황 대비)
-
-        - 로컬 브랜치 삭제 명령어
-
-          ```bash
-          git branch -d 브랜치명
-          ```
-
-          
 
    2. dev 브랜치 동기화
 
