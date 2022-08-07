@@ -1489,7 +1489,7 @@ expoprt default {
   $ npm i vuex-persistedstate
   ```
 
-- impot(in index.js)
+- import(in index.js)
 
   ```js
   // store/index.js
