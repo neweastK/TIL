@@ -1599,7 +1599,7 @@ import Vuex form 'vuex'
 import accounts from './modules/accounts'
 import articles from './modules/articles'
 
-Vue.use(Vuex)
+Vue.use(Vuex)drf
 
 export default new Vuex.Store({
     modules: {
