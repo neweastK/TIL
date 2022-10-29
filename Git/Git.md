@@ -247,7 +247,17 @@
 
 
 
+##### git restore
 
+> git add 한 내용 취소하기
+
+- git add 까지 한 파일을 취소할 수 있음
+
+  ```bash
+  git restore --staged 파일이름
+  ```
+
+  
 
 
 
