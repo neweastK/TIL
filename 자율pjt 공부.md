@@ -201,7 +201,7 @@
 
 - 완료 
 
-  ![image-20221029132802495](자율pjt 공부.assets/파티션 분할.png)
+  ![image-20221029132802495](assets/자율pjt 공부.assets/파티션 분할.png)
 
 
 
@@ -231,7 +231,7 @@
   
 - 다음과 같이 설정
 
-  - <img src="자율pjt 공부.assets/rufus-setting.png" alt="image-20221029141035345" style="zoom:50%;" />
+  - <img src="assets/자율pjt 공부.assets/rufus-setting.png" alt="image-20221029141035345" style="zoom:50%;" />
 
   - 파티션 구성, 포맷 옵션 등에 대한 설명
     - [내 BIOS 확인하기](https://forbes.tistory.com/582), [부팅 방법 차이](https://zkim0115.tistory.com/514), [포맷 차이](https://m.blog.naver.com/myrikason/221353874580)
@@ -404,3 +404,53 @@
 
   - `sudo apt-cache search [패키지명]`: 패키지 검색
   - `sudo apt-cache show [패키지명]` : 패키지 정보 보기
+
+
+
+## Ubuntu 22.04 에서의 Python 버전 문제
+
+> Edge TPU 사용시 쓰이는 Pycoral 라이브러리는 Python3.6-3.9 에서만 사용 가능
+>
+> BUT, Ubuntu 20.04의 기본 Python이 3.8인 반면 Ubuntu 22.04는 3.10이라서 Pycoral 설치 불가
+>
+> 이를 위해, Ubuntu 22.04에서의 Python 버전을 변경해야함
+>
+> - but, ubuntu에 기본적으로 설치되어 있는 python에는 운영체제 관련 많은 디펜던시가 있음
+> - 따라서, 해당 python을 고칠 경우 운영체제 전체에 문제가 생겨버림
+>   - 실제, 부팅화면에서 넘어가지 않아서 ubuntu-desktop을 재설치한다던지, 설치되어있던 크롬이 없어진다던지, 터미널이 삭제된다던지 등의 문제가 있었음
+> - 이를 해결하기 위해, 기본적으로 설치되어 있는 python을 건드리지 않고, 가상환경 내에서 새로운 파이썬을 설치하고, 해당 파이썬에 맞는 Pycoral을 받을 수 있도록 해야함
+
+### 1. 가상환경 내에 새로운 파이썬 사용
+
+> 일단 pip가 있는지 확인해봐야함! 
+
+- ```bash
+  pip3.8 install virtualenv --user
+  ```
+
+  - pip가 root 에 있다면 `--user` 삭제, 로컬에 있다면 사용
+  - 위 코드로 진행할 경우 가상환경은 기본적으로 python3.8을 인터프리터로 함
+
+- ```bash
+  virtualenv [가상환경명] --python=python3.8
+  ```
+
+  - 가상환경 생성하기
+  - 지정한 버전으로 파이썬 작동됨
+
+- ```bash
+  source [가상환경명]/bin/activate
+  ```
+
+  - 가상환경 작동시키기
+
+
+
+### 2. pycoral 설치
+
+- 만약 apt-get을 사용할 경우, root 폴더를 기준으로 하여 의존성 문제가 발생할 수도 있음.
+  - 아직 테스트 안해봄
+- 따라서, pip를 사용하여 pycoral을 설치하는데, 이때, window를 위해 주어진 코드를 사용해보자
+
+
+
