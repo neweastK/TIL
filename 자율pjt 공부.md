@@ -147,7 +147,7 @@
 | less [파일명]                                                | 파일을 열고 내용을 볼 수 있는 뷰어 기능                      |                                                              |                                                              |                                                              |
 | tar cvfz [압축파일명] [압축하고자 하는 파일 데릭토리1] [디렉토리 or 파일2] [디렉토리 or 파일3] | 파일과 디렉토리를 압축                                       |                                                              |                                                              |                                                              |
 | tar xvfz [파일명]                                            | 압축 해제                                                    |                                                              |                                                              |                                                              |
-| sudo [명령어] [옵션]                                         | root는 슈퍼관리자로 시스템의 중요 자원을 변경하기 위해서는 root 권한으로 작업해야함<br />이러한 root의 권한을 부여하는 명령어 | `sudo vi /etc/sudoers` 명령어로 루트 권한을 부여할 계정을 등록해야함 |                                                              |                                                              |
+| sudo [명령어] [옵션]                                         | root는 슈퍼관리자로 시스템의 중요 자원을 변경하기 위해서는 root 권한으로 작업해야함<br />이러한 root의 권한을 부여하는 명령어 | `sudo vi /etc/sudoers` 명령어로 루트 권한을 부여할 계정을 등록해야함f |                                                              |                                                              |
 | chown [소유자]:[그룹명] [소유자나 그룹명을 변경할 파일이나 디렉토리] | 소유자와 그룹 변경                                           |                                                              |                                                              |                                                              |
 | top                                                          | 운영적인 서버의 CPU나 메모리 상태를 확인할 수 있음           | `-d`: 갱신 시간 조정                                         |                                                              |                                                              |
 | w                                                            | 현재 Linux 장비에 접속한 사용자 확인 (who는 간단한 내용 출력) |                                                              |                                                              |                                                              |
@@ -284,6 +284,23 @@
   - 재부팅 할 때 안내 문구 뜨면 USB 제거하고 Enter 클릭
 
 - 이후, 컴퓨터 재부팅시 window boot manager를 선택하면 window가 ubuntu를 선택하면 ubuntu 실행
+
+
+
+### 4. 기타
+
+- 크롬 설치
+  - `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+  - `sudo apt install ./google-chrome-stable_current_amd64.deb`
+- curl 설치 
+- apt 미러 설정 (카카오로)
+  - `sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list`
+- 마크다운, vscode 설치
+- pip 설치
+  - `sudo apt-get install python3-pip`
+  - `sudo apt-get install python3-venv`
+
+
 
 
 
