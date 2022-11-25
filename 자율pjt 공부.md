@@ -12,11 +12,24 @@
 ##### 스피커
 
 1. 움직임 감지시 
-2. 
+
+   
 
 # 오류  및 학습 모음
 
 ## 오류
+
+- python 라이브러리 설치 후 import 안되는 경우 (ImportError)
+
+  - 에러메시지 
+
+    ```txt 
+    ImportError: cannot import name 'DeepFace' from partially initialized module 'deepface' (most likely due to a circular import) (/home/ssafy/ssafy/test/face_recoginition/deepface.py)
+    ```
+
+  - 파일명과 모듈명이 똑같아서 발생하는 오류
+
+  - 파이썬 실행 파일 이름을 변경해줄 것
 
 
 
@@ -468,6 +481,320 @@
 - 만약 apt-get을 사용할 경우, root 폴더를 기준으로 하여 의존성 문제가 발생할 수도 있음.
   - 아직 테스트 안해봄
 - 따라서, pip를 사용하여 pycoral을 설치하는데, 이때, window를 위해 주어진 코드를 사용해보자
+
+
+
+
+
+## 우리가 한 방법
+
+### 1.파이썬 설치 (ver 3.8.10)
+
+- https://joytk.tistory.com/77  페이지 참고
+  - 사전작업
+    - make 없어서 설치 (sudo apt install make)
+    - gcc 없어서 설치 (sudo apt-get install gcc)
+    - zlib 없어서 설치 (sudo apt-get install zlib1g)
+    - zlib-dev 없어서 설치 (sudo apt-get install zlib1g-dev)
+
+
+
+### 2. 위 방법 실패해서 가상환경 사용
+
+
+
+
+
+## HDMI 연결 문제
+
+### 그래픽 드라이버 재설치 필요
+
+1. 설치할 때 recommend 버전 확인
+
+   ```bash
+   ubuntu-drivers devices
+   ```
+
+2. 추천된 버전의 오리지널 버전 설치 (open이나 server 없는거)
+
+   ```bash
+   sudo add-apt-repository ppa:graphics-drivers/ppa
+   ```
+
+   - 레포지토리 추가하기
+
+   ```bash
+   sudo apt update
+   ```
+
+   - apt 업데이트
+
+   ```bash
+   sudo apt-get install nvidia-driver-520
+   ```
+
+   - 1번에서 확인한 recommend 버전의 기본형 설치
+
+3. 재시작
+
+- 결과적으로 HDMI 뿐 아니라 안되던 크롬 파이어폭스도 제대로 작동함
+
+
+
+
+
+## OpenCV 설치
+
+1. 기존 OpenCV 설치 여부 확인
+
+   ```bash
+   pkg-config --modversion opencv
+   ```
+
+   - 있다면 버전이 출력됨. 삭제하고 재설치
+
+     ```bash
+     sudo apt-get purge libopencv* python-opencv
+     sudo apt-get autoremove
+     ```
+
+   
+
+2. 기존에 설치된 패키지들 업그레이드
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get upgrade
+   ```
+
+   
+
+3. OpenCV 의존성 설치
+
+   ```bash
+   sudo apt install cmake
+   ```
+
+   - cmake 설치
+
+   ```bash
+   sudo apt-get install libjpeg-dev libtiff5-dev libpng-dev
+   ```
+
+   - 특정 포맷의 이미지 파일을 불러오거나 저장하기 위해 필요한 패키지들
+
+   ```bash
+   sudo apt-get install ffmpeg libavcodec-dev libavformat-dev libswscale-dev libxvidcore-dev libx264-dev libxine2-dev
+   ```
+
+   - 특정 코덱의 비디오 파일을 읽어오거나 저장하기 위해 필요한 패키지들
+
+   ```bash
+   sudo apt-get install libv4l-dev v4l-utils
+   ```
+
+   - Video4Linux(v4l) 패키지는 리눅스에서 웹캠으로부터 실시간 비디오 캡처를 지원하기 위한 디바이스 드라이버와 API를 포함
+
+   ```bash
+   sudo apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev 
+   ```
+
+   - GStreamer는 비디오 스트리밍을 위한 라이브러리
+
+   ```bash
+   sudo apt-get install libgtk-3-dev
+   ```
+
+   - 윈도우 생성 등의 GUI를 위해 gtk 또는 qt 설치
+     - 위 코드는 gtk 설치 코드
+
+
+
+4. 기타 추가 패키지 설치 (필수 X)
+
+   ```bash
+   sudo apt-get install libatlas-base-dev gfortran libeigen3-dev
+   ```
+
+   - OpenCV 최적화를 위해 사용되는 라이브러리
+
+   ```bash
+   sudo apt-get install mesa-utils libgl1-mesa-dri libgtkgl2.0-dev libgtkglext1-dev
+   ```
+
+   - OpenGL을 지원하기 위해 필요한 라이브러리
+
+   
+
+5. OpenCV 설치
+
+   - 소스코드 저장용 디렉토리 생성
+
+     ```bash
+     mkdir opencv
+     cd opencv
+     ```
+
+   - 소스코드 다운
+
+     - OpenCV 4.4.0 소스코드
+
+       ```bash
+       wget -O opencv.zip https://github.com/opencv/opencv/archive/4.4.0.zip
+       unzip opencv.zip 
+       ```
+
+     - Opencv_Contrib 소스코드
+
+       ```bash
+       wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.4.0.zip
+       unzip opencv_contrib.zip
+       ```
+
+       
+
+   - 빌드 디렉토리 생성
+
+     ```bash
+     cd opencv-4.4.0
+     mkdir bulid
+     cd bulid
+     ```
+
+   - 컴파일 설정
+
+     ```bash
+     cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=OFF -D WITH_IPP=OFF -D WITH_1394=OFF -D BUILD_WITH_DEBUG_INFO=OFF -D BUILD_DOCS=OFF -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=OFF -D BUILD_PACKAGE=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D WITH_QT=OFF -D WITH_GTK=ON -D WITH_OPENGL=ON -D BUILD_opencv_python3=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib-4.4.0/modules -D WITH_V4L=ON  -D WITH_FFMPEG=ON -D WITH_XINE=ON -D OPENCV_ENABLE_NONFREE=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D OPENCV_SKIP_PYTHON_LOADER=ON -D OPENCV_GENERATE_PKGCONFIG=ON ../
+     
+     ```
+
+     - 만약 파이썬 라이브러리가 아무 것도 없다면 아래 코드 실행
+
+       ```bash
+       cmake -D PYTHON3_INCLUDE_DIR=/usr/include/python3.8 -D PYTHON3_NUMPY_INCLUDE_DIRS=/usr/lib/python3/dist-packages/numpy/core/include/ -D PYTHON3_PACKAGES_PATH=/usr/lib/python3/dist-packages -D PYTHON3_LIBRARY=/usr/lib/x86_64-linux-gnu/libpython3.8.so ../
+       ```
+
+   - 컴파일 시작
+
+     ```bash
+     time make -j$(nproc)
+     ```
+
+   - 컴파일 결과물 설치
+
+     ```bash
+     sudo make install
+     ```
+
+   - 설정파일 설치 여부 확인
+
+     ```bash
+     cat /etc/ld.so.conf.d/*
+     ```
+
+     - 만약 /usr/local/lib 가 출력되지 않았다면 아래 명령 추가 실행
+
+       ```bash
+       sudo sh -c 'echo '/usr/local/lib' > /etc/ld.so.conf.d/opencv.conf'
+       ```
+
+   - 최종 
+
+     ```bash
+      sudo ldconfig
+     ```
+
+   - 설치 여부 확인
+
+     ```bash
+     python
+     $ python3
+     import cv2
+     cv2.__version__
+     ```
+
+   - 컴파일에 사용했던 소스코드 디렉토리 삭제
+
+     ```bash
+     cd
+     rm -rf opencv
+     ```
+
+
+
+
+## Python 문법
+
+### partial
+
+> 기존 함수와 동일하지만 파라미터를 미리 정해준 또 다른 함수
+
+
+
+- partial(기존함수, 파라미터1, 파라미터2 ...) 와 같이 사용
+
+- 예시
+
+  ```python
+  from functools import partial
+  
+  def foo(x,y,z):
+      print(f'x:{x}, y:{y}, z:{z}')
+  
+  foo1 = partial(foo,1) # x:1
+  foo2 = partial(foo,1,2) # x:1, y:2
+  foo3 = partial(foo,1,2,3) # x:1, y:2, z:3
+  fooz = partial(foo, z=3) # z:3
+  
+  # 아래 세 함수의 결과는 모두 x:1, y:2, z:3
+  foo1(2,3)
+  foo2(3)
+  foo3()
+  fooz(1,2)
+  
+  ```
+
+  
+
+
+
+## Gnome Extension 설치
+
+> 카메라 화면을 원하는 위치에 띄우기 위해 각종 방법 시도
+>
+> 1. gstreamer pipeline 내에서 컨트롤 (실패)
+> 2. compiz 프로그램으로 컨트롤 (실패)
+> 3. gnome-extension 탐색 활용
+>    1. Auto move windows - 실패 (작업환경 컨트롤. 즉, 위치가 아닌 가상환경을 지정)
+>    2. Native window placement - 세팅 불가
+>    3. Smart Auto move - gnome 버전 차이로 실패
+>    4. Put windows 설치
+
+
+
+### 과정
+
+1. gnome-shell-extensions 설치
+
+   ```bash
+   sudo apt-get install gnome-shell-extensions
+   ```
+
+2. gnome-shell-extensions 확장 프로그램 설치 (in Chrome)
+
+3. gnome-tweaks 설치 (컨트롤러)
+
+   ```bash
+   sudo apt install gnome-tweaks
+   ```
+
+4. Put windows 설치 
+
+   1. 원하는 프로그램 세팅
+      1. 프로그램 실행 시키고 해당 프로그램 선택 (실행 안되어있으면 선택 불가)
+      2. Gstreamer 프로그램 선택
+      3. 원하는 사이즈 및 위치 지정
+   2. 저장버튼 필수
 
 
 
