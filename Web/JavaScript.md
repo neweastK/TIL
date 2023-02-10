@@ -1266,6 +1266,28 @@ console.log(result)		// 결과 : 1-2-3-4-5
 
 
 
+##### from
+
+```js
+Array.from(arrayLike[,mapFn[,thisArg]])
+```
+
+- 유사 배열 객체나 반복 가능한 객체를 복사해 새로운 배열 생성
+
+- 첫번째 인자로 유사 배열 객체 혹은 반복 가능한 객체를 받는다
+
+- 두번째 인자는 각 요소에 대해 호출할 함수
+
+  - 반환값은 각 요소의 값이 된다
+
+- 예시
+
+  ```javascript
+  let array1 = Array.from({length:3}) //[undefined, undefined, undefined]
+  let array2 = Array.from({length:3},(v,i) => i) // [0,1,2]
+
+
+
 ##### Spread operator
 
 - sperad operator(...) 를 사용하면 배열 내부에서 배열 전개 가능
