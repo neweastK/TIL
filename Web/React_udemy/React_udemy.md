@@ -320,12 +320,17 @@
   - ReactDOM의 createRoot 메서드를 통해 react를 통해 만든 사용자 인터페이스가 위치해야할 요소를 알려줌
     - index.html의 root 아이디를 가진 div태그를 가리키고 있음(`ReactDOM.createRoot(요소)`)
     - root 객체를 반환하며 이 객체는 render 메서드로 지정한 위치에 무엇이 렌더링되어야하는지 알려줌 (`root.render(주로 App.js)`)
+- 렌더링은 루트 컴포넌트 한번만 실행
+
+
 
 ###### App.js
 
 - root라는 id를 갖는 요소가 있는 곳에 렌더링되는 컴포넌트
 - 최신 JS에서는 한 파일에 정의된 함수, 클래스, 객체를 다른 파일에서 사용하고자 하는 경우 export로 내보낼 수 있음
 - 루트 컴포넌트로서 ReactDOM에 의해 html 페이지에 직접 렌더링 될 수 있는 유일한 컴포넌트임
+  - 모든 컴포넌트들은 다른 컴포넌트 혹은 app.js에 중첩될 것
+
 
 
 
@@ -372,18 +377,21 @@
 
 - 다른 컴포넌트에서 import 로 컴포넌트를 가져와서 html 태그에 삽입
 
-  - 이때, 사용자 지정 컴포넌트의 이름은 반드시 대문자로 시작해야함
+  - 이때, 사용자 지정 컴포넌트의 이름은 **반드시 대문자로 시작해야함**
   - JSX가 코드를 변환할 때, 사용자 지정 컴포넌트인지 아닌지를 대소문자로 구분하기 때문
 
   ```react
   import 컴포넌트명 from './컴포넌트경로' //js 파일은 확장자 빼야함!
   
-  function App() {
+  function 컴포넌트명() { // 관습적으로 컴포넌트명으로 함수명 작성
       return (
       	<div>
           	<h2>Let's get started!</h2>
-              <컴포넌트명></컴포넌트명> // 이곳에 가져온 컴포넌트가 들어가게 됨. 시작글자는 대문자여야함! 
-              
+              {/*이곳에 가져온 컴포넌트가 들어가게 됨. 시작글자는 대문자여야함!*/} 
+              <컴포넌트명></컴포넌트명>
+              {/*컴포넌트 사이에 다른 내용이 없으면 아래처럼 사용가능*/}
+              <컴포넌트명 />
+  
           </div>
       )
   }
@@ -398,3 +406,198 @@
   3. import 후 원하는 위치에 html 태그처럼 삽입
      1. 이때, 이름은 반드시 대문자로 시작해야함
 
+
+
+##### 만약, JSX를 사용하지 않는다면? (변환 중간과정)
+
+```react
+{/* JSX 사용 */}
+import Expenses from './Expenses'
+
+function Example() {
+    return (
+    	<div>
+        	<h2>Let's get started!</h2>
+            <Expenses items={expenses}/>
+        </div>
+    )
+}
+```
+
+```react
+{/* React 라이브러리 사용 */}
+import React from 'react'
+import Expenses from './Expenses'
+
+functioin Example() {
+    return React.createElement(
+    	'div',{},
+        React.createElement('h2', {}, "Let's get started!"),
+        React.createElement(Expenses, {items: expenses})
+    )
+}
+```
+
+- React.createElement 매개변수 : 생성할 요소(html태그나 사용자 지정 컴포넌트), 속성, 태그 사이에 들어갈 컨텐츠
+  - 이 과정을 거치기 때문에, JSX 코드를 리턴할 때, 하나의 루트 태그만 있어야했던 것
+  - 안 그러면 변환 작업에서 React.createElement를 여러개 생성해야하는데 그럴 수 없음
+
+- 과거에는 React 라이브러리를 반드시 import 해야했음. but, 이제는 그러지 않아도 됨
+
+
+
+#### CSS 적용하기
+
+- 보통은 특정한 컴포넌트의 CSS를 위해 `컴포넌트.css` 파일을 하나 생성
+  - css 파일 작성
+- 해당하는 컴포넌트 파일에 css를 적용할 수 있도록 import
+  - 단지, import만 하면 됨
+  - `import './컴포넌트명.css'`
+- JSX 안에서 클래스를 지정할 때는 className으로 지정해야함
+  - why?) 
+    -  JSX로 작성되는 코드는 html처럼 생겼지만 html이 아닌 JS
+    - JS에는 class 가 이미 예약어로 존재, 따라서 다른 클래스 지정 단어가 필요했던 것
+
+
+
+#### 동적 데이터 작업하기
+
+- 함수 내부에 필요한 상수 혹은 변수를 설정할 수 있음
+  - 일반 자바스크립트 그대로 작성하면 됨
+  - return 위에 작성
+  - but, 만약 다른 컴포넌트의 데이터를 원한다면, props를 사용해야함
+- JSX에 해당 변수 혹은 상수를 넣기 위해서 중괄호 사용
+  - `{}` 안에서는 자바스크립트 언어를 작성할 수 있음
+  - 변수나 상수를 넣을 수도 있고, 어떤 JS 코드든 가능
+    - 단, 문자열로 출력될 수 있는 것만 가능
+    - 그래서 date 객체는 그대로 출력이 안됨
+
+
+
+#### Props 사용하기 (== 컴포넌트 재사용하기)
+
+##### props
+
+- 어떻게 다른 컴포넌트의 데이터를 사용할 것인가?
+
+- 만약, 특정 컴포넌트 내에서 다른 데이터를 사용하고 싶다면 해당 데이터는 컴포넌트 바깥에서 선언되어야함
+
+  - 바깥 컴포넌트에서 jsx 태그에 속성으로서 전달되기 때문
+
+    ```react
+    function App() {
+        // 다른 컴포넌트에게 전달할 데이터
+        const expense = [
+            {
+                id: "e1",
+                title: "paper",
+                amount: 123,
+            },
+            {
+                id: "e2",
+                title: "roll_paper",
+                amount: 443,
+            },
+            {
+                id: "e3",
+                title: "plastic",
+                amount: 1453,
+            }
+        ]
+      return (
+          // 특정 컴포넌트에 expense 데이터를 전달
+          // 전달된 속성들은 전달된 컴포넌트의 매개변수로 받을 수 있음
+          <div>
+          	<특정컴포넌트 
+                title={expense[0].title}
+                amout={expense[0].amout}
+                ></특정컴포넌트>
+            <특정컴포넌트 
+                title={expense[1].title}
+                amout={expense[1].amout}
+                ></특정컴포넌트>
+            <특정컴포넌트 
+                title="일반 문자열로도 전달이 가능하지"
+                amout=14422
+                ></특정컴포넌트>
+          </div>
+      )
+        
+    }
+    ```
+
+    ```react
+    // 첫번째 매개변수로 전달받음
+    // 이름은 임의로 지을 수 있지만 보통 props로 지음
+    function 특정컴포넌트(props) {
+        return (
+            <div className="expenseItem">
+                {/* expense의 title값이 올 것 */}
+                <div>{props.title}</div> 
+                <div>{props.amout}</div>
+            </div>
+        )
+        
+    }
+    ```
+
+- props 에는 지정한 모든 속성들이 하나의 객체로 합쳐진 상태로 존재
+  - 따라서, `props.속성명` 으로 하위 컴포넌트에서 접근해야함
+
+##### 동일한 컴포넌트를 여러 컴포넌트로 분리하기
+
+- 컴포넌트가 점점 커질 때는 하나의 컴포넌트를 더 작은 컴포넌트 단위로 분리할 수 있음
+- 컴포넌트를 작고 집중된 것으로 유지하는 것은 중요한 연습!
+
+
+
+#### children props
+
+- 사용자 정의 컴포넌트 태그 사이에 컨텐츠를 넣고 싶다면 children props 사용 필요
+
+- 사용자 정의 컴포넌트 태그 사이의 내용들은 모두  `props.children`에 저장되어 있음
+
+  - 따로 지정하지 않아도 자동으로 저장
+
+- 컨텐츠를 포함하고 있는 컴포넌트 파일에서 래퍼 html 코드를 작성하고 해당 태그 사이에 `{props.children}` 이라고 넣어줘야함
+
+- 사용자 정의 컴포넌트 태그에는 className 적용이 안됨
+
+  - 따라서, className을 props로 받아서 해당 파일에서 직접 작성해야함
+
+- 예시
+
+  ```react
+  {/* 메인 컴포넌트 */}
+  import ExpenseDate from './ExpenseDate';
+  import Card from './Card';
+  
+  function ExpenseItem(props) {
+      return (
+      <Card className='expense-item'> {/* 이 사용자 정의 컴포넌트로 아래 내용들을 감싸고 싶다면 Card 컴포넌트 파일에서 작업 필요 */}
+              <ExpenseDate date={props.date} />
+              <div className='expense-item'>
+              	<h2>{props.title}</h2>
+                  <div className='expense-item'>${props.amount}</div>
+              </div>
+      </Card>
+      )
+  }
+  ```
+
+  ```react
+  {/* Card 컴포넌트 */}
+  
+  function Card(props) {
+      {/* 사용자 정의 컴포넌트에 className은 적용되지 않음 */}
+      {/* 따라서, 해당 컴포넌트 파일에서 아래처럼 직접 지정해주고, return값에 적용시켜야함 */}
+      const classes = 'card '+ props.className
+      
+      return <div className={classes}>{props.children}</div> 
+      {/* props.children에는 위 메인 컴포넌트에서 Card 컴포넌트에 감싸져있는 코드들이 있음 */}
+  }
+  
+  export default Card
+  ```
+
+  
