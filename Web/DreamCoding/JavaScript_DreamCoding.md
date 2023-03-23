@@ -441,7 +441,7 @@
 
   
 
-## 6강 _ Class & Object
+## 6강 _ Class vs Object
 
 - Class는 관련있는 속성(fields)과 행동(methods)가 종합적으로 묶여있는 것
   - method 없이 field로만 있는 경우도 있음 (데이터 클래스)
@@ -586,5 +586,84 @@
 
   
 
-​	
+## 7강 _ Object
 
+> - JS 데이터 타입 중 하나
+> - 기능적으로 연관된 데이터의 모음
+> - 거의 모든 오브젝트는 Object 클래스의 인스턴스
+> - Object는 키와 값의 집합체
+>   - Object는 키로 접근해서 값을 얻어온다
+
+
+
+#### Object를 만드는 법
+
+- Object Literal Syntax
+  - `const obj1 = {}`
+- Object Constructor Syntax
+  - `const obj2 = new Object()`
+- 처음 생성한 이후에도 새로운 키와 값을 추가하거나 기존 값을 삭제 할 수 있음
+  - 새로운값 추가 : `obj.키이름 = 값` or `obj['키이름'] = 값`
+  - 기존값 삭제 : `delete obj.삭제할키이름`
+
+
+
+#### Computed properties
+
+- 키에 접근하는 방법
+  - `obj.키이름`
+    - 어떤 키를 받을지 명확하게 아는 경우
+  - `obj['키이름']`
+    - 반드시 키 이름은 문자 타입으로
+    - 코딩 시점에 정확하게 어떤 키가 필요한지 모를 때 사용 (사용자에게 입력을 받는다거나 할 때)
+
+
+
+#### Property value shorthand
+
+- 객체 내의 key와 value의 이름이 같다면 둘 중 하나만 작성해도 됨
+
+  - 예시
+
+    ```js
+    function makePerson(name,age) {
+        return {
+    	    name,
+        	age
+        }
+    }
+    ```
+
+    - `{ name: name, age:age }` 처럼 작성할 필요가 없다는 것
+
+
+
+#### 연산자
+
+##### in
+
+- `key in object` : 해당 키가 객체 안에 있는지 true/false 반환 (key는 문자열로 작성)
+
+##### for in
+
+- 객체를 순회하면서 객체의 키값을 반환
+- 배열에 사용할 경우 인덱스 반환
+
+##### for of
+
+- 배열을 순회하면서 각 값을 반환
+- 객체에서 사용할 경우 오류남
+
+
+
+#### 복사
+
+- 기존에 있던 obj1을 obj2라는 새로운 변수에 할당하게되면 얕은 복사가 됨
+  - obj1에서 값을 바꾸면 obj2도 값이 바뀌고, obj2에서 값을 바꾸면 obj1에서도 값이 바뀜
+- 깊은 복사
+  - Object 클래스의 assign 메서드 사용
+    - `Object.assign(target, source)`
+    - 복사하고자 하는 source를 복사하려는 target 
+    - 여러개의 source를 매개변수로 설정할 수 있음
+    - 따라서, target에는 빈 객체를 넣고 복사하고 싶은 객체를 source에 넣으면 됨
+    - source가 여러개이면서 key값이 겹치는 경우가 있다면 가장 뒤에있는 값으로 덮어 씌워짐
