@@ -600,4 +600,270 @@ functioin Example() {
   export default Card
   ```
 
+
+
+
+
+
+## Section4. React State & Working with Events
+
+#### props로 이벤트리스너 추가하기
+
+- on으로 시작하는 이벤트 핸들러를 props로 설정
+
+  - onClick, onChange, onInput 등
+  - html 요소가 지원하는 이벤트라면 on+`요소명`으로 모든 이벤트 설정 가능
+
+- props의 값으로는 함수를 전달해야함
+
+  - 클릭했을 때, 작동해야할 함수
+
+- JSX 코드의 가독성을 유지하기 위해, 함수를 따로 저장하여 사용
+
+  - **이때, 이벤트 핸들러의 값으로 함수를 전달할 때 실행시키면 안됨!**
+  - **즉, `()` 없이 함수의 이름만 넣어야한다는 것!!**
+
+- 예시
+
+  ```react
+  import ExpenseDate from './ExpenseDate';
+  import Card from './Card';
   
+  function ExpenseItem(props) {
+      function clickHandler () {
+          console.log("Clicked!!")
+      }
+      
+      return (
+      <Card className='expense-item'> 
+              <ExpenseDate date={props.date} />
+              <div className='expense-item'>
+              	<h2>{props.title}</h2>
+                  <div className='expense-item'>${props.amount}</div>
+              </div>
+              <button onClick={clickHandler}>Change Title</button> 
+              {/* 버튼을 클릭하면 위의 clickHandler 함수를 실행시킨다 */}
+      </Card>
+      )
+  }
+  ```
+
+- 이벤트를 다루는 함수는 첫번째 인자로 이벤트 객체를 얻음
+
+  - 자동적으로 얻기 때문에 따로 설정 불필요
+    - onClick 이벤트 리스너가 이벤트 객체를 얻게 해주는 것
+
+
+
+
+
+
+#### State
+
+##### 왜 필요한가?
+
+- 리액트는 처음 렌더링할 때 모든 컴포넌트들을 확인함
+  - 컴포넌트는 함수로 정의했음.
+  - 따라서, 특정 컴포넌트를 만나면 정의한 함수가 실행됨
+  - 또한, 내부에 정의된 또 다른 컴포넌트 역시도 함수로서 실행됨
+- 문제는, 리액트는 절대 반복하지 않는다는 것
+  - 한번 렌더링하면 다시 렌더링하지 않음
+  - 따라서, 리액트에게 어떤 것이 변경되었고, 특정 컴포넌트는 재평가되어야한다고 알려줘야함
+    - 그 때 필요한 것이 state
+    - 컴포넌트 내 단순 정의된 변수는 변경되어도 리액트는 신경쓰지 않음 (다시 렌더링하지 않는다는 것)
+
+
+
+##### 사용하기
+
+- 리액트 라이브러리에서 제공되는 함수 useState를 import해야함
+
+  - `import React, { useState } from 'react';`
+  - 컴포넌트 함수가 다시 호출되는 곳에서 변경된 값을 반영하기 위해 state로 값을 정의할 수 있게 해주는 역할
+
+- 컴포넌트 함수 내에서 useState 호출
+
+  - `useState();`
+    - 리액트 훅 중 하나
+    - 리액트 훅은 use로 시작
+    - 모든 리액트 훅은 리액트 컴포넌트 함수 안에서 호출해야함
+    - 리액트 컴포넌트 함수 내에 이미 정의된 함수의 안에서도 호출할 수 없음
+    - only 리액트 컴포넌트 함수 바로 하위에 호출
+    - 단, 한가지 예외가 있음 (나중에)
+  - useState는 특별한 변수를 생성하는 역할
+    - 해당 변수는 변경사항으로 인해 컴포넌트를 다시 호출하도록 함
+    - **첫번째 요소는 변수 자체, 두번째 요소는 첫번째 요소를 업데이트 하는 함수인 배열 반환**
+  - `const [title, setTitle] = useState(초기값)` 과 같이 호출 
+    - 초기값은 title에 담기는데, 맨 처음 컴포넌트가 호출될 때만 초기값이 적용됨
+      - 이후, 재평가될 때는 초기값 무시
+    - 함수에 대한 명명은 주로 `set+첫번째요소이름` 으로 함
+    - title을 재할당하는 일이 없기 때문에 const로 변수 설정
+
+- 호출한 함수 사용하기 (이름은 위처럼 setTitle로 가정)
+
+  - 두번째 요소였던 함수의 역할
+    1. 초기 설정한 state값 변경
+    2. 리액트에게 해당 컴포넌트 재실행 요청
+  - `setTitle('변경할내용')`처럼 실행
+    - 실행하면 리액트는 해당 컴포넌트를 재실행
+    - JSX 코드를 지난번과 비교하여 변경된 내용을 화면에 적용
+  - 실험해보니, setTitle의 변경할내용이 현재 상태와 같다면, 컴포넌트를 재실행하지 않음
+    - 그리고 setTitle을 해도 초기값 자체는 변하지 않음
+    - 또한, setTitle을 수행한다고 state의 값이 바로 변경되지는 않음 (조금의 시간 필요)
+
+- 예시
+
+  ```react
+  import React, { useState } from 'react';
+  import ExpenseDate from './ExpenseDate';
+  import Card from './Card';
+  
+  function ExpenseItem(props) {
+      const [title,setTitle] = useState(props.title)
+      function clickHandler () {
+          setTitle("변경할내용")
+      }
+      
+      return (
+      <Card className='expense-item'> 
+              <ExpenseDate date={props.date} />
+              <div className='expense-item'>
+              	<h2>{props.title}</h2>
+                  <div className='expense-item'>${props.amount}</div>
+              </div>
+              <button onClick={clickHandler}>Change Title</button> 
+      </Card>
+      )
+  }
+  ```
+
+  
+
+
+
+##### 독립적인 state
+
+- 만약, state생성을 하나의 컴포넌트에서 했지만, 해당 컴포넌트를 여러번 반복하여 사용한다면?
+
+  - 그리고, 하나의 state를 변경했을 때, 복제된 다른 컴포넌트의 state들은 어떻게될까?
+    - 변경되지 않음!
+    - state를 생성하는 순간 독립적인 state를 갖고 독립적으로 관리됨
+    - 그리고 그 변경된 state의 컴포넌트만 재평가됨. (설령 같은 state를 가진 다른 컴포넌트가 있어도, 해당 컴포넌트만 재실행됨)
+
+
+- 그렇다면, 하나의 컴포넌트에서 useState로 state를 여러번 생성하면?
+  - 각 state는 완전히 별개의 것들로 작동함
+
+
+
+
+
+#### practice_사용자 입력값 state에 저장하기
+
+- 이벤트리스너는 props에 `onChange`로 활용
+  - 모든 변화를 감지
+  - 장점은 문자열 입력 등 뿐 아니라 드롭박스 변화도 감지
+- 사용자가 입력할 때마다 현재 값을 얻기 위해 함수의 이벤트 인자 활용
+  - 이벤트리스너에서 실행한 함수는 자동으로 event 객체를 얻음
+  - event 객체 중 target 프로퍼티 내의 value를 통해 이벤트가 발생했을 때의 현재 값을 얻을 수 있음 (event.target.value)
+    - event.target.value는 항상 문자열
+- submit 이벤트는 prevent로 막고 state값을 갱신해야함
+  - 안 그러면 submit 이벤트는 자동으로 페이지를 리로드하기 때문
+
+
+
+#### 하나 이상의 state 다루기
+
+1. useState를 여러번 호출하기
+
+   ```react
+   const [enteredTitle, setEnteredTitle] = useState('');
+   const [enteredAmount, setEnteredAmount] = useState('');
+   const [enteredDate, setEnteredDate] = useState('');
+   ```
+
+2. 객체를 활용하기
+
+   ```react
+   cosnt [userInput, setUserInput] = useState({
+       enteredTitle: '',
+       enteredAmount: '',
+       enteredDate: ''
+   })
+   ```
+
+   - 단, 상태를 갱신할 때 해당하는 키값이 아니더라도 나머지 value들도 같이 입력해줘야함
+
+     ```react
+     cosnt [userInput, setUserInput] = useState({
+         enteredTitle: '',
+         enteredAmount: '',
+         enteredDate: ''
+     })
+     
+     const titleChangeHandler = (event) => {
+         setUserInput({
+             ...userInput,
+             enteredTitle: event.target.value,
+         })
+     }
+     ```
+
+     - 하지만 위 같이 하면 문제가 발생할 수 있음. 따라서,아래와 같이 해야함
+     - 발생 가능한 문제 : 최신의 state 값을 활용하여 state값을 변경한다면, setState가 바로 적용이 안되기 때문에 갱신되지 않은 state를 활용할 수 있음.
+
+     ```react
+     cosnt [userInput, setUserInput] = useState({
+         enteredTitle: '',
+         enteredAmount: '',
+         enteredDate: ''
+     })
+     
+     const titleChangeHandler = (event) => {
+         setUserInput((prevState) => {
+             return {
+       	      ...prevState
+       	      enteredTitle: event.target.value,
+             }
+         })
+     }
+     ```
+
+     - `setState(updater[,callback])`: updater는 새로운 state 값 뿐만 아니라 새로운 state값을 반환하는 함수가 될 수도 있음
+     - 만약, 새로운 state값을 반환하는 함수를 인자로 넣어주면, 해당 함수는 이전의 state를 인자로 받을 수 있음
+       - 이전의 state는 아직 갱신되지 않은 state가 아닌 갱신되야할 state를 의미
+       - 즉, 항상 최신의 값을 유지시켜줄 수 있다는 것
+       - [참고_리액트 공식 홈페이지](https://ko.reactjs.org/docs/faq-state.html)
+     - 그리고, setState는 비동기로 작동. 즉, 함수를 실행했다고 해서 state가 바로 변경되지는 않는다는 것
+
+
+
+#### 양방향 바인딩
+
+- 사용자가 작성한 입력값을 받을 수도, 우리가 입력값을 정할 수도 있다는 것
+  - ex) 사용자가 입력값을 제출한 후에, 작성한 입력값들을 모두 빈칸으로 리셋해야되는 경우
+  - input 태그의 value 속성 활용
+    - value 속성에 state 값을 넣어주면 됨
+    - 만약, state가 submit 이후에 빈 문자열로 변한다면, value도 빈 문자열이 되기 때문
+
+
+
+#### 자식 컴포넌트에서 부모 컴포넌트로의 통신
+
+**props를 활용하라!**
+
+- 부모 컴포넌트에서 할 일
+  - 자식 컴포넌트에 속성 추가
+    - 이름은 완전히 자유
+    - 이벤트 리스너임을 표시하기 위해 on을 주로 붙임
+  - `속성={실행시킬 함수} `
+    - 자식 컴포넌트로부터 통신 받으면 실행시킬 함수를 정의
+    - 해당 함수는 자식 컴포넌트로부터 받은 데이터를 인자로 가짐
+    - 해당 이벤트가 발생했을 때 실행시킬 함수이므로 주로 `이벤트명(여기서는 속성명)Handler`로 이름을 붙임
+- 자식 컴포넌트에서 할 일
+  - props를 통해 부모 컴포넌트에서 정의한 속성 가져오기
+  - 특정 조건일 때, 해당 속성을 실행
+    - 해당 속성에는 함수가 할당되어있으므로 실행 가능
+    - 함수의 인자로 전달할 데이터 할당
+    - `속성명(전달할 데이터)` 와 같이 실행시키면 부모 컴포넌트에서 해당 이벤트를 받고, 저장해놓은 함수를 실행시킴
+
