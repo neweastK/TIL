@@ -777,6 +777,8 @@ functioin Example() {
 1. useState를 여러번 호출하기
 
    ```react
+   import React, { useState } from 'react';
+   
    const [enteredTitle, setEnteredTitle] = useState('');
    const [enteredAmount, setEnteredAmount] = useState('');
    const [enteredDate, setEnteredDate] = useState('');
@@ -785,7 +787,9 @@ functioin Example() {
 2. 객체를 활용하기
 
    ```react
-   cosnt [userInput, setUserInput] = useState({
+   import React, { useState } from 'react';
+   
+   const [userInput, setUserInput] = useState({
        enteredTitle: '',
        enteredAmount: '',
        enteredDate: ''
@@ -793,7 +797,7 @@ functioin Example() {
    ```
 
    - 단, 상태를 갱신할 때 해당하는 키값이 아니더라도 나머지 value들도 같이 입력해줘야함
-
+   
      ```react
      cosnt [userInput, setUserInput] = useState({
          enteredTitle: '',
@@ -808,12 +812,12 @@ functioin Example() {
          })
      }
      ```
-
+   
      - 하지만 위 같이 하면 문제가 발생할 수 있음. 따라서,아래와 같이 해야함
      - 발생 가능한 문제 : 최신의 state 값을 활용하여 state값을 변경한다면, setState가 바로 적용이 안되기 때문에 갱신되지 않은 state를 활용할 수 있음.
-
+   
      ```react
-     cosnt [userInput, setUserInput] = useState({
+     const [userInput, setUserInput] = useState({
          enteredTitle: '',
          enteredAmount: '',
          enteredDate: ''
@@ -828,7 +832,7 @@ functioin Example() {
          })
      }
      ```
-
+   
      - `setState(updater[,callback])`: updater는 새로운 state 값 뿐만 아니라 새로운 state값을 반환하는 함수가 될 수도 있음
      - 만약, 새로운 state값을 반환하는 함수를 인자로 넣어주면, 해당 함수는 이전의 state를 인자로 받을 수 있음
        - 이전의 state는 아직 갱신되지 않은 state가 아닌 갱신되야할 state를 의미
@@ -862,7 +866,7 @@ functioin Example() {
     - 해당 이벤트가 발생했을 때 실행시킬 함수이므로 주로 `이벤트명(여기서는 속성명)Handler`로 이름을 붙임
 - 자식 컴포넌트에서 할 일
   - props를 통해 부모 컴포넌트에서 정의한 속성 가져오기
-  - 특정 조건일 때, 해당 속성을 실행
+  - 특정 조건일 때, 해당 속성을 실행 (= `속성()`)
     - 해당 속성에는 함수가 할당되어있으므로 실행 가능
     - 함수의 인자로 전달할 데이터 할당
     - `속성명(전달할 데이터)` 와 같이 실행시키면 부모 컴포넌트에서 해당 이벤트를 받고, 저장해놓은 함수를 실행시킴

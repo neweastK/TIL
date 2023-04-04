@@ -667,3 +667,283 @@
     - 여러개의 source를 매개변수로 설정할 수 있음
     - 따라서, target에는 빈 객체를 넣고 복사하고 싶은 객체를 source에 넣으면 됨
     - source가 여러개이면서 key값이 겹치는 경우가 있다면 가장 뒤에있는 값으로 덮어 씌워짐
+
+
+
+## 8,9강 _ Array
+
+#### 선언
+
+1. `new Array()`
+2. `[]`
+
+
+
+#### 접근
+
+- `배열[index]`
+  - 생각해보니 객체의 value에 접근할 때는 `객체[key]`로 접근
+  - 배열도 위와 마찬가지, 배열에서의 key값은 인덱스이기 때문
+
+
+
+#### 순회
+
+- `for (let i = 0; i<array.length; i++) {}`
+- `for ( a of array) {}`
+- `forEach (callback(value, index, array){})`
+
+
+
+#### 삽입, 삭제
+
+- `Array.push()` : item을 뒤에 삽입
+- `Array.pop()` : item을 뒤에서 추출
+- `Array.unshift()`: item을 앞에 삽입
+- `Array.shift()`: item을 앞에서 추출
+- **pop,push보다 shift,unshift가 훨씬 느림!!**
+  - 특히, 배열이 길면 길수록 성능은 더 안좋아짐
+- `Array.splice(start,count)`: 배열의 start 인덱스부터 count만큼 삭제
+  - 만약, count를 지정하지 않으면 array[start:] 삭제
+  - count 인자 뒤에는 해당 값을 지우고 삽입할 값들 입력
+    - ex. `arrays.splice(1,1,"hi","hello")`
+    - 배열의 1번 인덱스 값을 지우고 "hi", "hello" 문자열 삽입
+- `Array.concat(newArray)` : 기존에 있던 배열에 새로운 배열을 이어붙임
+
+
+
+#### 검색
+
+- `Array.indexOf(item)` : item의 가장 앞의 인덱스 번호를 반환 (없으면 -1 반환)
+- `Array.lastIndexOf(item)` : item의 가장 뒤의 인덱스 번호 반환 (없으면 -1 반환)
+- `Array.includes(item)` : 배열에 item이 있는지 없는지를 true/false로 반환
+
+
+
+#### 메서드
+
+##### join(`구분자`)
+
+- 구분자를 생략하면 기본적으로 `,`로 구분된 문자열 반환
+- 원본 배열 변화 없음
+
+
+
+##### split(`구분자[,사이즈]`)
+
+- 구분자를 생략하면 문자열 전체가 배열 하나의 원소가 되어버림
+  - `['a,b,c,d']` 처럼 되어버림
+  - 즉, 길이 1의 배열이 반환되는 것
+- 사이즈는 return 받을 리스트의 사이즈 설정 가능
+
+
+
+##### reverse()
+
+- 배열을 역순으로 정렬
+- 원본 배열도 순서가 변경됨
+- 변수에 할당하면 해당 변수에도 정렬된 배열이 들어감
+- 즉, 원본 배열 자체의 순서를 변경하면서, 변경된 배열을 반환도 함
+
+
+
+##### sort(callback(previousValue,currentValue) { return previousValue-currentValue})
+
+- 콜백함수의 return 값이 음수라면 첫번째 값이 다음 값보다 작다고 판단하고 정렬
+- 오름차순 정렬할 때 
+  - `array.sort((a,b) => a-b)`
+- 내림차순 정렬할 때
+  - `array.sort((a,b) => b-a)`
+
+
+
+
+
+
+
+
+
+##### splice(start,end) & slice(start,end)
+
+- splice는 원본 배열 자체를 변경하고, 삭제한 요소들을 return
+- slice는 start인덱스부터 end인덱스까지의 배열을 반환함
+  - 단, end는 포함하지 않음
+  - 배열 자체를 수정하지 않음
+
+
+
+##### find(`callback(value, idx, obj)`{return boolean})
+
+- find 메서드를 호출한 배열의 각 요소를 순차적으로 호출
+- find의 콜백함수는 boolean을 리턴해야함
+- 만약, true값이 return 되면 find 메서드는 즉시 종료
+  - 그러면서 true일 때의 원소를 반환
+- 즉, true 값을 반환하는 첫번째 원소만 반환
+
+
+
+##### filter(callback(value, idx, obj){return boolean})
+
+- 콜백 함수가 true 값을 반환하는 원소들만 모아서 새로운 배열 반환
+
+
+
+##### map(callback(value,idx,obj){ })
+
+- 콜백함수가 반환한 값들로 이루어진 배열 반환
+- 즉, 원본 배열의 요소들에 동일한 작업을 진행하고 싶을 때 사용할 수 있음
+
+
+
+##### some(callback(value,index,obj){ return boolean })
+
+- 배열의 원소 중 콜백함수의 반환값이 true인 원소가 하나라도 있다면 true 반환
+- 하나도 없다면 some 메서드는 false 반환
+
+
+
+##### every(callback(value,index,obj){return boolean})
+
+- 배열의 모든 원소에 대해 콜백함수의 반환값이 true라면 true 반환
+- 단 하나라도 false인 원소가 있다면 false 반환
+
+
+
+##### reduce(callback(previousValue, currentValue, currentIndex), initialValue)
+
+- 콜백함수에서 return 되는 값은 계속해서 누적되어감
+- previousValue는 이전 단계에서 return된 값
+  - 즉, 지금까지 누적된 값을 의미
+- initialValue는 기본값 (시작값)
+
+
+
+
+
+## 10강 _ JSON
+
+#### HTTP
+
+- Hyper Text Transfer Protocol
+- 서버와 클라이언트가 어떻게 hypertext를 주고 받을지 정해놓은 규약
+- hypertext는 웹사이트에서 전반적으로 이용되고 있는 문서,파일,이미지와 같은 모든 리소스들을 포함
+
+
+
+#### AJAX
+
+- Asynchronous JavaScript And XML
+- HTTP를 이용하여 서버에게 데이터를 요청하여 받아올 수 있는 방법 중 하나
+- 웹페이지에서 동적으로 서버에게 데이터를 주고 받을 수 있는 기술
+- XML : HTML과 같은 마크업 언어 중 하나로 태그를 이용하여 데이터를 표현함
+- 예시
+  - XHR Object
+    - XML Http Request
+    - 브라우저 API에서 제공하는 Object 중 하나
+    - 간단하게 서버에게 데이터를 요청하고 받아올 수 있음
+    - but, XML은 불필요한 태그가 너무 많아 파일 사이즈가 커지고, 가독성이 좋지 않아 최근에는 많이 사용하지 않음
+  - fetch() API
+
+
+
+#### JSON
+
+- JavaScript Object Notation
+- key와 value로 이루어진 데이터 포맷
+- 데이터를 주고 받을 때 쓸 수 있는 가장 간단한 파일 포맷
+- 텍스트 기반으로 매우 가볍고 가독성이 좋음
+- 프로그래밍 언어나 플랫폼과 관계없이 사용할 수 있음
+- serialize와 deserialize에 대해 공부해야함
+
+
+
+##### serialize & deserialize
+
+- `JSON.stringify(객체[,replacer])`
+
+  - 데이터를 문자열로 변환
+
+  - 객체 내 함수는 제외된 후 변환
+
+  - replacer로 상세하게 조정 가능
+
+    - 배열로 사용할 경우, 배열 내 원하는 프로퍼티를 지정하면 해당 프로퍼티의 값만 변환됨
+
+      ```js
+      const json = JSON.stringify(obj. ['name','size'])
+      ```
+
+    - 콜백함수는 key와 value를 매개변수로 받는 함수 선언
+
+      - return값에서 3항 조건문으로 원하는 value로 수정 가능
+
+        ```js
+        const json = JSON.stringify(obj, (key,value) =>
+                                    return key==='name' ? 'kim' : value
+        ```
+
+        
+
+- `JSON.parse(문자열[,reviver])`
+
+  - 문자열(json)을 객체로 변환
+
+  - stringfy 과정에서 사라진 함수는 parse를 통해 객체로 되돌려도 다시 생기지 않음
+
+  - 또한, stringfy 과정에서 Date 객체 같은 것들도 모두 string 형태로 변환됐었음
+
+    - 따라서, parse를 통해 object로 가져온다해도, Date 객체로 살아나지 않고 string으로 되어있음
+
+  - reviver로 상세하게 조정 가능
+
+    - 콜백 함수에서 key와 value를 매개변수로 가짐
+
+    - 삼항 조건문으로 여러 조건에 따라 받아오는 데이터의 타입을 바꿀 수 있음
+
+      ```js
+      const obj = JSON.parse(json, (key,value) => {
+          return key==='birthDate' ? new Date(value) : value
+      })
+      // 키가 birthDate면 Date 객체로 받고, 아니면 그냥 문자열 그대로 받겠다는 뜻
+      ```
+
+
+
+##### 유용한 사이트
+
+- JSON Diff
+  - 두 JSON을 비교해서 다른 부분을 찾아줌
+- JSON Beautifier
+  - JSON의 포맷을 예쁘게 수정해줌
+- JSON Parser
+  - JSON이 object로 변환시켰을 때의 모습을 보여줌
+- JSON Validator
+  - JSON이 유효한 데이터인지 아닌지 오류를 찾아줌
+
+
+
+
+
+## 11강,12강,13강 _ 비동기 프로그래밍
+
+#### 동기(synchronous) vs 비동기(Asynchronous)
+
+- 자바스크립트는 동기적 언어
+  - 호이스팅 된 이후부터 코드가 작성한 순서대로 하나씩 수행된다는 것
+
+- 비동기는 언제 코드가 실행될지 예측할 수 없는 것
+  - 즉시 코드를 실행하지 않고 다음 코드로 넘어감
+  - 정해진 시점에 코드가 실행됨
+    - 즉, 정해진 순서대로 코드가 실행되지 않는다는 것을 의미
+- 콜백함수라고 무조건 비동기인 것은 아님
+  - 어떻게 함수를 구성하냐에 따라 동기,비동기로 나눠짐
+
+
+
+#### 콜백지옥
+
+- 콜백함수 내에서 다른 콜백함수를 호출하고 또 내부에서 다른 콜백함수를 부르면서 가독성이 매우 떨어지는 코드
+  - 이해하기도 읽기도 어려움
+  - 에러와 디버깅이 아주 어려워짐
+- 콜백지옥 해결하기
+  - Promise, Async & Await

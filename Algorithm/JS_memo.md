@@ -41,3 +41,15 @@ https://yoon-dumbo.tistory.com/entry/NODEJS-%EA%B8%B0%EB%B0%98%EC%9C%BC%EB%A1%9C
   - 파이썬은 따로 count를 지정하지 않는 이상 모든 글자를 지정한 글자로 바꿈
   - but, js는 가장 첫번째 글자만 지정한 글자로 바꿈
     - 모든 이전 사항을 변경하고 싶다면 replaceAll 메서드 사용
+
+- 소수점 (파이썬은 import math 필요)
+  - 올림
+    - Math.ceil()
+    - 파이썬 : math.ceil()
+  - 내림
+    - Math.floor()
+    - 파이썬: math.floor는 내림
+    - 파이썬에는 math.trunc() 메서드가 있음(무조건 버림. 걍 없애버리는 것)
+  - 반올림
+    - Math.round()
+    - 파이썬 round()
