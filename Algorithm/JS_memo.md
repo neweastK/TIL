@@ -32,4 +32,12 @@ https://yoon-dumbo.tistory.com/entry/NODEJS-%EA%B8%B0%EB%B0%98%EC%9C%BC%EB%A1%9C
     console.log(res) //'abcabcabc'
     ```
 
-    
+- `문자열+문자열`은 파이썬과 똑같이 작동
+
+- 파이썬의 경우 `list(문자열)`로 각 문자를 원소로 하는 배열을 반환할 수 있지만, JS의 경우 `Array(문자열)`로 하면 문자열 전체를 원소로 하는 길이 1의 배열 반환
+
+- replace
+
+  - 파이썬은 따로 count를 지정하지 않는 이상 모든 글자를 지정한 글자로 바꿈
+  - but, js는 가장 첫번째 글자만 지정한 글자로 바꿈
+    - 모든 이전 사항을 변경하고 싶다면 replaceAll 메서드 사용
