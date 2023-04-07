@@ -53,3 +53,12 @@ https://yoon-dumbo.tistory.com/entry/NODEJS-%EA%B8%B0%EB%B0%98%EC%9C%BC%EB%A1%9C
   - 반올림
     - Math.round()
     - 파이썬 round()
+
+- 아스키코드 변환
+  - 아스키 → 문자열
+    - 파이썬 : `chr()`
+    - JS : `String.fromCharCode()`
+  - 문자열 → 아스키
+    - 파이썬 : `ord()`
+    - JS : `String.charCodeAt()`
+      - cf) charAt(index)는 index에 해당하는 문자열 반환
