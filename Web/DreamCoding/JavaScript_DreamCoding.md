@@ -947,3 +947,279 @@
   - 에러와 디버깅이 아주 어려워짐
 - 콜백지옥 해결하기
   - Promise, Async & Await
+
+
+
+#### Promise
+
+> - JS에서 제공하는 비동기를 간편하고 깔끔하게 처리해주는 내장 Object
+> - 정해진 기능을 수행하고 나서 정상적으로 기능이 수행됐다면 성공 메시지와 결과값 전달
+>   - 기능이 수행되지 못했다면 에러 발생
+
+
+
+##### 중요 포인트
+
+- 상태 : 프로세스가 기능을 수행중인지 완료되었는지를 나타냄
+  - 기능이 수행중일 때는 pending 상태
+  - 기능을 성공적으로 끝내면 fulfilled
+  - 파일을 찾을 수 없거나 네트워크에 문제가 생기면 rejected
+- producer / consumer
+  - Producer : 원하는 기능을 수행해서 해당하는 데이터를 만들어냄
+  - Consumer : 우리가 원하는 데이터를 소비
+- Promise를 활용한 비동기 작업은 주로 무거운 일들을 수행
+  - 네트워크에서 데이터를 받아오거나 파일에서 데이터를 읽어오는 경우
+  - 즉, 시간이 조금 걸리는 일들은 비동기 처리하는것이 좋음
+
+
+
+##### 사용법
+
+- new 키워드로 Object 생성(Producer)
+
+  - `new Promise(callback(resolve:기능을 정상적으로 수행했을 경우 호출할 함수,reject:기능을 수행하다가 오류가 발생했을 경우 호출할 함수))`
+  - **Promise가 생성되는 순간 callback 함수는 자동으로 수행됨!!**
+
+  ```js
+  const promise = new Promise((resolve,reject)=>{
+      // 2초 뒤에 실행하는 함수는 resolve에 kim을 넣어서 반환
+      setTimeout(()=>{
+          resolve('kim')
+          reject(new Error('no network'))
+      },2000)
+  })
+  ```
+
+  - resolve는 정상적으로 수행됐을 경우 전달할 데이터를 매개변수로 가지며 호출 - promise 객체의 then이 수행됨
+  - reject는 작업이 비정상적으로 종료됐을 때 호출되며, 주로 매개변수로 Error 객체를 받음 - promise 객체의 catch가 수행
+
+- 만들어진 promise 사용하기
+
+  - then, catch, finally 사용
+  - then : 작업이 정상적으로 잘 수행된 경우
+    - `promise.then(callback(value=resolve로부터 받은 데이터))`
+  - catch : 에러가 발생했을 경우
+    - `promise.catch(callback(error))`
+  - finally : 성공,실패 상관없이 마지막에 무조건 호출됨
+    - `promise.finally(callback())`
+
+  ```js
+  // setTimeout으로 resolve에 전달한 kim이 value에 담김
+  promise
+      .then(value=>{
+      	console.log(value)
+  	}) // then은 같은 promise 객체를 반환함. 따라서, catch를 바로 붙일 수 있음
+  	.catch(error=>{
+  	    console.log(error)
+  	})
+  ```
+
+- 즉, promise 객체를 만들 때, 비동기적으로 수행하고 싶은 코드를 작성
+
+  - 성공적으로 잘 됐다면 resolve 호출
+    - then으로 성공한 값을 받아와 처리
+  - 실패했다면 reject를 호출
+    - catch로 실패한 에러를 받아와 처리
+
+- Promise Chaning
+
+  ```js
+  const fetchNumber = new Promise((resolve,reject) => {
+      setTimeout(() => resolve(1),1000)
+  })
+  
+  fetchNumber
+  .then(value => value*2)
+  .then(value => value*3)
+  .then(value=> {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => resolve(num-1), 1000)
+      })
+  })
+  .then(num => console.log(num))
+  ```
+
+  - then은 값을 전달 할 수도 있지만, promise 객체를 전달해도 됨
+
+- Error Handling
+
+  ```js
+  const getHen = () => 
+      new Promise((resolve,reject) => {
+          setTimeout(() => resolve('🐓'), 1000)
+      });
+  const getEgg = hen =>
+  	new Promise((resolve, reject) => {
+          setTimeout(() => resolve(`${hen} =>🥚`),1000)
+      })
+  const cook = egg =>
+  	new Promise((resolve, reject) => {
+          setTimeout(() => resolve(`${egg} =>🍳`),1000)
+      })
+  
+  getHen()
+  .then(hen => getEgg(hen))  // ==.then(getEgg)
+  .then(egg => cook(egg))  // ==.then(cook)
+  .then(meal => console.log(meal)) // ==.then(console.log)
+  // 결과값
+  // 🐓=> 🥚 =>🍳
+  ```
+
+  - 만약, 오류가 생겼고, 이때 다른 자원으로 대체하고 싶다면?
+
+  ```js
+  const getHen = () => 
+      new Promise((resolve,reject) => {
+          setTimeout(() => resolve('🐓'), 1000)
+      });
+  const getEgg = hen =>
+  	new Promise((resolve, reject) => {
+          setTimeout(() => reject(new Error(`error! ${hen} =>🥚`),1000)
+      })
+  const cook = egg =>
+  	new Promise((resolve, reject) => {
+          setTimeout(() => resolve(`${egg} =>🍳`),1000)
+      })
+  
+  getHen()
+  .then(hen => getEgg(hen))  // ==.then(getEgg)
+  .catch(error => return '🥖')
+  .then(egg => cook(egg))  // ==.then(cook)
+  .then(meal => console.log(meal)) // ==.then(console.log)
+  // 결과값
+  // 🥖=>🍳
+  // catch를 중간이 아닌 맨뒤에 놓으면 (.catch(console.log(err)))
+  /// 결과값은 에러 메시지가 나옴
+  ```
+
+  - 즉, 어떠한 에러를 처리하거나 대체하고 싶다면 해당 promise 뒤에 바로 catch를 사용해야함
+
+
+
+#### async & await
+
+- promise도 chaining 되다 보면 코드가 복잡해짐
+  - 이를 보완하기 위한 syntactic sugar
+
+- promise를 사용하는게 옳을 때도 있고, async&await을 쓰는게 더 맞는 경우도 있음
+
+  - 때에 따라 다르게 사용할 수 있어야함
+
+- 예시
+
+  ```js
+  function fetchUser() {
+      // 10초 걸리는 네트워크 작업이라 가정
+      return 'kim'
+  }
+  
+  const user = fetchUser();
+  // 10초 후에 'kim'을 출력
+  console.log(user)
+  
+  // ------ promise 로 비동기 처리 -----
+  fuction fetchUserPromise() {
+      return new Promise((resolve,reject) => {
+          // 이 안에서 비동기로 처리할 작업 정의
+          resolve('kim')
+      })
+  }
+  
+  const user1 = fetchUserPromise();
+  user1.then(console.log)
+  
+  // ----- async -----
+  async function fetchUserAsync() {
+      return 'kim'
+  }
+  const user2 = fetchUserAsync();
+  user2.then(console.log)
+  
+  
+  // ----- await -----
+  // async가 붙은 함수 안에서만 사용 가능
+  function delay(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms))
+  }
+  
+  async function getApple() {
+      // delay 함수가 완료될 때까지 기다림
+      await delay(3000);
+      // async에서는 return 되는 값이 promise에서의 then의 인자
+      return 'apple'
+  }
+  
+  async function getBanana() {
+      await delay(3000);
+      return 'banana'
+  }
+  
+  // getBanana를 promise로 만들면?
+  function getBananaPromise() {
+      return delay(3000)
+      .then(()=>'banana')
+  }
+  
+  // 좀 더 복잡한 함수 비교
+  // promise
+  function pickFruits() {
+      return getApple().then(apple => {
+          return getBanana().then(banana => `${apple} + ${banana}`);
+      })
+  }
+  pickFruits().then(console.log) // 6초 뒤에 'apple+banana' 출력
+  
+  // async & await
+  async function pickFruitsAsync() {
+      const apple = await getApple()
+      const banana = await getBanana()
+      return `${apple} + ${banana}`;
+  }
+  pickFruitsAsync().then(console.log)
+  ```
+  
+- async에서 오류 처리는 어떻게?
+
+  - promise 는 reject를 이용했음
+
+  - async에서는 try catch 를 이용하면 됨
+
+    ```js
+    async function pickFruits() {
+        try {
+            const apple = await getApple()
+        }
+        catch(err) {
+            console.log(err)
+        }
+    }
+    ```
+
+- 두가지 비동기 함수가 서로에게 영향을 미치지 않을 때 동시 처리하기
+
+  - Promise의 API (all) 사용
+
+    ```js
+    async function pickAllFruits() {
+        // 인자로 넣은 배열에 속한 함수들이 모두 완료되면
+        return Promise.all([getApple(), getBanana()]);
+        // 반환값이 모두 담긴 배열 반환
+        .then(fruits => fruits.join(' + '))
+    }
+    pickAllFruits().then(console.log)
+    ```
+
+  - Promise의 API(race)
+
+    ```js
+    function pickOnlyOne() {
+        // 배열 안에 있는 함수 중 먼저 반환된 것만 반환
+        return Promise.race([getAplle(), getBanana()]);
+    }
+    pickOnlyOne().then(console.log)
+    ```
+
+  
+
+
+
