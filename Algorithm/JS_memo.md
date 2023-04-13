@@ -64,3 +64,5 @@ https://yoon-dumbo.tistory.com/entry/NODEJS-%EA%B8%B0%EB%B0%98%EC%9C%BC%EB%A1%9C
       - cf) charAt(index)는 index에 해당하는 문자열 반환
   
 - Spread Operator는 iterable 객체에 다 가능하다!! 문자열도 된다고! [...문자열]
+
+- Python은 빈 문자열을 False로 인식하지만, JS는 true다!!!
